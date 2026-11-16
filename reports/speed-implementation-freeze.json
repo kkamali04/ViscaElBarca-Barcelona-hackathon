@@ -1,0 +1,83 @@
+{
+  "utc": "2026-11-16T19:05:12.883261+00:00",
+  "scope": "candidate and normative specification freeze before fresh blind acceptance",
+  "files": {
+    "experiments/speed_v1/__init__.py": {
+      "bytes": 177,
+      "sha256": "df5e2954aec91940bf2de7240fdffc31d5b8b99528045bd7c12a710169587b81"
+    },
+    "experiments/speed_v1/preparation.py": {
+      "bytes": 10960,
+      "sha256": "7400adbd538a44c72f4533887d1279f563d5e4b3d0bb3c2048df1edf7c6fb2f3"
+    },
+    "experiments/speed_v1/README.md": {
+      "bytes": 2936,
+      "sha256": "d05c24e146a5c5f75f05c77c9169c6ec319205123d8bb0a408756da42bf9f97c"
+    },
+    "specs/004-training-speed/README.md": {
+      "bytes": 3445,
+      "sha256": "5814b925c7c304d77b1ef47464a1500885b1e9d3070686ea633f22fbc7e07c8b"
+    }
+  },
+  "original_source_bindings": {
+    "MVP_REVIEW.md": "e6a828283d0334dd65d45d079c62db26e0ed191fbc5eb44bb34839cd53bf49bc",
+    "MVP_TECHNICAL.md": "6eede71d984bf1c8f99246e4c9210ce72450bf88d7c7deb62d740a28f9d7e994",
+    "experiments/__init__.py": "6410dea73fc5becf931c5b762cb8e1eb6d2b3a669c585e3780d67cc4ab1ce84c",
+    "experiments/noise_v2/__init__.py": "61e39e8b249de5dca7fb3c565d673430be34e04525cb55116e92e8015ba75ced",
+    "experiments/noise_v2/features.py": "830397e5574e2dc7dde590fdb3b7d92bc0ea5f6852ec6c5f95942d54c1739a5c",
+    "experiments/noise_v2/fetch_holdout.py": "965481f2d5ed3120c41af3888abf8e6ed65d906276413b9e6f85ab3018a6d407",
+    "experiments/noise_v2/run_experiment.py": "ddd69aad2bbd49c40e2ad7236db5b552a56148224638bb17657ea2dfd0fe877e",
+    "experiments/v3/__init__.py": "3093039c01dbc226ee6a90746ba39bce7dbd3597b8ffe6148c2cf4a5202d968f",
+    "experiments/v3/adapter.py": "683bf9e18367cf605b03edd43488cf312b4b1b7d8b61d20faca9f80901719983",
+    "experiments/v3/boundary.py": "768187cb624c7ff1c7b9b0d560b8640d435720d0a95611dbc48904e62f1f7475",
+    "experiments/v3/cache.py": "4d1189def8cb261884fca1f7852c70f846896b5d940c64e29599b2118f203fb9",
+    "experiments/v3/cli.py": "2cd8a9210347769c1fac09489d9c35fce0550d665a294fe3726cd28feed9ca09",
+    "experiments/v3/contracts.py": "3c82ff9d69526e40085bb36fbd68e75f2e302f8648472628ebee23394356a0ab",
+    "experiments/v3/core.py": "5b1a936a20aaadae5e32b928edd519951c4fae7b1cb49e4203a477e50c570107",
+    "experiments/v3/corruption.py": "2c5ebbcf18b59dd28dad5c481ea407a30feb0e944764f5ff26e1c9d8c4a870b1",
+    "experiments/v3/decoder.py": "f157511f3a017311fa055413cc72e74cd5cedadf25069d2083f7239163c818ef",
+    "experiments/v3/evaluate.py": "51ffd2705158f3ac1974c645a7ec674b690d8bdb297ad1a02704eab28f4021cd",
+    "experiments/v3/fetch.py": "25cf4cbac5cb7abd85ddab0a1acb29fb7b105f6582e56656f6ff20562e042bf8",
+    "experiments/v3/guard.py": "aa532951937b2546bbf2b1f304216e247387b3a607bcddbe8f82ab6cfdd57c28",
+    "experiments/v3/resources.py": "9396108f4df6e93397da2ea9c318b4923bbc70577f4f46ed087376b9709a921a",
+    "experiments/v3/training.py": "fd66adbcf48d0567f293f8796ecbdd118d556887175a1175bfbcf9d13baed919",
+    "local/mvp-code.zip": "a06eb6323ebf68658ae626b97e8b98a75acbfbeb109b9e7a7556eadfe03b582c",
+    "local/submission-code.zip": "28776118e00a15f7f01dc509ae8a436903a2e457708ac35a105c52da8a1443c4",
+    "models/active.json": "72adfa61f9a4475e324317f93f5c5d56d52c8ef352b28f29690b1dc32dff2cd0",
+    "models/noise-v2-trees.json": "856114a7693414db9652bb50e37ab527f958f84e75200b69ce07be28be24bff2",
+    "more-than-a-hack-2027-main/FAQ.md": "c536ec6401ea1b8c8a6dd54ee80e39518d3a521464ed9fe2bc1cf0ee70b7419b",
+    "more-than-a-hack-2027-main/evaluation/possession_metrics.py": "341bad48904b489d6e875397b27687f5d6a4d22a397f3dc8af3a00d48f16874d",
+    "more-than-a-hack-2027-main/evaluation/validate_submission.py": "07ac29499acbd337e1dc1de1832d63f6e1fa1d981e22f6ad08212529e2bbee14",
+    "more-than-a-hack-2027-main/games.py": "3b2122794e9e0476e2b3a871d14880e5fa47c4feaeacf99caef054c2309076ce",
+    "possession_model/__init__.py": "449dad4bb18019700401a977f8446b623dcee6a3a7f05d15526fc71c29caa4cb",
+    "possession_model/decoder.py": "410dc8b086a37b3f15a6545760ea114af099929da45d81ce4a6107c72e1af2da",
+    "possession_model/evidence.py": "f5b2e738022be102db47586271c2bc0669e72744b08c727074bcbae1877c72a9",
+    "possession_model/features.py": "8d2dae5785d1c485e6a1ae20c68e29358906e02a6ff4b053d8da75b1117fb3d8",
+    "possession_model/pipeline.py": "22b3950cda12c58080b9b21441c8149af93ee464908cf76616d123e7f88a6204",
+    "possession_model/schema.py": "787f738d9a431c961160061a0d509bb93ee850a884e229645de3f0d05e5be470",
+    "possession_model/trees.py": "64e5f39b5e5e36a7a58c767e090a8d169b7a953b2dc2e1ed2e84f91fdd672059",
+    "reports/v3-metadata-overlap.json": "4f3389dfb32ab27ac146e036dd409809e623457bb49ca9686d700224a3b2a72d",
+    "reports/v3-source-attribution.json": "a4ea4312de5c579da09d74a685d2335983905bc3c3e3f5b80c704edb58614a03",
+    "requirements-lock.txt": "f7db4ee30863d5ee003283f3d9b4eb701be327900756c9113bb40c37a7cb3494",
+    "requirements-training-lock.txt": "9a597a314b3850b071a59c0ca298dd639fe38867930cd761af3af0efc4aa09bb",
+    "review.ps1": "1c41618193379b9af9c23d1646f67a1f303fa4a561ed208195c875668af4f961",
+    "review_app/__init__.py": "1b80b06008334a8140a9d585aca174d8ce9ef3913ca14a52f9626c3d2181c004",
+    "review_app/__main__.py": "3b6e8ad0c2a8b19976fe43eb46e0f6851b68462ad9d9ae1571a402bf8a502b6a",
+    "review_app/exporting.py": "38a3d8ed48bddf9626dcccb77e87e488a2128d152e371a17bd5d588fca789468",
+    "review_app/server.py": "fee390c75b95c321898f453c2b25855df49fd78b7e75f54df6a1f8f48b033d11",
+    "review_app/state.py": "cde2dd945e928b19b0778114af3df349b061c602b7f2e52f14403245636f4a94",
+    "review_app/static/app.css": "8794600c89969dd4812544c1318aba39e5e00336cb97f70a8e5e89a616057b38",
+    "review_app/static/app.js": "688e0afc4ab17d2a6aed44ad58b44c8c1e86ce6d1eb7a5e4373e65187bf9d23f",
+    "review_app/static/index.html": "f99eb7b324dc246449974e04e55c16257406df818b081a27636a5c0c5c282600",
+    "stop-review.ps1": "2d6abc84b0f300879354406b8a9f4c73e2bd11aa8397975f60b78cbdafd0b723",
+    "submissions/candidate.csv": "d000a49eb8db71ac94da4877abe5b85506d05be233db1f43644df1e4c9e653fd",
+    "tools/build_mvp_package.py": "912f608564300c0c16c801f7870b975821a6a4207cb3f182ecfde31a84d6845d",
+    "tools/check_robustness.py": "ce1e4e63cae8557fc69fa28fa5362e2db98695a0d6536e7bc854a18d0bd8fced",
+    "tools/fetch_validation_data.py": "ac67e82f5317312992d05e58e9fb87ede766736a9acd3af496998741cefb3de1",
+    "tools/run_candidate.py": "5b9da02c893a0cec34bc8444a4c88a12abe58562bf0f836f9a27955bbed66f34",
+    "tools/train_and_validate.py": "f3388329cc02b8e0adfb307662b602a84d0487727534a5ad1253d624f615f99f",
+    "tools/v3_prepare_catalog.py": "eb80b6ffadce2e696d86be5667b1d54a3be2210d2a355cda944fc53b3969a1e2",
+    "validation/metrics.py": "d94776e7a6c6c69d83485ce35c4ef78f6ae33048fc36c136d5b6f58657056aff",
+    "validation/sportec.py": "834a997c186661e6564b92f23281463fe62a5d6c7960accef00c5eba7a15651e"
+  }
+}

@@ -1,0 +1,297 @@
+{
+  "split": "post_selection_validation_stress",
+  "match": "J03WOY",
+  "is_additional_holdout": false,
+  "used_for_selection_or_tuning": false,
+  "selection_sha256": "1d4069949dc30e38b50f194986b41b4ae815befd499eac8c724ee4b8c7c0a4c2",
+  "model_sha256": "abf4f2973003182ae8b1b40d3a5727624e59e78033571c774e46f0afd5a778f7",
+  "source_sha256": {
+    "possession_model/features.py": "1c8d3e31af1fb51e311edc1333eb2e72527adb0e389427f915f7dca2f4b2f03b",
+    "possession_model/evidence.py": "55b655cf624e12780a559390597f8984cf5033c13914db625abcb8169e11b06b",
+    "possession_model/decoder.py": "410dc8b086a37b3f15a6545760ea114af099929da45d81ce4a6107c72e1af2da",
+    "possession_model/trees.py": "425698850e1a5fbfc3d2e5548f7dc1861efefddeac9374d4b93613666fbeabe1",
+    "possession_model/pipeline.py": "51161eb061384caec129c044976001b2e2154687a4cdc943bd09f8b34565aa02",
+    "possession_model/schema.py": "787f738d9a431c961160061a0d509bb93ee850a884e229645de3f0d05e5be470",
+    "validation/sportec.py": "7ef03d2e71de26a65c7570945fb161a45c1691ba9c8709ce458655e571cfa569",
+    "validation/metrics.py": "89a8ca52fb72bdde51fcb739504b20b5a7642913f8f2e2c08604e022415a4fa9",
+    "tools/train_and_validate.py": "f3388329cc02b8e0adfb307662b602a84d0487727534a5ad1253d624f615f99f"
+  },
+  "experiment_script_sha256": "ce1e4e63cae8557fc69fa28fa5362e2db98695a0d6536e7bc854a18d0bd8fced",
+  "source": {
+    "name": "IDSSE Sportec/DFL raw observed tracking",
+    "paper": "https://www.nature.com/articles/s41597-025-04505-y",
+    "license": "CC-BY-4.0",
+    "match_id": "DFL-MAT-J03WOY",
+    "coordinate_transform": "centered metres + (pitch_x/2,pitch_y/2), no orientation flip"
+  },
+  "mask_and_noise_depend_on_truth": false,
+  "conditions_declared_before_execution": [
+    {
+      "name": "long_ball_gaps_12s",
+      "seed": 20261116,
+      "ball_missing_fraction": 0.4,
+      "ball_block_seconds": 12.0,
+      "player_slot_dropout_probability": 0.0,
+      "player_block_seconds": 1.0,
+      "coordinate_noise_std_m": 0.0,
+      "teleport_probability_per_timeline_frame": 0.0,
+      "teleport_distance_m": 20.0
+    },
+    {
+      "name": "combined_tracking_errors",
+      "seed": 20261117,
+      "ball_missing_fraction": 0.4,
+      "ball_block_seconds": 4.0,
+      "player_slot_dropout_probability": 0.3,
+      "player_block_seconds": 1.0,
+      "coordinate_noise_std_m": 0.25,
+      "teleport_probability_per_timeline_frame": 0.004,
+      "teleport_distance_m": 20.0
+    }
+  ],
+  "results": [
+    {
+      "condition": {
+        "name": "long_ball_gaps_12s",
+        "seed": 20261116,
+        "ball_missing_fraction": 0.4,
+        "ball_block_seconds": 12.0,
+        "player_slot_dropout_probability": 0.0,
+        "player_block_seconds": 1.0,
+        "coordinate_noise_std_m": 0.0,
+        "teleport_probability_per_timeline_frame": 0.0,
+        "teleport_distance_m": 20.0
+      },
+      "observations": {
+        "n_frames": 142536,
+        "n_roster_slots": 40,
+        "base_ball_observation_rate": 1.0,
+        "stressed_ball_observation_rate": 0.6000028063085817,
+        "reliable_ball_geometry_rate_after_jump_guard": 0.5950075770331705,
+        "masked_ball_timeline_frames": 57014,
+        "masked_ball_timeline_fraction": 0.3999971936914183,
+        "base_player_observations": 3135792,
+        "retained_player_observations": 3135792,
+        "retained_natural_player_observation_fraction": 1.0,
+        "mean_visible_players_per_side": [
+          11.0,
+          11.0
+        ],
+        "drawn_teleport_frames": 0,
+        "applied_observed_ball_teleports": 0,
+        "feature_array_bytes": 4846224,
+        "player_ring_bytes": 8320,
+        "dropout_mask_bytes": 228080,
+        "feature_seconds": 19.264132400014205
+      },
+      "candidate": {
+        "macro_f1": 0.8190690088978009,
+        "spell_f1": 0.38792452830188673,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 339,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            28667,
+            7750,
+            1395,
+            0
+          ],
+          [
+            7549,
+            29413,
+            1512,
+            0
+          ],
+          [
+            1484,
+            2641,
+            62125,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.7592700497934104,
+          "A": 0.7515010603234624,
+          "D": 0.9464359165765298
+        },
+        "transitions_1s": {
+          "n_matched": 214,
+          "n_gt": 567,
+          "n_pred": 459,
+          "precision": 0.4662309368191721,
+          "recall": 0.37742504409171074,
+          "f1": 0.41715399610136455
+        }
+      },
+      "smooth50": {
+        "macro_f1": 0.40550366516197006,
+        "spell_f1": 0.17037943696450428,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 361,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            19940,
+            4268,
+            13604,
+            0
+          ],
+          [
+            4889,
+            18901,
+            14684,
+            0
+          ],
+          [
+            25730,
+            22708,
+            17812,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.4512792658224983,
+          "A": 0.4481511778165049,
+          "D": 0.317080551846907
+        },
+        "transitions_1s": {
+          "n_matched": 66,
+          "n_gt": 567,
+          "n_pred": 469,
+          "precision": 0.14072494669509594,
+          "recall": 0.1164021164021164,
+          "f1": 0.1274131274131274
+        }
+      },
+      "candidate_prediction_seconds": 6.010876100015594,
+      "smooth50_prediction_seconds": 0.00856669998029247
+    },
+    {
+      "condition": {
+        "name": "combined_tracking_errors",
+        "seed": 20261117,
+        "ball_missing_fraction": 0.4,
+        "ball_block_seconds": 4.0,
+        "player_slot_dropout_probability": 0.3,
+        "player_block_seconds": 1.0,
+        "coordinate_noise_std_m": 0.25,
+        "teleport_probability_per_timeline_frame": 0.004,
+        "teleport_distance_m": 20.0
+      },
+      "observations": {
+        "n_frames": 142536,
+        "n_roster_slots": 40,
+        "base_ball_observation_rate": 1.0,
+        "stressed_ball_observation_rate": 0.6000028063085817,
+        "reliable_ball_geometry_rate_after_jump_guard": 0.5701998091710164,
+        "masked_ball_timeline_frames": 57014,
+        "masked_ball_timeline_fraction": 0.3999971936914183,
+        "base_player_observations": 3135792,
+        "retained_player_observations": 2195976,
+        "retained_natural_player_observation_fraction": 0.7002938970441918,
+        "mean_visible_players_per_side": [
+          7.705428803951283,
+          7.701036931020935
+        ],
+        "drawn_teleport_frames": 558,
+        "applied_observed_ball_teleports": 318,
+        "feature_array_bytes": 4846224,
+        "player_ring_bytes": 8320,
+        "dropout_mask_bytes": 228080,
+        "feature_seconds": 21.97030360001372
+      },
+      "candidate": {
+        "macro_f1": 0.38728655865590583,
+        "spell_f1": 0.18019359642591212,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 887,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            27245,
+            10547,
+            20,
+            0
+          ],
+          [
+            11088,
+            27386,
+            0,
+            0
+          ],
+          [
+            31381,
+            29888,
+            4981,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.5067611554414746,
+          "A": 0.5152829389905451,
+          "D": 0.13981558153569776
+        },
+        "transitions_1s": {
+          "n_matched": 111,
+          "n_gt": 567,
+          "n_pred": 948,
+          "precision": 0.11708860759493671,
+          "recall": 0.19576719576719576,
+          "f1": 0.14653465346534653
+        }
+      },
+      "smooth50": {
+        "macro_f1": 0.37810769111286574,
+        "spell_f1": 0.11761280931586608,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 918,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            22290,
+            9718,
+            5804,
+            0
+          ],
+          [
+            10012,
+            21961,
+            6501,
+            0
+          ],
+          [
+            25969,
+            29986,
+            10295,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.46397385593705437,
+          "A": 0.43861033163902174,
+          "D": 0.2317388857625211
+        },
+        "transitions_1s": {
+          "n_matched": 108,
+          "n_gt": 567,
+          "n_pred": 1052,
+          "precision": 0.10266159695817491,
+          "recall": 0.19047619047619047,
+          "f1": 0.13341568869672638
+        }
+      },
+      "candidate_prediction_seconds": 5.65376680000918,
+      "smooth50_prediction_seconds": 0.007938800001284108
+    }
+  ],
+  "total_seconds": 53.03995209999266,
+  "limitations": [
+    "Already-used validation match; these results are stress diagnostics, not another held-out match.",
+    "Provider possession/control semantics differ from corrected Metrica challenge labels.",
+    "Synthetic errors do not establish realism for all restricted ATD tracking failures.",
+    "No model or constants were adjusted using these stress results.",
+    "No challenge inputs, public GT or final holdout inputs were opened by this script.",
+    "Reference smooth50 intentionally sees the same corrupted features, without the candidate's jump-geometry guard."
+  ]
+}

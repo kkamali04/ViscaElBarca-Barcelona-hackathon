@@ -1,0 +1,54 @@
+{
+  "utc": "2026-11-16T04:17:34.636939+00:00",
+  "scope": "root actual train metadata/hash verification",
+  "status": "VERIFIED_BOUNDED_TRAIN_BEFORE_SELECTION",
+  "study_digest": "e2d265c657eabcabf5e5eb8b8d145a54dd8569fe80a8ba0b9aaf288357a51938",
+  "model_seal_digest": "3b1c0be9bfe40fb7a64dbedfc7975fa290c85c1bc8c7e4879e840951da27a809",
+  "exact_fit_count": 3,
+  "parity": [
+    {
+      "model": "C0",
+      "rows": 447608,
+      "synthetic_probe_rows": 10756,
+      "maximum_raw_error": 0.0,
+      "numeric_export_parity": true
+    },
+    {
+      "model": "C1",
+      "rows": 447608,
+      "synthetic_probe_rows": 10752,
+      "maximum_raw_error": 0.0,
+      "numeric_export_parity": true
+    },
+    {
+      "model": "boundary",
+      "rows": 56448,
+      "synthetic_probe_rows": 2308,
+      "maximum_raw_error": 0.0,
+      "numeric_export_parity": true
+    }
+  ],
+  "train_resource_measurement": {
+    "exit_code": 0,
+    "gaps_over_50ms": 0,
+    "job_commit_limit_bytes": 12884901888,
+    "max_job_processes": 3,
+    "max_sample_gap_seconds": 0.021802300005219877,
+    "measurement_note": "Sampled concurrent working-set peak is a lower bound; job ceiling limits committed memory, not resident working set.",
+    "sample_count": 120805,
+    "sampled_job_peak_working_set_bytes": 835604480,
+    "sampling_errors": [],
+    "termination_reason": null,
+    "wall_seconds": 1237.3859909999883,
+    "worker_creation_time": "134392749687234771",
+    "worker_peak_working_set_bytes": 825995264,
+    "worker_pid": 80208
+  },
+  "train_resource_sha256": "b8d4a915a0c9c593132b0021777905b39bdc4edc6d747421c382e5da405e4c6a",
+  "train_result_sha256": "7079a6e3810ed5417cf59224f47ab30461ac024ff6ff2eb450eac23cf2382719",
+  "registered_source_closure_verified": true,
+  "fallback_files_unchanged": 29,
+  "fit_seconds_accounted": 1237.3859909999883,
+  "selection_test_reserved": false,
+  "limits": "Training metadata/parity/resources only; no quality, fresh test or package inference acceptance."
+}

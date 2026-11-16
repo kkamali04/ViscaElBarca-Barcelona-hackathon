@@ -1,0 +1,19 @@
+# Reuse matrix — 2026-11-15
+
+Status: research-only. No installs, model changes or performance tests performed.
+
+| Engine/artifact | Pin and license | Reuse decision | Concrete integration / resource constraint | Evidence versus hypothesis |
+|---|---|---|---|---|
+| Existing three-state DP | local possession_model/decoder.py; accepted source remains frozen | **Reuse in isolated versioned candidate** | Add typed per-edge modulation while retaining validation, independent runs and tie ordering. O(9N),3N backpointers; two float32 support channels. | Existing exact objective read from code. New boundary benefit untested. |
+| Existing numeric tree export/inference | local possession_model/trees.py | **Reuse pattern with explicit new boundary schema** | Existing loader requires3classes, numeric-hgb-v1; boundary NONE/TEAM_CHANGE/LIVE_DEAD must never silently share H/A/D semantics. Preserve NumPy-only runtime. | Code capability observed; portable boundary exporter still needs implementation/equivalence tests. |
+| PathCRF |1b7c6f85a6b78c92e4543fde72ca2b86a933f997,2026-06-08; MPL-2.0 | **Concept/ablation only for first release** | Player-edge states, temporal attention, torch; preknown in-play episodes and event synchronization in published evaluation. GPU latency cannot be used as CPU evidence. Source requirements omits torch import dependency. | Dynamic-vs-static comparison is soccer-specific; H/A/D challenge gains and CPU fit unknown. |
+| ASRF official yiskw713/asrf |9623f1e8d9a1171333a4eeb65d190997b6c44a95,2021-02-03; MIT | **Boundary/class separation only** | Multi-stage TCN plus I3D feature pipeline and PyTorch would require new training and substantial package change. | Generic action datasets support idea, not soccer performance. |
+| ruptures |releasev1.1.10,2025-09-10; repoee1c8ff8a548d54c641b2bb471562165931f31c7,2026-05-26; BSD-2-Clause | **Development diagnostic/optional generic baseline** | L2 compact finite data, period/gap masking; choose jump1 for frame-grid study. Defaultjump5 restricts boundaries. Avoid full-timeline RBF Gram matrices. | Optimality is relative to supplied segmentation cost. PELT average complexity is conditional. No possession semantics. |
+| hsmmlearn |69bc8aafb53033596e6a314d314547c6f2d197f2,2021-08-21; GPLv3; archived | **Reject runtime dependency; duration concept remains alternative** | C++/Cython Windows build; unsupervised library API does not ingest current raw scores directly without adapter. Duration-bound dynamic program increases search/state costs. | Explicit durations are real new structure; utility and transfer unknown. |
+| DataBallPy |releasev0.8.1,2026-08-11; repoa2ab78c4c7ba3ad964ab26dd65dd848de3939d18,2026-11-03; MIT | **Inspect/reuse declared physics feature ideas, not team-possession oracle** | Event-based team function unavailable without inference events; individual-control rules require identities/ball kinematics. Retain attribution for copied code. | Documented speed/direction/duration checks are credible; sparse anonymous-tracker transfer unknown. |
+| Semi-Markov temporal xT2026 |Scientific Reports2026-05-18 | **Exclude from decoder implementation** | Observed event/action/zone->time-conditioned threat, not raw tracking->state. | Contemporary duration evidence for a different target. |
+
+License verification: raw pinned LICENSE files read for PathCRF, ASRF, ruptures and DataBallPy; hsmmlearn README/API identify GPLv3, with license file named COPYING (verified separately in cache). No source was copied into application code. This is an engineering inventory, not a legal determination.
+
+Highest-priority next artifacts: reviewed boundary feature/target and transition interfaces; whole-match split/attempt manifest; factorial ablation protocol; blind exact-objective and package acceptance contracts. Root owns scientific promotion and final integration.
+

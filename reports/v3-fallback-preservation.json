@@ -1,0 +1,123 @@
+{
+  "recorded_utc": "2026-11-15T20:13:32.592019+00:00",
+  "scope": "Preserved accepted fallback before new experiments; hashes only, no data/GT/CSV contents inspected",
+  "files": {
+    "MVP_REVIEW.md": {
+      "sha256": "e6a828283d0334dd65d45d079c62db26e0ed191fbc5eb44bb34839cd53bf49bc",
+      "bytes": 3723
+    },
+    "MVP_TECHNICAL.md": {
+      "sha256": "6eede71d984bf1c8f99246e4c9210ce72450bf88d7c7deb62d740a28f9d7e994",
+      "bytes": 7276
+    },
+    "experiments/noise_v2/__init__.py": {
+      "sha256": "61e39e8b249de5dca7fb3c565d673430be34e04525cb55116e92e8015ba75ced",
+      "bytes": 160
+    },
+    "experiments/noise_v2/features.py": {
+      "sha256": "830397e5574e2dc7dde590fdb3b7d92bc0ea5f6852ec6c5f95942d54c1739a5c",
+      "bytes": 3306
+    },
+    "experiments/noise_v2/fetch_holdout.py": {
+      "sha256": "965481f2d5ed3120c41af3888abf8e6ed65d906276413b9e6f85ab3018a6d407",
+      "bytes": 1273
+    },
+    "experiments/noise_v2/run_experiment.py": {
+      "sha256": "ddd69aad2bbd49c40e2ad7236db5b552a56148224638bb17657ea2dfd0fe877e",
+      "bytes": 11120
+    },
+    "local/mvp-code.zip": {
+      "sha256": "a06eb6323ebf68658ae626b97e8b98a75acbfbeb109b9e7a7556eadfe03b582c",
+      "bytes": 480259
+    },
+    "local/submission-code.zip": {
+      "sha256": "28776118e00a15f7f01dc509ae8a436903a2e457708ac35a105c52da8a1443c4",
+      "bytes": 2688283
+    },
+    "models/active.json": {
+      "sha256": "72adfa61f9a4475e324317f93f5c5d56d52c8ef352b28f29690b1dc32dff2cd0",
+      "bytes": 3479
+    },
+    "models/noise-v2-trees.json": {
+      "sha256": "856114a7693414db9652bb50e37ab527f958f84e75200b69ce07be28be24bff2",
+      "bytes": 767185
+    },
+    "possession_model/__init__.py": {
+      "sha256": "449dad4bb18019700401a977f8446b623dcee6a3a7f05d15526fc71c29caa4cb",
+      "bytes": 55
+    },
+    "possession_model/decoder.py": {
+      "sha256": "410dc8b086a37b3f15a6545760ea114af099929da45d81ce4a6107c72e1af2da",
+      "bytes": 7039
+    },
+    "possession_model/evidence.py": {
+      "sha256": "f5b2e738022be102db47586271c2bc0669e72744b08c727074bcbae1877c72a9",
+      "bytes": 7078
+    },
+    "possession_model/features.py": {
+      "sha256": "8d2dae5785d1c485e6a1ae20c68e29358906e02a6ff4b053d8da75b1117fb3d8",
+      "bytes": 17746
+    },
+    "possession_model/pipeline.py": {
+      "sha256": "22b3950cda12c58080b9b21441c8149af93ee464908cf76616d123e7f88a6204",
+      "bytes": 5008
+    },
+    "possession_model/schema.py": {
+      "sha256": "787f738d9a431c961160061a0d509bb93ee850a884e229645de3f0d05e5be470",
+      "bytes": 746
+    },
+    "possession_model/trees.py": {
+      "sha256": "64e5f39b5e5e36a7a58c767e090a8d169b7a953b2dc2e1ed2e84f91fdd672059",
+      "bytes": 9588
+    },
+    "review.ps1": {
+      "sha256": "1c41618193379b9af9c23d1646f67a1f303fa4a561ed208195c875668af4f961",
+      "bytes": 669
+    },
+    "review_app/__init__.py": {
+      "sha256": "1b80b06008334a8140a9d585aca174d8ce9ef3913ca14a52f9626c3d2181c004",
+      "bytes": 70
+    },
+    "review_app/__main__.py": {
+      "sha256": "3b6e8ad0c2a8b19976fe43eb46e0f6851b68462ad9d9ae1571a402bf8a502b6a",
+      "bytes": 1318
+    },
+    "review_app/exporting.py": {
+      "sha256": "38a3d8ed48bddf9626dcccb77e87e488a2128d152e371a17bd5d588fca789468",
+      "bytes": 25789
+    },
+    "review_app/server.py": {
+      "sha256": "fee390c75b95c321898f453c2b25855df49fd78b7e75f54df6a1f8f48b033d11",
+      "bytes": 8632
+    },
+    "review_app/state.py": {
+      "sha256": "cde2dd945e928b19b0778114af3df349b061c602b7f2e52f14403245636f4a94",
+      "bytes": 14649
+    },
+    "review_app/static/app.css": {
+      "sha256": "8794600c89969dd4812544c1318aba39e5e00336cb97f70a8e5e89a616057b38",
+      "bytes": 33738
+    },
+    "review_app/static/app.js": {
+      "sha256": "688e0afc4ab17d2a6aed44ad58b44c8c1e86ce6d1eb7a5e4373e65187bf9d23f",
+      "bytes": 25264
+    },
+    "review_app/static/index.html": {
+      "sha256": "f99eb7b324dc246449974e04e55c16257406df818b081a27636a5c0c5c282600",
+      "bytes": 14574
+    },
+    "stop-review.ps1": {
+      "sha256": "2d6abc84b0f300879354406b8a9f4c73e2bd11aa8397975f60b78cbdafd0b723",
+      "bytes": 596
+    },
+    "submissions/candidate.csv": {
+      "sha256": "d000a49eb8db71ac94da4877abe5b85506d05be233db1f43644df1e4c9e653fd",
+      "bytes": 1682773
+    },
+    "tools/build_mvp_package.py": {
+      "sha256": "912f608564300c0c16c801f7870b975821a6a4207cb3f182ecfde31a84d6845d",
+      "bytes": 614
+    }
+  },
+  "accepted_mvp_freeze_matches": true
+}

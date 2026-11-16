@@ -1,0 +1,32 @@
+{
+  "emitter": "trees",
+  "transition_seconds": 0.5,
+  "tag_weight": 0.0,
+  "validation_mean_spell_f1": 0.4589603203776432,
+  "validation_mean_macro_f1": 0.8588000628478685,
+  "selection_match": "J03WOY",
+  "training_match": "J03WOH",
+  "holdout_match": "J03WR9",
+  "model": "models/independent_trees.json",
+  "conditions": {
+    "clean": {},
+    "occluded": {
+      "ball_missing_fraction": 0.4,
+      "block_seconds": 4.0,
+      "seed": 20261115
+    }
+  },
+  "model_sha256": "abf4f2973003182ae8b1b40d3a5727624e59e78033571c774e46f0afd5a778f7",
+  "source_sha256": {
+    "possession_model/features.py": "1c8d3e31af1fb51e311edc1333eb2e72527adb0e389427f915f7dca2f4b2f03b",
+    "possession_model/evidence.py": "55b655cf624e12780a559390597f8984cf5033c13914db625abcb8169e11b06b",
+    "possession_model/decoder.py": "410dc8b086a37b3f15a6545760ea114af099929da45d81ce4a6107c72e1af2da",
+    "possession_model/trees.py": "425698850e1a5fbfc3d2e5548f7dc1861efefddeac9374d4b93613666fbeabe1",
+    "possession_model/pipeline.py": "51161eb061384caec129c044976001b2e2154687a4cdc943bd09f8b34565aa02",
+    "possession_model/schema.py": "787f738d9a431c961160061a0d509bb93ee850a884e229645de3f0d05e5be470",
+    "validation/sportec.py": "7ef03d2e71de26a65c7570945fb161a45c1691ba9c8709ce458655e571cfa569",
+    "validation/metrics.py": "89a8ca52fb72bdde51fcb739504b20b5a7642913f8f2e2c08604e022415a4fa9",
+    "tools/train_and_validate.py": "f3388329cc02b8e0adfb307662b602a84d0487727534a5ad1253d624f615f99f"
+  },
+  "selection_rule": "Maximum mean clean/occluded spellF1, macroF1 tie; no challenge GT opened"
+}

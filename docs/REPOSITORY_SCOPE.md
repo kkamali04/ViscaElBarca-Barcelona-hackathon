@@ -1,0 +1,35 @@
+# Repository scope and provenance
+
+The original MVP ZIP has 106 code/model/document members. It excludes actual
+timelines and match assets. Its existing .gitignore is bound by both retained
+legacy manifests, so it remains byte exact. setup-git.ps1 configures the tracked
+.gitignore.team as the repository-local core.excludesFile using a resolved absolute
+path in each clone, together with .githooks, pull.ff=only and pull.rebase=false.
+Clone with --config core.autocrlf=false before the first checkout; setup-git.ps1
+also keeps core.autocrlf=false locally so exact manifest-bound bytes are preserved.
+Run that script before adding local data or environments. Git has no size-based
+ignore syntax; the preserved hooks enforce the 100 MB repository rule, while this
+curated handoff is checked under 50 MB per file.
+
+PACKAGE_MANIFEST.json covers only the 106-member runtime export scope. Its README
+entry is refreshed for the teammate guide; all other entries and model/runtime
+members remain exact. ESTIMATOR_PACKAGE_MANIFEST.json retains historical estimator
+provenance and references intentionally excluded old GT/baseline members; its
+README corresponds to ESTIMATOR_README.md, not the teammate README.
+TEAM_REPO_MANIFEST.json separately binds the extended repository, excluding itself
+and local generated/ignored files. It does not imply that the original export
+includes newly added experiments/research.
+
+Added evidence is an explicit selected list of aggregate historical reports.
+Some historical links name local controls or reports deliberately excluded here.
+The proposed public research dataset catalog is public metadata; actual bound
+study catalogs, ledgers, licensed match downloads and extra fitted models are
+excluded. Existing reports record only their historical tested versions. They
+do not validate a future change or authorize replay of a closed study.
+
+Frozen model JSONs were copied opaquely from the vetted base ZIP and verified
+against their manifest digests. No other model payload was copied. Organizer
+starter notebooks retain zero outputs. Third-party notices and source documents
+are retained. This private handoff is not a competition submission or a decision
+to publish code publicly. Private review packs contain actual CSVs and must stay
+local; only a checked code-only export is eligible for a later sharing decision.

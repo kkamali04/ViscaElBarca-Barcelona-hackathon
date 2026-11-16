@@ -1,0 +1,70 @@
+{
+  "scope": "Post-freeze coverage diagnostics from existing feature caches only; no truth arrays opened or predictions/scoring rerun",
+  "used_for_selection_or_tuning": false,
+  "rows": [
+    {
+      "match": "J03WOY",
+      "condition": "clean",
+      "graded_frames": 142536,
+      "v1_finite_motion_fraction": 0.99326485940394,
+      "v2_finite_motion_fraction": 0.9725402705281473,
+      "v2_transform_seconds": 0.018436599988490343,
+      "feature_bytes": 4846224
+    },
+    {
+      "match": "J03WOY",
+      "condition": "occluded",
+      "graded_frames": 142536,
+      "v1_finite_motion_fraction": 0.5714275691755065,
+      "v2_finite_motion_fraction": 0.5115619913565695,
+      "v2_transform_seconds": 0.02772059998824261,
+      "feature_bytes": 4846224
+    },
+    {
+      "match": "J03WOY",
+      "condition": "long_gaps",
+      "graded_frames": 142536,
+      "v1_finite_motion_fraction": 0.587704158949318,
+      "v2_finite_motion_fraction": 0.559255205702419,
+      "v2_transform_seconds": 0.018428599985782057,
+      "feature_bytes": 4846224
+    },
+    {
+      "match": "J03WOY",
+      "condition": "combined",
+      "graded_frames": 142536,
+      "v1_finite_motion_fraction": 0.5468723690857047,
+      "v2_finite_motion_fraction": 0.43349048661390804,
+      "v2_transform_seconds": 0.01927879999857396,
+      "feature_bytes": 4846224
+    },
+    {
+      "match": "J03WMX",
+      "condition": "clean",
+      "graded_frames": 145967,
+      "v1_finite_motion_fraction": 0.9937588633047195,
+      "v2_finite_motion_fraction": 0.9745832962244891,
+      "v2_transform_seconds": 0.020038199989357963,
+      "feature_bytes": 4962878
+    },
+    {
+      "match": "J03WMX",
+      "condition": "occluded",
+      "graded_frames": 145967,
+      "v1_finite_motion_fraction": 0.5712592572293738,
+      "v2_finite_motion_fraction": 0.5110333157494502,
+      "v2_transform_seconds": 0.019033000018680468,
+      "feature_bytes": 4962878
+    },
+    {
+      "match": "J03WMX",
+      "condition": "combined",
+      "graded_frames": 145967,
+      "v1_finite_motion_fraction": 0.5456164749566683,
+      "v2_finite_motion_fraction": 0.42737742092390746,
+      "v2_transform_seconds": 0.03337630000896752,
+      "feature_bytes": 4962878
+    }
+  ],
+  "training_peak_memory": "not instrumented; inference process peak measured separately"
+}

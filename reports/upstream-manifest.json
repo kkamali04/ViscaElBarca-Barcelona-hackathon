@@ -1,0 +1,178 @@
+{
+  "verified_at": "2026-11-14",
+  "repository": "https://github.com/metrica-sports/more-than-a-hack-2027",
+  "commit": "f8f2629ff1e0985f81d7e59d8413678514ee1530",
+  "tree": "f8f2629ff1e0985f81d7e59d8413678514ee1530",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha": "c6eda5a79533f677d619ba45736c801e006f1964",
+      "size": 3002
+    },
+    {
+      "path": "CHALLENGE.md",
+      "sha": "a3cdb147ea780b27fca454239cfee5627c245928",
+      "size": 7030
+    },
+    {
+      "path": "CITATION.cff",
+      "sha": "122df94561eea1924231426b47e67041986f8710",
+      "size": 1182
+    },
+    {
+      "path": "DATA.md",
+      "sha": "6bd2f042c00d06d6391472926ec1bc1a15201a17",
+      "size": 12465
+    },
+    {
+      "path": "EVALUATION.md",
+      "sha": "0c281c41787cdbb77b1f8b6aba9403f28cf9c4a2",
+      "size": 6916
+    },
+    {
+      "path": "FAQ.md",
+      "sha": "c45ff9141f2f59e5ec75e7dace55b575b4519878",
+      "size": 7473
+    },
+    {
+      "path": "LICENSE",
+      "sha": "d9330daa5cb9bd8c01412b938e5c15539cb5d799",
+      "size": 1603
+    },
+    {
+      "path": "OVERVIEW.md",
+      "sha": "2f9c83683cfdcc142aeeaa16d0bb014d654ee1ab",
+      "size": 13622
+    },
+    {
+      "path": "README.md",
+      "sha": "2d30a8a3848f0ed5c38536caa66f4c2b411b4156",
+      "size": 8633
+    },
+    {
+      "path": "RULES.md",
+      "sha": "d26a3835a93e800cc2039723943a250d90a44c20",
+      "size": 5965
+    },
+    {
+      "path": "SUBMISSION.md",
+      "sha": "ef703837ba6855dba010704256d7375752a559f5",
+      "size": 4454
+    },
+    {
+      "path": "data/README.md",
+      "sha": "e82c9d0cf550c31335fb715b6c16df86903d4fed",
+      "size": 2161
+    },
+    {
+      "path": "evaluation/gt/BAR-ATH_possession_gt_public.csv",
+      "sha": "99564b6d6c81805e404e4b16d890f4a62020ae49",
+      "size": 1682773
+    },
+    {
+      "path": "evaluation/gt/BAR-ATH_possession_gt_public_meta.json",
+      "sha": "c87adb00e89ee22b13770b2d88296b838c4f394b",
+      "size": 1056
+    },
+    {
+      "path": "evaluation/possession_metrics.py",
+      "sha": "767494a053628cbdc81a8e9deaf43ef21cc7e58a",
+      "size": 33370
+    },
+    {
+      "path": "evaluation/results/README.md",
+      "sha": "a7f2d5ae2cfac43a730b4c248a9462f31e0eacc2",
+      "size": 1574
+    },
+    {
+      "path": "evaluation/results/baseline_raw.csv",
+      "sha": "5551ddcb06b969e14f0cbe556e8ff921e8fe77c2",
+      "size": 1682773
+    },
+    {
+      "path": "evaluation/results/baseline_smooth125.csv",
+      "sha": "fb75527cf9344d4c5579e5e65dd84d834556bca9",
+      "size": 1682773
+    },
+    {
+      "path": "evaluation/results/baseline_smooth25.csv",
+      "sha": "a2ef72adeab130a2de1329e8a2758da81b175334",
+      "size": 1682773
+    },
+    {
+      "path": "evaluation/results/baseline_smooth50.csv",
+      "sha": "1e1e46757128d5434162b2e3e05195ea00635371",
+      "size": 1682773
+    },
+    {
+      "path": "evaluation/run_evaluation.py",
+      "sha": "16adc82b66ec15c7d4bb1ca86a72eceb7327d45f",
+      "size": 29419
+    },
+    {
+      "path": "evaluation/validate_submission.py",
+      "sha": "9b25e3fc9f4973f5b58f1d58fd19ef80d34b206b",
+      "size": 4192
+    },
+    {
+      "path": "games.py",
+      "sha": "d330dc11b3c54d9c704f0c9df7de111395f9f1d4",
+      "size": 10301
+    },
+    {
+      "path": "requirements-starter.txt",
+      "sha": "13e7f03fa45b14da1b7e7eff8280cfecb194be23",
+      "size": 533
+    },
+    {
+      "path": "requirements.txt",
+      "sha": "2f28c247b5bcae982b66d5fc63c41583963558a0",
+      "size": 441
+    },
+    {
+      "path": "starter/01_smart_tagging.ipynb",
+      "sha": "dbb454e1716cc620af9e3d314012ed82727acdcf",
+      "size": 7022
+    },
+    {
+      "path": "starter/02_tracking_atd.ipynb",
+      "sha": "5dbe5bc7e0a39b7ccd2fe9b41ee2c9452e80f9de",
+      "size": 8301
+    },
+    {
+      "path": "starter/03_first_submission.ipynb",
+      "sha": "cb55f666415b5c5896a9f734ba01cc4461566376",
+      "size": 11113
+    },
+    {
+      "path": "starter/baseline.py",
+      "sha": "32369d601823dd4806433ba296786f1e7988cd31",
+      "size": 10084
+    },
+    {
+      "path": "starter/load_atd.py",
+      "sha": "e002e6a85add76c9c8d4610c6ecfb0f43c55fa6b",
+      "size": 7121
+    },
+    {
+      "path": "starter/load_homography.py",
+      "sha": "e53314c177bb0a6b72e52ad49b89c46011dcb6fa",
+      "size": 7021
+    },
+    {
+      "path": "starter/load_smart_tagging.py",
+      "sha": "371148cde187a072d9b76a114815502ce7fcd83d",
+      "size": 6092
+    },
+    {
+      "path": "starter/make_dummy_submission.py",
+      "sha": "96b8016f0af68f1648bedf2aa8f546422908dc9f",
+      "size": 2954
+    },
+    {
+      "path": "starter/utils.py",
+      "sha": "dbc6df2946092bccf19f31a57ff523625911a632",
+      "size": 5624
+    }
+  ]
+}

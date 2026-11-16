@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111d2d">
+  <title>Touchline — Possession review</title>
+  <link rel="stylesheet" href="/static/app.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Skip to review</a>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Touchline home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>touchline<span class="brand-dot">.</span></a>
+    <nav aria-label="Main navigation"><a class="nav-active" href="#workspace">Match review</a><a href="#method">The method</a><a href="#export">Review pack</a></nav>
+    <div class="environment" id="environment"><span class="status-dot" aria-hidden="true"></span><span id="mode-label">Connecting</span></div>
+  </header>
+
+  <main id="workspace">
+    <div class="page-heading">
+      <div><p class="eyebrow">MORE THAN A HACK 2027 <span>/</span> POSSESSION LAB</p><h1>The game, frame by frame<span>.</span></h1><p class="heading-description">Follow the play. Review the predictions. Take the evidence with you.</p></div>
+      <div class="local-note"><span class="privacy-icon" aria-hidden="true">↳</span><span>Runs on this machine<br><strong>No match uploads</strong></span></div>
+    </div>
+
+    <div class="notice" id="connection-notice" role="status" aria-live="polite" hidden></div>
+    <div class="demo-notice" id="demo-notice" hidden><span class="demo-tag">SYNTHETIC DEMO</span><span>An invented pitch and sample predictions demonstrate the workflow. They are not match evidence.</span></div>
+
+    <section class="match-shell" aria-labelledby="match-title">
+      <div class="match-header"><div class="match-heading"><p class="eyebrow">MATCH WORKSPACE</p><h2 id="match-title">Preparing your review<span class="loading-dots" aria-hidden="true">…</span></h2></div><div class="match-meta"><span id="match-frames">Awaiting match metadata</span><span class="meta-separator" aria-hidden="true">·</span><span id="match-fps">— fps</span></div></div>
+      <div class="review-grid">
+        <div class="playback-column">
+          <div class="video-stage" id="video-stage">
+            <video id="match-video" preload="metadata" playsinline aria-label="Tactical match video" hidden></video>
+            <div class="synthetic-stage" id="synthetic-stage" hidden>
+              <svg class="pitch" viewBox="0 0 1000 560" role="img" aria-label="Invented football pitch for the synthetic demonstration">
+                <defs><pattern id="pitch-stripes" width="180" height="560" patternUnits="userSpaceOnUse"><rect width="90" height="560" fill="#153e3d"/><rect x="90" width="90" height="560" fill="#174443"/></pattern><radialGradient id="pitch-light"><stop stop-color="#64b4a0" stop-opacity=".13"/><stop offset="1" stop-color="#071a25" stop-opacity=".45"/></radialGradient><filter id="ball-glow"><feGaussianBlur stdDeviation="6"/></filter></defs>
+                <rect width="1000" height="560" fill="url(#pitch-stripes)"/><rect width="1000" height="560" fill="url(#pitch-light)"/>
+                <g fill="none" stroke="#a5c6bc" stroke-width="2" opacity=".4"><rect x="55" y="45" width="890" height="470" rx="1"/><path d="M500 45v470"/><circle cx="500" cy="280" r="67"/><circle cx="500" cy="280" r="2" fill="#a5c6bc"/><path d="M55 142h143v276H55m0-195h53v114H55m890-195H802v276h143m0-195h-53v114h53"/><path d="M198 226a67 67 0 0 1 0 108m604-108a67 67 0 0 0 0 108"/><path d="M55 55a10 10 0 0 0 10-10m870 0a10 10 0 0 0 10 10M55 505a10 10 0 0 1 10 10m870 0a10 10 0 0 1 10-10"/></g>
+                <g class="pitch-home" fill="#dd69a6" stroke="#f3bbd7" stroke-width="2"><circle cx="85" cy="280" r="8"/><circle cx="280" cy="135" r="8"/><circle cx="265" cy="235" r="8"/><circle cx="270" cy="345" r="8"/><circle cx="305" cy="445" r="8"/><circle cx="430" cy="190" r="8"/><circle cx="450" cy="320" r="8"/><circle cx="460" cy="425" r="8"/><circle cx="590" cy="120" r="8"/><circle cx="605" cy="250" r="8"/><circle cx="660" cy="385" r="8"/></g>
+                <g class="pitch-away" fill="#6c9eea" stroke="#b3d0fb" stroke-width="2"><circle cx="915" cy="280" r="8"/><circle cx="735" cy="140" r="8"/><circle cx="770" cy="245" r="8"/><circle cx="780" cy="340" r="8"/><circle cx="730" cy="442" r="8"/><circle cx="600" cy="180" r="8"/><circle cx="585" cy="330" r="8"/><circle cx="600" cy="450" r="8"/><circle cx="455" cy="125" r="8"/><circle cx="495" cy="265" r="8"/><circle cx="490" cy="370" r="8"/></g>
+                <g id="demo-ball"><circle cx="530" cy="290" r="20" fill="#b5f7cf" opacity=".35" filter="url(#ball-glow)"/><circle cx="530" cy="290" r="5" fill="#f8fff9"/></g>
+              </svg>
+              <span class="stage-caption">ILLUSTRATIVE TACTICAL VIEW</span>
+            </div>
+            <div class="stage-empty" id="stage-empty"><span class="empty-pitch" aria-hidden="true">⌗</span><h3 id="stage-empty-title">Opening the workspace</h3><p id="stage-empty-description">Checking local inputs and prediction status.</p></div>
+            <div class="stage-topline" id="stage-topline" hidden><span class="stage-live"><span aria-hidden="true"></span><span id="stage-source">LOCAL VIDEO</span></span><span class="stage-view">TACTICAL VIEW <span aria-hidden="true">↗</span></span></div>
+            <div class="prediction-overlay" id="prediction-overlay" hidden><span class="prediction-indicator" id="prediction-indicator" aria-hidden="true"></span><div><span class="overlay-eyebrow">PREDICTED STATE</span><strong id="current-team">Awaiting predictions</strong></div><span class="label-code" id="current-label">—</span></div>
+          </div>
+          <div class="transport"><button class="icon-button play-button" id="play-toggle" aria-label="Play video" disabled><svg id="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7z"/></svg><svg id="pause-icon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M7 5h4v14H7zm7 0h4v14h-4z"/></svg></button><span class="video-clock" id="video-clock">00:00:00 <span>/ —</span></span><span class="clock-label">VIDEO CLOCK</span><span class="transport-spacer"></span><label class="speed-control"><span class="sr-only">Playback speed</span><select id="playback-speed" aria-label="Playback speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label><button class="icon-button" id="fullscreen-toggle" aria-label="Enter fullscreen video" disabled><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4"/></svg></button></div>
+        </div>
+
+        <aside class="match-insights" aria-label="Prediction summary">
+          <div class="insight-top"><p class="eyebrow">PREDICTIONS</p><span class="compact-status" id="output-status">Checking</span></div>
+          <h3>Who has the ball?</h3><p class="insight-description">A team state for every tracking frame.</p>
+          <div class="possession-heading"><span>Live-play possession</span><span class="info-mark" title="Home and away frames only. Dead-ball and no-answer frames are excluded." aria-label="Home and away frames only; dead-ball and no-answer frames excluded">i</span></div>
+          <div class="possession-values"><div><span class="team-name"><i class="home-dot"></i><span id="home-name">Home</span></span><strong id="home-possession">—<small>%</small></strong></div><div><span class="team-name"><i class="away-dot"></i><span id="away-name">Away</span></span><strong id="away-possession">—<small>%</small></strong></div></div>
+          <div class="possession-bar" aria-label="Live-play team possession ratio"><div class="home-share" id="home-share"></div><div class="away-share" id="away-share"></div></div>
+          <p class="ratio-note">Excludes dead-ball and no-answer frames.</p>
+          <dl class="summary-stats"><div><dt><i class="dead-dot"></i>Stopped / dead ball</dt><dd id="dead-time">—</dd></div><div><dt><i class="unknown-dot"></i>No answer / outside play</dt><dd id="unknown-time">—</dd></div><div><dt>Frames covered</dt><dd id="frame-coverage">—</dd></div></dl>
+          <div class="quality-note"><span class="quality-icon" aria-hidden="true">↗</span><p>Model predictions for review.<br><strong>Challenge accuracy is unknown.</strong></p></div>
+        </aside>
+      </div>
+
+      <div class="timeline-section">
+        <div class="timeline-heading"><div><h3>Possession timeline</h3><p>Scrub the match or jump between states.</p></div><div class="state-navigation"><button id="previous-state" class="small-button" disabled aria-label="Go to previous predicted state"><span aria-hidden="true">←</span> Previous</button><button id="next-state" class="small-button" disabled aria-label="Go to next predicted state">Next <span aria-hidden="true">→</span></button></div></div>
+        <div class="timeline-track" id="timeline-track"><canvas id="timeline-canvas" aria-label="Full-match predicted possession timeline"></canvas><input id="timeline-seek" type="range" min="0" max="1" value="0" step="1" aria-label="Seek to match frame" aria-valuetext="No timeline available" disabled><div class="timeline-placeholder" id="timeline-placeholder">The timeline appears when predictions are ready.</div></div>
+        <div class="timeline-ticks" id="timeline-ticks" aria-hidden="true"><span>00:00</span><span>—</span><span>—</span><span>—</span><span>—</span></div>
+        <div class="timeline-footer"><div class="timeline-legend"><span><i class="home-dot"></i><span id="legend-home">Home</span></span><span><i class="away-dot"></i><span id="legend-away">Away</span></span><span><i class="dead-dot"></i>Stopped</span><span><i class="unknown-dot"></i>No answer</span></div><span class="frame-counter" id="frame-counter">FRAME — / —</span></div>
+      </div>
+    </section>
+
+    <section class="workbench" aria-label="Generation and export">
+      <div class="generation-panel"><div class="section-number" aria-hidden="true">01 / GENERATE</div><h2>From tracking to a clear timeline.</h2><p class="section-description">Run the frozen candidate locally to regenerate the frame-by-frame possession CSV.</p><div class="run-state" id="run-state" aria-live="polite"><span class="run-dot" aria-hidden="true"></span><div><strong id="run-title">Checking local inputs</strong><p id="run-message">Connecting to the review service.</p></div><span id="run-elapsed"></span></div><div class="generation-actions"><button class="button button-dark" id="regenerate" disabled><span class="button-symbol" aria-hidden="true">↻</span><span id="regenerate-label">Regenerate CSV</span></button><a class="button button-outline disabled" id="download-csv" href="/download/candidate" aria-disabled="true" download><span aria-hidden="true">↓</span> Download CSV</a></div><p class="artifact-note" id="artifact-note">Prediction integrity and runtime appear after generation.</p></div>
+      <div class="export-panel" id="export"><div class="section-number" aria-hidden="true">02 / REVIEW & EXPORT</div><h2>Ready for a second look.</h2><p class="section-description">Bundle the candidate and supporting files for your team's review.</p><form id="export-form"><div class="export-fields"><label for="team-name">Team name<input id="team-name" name="team_name" placeholder="Your registered team name" autocomplete="organization" maxlength="120" required></label><label for="repository-url">Public repository <span>optional</span><input id="repository-url" name="repository_url" type="url" placeholder="https://github.com/your-team/repo" maxlength="500" autocomplete="url"></label></div><div class="export-actions"><button class="button button-mint" id="prepare-pack" type="submit" disabled>Prepare review pack <span aria-hidden="true">↗</span></button><span class="pack-note">Local download<br>Submission stays with you.</span></div></form><p class="export-feedback" id="export-feedback" role="status" aria-live="polite"></p><div class="supporting-downloads"><a id="download-code" class="disabled" href="/download/code" aria-disabled="true" download>Code ZIP <span aria-hidden="true">↓</span></a><a href="/download/technical" download>Technical draft <span aria-hidden="true">↓</span></a><span>Draft needs team completion.</span></div></div>
+    </section>
+
+    <section class="method-section" id="method" aria-labelledby="method-title"><div class="method-intro"><p class="eyebrow">A TRACEABLE WORKFLOW</p><h2 id="method-title">The path from movement to possession.</h2><p id="model-description">Tracking data flows through a local model to produce one prediction per frame.</p></div><ol class="workflow"><li><span class="workflow-index">01</span><h3>Tracking</h3><p>Local player and ball positions.</p></li><li><span class="workflow-index">02</span><h3>Model</h3><p id="model-name">Checking candidate</p></li><li><span class="workflow-index">03</span><h3>Timeline</h3><p>Predicted states alongside the video.</p></li><li><span class="workflow-index">04</span><h3>CSV</h3><p>One frame. One team-state label.</p></li></ol></section>
+    <details class="evidence-details" id="evidence-details"><summary>About validation & measured runtime <span aria-hidden="true">+</span></summary><div class="evidence-content"><div><h3>External validation</h3><p id="validation-notice">External validation is separate from the challenge match and does not establish hidden-match performance.</p><dl id="validation-scores" hidden><div><dt>Clean spell F1</dt><dd id="clean-score">—</dd></div><div><dt>Occluded spell F1</dt><dd id="occluded-score">—</dd></div><div><dt>Combined spell F1</dt><dd id="combined-score">—</dd></div></dl><p class="evidence-footnote" id="validation-match"></p></div><div><h3>Local execution</h3><dl><div><dt>Inference runtime</dt><dd id="runtime-total">Not measured</dd></div><div><dt>Peak process working set</dt><dd id="runtime-memory">Not measured</dd></div><div><dt>Tracking cache</dt><dd id="runtime-cache">—</dd></div></dl><p class="evidence-footnote">Measurements describe this local run. They are not a quality score.</p></div></div></details>
+  </main>
+  <footer class="site-footer"><a class="brand footer-brand" href="/">touchline<span class="brand-dot">.</span></a><span>A closer look at the beautiful game.</span><span>MORE THAN A HACK 2027</span></footer>
+  <div class="sr-only" id="announcement" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

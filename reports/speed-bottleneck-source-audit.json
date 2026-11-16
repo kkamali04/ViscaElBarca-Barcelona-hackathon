@@ -1,0 +1,204 @@
+{
+  "do_not_optimize_without_new_evidence": [
+    "FeatureAccumulator float64/float32 arithmetic and scalar median/nearest-set operations define existing features; vectorization can change precision, causal reset or median semantics",
+    "Do not replace local-linear np.convolve, change RNG partitioning/generators, row caps or downsampling, tree parameters/thread count, fit order, all-row parity checks or synthetic threshold probes",
+    "fit_numeric.fit_seconds includes fit, export, numeric construction and full-row/probe parity; source alone cannot separate its historic costs",
+    "No historic train timing breakdown or end-to-end speedup is measured by this audit"
+  ],
+  "elapsed_audit_fixture_seconds": 0.154332,
+  "forbidden_accesses_performed": [],
+  "invented_operation_evidence": {
+    "advanced_index_boundary_selection_already_owns_c_contiguous": true,
+    "advanced_index_selection_already_owns_float32_c_contiguous": true,
+    "boundary_selection_redundant_copy_bytes_for_four_rows": 448,
+    "combined_receipt_replays_full_jitter_draw_values_formula": "N*(S+1)*2 float64 values",
+    "combined_receipt_replays_full_teleport_draw_values_formula": "N*2 float64 values",
+    "invented_clean_feature_build_profile": [
+      {
+        "calls": 628,
+        "cumulative_seconds": 0.024533600000000003,
+        "function": "_median",
+        "self_seconds": 0.0045561
+      },
+      {
+        "calls": 1,
+        "cumulative_seconds": 0.000906,
+        "function": "robustify_ball_motion",
+        "self_seconds": 0.0001807
+      },
+      {
+        "calls": 628,
+        "cumulative_seconds": 0.0281917,
+        "function": "median",
+        "self_seconds": 0.0008322000000000001
+      },
+      {
+        "calls": 1,
+        "cumulative_seconds": 0.0018653,
+        "function": "finalize_features",
+        "self_seconds": 0.0002452
+      },
+      {
+        "calls": 420,
+        "cumulative_seconds": 0.07084760000000001,
+        "function": "push",
+        "self_seconds": 0.0248651
+      },
+      {
+        "calls": 1,
+        "cumulative_seconds": 0.0009747000000000001,
+        "function": "validate_observations",
+        "self_seconds": 0.0004782
+      }
+    ],
+    "one_combined_condition_feature_receipt_validate_observations_calls": 3,
+    "one_emitter_feature_matrix_period_slices_calls": 12,
+    "one_emitter_feature_matrix_rolling_mean_calls": 11,
+    "one_feature_build_accumulator_pushes": 420,
+    "redundant_array_copy_additional_bytes_for_four_emitter_rows": 352,
+    "scratch_hoist_boundary_valid_byte_identical": true,
+    "scratch_hoist_boundary_values_byte_identical": true,
+    "two_run_boundary_original_cumsum_calls": 54,
+    "two_run_boundary_scratch_hoisted_cumsum_calls": 30
+  },
+  "limitations": [
+    "420-frame synthetic fixture; operation counts and allocation facts do not predict full-input wall time",
+    "No sklearn imported or fitted, no stage/Jobs invocation, no study/control/ledger, model, prediction, restricted input, CSV, video or GT read",
+    "No protected source edits; scratch transformation is an illustration requiring future independent blind acceptance"
+  ],
+  "recommendations": [
+    {
+      "basis": "24 identical-namespace builds cover 10 unique pairs; 14 builds (58.33%) are duplicates by source call graph",
+      "change": "Versioned same-attempt reuse of exact immutable fixture/condition features, receipts and row products across curricula",
+      "preservation": "Keep row order, dtype, RNG call shapes/names/seeds, sampling, weights, fit order and all digests unchanged; validate exact byte parity independently",
+      "priority": 1,
+      "tradeoff": "Keeping all dense features/strata resident raises peak memory; use a measured bounded lifecycle or authorized ephemeral storage, never an unguarded cross-attempt cache"
+    },
+    {
+      "basis": "Scratch invented fixture: total cumsum calls 54 to 30 across two runs, including the unchanged reliable-mask cumsums",
+      "change": "In a new version, hoist boundary per-base finite mask and identical prefix sums/counts outside the two-window loop",
+      "preservation": "Same np.cumsum dtype/order and downstream arithmetic; invented values/validity byte comparison only, not full implementation acceptance",
+      "priority": 2
+    },
+    {
+      "basis": "Float32 fancy-index results are already owned C-contiguous arrays on invented fixture",
+      "change": "Avoid second copy after typed advanced row indexing in emitter_stratum and boundary row selection",
+      "preservation": "Do not replace ownership boundaries with views; confirm dtype, order, writeability and no aliasing under independent fixtures",
+      "priority": 3
+    },
+    {
+      "basis": "Three validate_observations calls per stratum plus ObservationBatch replacement validation; timestamp validation iterates in Python",
+      "change": "Reuse trusted same-attempt validation of invariant immutable observation arrays and metadata",
+      "preservation": "Keep public entry-point malformed-input rejection and capability checks; skip only provably unchanged fields through a private validated ownership path",
+      "priority": 4
+    },
+    {
+      "basis": "Combined receipt redraws full normal/teleport arrays and repeats block masking solely for a reproducibility receipt",
+      "change": "Reuse generated corruption masks/draw hashes for condition_receipt within the same operation",
+      "preservation": "Hash the original unscaled float64 jitter draws before in-place *.25; retain all RNG call shapes/order, logical masks, NaN normalization and exact receipt bytes",
+      "priority": 5
+    },
+    {
+      "basis": "One emitter feature_matrix call uses 11 rolling_mean and 12 period_slices calls; close H/A, set motion and observed use repeated input signals",
+      "change": "Reuse emitter rolling-window finite prefix sums for signals smoothed at multiple radii; precompute positive period slices",
+      "preservation": "Preserve current float32 conversion, float64 cumulative sums, int32 counts, radius bounds, NaNs and period breaks; no numerical reassociation",
+      "priority": 6
+    }
+  ],
+  "schema_version": 1,
+  "scope": "read-only source audit plus scratch-only invented microfixture; no actual stage attribution",
+  "source_counts": {
+    "avoidable_duplicate_strata_builds": 14,
+    "boundary_feature_calls": 8,
+    "condition_occurrences_per_fixture": {
+      "ball12": 1,
+      "ball4": 3,
+      "clean": 3,
+      "combined": 3,
+      "stale_players": 2
+    },
+    "emitter_feature_matrix_calls": 16,
+    "feature_accumulator_push_formula": "12*(N_fixture_1+N_fixture_2); unique-only 5*(N_fixture_1+N_fixture_2)",
+    "fixture_count": 2,
+    "model_curricula": {
+      "C0": [
+        "clean",
+        "ball4",
+        "ball12",
+        "combined"
+      ],
+      "C1": [
+        "clean",
+        "ball4",
+        "combined",
+        "stale_players"
+      ],
+      "boundary": [
+        "clean",
+        "ball4",
+        "combined",
+        "stale_players"
+      ]
+    },
+    "protocol_sha256_calls_inside_condition_loop": 24,
+    "same_attempt_adapter_loads_already_reused": 2,
+    "source_strata_builds": 24,
+    "target_array_digest_calls": 6,
+    "unique_emitter_feature_matrices": 10,
+    "unique_fixture_conditions": 10,
+    "unique_target_arrays": 2,
+    "validation_calls_over_three_curricula": 72
+  },
+  "source_identities": {
+    "experiments/noise_v2/features.py": {
+      "bytes": 3306,
+      "sha256": "830397e5574e2dc7dde590fdb3b7d92bc0ea5f6852ec6c5f95942d54c1739a5c"
+    },
+    "experiments/v3/boundary.py": {
+      "bytes": 18874,
+      "sha256": "768187cb624c7ff1c7b9b0d560b8640d435720d0a95611dbc48904e62f1f7475"
+    },
+    "experiments/v3/contracts.py": {
+      "bytes": 9199,
+      "sha256": "3c82ff9d69526e40085bb36fbd68e75f2e302f8648472628ebee23394356a0ab"
+    },
+    "experiments/v3/corruption.py": {
+      "bytes": 19853,
+      "sha256": "2c5ebbcf18b59dd28dad5c481ea407a30feb0e944764f5ff26e1c9d8c4a870b1"
+    },
+    "experiments/v3/training.py": {
+      "bytes": 18225,
+      "sha256": "fd66adbcf48d0567f293f8796ecbdd118d556887175a1175bfbcf9d13baed919"
+    },
+    "possession_model/evidence.py": {
+      "bytes": 7078,
+      "sha256": "f5b2e738022be102db47586271c2bc0669e72744b08c727074bcbae1877c72a9"
+    },
+    "possession_model/features.py": {
+      "bytes": 17746,
+      "sha256": "8d2dae5785d1c485e6a1ae20c68e29358906e02a6ff4b053d8da75b1117fb3d8"
+    },
+    "possession_model/schema.py": {
+      "bytes": 746,
+      "sha256": "787f738d9a431c961160061a0d509bb93ee850a884e229645de3f0d05e5be470"
+    }
+  },
+  "source_locations": {
+    "boundary_prefix_sum_repeat": "experiments/v3/boundary.py:113-141",
+    "curriculum_repetition": "experiments/v3/training.py:25-27,169-212,278-318",
+    "emitter_repeated_smoothing": "possession_model/evidence.py:24-39,94-123",
+    "per_frame_python_and_casts": "experiments/v3/corruption.py:224-230; possession_model/features.py:101-174",
+    "receipt_rng_replay": "experiments/v3/corruption.py:280-317",
+    "redundant_post_index_copies": "experiments/v3/training.py:103,200",
+    "repeated_observation_validation": "experiments/v3/corruption.py:110-160,164,225,287"
+  },
+  "source_unchanged": true,
+  "synthetic_fixture": {
+    "frames": 420,
+    "numpy_version": "2.4.3",
+    "origin": "independently invented deterministic trigonometric coordinates",
+    "positive_runs": 2,
+    "slots": 6,
+    "source_timestamp_rows": 400
+  }
+}

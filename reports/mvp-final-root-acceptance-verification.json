@@ -1,0 +1,47 @@
+{
+  "checks": {
+    "report_accepted": true,
+    "browser_checks_pass": true,
+    "report_matches_agent_digest": true,
+    "tested_zip_directly_rehashed": true,
+    "all_tested_sources_match_current": true,
+    "minimal_environment_no_sklearn": true,
+    "three_actual_csvs_directly_rehashed": true,
+    "root_independent_every_row_and_public_boundaries": true,
+    "actual_worker_OS_peak_exactly_matches_report": true,
+    "worker_report_actual_binding": true,
+    "four_synthetic_screenshots_directly_rehashed": true,
+    "complete_final_source_freeze_intact": true,
+    "root_actual_official_validator": true
+  },
+  "tested_zip_sha256": "a06eb6323ebf68658ae626b97e8b98a75acbfbeb109b9e7a7556eadfe03b582c",
+  "report_sha256": "d6a220a1159a2871f4aae48c624fa1669806721a59a82a23ada4aeb78e706107",
+  "harness_sha256": "30dc06a1d08ab025e09d3f3ffcc74b992004a3f06dbad3537181d60a09b03cf1",
+  "actual_csv_paths": [
+    "local\\mvp-final-blind-20261115-134140\\private-run-1.csv",
+    "local\\mvp-final-blind-20261115-134140\\private-run-2.csv",
+    "local\\mvp-final-blind-20261115-134140\\package\\local\\review-mvp\\candidate.csv"
+  ],
+  "actual_csv_sha256": [
+    "d000a49eb8db71ac94da4877abe5b85506d05be233db1f43644df1e4c9e653fd",
+    "d000a49eb8db71ac94da4877abe5b85506d05be233db1f43644df1e4c9e653fd",
+    "d000a49eb8db71ac94da4877abe5b85506d05be233db1f43644df1e4c9e653fd"
+  ],
+  "top_level_checks": 47,
+  "browser_checks": 27,
+  "actual_inference_worker_peak_bytes": 119586816,
+  "uncached_wall_seconds": 53.70747229998233,
+  "official_root_validator_log_sha256": "50913007cc98445ec638755fae8a4f7597e21eca10aad5415e61845378f4d141",
+  "root_visual_review": [
+    "synthetic-after-generation.png",
+    "synthetic-mobile.png"
+  ],
+  "limits": [
+    "Local review MVP acceptance only; challenge-match accuracy and hidden performance were not measured.",
+    "Real match video playback was not tested; the authorized fresh package contains only tracking XML/TXT. Browser playback uses explicitly synthetic demo data.",
+    "Headless Chromium tested; native fullscreen was replaced with an independently injected rejection to test graceful fallback.",
+    "Public repository availability, registration/eligibility, organiser form, publication and submission remain owner actions.",
+    "Browser layout bounds and interactions were checked; no claim of cross-browser or broad accessibility certification."
+  ],
+  "scope": "Exact final MVP acceptance; model unchanged, no hidden accuracy or private footage inspection."
+}

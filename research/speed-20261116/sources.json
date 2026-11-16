@@ -1,0 +1,65 @@
+{
+  "snapshot_date": "2026-11-16",
+  "scope": "Public primary-source documentation only; no local project/data/model/GT inspection or fitting",
+  "retrieval": {
+    "discovery": "Connected Exa web_search_exa; one Firecrawl developer-category search returned no web results and received feedback",
+    "verification": "Connected Firecrawl firecrawl_scrape with maxAge=0, onlyMainContent=true, markdown format",
+    "installed_versions_checked": false,
+    "fetched_text_saved": false
+  },
+  "sources": [
+    {
+      "id": "hgb-api",
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.HistGradientBoostingClassifier.html",
+      "title": "HistGradientBoostingClassifier — scikit-learn 1.9.1 documentation",
+      "observed_version": "1.9.1",
+      "http_status": 200,
+      "scrape_id": "01a1e5b7-4277-72c4-adcc-d14f7003da59",
+      "supports": ["Existing histogram binning", "max_bins semantics", "random_state", "warm_start and early_stopping are model behavior"]
+    },
+    {
+      "id": "sklearn-parallelism",
+      "url": "https://scikit-learn.org/stable/computing/parallelism.html",
+      "title": "10.3. Parallelism and resource management — scikit-learn 1.9.1 documentation",
+      "observed_version": "1.9.1",
+      "http_status": 200,
+      "scrape_id": "01a1e5b7-4279-755b-81c0-8b0938ff5c31",
+      "supports": ["HGB OpenMP", "Thread controls", "Oversubscription", "Performance requires experiment"]
+    },
+    {
+      "id": "numpy-copies",
+      "url": "https://numpy.org/doc/stable/user/basics.copies.html",
+      "title": "Copies and views — NumPy v2.5 Manual",
+      "observed_version": "2.5",
+      "page_build_last_update": "Jun 28, 2026",
+      "http_status": 200,
+      "scrape_id": "01a1e5b7-0bec-719e-981a-d404a789d6c9",
+      "supports": ["Slicing views", "Advanced indexing copies", "Shared mutation risks", "Reshape and flatten behavior"]
+    },
+    {
+      "id": "joblib-memory",
+      "url": "https://joblib.readthedocs.io/en/stable/user_guide/memory.html",
+      "title": "Disk-based caching — joblib 1.6.0 documentation",
+      "observed_version": "1.6.0",
+      "http_status": 200,
+      "scrape_id": "01a1e5b7-a54d-71c3-87b6-96f56f9463f9",
+      "supports": ["Pure-function result reuse", "NumPy argument hashing", "Read-only memory mapping", "Compressed arrays cannot be memory mapped", "Environment invalidation", "Windows file-lock cleanup"]
+    },
+    {
+      "id": "numpy-compressed",
+      "url": "https://numpy.org/doc/stable/reference/generated/numpy.savez_compressed.html",
+      "title": "numpy.savez_compressed — NumPy v2.5 Manual",
+      "observed_version": "2.5",
+      "page_build_last_update": "Jun 28, 2026",
+      "http_status": 200,
+      "scrape_id": "01a1e5b7-0bf8-72c8-add5-f669853f489c",
+      "supports": ["ZIP_DEFLATED with .npy entries", "Exact reload array equality example", "Numeric-array pickle avoidance"]
+    }
+  ],
+  "limits": [
+    "Stable documentation aliases can change after this snapshot",
+    "No runtime measurements or locally installed version verification",
+    "Caching benefit depends on repeated work and I/O/hash overhead",
+    "No promise of bitwise model determinism across versions, layouts or thread counts"
+  ]
+}

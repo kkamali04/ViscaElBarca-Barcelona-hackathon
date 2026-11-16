@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "utc": "2026-11-16T04:46:35.938698+00:00",
+  "scope": "synthetic Windows native measurement-tool acceptance only; no model/package/G08 E2E",
+  "accepted_bounded": true,
+  "independent_native_checks": 30,
+  "root_native_checks": 30,
+  "strict_mock_root_receipt": {
+    "relative_path": "reports/v3-native-measure-v5-strict-root-preparation.json",
+    "bytes": 1096,
+    "sha256": "03e7f104561767f384c578b3c36bfd6cea8101f36291ca86a09ee663c3617015"
+  },
+  "independent_native_report": {
+    "relative_path": "reports/v3-native-measure-v5-strict-blind-native-explicit-job.json",
+    "bytes": 18100,
+    "sha256": "40717c51e6159f87d41d6b2cb65d8cbd7620f0113a2841775b24a3bfc47d42db"
+  },
+  "root_native_report": {
+    "relative_path": "reports/v3-native-measure-v5-strict-blind-root-explicit-job-reproduce.json",
+    "bytes": 18106,
+    "sha256": "772a8d86cefef74fa33a65c058a69f7af54b039634754f20ce4e36b16d4d765e"
+  },
+  "targets": {
+    "win32_measure.py": "807a2e84061c3b38ca9a320eefb39bbef3f103ff404b1477d084c4d8e21ddf1a",
+    "acceptance.py": "fef68456b6f88fcb827008d0bd065dc4dfaa5d08773062ceff4161746bc13467",
+    "native_probe.py": "aac98d8bd977ba1d6d22cf99392124854411ba3598b801c68f8318554a512020",
+    "direct_worker.py": "5115f8f429e65ebbe0790ae27f026998199bd13336a9727231af22fc97ecd563",
+    "safe_failure.py": "10bec9bc2a7faebd72a06a13e3937a227f9113938f17a1781fd070bfdc5a19d5"
+  },
+  "harness_sha256": "cfaa982ad883dc2b3a9eafb9081d47e3779a1e4d15b1120382f469cf8a114a64",
+  "all_known_fixture_children_exited": true,
+  "original_failed_fixture_preserved": true,
+  "root_original_failed_checks": [
+    "allocation-measurement-valid",
+    "allocation-job-bound-before-fixture-allocation",
+    "launcher-measurement-valid",
+    "tree-measurement-valid",
+    "tree-job-bound-before-fixture-allocation",
+    "image-selector-measurement-valid",
+    "image-selector-job-bound-before-fixture-allocation"
+  ],
+  "fixture_scope_correction": "NULL QueryInformationJobObject queries immediate nested Job. Supplemental oracle queries actual measured target Job while live, without changing production target source.",
+  "root_original_additional_observation": "Four original replay measurements were correctly refused for actual 50.68-58.54ms sampling gaps. Supplemental fresh fixture passed all30. No cadence threshold waiver or source repair.",
+  "limitations": [
+    "No actual model, package, inference, restricted observations or G08/E2E acceptance.",
+    "Concurrent process-tree sampling is a lower bound; short child is counted by Job independently and may be missed by sampler.",
+    "Forced real admission denial leaves termination APIs intact and uses independent duplicate-handle guardian; no termination-failure leak injected.",
+    "Native sampling cadence can invalidate otherwise completed runs; acceptance fails closed. Real termination API failure was not injected."
+  ]
+}

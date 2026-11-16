@@ -1,0 +1,327 @@
+{
+  "utc": "2026-11-15T21:26:02.586012+00:00",
+  "verdict": "G01_ACCEPTED_FOR_SYNTHETIC_IMPLEMENTATION",
+  "design_revision": 4,
+  "tested_freeze": "reports/v3-design-round3-freeze.json",
+  "frozen_files": {
+    "research/v3/turnover/CORRECTIONS.md": {
+      "sha256": "18098d61789221db0c8afe9748850d920ce7a19d38769ff244ec2f8f3848cabb",
+      "bytes": 10118
+    },
+    "research/v3/workflow/sources.json": {
+      "sha256": "5c5ec412795bbdfac0fc72452f3ffb1901023f2e1ca0a0d1cf0517316c82d011",
+      "bytes": 13264
+    },
+    "specs/003-possession-improvements/architecture.md": {
+      "sha256": "854758d74221de80c3d129d85ee81270c65f1823bb8b8cdcfa9b67ff73fc3bfb",
+      "bytes": 8925
+    },
+    "specs/003-possession-improvements/checklists/requirements.md": {
+      "sha256": "bdb49880e3093e3f2fcbf04b4cb6bb5726083aa145a1b19cb1759a468598c29d",
+      "bytes": 3788
+    },
+    "specs/003-possession-improvements/contracts.md": {
+      "sha256": "b4bfe41bf09e6a869d90b9eedefe1f4c2cc202a7b8e0d9bb8ded52db072845f1",
+      "bytes": 43704
+    },
+    "specs/003-possession-improvements/decisions.md": {
+      "sha256": "b374b96a59bcd9b85679d0f8445aa827e3a171dab7d4be3e5783a3c01134abec",
+      "bytes": 5312
+    },
+    "specs/003-possession-improvements/interfaces-draft.md": {
+      "sha256": "265dab0a4714e71046150d2972bbc4ca3ecbc6da807d8f5c7151108efd03d595",
+      "bytes": 673
+    },
+    "specs/003-possession-improvements/known-issues.md": {
+      "sha256": "b7879e739eb2d92aa9ec6c4eebfc590f64f10d4d3d7225311eab0e7096edb00e",
+      "bytes": 12470
+    },
+    "specs/003-possession-improvements/plan.md": {
+      "sha256": "7b091c4ab49eb8da7eb9f7ce2fad789c4d4d6228aacd992690f5f0e39f95e1f1",
+      "bytes": 18596
+    },
+    "specs/003-possession-improvements/PRD-MULTIMATCH.md": {
+      "sha256": "1f224eba699c9d16e8e3cb40cf78ab8c8a1e9ca2f53477f9d5a725630f1c466b",
+      "bytes": 48027
+    },
+    "specs/003-possession-improvements/PRD-TURNOVER.md": {
+      "sha256": "ddb4d88d45f7485c436ebbd5b3285703a5e9bb080d29c12452fd4bef1ce95431",
+      "bytes": 35147
+    },
+    "specs/003-possession-improvements/protocol.json": {
+      "sha256": "793f4ab3edcbd7b606940a820dfaec5fbe626c645bc22c13bd5c10d1d531a10f",
+      "bytes": 26927
+    },
+    "specs/003-possession-improvements/requirements.md": {
+      "sha256": "5cd8a3878c7de58ab7cd9fb00c40b337a178ff27a2ac585ff55a70b5956c14cf",
+      "bytes": 11146
+    },
+    "specs/003-possession-improvements/tasks.md": {
+      "sha256": "8e4dd21035b72cbaf1182146c33377415002f31305bdef8727962384d445bcc8",
+      "bytes": 4736
+    },
+    "specs/003-possession-improvements/WORKFLOW.md": {
+      "sha256": "aef27fc643b93667707a9521d8baf655fdfc83d4d7ccc2b758b806713c263bad",
+      "bytes": 5586
+    }
+  },
+  "evidence": {
+    "reports/v3-binding-design-blind.json": "7a3e975540d1b3e94c7fd25b9582881910ad6dcc8715464a9051db3803eea00c",
+    "reports/v3-binding-design-blind.md": "85dc2b3443fb99d389879bcaf41957b077e7d15f68aadd79d8f3799b185398ce",
+    "reports/v3-final-design-science-blind.json": "56d0e3cfd4b85b3d37b729d777c97784ae5b0c31da1daac1e8deff82ca15d80e",
+    "local/v3-root-binding-final-probe.json": "e45e3a0f057ead6233c6e51476dcf0d25373386b37745eeb993b6faeb3a6644a",
+    "local/v3-root-design-round3-science/receipt.json": "a516664da3fc02ccf7884fec5cb526fe6d39fe8eae14542526e482ca182d9a74"
+  },
+  "root_reproduction": {
+    "numerical_design_checks": 41,
+    "binding_probes": {
+      "scope": "independent design primitive/reference-model demonstrations only",
+      "scratch": "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\v3-root-binding-final-zrq69y8u",
+      "python": "3.13.12 | packaged by Anaconda, Inc. | (main, Feb 24 2026, 16:05:56) [MSC v.1942 64 bit (AMD64)]",
+      "platform": "win32",
+      "publication": {
+        "hard_kill_boundaries": [
+          {
+            "stage": "mkdir",
+            "termination_exitcode": 1,
+            "final_valid": false,
+            "old_unchanged": true
+          },
+          {
+            "stage": "partial_csv",
+            "termination_exitcode": 1,
+            "final_valid": false,
+            "old_unchanged": true
+          },
+          {
+            "stage": "csv_write",
+            "termination_exitcode": 1,
+            "final_valid": false,
+            "old_unchanged": true
+          },
+          {
+            "stage": "csv_flush",
+            "termination_exitcode": 1,
+            "final_valid": false,
+            "old_unchanged": true
+          },
+          {
+            "stage": "csv_fsync",
+            "termination_exitcode": 1,
+            "final_valid": false,
+            "old_unchanged": true
+          },
+          {
+            "stage": "report_write",
+            "termination_exitcode": 1,
+            "final_valid": false,
+            "old_unchanged": true
+          },
+          {
+            "stage": "report_flush",
+            "termination_exitcode": 1,
+            "final_valid": false,
+            "old_unchanged": true
+          },
+          {
+            "stage": "report_fsync",
+            "termination_exitcode": 1,
+            "final_valid": false,
+            "old_unchanged": true
+          },
+          {
+            "stage": "commit_write",
+            "termination_exitcode": 1,
+            "final_valid": false,
+            "old_unchanged": true
+          },
+          {
+            "stage": "commit_flush",
+            "termination_exitcode": 1,
+            "final_valid": false,
+            "old_unchanged": true
+          },
+          {
+            "stage": "commit_fsync",
+            "termination_exitcode": 1,
+            "final_valid": false,
+            "old_unchanged": true
+          },
+          {
+            "stage": "pre_rename",
+            "termination_exitcode": 1,
+            "final_valid": false,
+            "old_unchanged": true
+          },
+          {
+            "stage": "post_rename",
+            "termination_exitcode": 1,
+            "final_valid": true,
+            "old_unchanged": true
+          }
+        ],
+        "concurrent_publish_results": [
+          "published",
+          "collision"
+        ],
+        "malformed_reader_refusals": 4
+      },
+      "held_windows_handles": [
+        {
+          "operation": "write",
+          "winerror": null
+        },
+        {
+          "operation": "rename",
+          "winerror": 32
+        },
+        {
+          "operation": "unlink",
+          "winerror": 32
+        }
+      ],
+      "authority_reference_model": {
+        "reference_model_denials_before_lookup": 10,
+        "standalone_scenarios": 3,
+        "standalone_control_lookups": 0,
+        "production_runtime_tested": false
+      },
+      "staged_binding_reference_model": {
+        "invalid_seal_refusals": 4,
+        "study_unchanged": true,
+        "study_digest": "781da3bed679a1b2213cac1d5be58bec1a30c6fa0e6b1ee56262bed8e71dd104",
+        "model_seal_digest": "04be7a13a3d3dcbebe021e3246f32c377b83a54379b502152993991694b6be01",
+        "finalist_digest": "55c0271c7997ed807b25178420019ebeee4c28af188934b43ddf510b4110c127",
+        "production_guard_tested": false
+      },
+      "management_binding_reference_model": {
+        "management_updates_preserve_scientific_binding": 4,
+        "scientific_mutations_detected": 4,
+        "overbroad_live_tracker_binding_conflicts": true,
+        "scope_basis": "Plan T02 named immutable inputs; architecture tasks controls status not scientific truth; live workflow obligations",
+        "production_registration_tested": false
+      },
+      "public_requirements": {
+        "receipts": [
+          {
+            "url": "https://raw.githubusercontent.com/metrica-sports/more-than-a-hack-2027/f8f2629ff1e0985f81d7e59d8413678514ee1530/CHALLENGE.md",
+            "sha256": "ce3d0517ee74282fb0443ed9c05aa5398a4c178b98e55ebabd4b1d970243848c",
+            "bytes": 7030
+          },
+          {
+            "url": "https://raw.githubusercontent.com/metrica-sports/more-than-a-hack-2027/f8f2629ff1e0985f81d7e59d8413678514ee1530/DATA.md",
+            "sha256": "b70aaa434e96a559f501fe5c3d65dbda6fba25c0fbd80ebe897ef23254de8c24",
+            "bytes": 12465
+          },
+          {
+            "url": "https://raw.githubusercontent.com/metrica-sports/more-than-a-hack-2027/f8f2629ff1e0985f81d7e59d8413678514ee1530/RULES.md",
+            "sha256": "b6f63456d215e2e6016619f6268580ed8921bb96ba41c7d3037f2733f8d10153",
+            "bytes": 5965
+          },
+          {
+            "url": "https://raw.githubusercontent.com/metrica-sports/more-than-a-hack-2027/f8f2629ff1e0985f81d7e59d8413678514ee1530/EVALUATION.md",
+            "sha256": "25b61f6d8a2bcbe77396bd9a9cae564b27424538e0a958aa1cd365e1e58ae571",
+            "bytes": 6916
+          },
+          {
+            "url": "https://raw.githubusercontent.com/metrica-sports/more-than-a-hack-2027/f8f2629ff1e0985f81d7e59d8413678514ee1530/FAQ.md",
+            "sha256": "c536ec6401ea1b8c8a6dd54ee80e39518d3a521464ed9fe2bc1cf0ee70b7419b",
+            "bytes": 7473
+          },
+          {
+            "url": "https://raw.githubusercontent.com/metrica-sports/more-than-a-hack-2027/f8f2629ff1e0985f81d7e59d8413678514ee1530/games.py",
+            "sha256": "3b2122794e9e0476e2b3a871d14880e5fa47c4feaeacf99caef054c2309076ce",
+            "bytes": 10301
+          },
+          {
+            "url": "https://raw.githubusercontent.com/metrica-sports/more-than-a-hack-2027/f8f2629ff1e0985f81d7e59d8413678514ee1530/evaluation/possession_metrics.py",
+            "sha256": "341bad48904b489d6e875397b27687f5d6a4d22a397f3dc8af3a00d48f16874d",
+            "bytes": 33370
+          },
+          {
+            "url": "https://raw.githubusercontent.com/metrica-sports/more-than-a-hack-2027/f8f2629ff1e0985f81d7e59d8413678514ee1530/evaluation/validate_submission.py",
+            "sha256": "07ac29499acbd337e1dc1de1832d63f6e1fa1d981e22f6ad08212529e2bbee14",
+            "bytes": 4192
+          }
+        ],
+        "public_contract_matches": true,
+        "official_validator_invented_valid": 1,
+        "official_validator_invented_invalid": 5,
+        "actual_inference_tested": false
+      },
+      "reviewed_files_before_after": [
+        {
+          "path": "specs\\003-possession-improvements\\contracts.md",
+          "sha256": "b4bfe41bf09e6a869d90b9eedefe1f4c2cc202a7b8e0d9bb8ded52db072845f1",
+          "bytes": 43704
+        },
+        {
+          "path": "specs\\003-possession-improvements\\protocol.json",
+          "sha256": "793f4ab3edcbd7b606940a820dfaec5fbe626c645bc22c13bd5c10d1d531a10f",
+          "bytes": 26927
+        },
+        {
+          "path": "specs\\003-possession-improvements\\architecture.md",
+          "sha256": "854758d74221de80c3d129d85ee81270c65f1823bb8b8cdcfa9b67ff73fc3bfb",
+          "bytes": 8925
+        },
+        {
+          "path": "specs\\003-possession-improvements\\plan.md",
+          "sha256": "7b091c4ab49eb8da7eb9f7ce2fad789c4d4d6228aacd992690f5f0e39f95e1f1",
+          "bytes": 18596
+        },
+        {
+          "path": "specs\\003-possession-improvements\\requirements.md",
+          "sha256": "5cd8a3878c7de58ab7cd9fb00c40b337a178ff27a2ac585ff55a70b5956c14cf",
+          "bytes": 11146
+        },
+        {
+          "path": "specs\\003-possession-improvements\\PRD-TURNOVER.md",
+          "sha256": "ddb4d88d45f7485c436ebbd5b3285703a5e9bb080d29c12452fd4bef1ce95431",
+          "bytes": 35147
+        },
+        {
+          "path": "specs\\003-possession-improvements\\PRD-MULTIMATCH.md",
+          "sha256": "1f224eba699c9d16e8e3cb40cf78ab8c8a1e9ca2f53477f9d5a725630f1c466b",
+          "bytes": 48027
+        },
+        {
+          "path": "specs\\003-possession-improvements\\WORKFLOW.md",
+          "sha256": "aef27fc643b93667707a9521d8baf655fdfc83d4d7ccc2b758b806713c263bad",
+          "bytes": 5586
+        },
+        {
+          "path": "specs\\003-possession-improvements\\tasks.md",
+          "sha256": "8e4dd21035b72cbaf1182146c33377415002f31305bdef8727962384d445bcc8",
+          "bytes": 4736
+        },
+        {
+          "path": "specs\\003-possession-improvements\\known-issues.md",
+          "sha256": "b7879e739eb2d92aa9ec6c4eebfc590f64f10d4d3d7225311eab0e7096edb00e",
+          "bytes": 12470
+        },
+        {
+          "path": "specs\\003-possession-improvements\\decisions.md",
+          "sha256": "b374b96a59bcd9b85679d0f8445aa827e3a171dab7d4be3e5783a3c01134abec",
+          "bytes": 5312
+        },
+        {
+          "path": "specs\\003-possession-improvements\\checklists\\requirements.md",
+          "sha256": "bdb49880e3093e3f2fcbf04b4cb6bb5726083aa145a1b19cb1759a468598c29d",
+          "bytes": 3788
+        },
+        {
+          "path": "research\\v3\\workflow\\sources.json",
+          "sha256": "5c5ec412795bbdfac0fc72452f3ffb1901023f2e1ca0a0d1cf0517316c82d011",
+          "bytes": 13264
+        }
+      ],
+      "reviewed_files_unchanged": true,
+      "harness_sha256": "d68b003b42e4bda0ed1de2f01c4467e4159a2dfb376ba22d2de56ec929bebda7"
+    },
+    "harness_copy_changes": "root-private path prefix only; original and earlier reproductions retained"
+  },
+  "unchanged_fallback_files": 29,
+  "binding_policy": "protocol, bothPRDs, contracts, scientific sources/metrics/locks/catalog/comparator immutable; live tasks/WORKFLOW/PROJECT_STATE/AGENTIC_GOAL/progress ledgers explicitly excluded from scientific identity",
+  "limits": "Design acceptance only. T02/T03/T04 synthetic implementation authorized; G02/G03/G04/G05 required before new actual study/labels. No model/runtime/package/quality acceptance."
+}

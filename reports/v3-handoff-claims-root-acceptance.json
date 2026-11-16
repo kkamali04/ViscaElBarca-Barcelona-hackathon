@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "utc": "2026-11-16T04:59:57.390373+00:00",
+  "passed_bounded": true,
+  "scope": "handoff aggregate arithmetic, receipt identities and prose status; no product execution",
+  "review_doc": {
+    "relative_path": "V3_REVIEW.md",
+    "bytes": 10385,
+    "sha256": "65a5ffa45b368daf16856ff41d79d2f49d160351923f37492c1dfe619fc14f4a"
+  },
+  "independent_final_claims": {
+    "relative_path": "reports/v3-handoff-claims-blind-final.json",
+    "bytes": 4994,
+    "sha256": "ba732ed8c044c859422c86c35f6b6f74a5b10c7c8f6ad610f6b624947b29e253"
+  },
+  "independent_tracker_closeout": {
+    "relative_path": "reports/v3-handoff-tracker-blind-closeout.json",
+    "bytes": 4273,
+    "sha256": "4a429560bcfdedc495e8ad0fd895b3a6bf237dc97802389c552b18762f09ec93"
+  },
+  "exact_checker_root_replay": {
+    "relative_path": "reports/v3-handoff-claims-root-reproduction.json",
+    "bytes": 12970,
+    "sha256": "6aae8b2ab4e8dea0fc5de10f1045949f854a88b770a4f86b029e1a5f28e1111c"
+  },
+  "root_replay_table_values": 18,
+  "root_replay_bindings": 14,
+  "root_replay_all_links_exist": true,
+  "original_checker_freeze_assertion_passed": false,
+  "freeze_difference": "Only tasks.md changed after the original document freeze, to correct status prose. The exact checker replay preserved this failed freeze assertion; the separate independent tracker closeout binds the final tasks bytes. All other frozen files remained unchanged.",
+  "limitations": [
+    "No inference, model, native Job, package or scientific quality rerun.",
+    "No restricted records, predictions, video or challenge ground truth inspected."
+  ]
+}

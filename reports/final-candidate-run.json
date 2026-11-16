@@ -1,0 +1,36 @@
+{
+  "configuration": "models\\active.json",
+  "config_sha256": "72adfa61f9a4475e324317f93f5c5d56d52c8ef352b28f29690b1dc32dff2cd0",
+  "experimental_tag_weight": 0.0,
+  "input_signatures": {
+    "metadata_sha256": "327e35e32e46a647389b88f883d4f9a2ab931e3e6148aef2fcf8f22b1e93c43a",
+    "tracking_sha256": "f130e350d2bfdf734b7e32f072931fccc6d015c1e837d082064875fe0a700431",
+    "extractor_sha256": "8d2dae5785d1c485e6a1ae20c68e29358906e02a6ff4b053d8da75b1117fb3d8",
+    "blocks": [
+      [
+        1,
+        11185,
+        90652
+      ],
+      [
+        2,
+        110808,
+        190198
+      ]
+    ]
+  },
+  "frames": 199319,
+  "fps": 25,
+  "cache_hit": false,
+  "feature_seconds": 40.63931500000763,
+  "inference_seconds": 8.451036599988583,
+  "feature_transform_seconds": 0.020110199984628707,
+  "total_seconds": 49.66170460000285,
+  "feature_array_bytes": 6776846,
+  "peak_process_working_set_bytes": 118521856,
+  "csv_sha256": "d000a49eb8db71ac94da4877abe5b85506d05be233db1f43644df1e4c9e653fd",
+  "official_format_validator": "passed",
+  "ground_truth_opened": false,
+  "video_opened": false,
+  "private_accuracy_measured": false
+}

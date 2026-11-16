@@ -1,0 +1,8 @@
+{
+  "utc": "2026-11-16T19:14:44.034796+00:00",
+  "passed": true,
+  "scope": "opaque original v3 scientific source/fallback preservation",
+  "source_files_unchanged": 59,
+  "fallback_files_unchanged": 29,
+  "no_raw_parsing_or_refit": true
+}

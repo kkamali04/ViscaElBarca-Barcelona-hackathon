@@ -1,0 +1,150 @@
+{
+  "utc": "2026-11-16T19:14:44.422540+00:00",
+  "accepted_bounded": true,
+  "scope": "synthetic exact-reuse preparation prototype; not integrated model/training/package E2E",
+  "independent_acceptance": {
+    "relative_path": "reports/speed-reuse-blind-acceptance.json",
+    "bytes": 8260,
+    "sha256": "59b8f8272b07815b99dae166f4805ce495a7708c44d6ad9bf24e183cfd6e1334"
+  },
+  "root_reproduction": {
+    "relative_path": "reports/speed-reuse-root-reproduction.json",
+    "bytes": 8265,
+    "sha256": "ea7f219810c3913c028d0c8c5a1b01a6215c7894246b9cc3687360053a92e285"
+  },
+  "independent_groups": 7,
+  "root_groups": 7,
+  "candidate_freeze": {
+    "relative_path": "reports/speed-implementation-freeze.json",
+    "bytes": 6922,
+    "sha256": "b07881ca4c0516b67444f3dde360bd679128fc97ec57dd29cd3474bc0f5f2171"
+  },
+  "independent_harness": {
+    "relative_path": "local/speed-reuse-blind/acceptance.py",
+    "bytes": 23898,
+    "sha256": "793c2d0ecbcf0e4cad6acef44a39c6ed5ab296c728322c21509a5dd52c632152"
+  },
+  "root_exact_harness_copy": {
+    "relative_path": "local/speed-reuse-root/acceptance.py",
+    "bytes": 23898,
+    "sha256": "793c2d0ecbcf0e4cad6acef44a39c6ed5ab296c728322c21509a5dd52c632152"
+  },
+  "independent_oracle": {
+    "relative_path": "local/speed-reuse-blind/oracle.py",
+    "bytes": 10530,
+    "sha256": "687831ca849213c8f410067d9d2ddce1577eb2ec298b912227c2ae6be10ff78d"
+  },
+  "root_exact_oracle_copy": {
+    "relative_path": "local/speed-reuse-root/oracle.py",
+    "bytes": 10530,
+    "sha256": "687831ca849213c8f410067d9d2ddce1577eb2ec298b912227c2ae6be10ff78d"
+  },
+  "all_24_strata_and_assembled_corpora_byte_equal": true,
+  "independent_root_corpus_digest_equal": true,
+  "root_benchmark": {
+    "workload": {
+      "fixtures": 2,
+      "frames_per_fixture": 1930,
+      "slots_per_fixture": 6,
+      "curricula": [
+        "C0",
+        "C1",
+        "boundary"
+      ],
+      "strata": 24,
+      "includes": "source preparation plus complete corpus assembly; constructor and loader included for cold",
+      "excludes": "fixture generation, output comparison, GC, session close, fitting, model export, inference"
+    },
+    "warmups_per_mode": 1,
+    "paired_repeats": 3,
+    "wall_seconds": {
+      "baseline": [
+        5.413961599988397,
+        5.539674300001934,
+        5.281142199994065
+      ],
+      "candidate_cold": [
+        2.4529377999715507,
+        2.4429252999834716,
+        2.4692515999777243
+      ],
+      "candidate_warm": [
+        0.18636819999665022,
+        0.19338149996474385,
+        0.18356840003980324
+      ]
+    },
+    "median_seconds": {
+      "baseline": 5.413961599988397,
+      "candidate_cold": 2.4529377999715507,
+      "candidate_warm": 0.18636819999665022
+    },
+    "baseline_to_cold_median_ratio": 2.207133666435076,
+    "baseline_to_warm_median_ratio": 29.049814292812336,
+    "cache_statistics_per_repeat": [
+      {
+        "source_calls": 3,
+        "fixture_uses": 6,
+        "hits": 14,
+        "misses": 10,
+        "preparations": 10,
+        "evictions": 0,
+        "skipped_retention": 0,
+        "retained_bytes": 699151,
+        "peak_retained_bytes": 699151,
+        "cache_entries": 10,
+        "max_cache_bytes": 134217728,
+        "closed": false
+      },
+      {
+        "source_calls": 3,
+        "fixture_uses": 6,
+        "hits": 14,
+        "misses": 10,
+        "preparations": 10,
+        "evictions": 0,
+        "skipped_retention": 0,
+        "retained_bytes": 699151,
+        "peak_retained_bytes": 699151,
+        "cache_entries": 10,
+        "max_cache_bytes": 134217728,
+        "closed": false
+      },
+      {
+        "source_calls": 3,
+        "fixture_uses": 6,
+        "hits": 14,
+        "misses": 10,
+        "preparations": 10,
+        "evictions": 0,
+        "skipped_retention": 0,
+        "retained_bytes": 699151,
+        "peak_retained_bytes": 699151,
+        "cache_entries": 10,
+        "max_cache_bytes": 134217728,
+        "closed": false
+      }
+    ],
+    "corpus_digest": "92546d15dcc1dfecee0585141e434c3704e0c6ffbbf70b7a9938921945a07445",
+    "measurement_limits": "Same-process exclusive task compute; wall time includes OS noise; cache retention is not peak process memory; no actual-study/fitting-stage extrapolation."
+  },
+  "retention_bytes": 699151,
+  "default_payload_cap_bytes": 134217728,
+  "preservation": {
+    "relative_path": "reports/speed-preservation-after.json",
+    "bytes": 248,
+    "sha256": "b395f1f6dc152c960634ca746b799a86b502a0b14ceb9143d5d884edfdfecc88"
+  },
+  "original_scientific_source_files_unchanged": 59,
+  "fallback_files_unchanged": 29,
+  "actual_fit_or_actual_data_replay": false,
+  "current_MVP_or_registered_v3_integrated": false,
+  "limitations": [
+    "Only invented two-fixture1930-frame6-slot inputs; initial actual XML parsing/I/O absent.",
+    "Cold means new preparation session; loader is a synthetic callback returning in-memory observations.",
+    "No new actual whole training-stage, fit, numeric model/export, inference/CSV, official-validator or package E2E run.",
+    "Synthetic authorization stubs prove call/refusal behavior, not live registered authority.",
+    "Cache accounting measures retained payload/schema/serialized metadata, not peak process memory or allocator overhead.",
+    "No new quality claim or change to the failed v3 eligibility disposition; future integration requires appropriate new source/protocol evidence."
+  ]
+}

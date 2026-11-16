@@ -1,0 +1,230 @@
+{
+  "schema_version": 3,
+  "status": "design_source_receipts_pending_independent_acceptance",
+  "cutoff": "2026-11-15",
+  "observed_date": "2026-11-15",
+  "restricted_data_sent_to_services": false,
+  "community_sources_used": false,
+  "installed_skills_changed": false,
+  "versions": {
+    "spec_kit": {
+      "commit": "2ee2b1e8005905db05f5717300a469b3068b908f",
+      "commit_date": "2026-11-12T16:30:46Z",
+      "latest_release_observed": "v1.4.0",
+      "release_date": "2026-11-10T21:26:08Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v1.4.0"
+    },
+    "superpowers": {
+      "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "commit_date": "2026-11-03T22:17:07Z",
+      "upstream_plugin_version": "7.0.2",
+      "installed_requested_version": "6.1.1"
+    }
+  },
+  "sources": [
+    {
+      "repo": "github/spec-kit",
+      "commit": "2ee2b1e8005905db05f5717300a469b3068b908f",
+      "path": "templates/spec-template.md",
+      "url": "https://raw.githubusercontent.com/github/spec-kit/2ee2b1e8005905db05f5717300a469b3068b908f/templates/spec-template.md",
+      "local_path": "local/v3-workflow-public-20261115/github-spec-kit-templates-spec-template.md",
+      "sha256": "3945437fc35cd30a5b2bf7beea680337c3516826d3efa5a6b92c4a7eca1ba28e",
+      "bytes": 4556,
+      "observed_date": "2026-11-15",
+      "acquisition": "GitHub public raw URL pinned by GitHub API commit query until 2026-11-15T23:59:59Z; Exa/Firecrawl discovery and inspection",
+      "license": "MIT",
+      "limitation": "Workflow source, not evidence of ML effectiveness, scientific correctness or project acceptance"
+    },
+    {
+      "repo": "github/spec-kit",
+      "commit": "2ee2b1e8005905db05f5717300a469b3068b908f",
+      "path": "templates/plan-template.md",
+      "url": "https://raw.githubusercontent.com/github/spec-kit/2ee2b1e8005905db05f5717300a469b3068b908f/templates/plan-template.md",
+      "local_path": "local/v3-workflow-public-20261115/github-spec-kit-templates-plan-template.md",
+      "sha256": "dfba43da2b2a207ff8c177a0fba03af074fd45e261696b4b64172041fad2e992",
+      "bytes": 3770,
+      "observed_date": "2026-11-15",
+      "acquisition": "GitHub public raw URL pinned by GitHub API commit query until 2026-11-15T23:59:59Z; Exa/Firecrawl discovery and inspection",
+      "license": "MIT",
+      "limitation": "Workflow source, not evidence of ML effectiveness, scientific correctness or project acceptance"
+    },
+    {
+      "repo": "github/spec-kit",
+      "commit": "2ee2b1e8005905db05f5717300a469b3068b908f",
+      "path": "templates/tasks-template.md",
+      "url": "https://raw.githubusercontent.com/github/spec-kit/2ee2b1e8005905db05f5717300a469b3068b908f/templates/tasks-template.md",
+      "local_path": "local/v3-workflow-public-20261115/github-spec-kit-templates-tasks-template.md",
+      "sha256": "1e448e9153462e8c5b5a55231a54c756d870a82950d4dd9425a2bf5b7008a0d9",
+      "bytes": 9182,
+      "observed_date": "2026-11-15",
+      "acquisition": "GitHub public raw URL pinned by GitHub API commit query until 2026-11-15T23:59:59Z; Exa/Firecrawl discovery and inspection",
+      "license": "MIT",
+      "limitation": "Workflow source, not evidence of ML effectiveness, scientific correctness or project acceptance"
+    },
+    {
+      "repo": "github/spec-kit",
+      "commit": "2ee2b1e8005905db05f5717300a469b3068b908f",
+      "path": "templates/checklist-template.md",
+      "url": "https://raw.githubusercontent.com/github/spec-kit/2ee2b1e8005905db05f5717300a469b3068b908f/templates/checklist-template.md",
+      "local_path": "local/v3-workflow-public-20261115/github-spec-kit-templates-checklist-template.md",
+      "sha256": "c65b7f10aa9a965ea9c7f4e879d4ab0240665473731c5e9e638c4acb3ca9afc4",
+      "bytes": 2088,
+      "observed_date": "2026-11-15",
+      "acquisition": "GitHub public raw URL pinned by GitHub API commit query until 2026-11-15T23:59:59Z; Exa/Firecrawl discovery and inspection",
+      "license": "MIT",
+      "limitation": "Workflow source, not evidence of ML effectiveness, scientific correctness or project acceptance"
+    },
+    {
+      "repo": "github/spec-kit",
+      "commit": "2ee2b1e8005905db05f5717300a469b3068b908f",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/github/spec-kit/2ee2b1e8005905db05f5717300a469b3068b908f/LICENSE",
+      "local_path": "local/v3-workflow-public-20261115/github-spec-kit-LICENSE",
+      "sha256": "2510b446bc1f0cf9702453075d20cd88631e20e5642658edb7325d9c1eb534f7",
+      "bytes": 1060,
+      "observed_date": "2026-11-15",
+      "acquisition": "GitHub public raw URL pinned by GitHub API commit query until 2026-11-15T23:59:59Z; Exa/Firecrawl discovery and inspection",
+      "license": "MIT",
+      "limitation": "Workflow source, not evidence of ML effectiveness, scientific correctness or project acceptance"
+    },
+    {
+      "repo": "obra/superpowers",
+      "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "path": ".claude-plugin/plugin.json",
+      "url": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/.claude-plugin/plugin.json",
+      "local_path": "local/v3-workflow-public-20261115/obra-superpowers-.claude-plugin-plugin.json",
+      "sha256": "6728b554d1aaf9235f7981c7838a32f50c191297284af97f4c2a808155f7c399",
+      "bytes": 497,
+      "observed_date": "2026-11-15",
+      "acquisition": "GitHub public raw URL pinned by GitHub API commit query until 2026-11-15T23:59:59Z; Exa/Firecrawl discovery and inspection",
+      "license": "MIT",
+      "limitation": "Workflow source, not evidence of ML effectiveness, scientific correctness or project acceptance"
+    },
+    {
+      "repo": "obra/superpowers",
+      "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "path": "skills/subagent-driven-development/SKILL.md",
+      "url": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/skills/subagent-driven-development/SKILL.md",
+      "local_path": "local/v3-workflow-public-20261115/obra-superpowers-skills-subagent-driven-development-SKILL.md",
+      "sha256": "1baf70e307bde682c462513c86116333f1f066168c6710f45145bf5f0b00828d",
+      "bytes": 19740,
+      "observed_date": "2026-11-15",
+      "acquisition": "GitHub public raw URL pinned by GitHub API commit query until 2026-11-15T23:59:59Z; Exa/Firecrawl discovery and inspection",
+      "license": "MIT",
+      "limitation": "Workflow source, not evidence of ML effectiveness, scientific correctness or project acceptance"
+    },
+    {
+      "repo": "obra/superpowers",
+      "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "path": "skills/dispatching-parallel-agents/SKILL.md",
+      "url": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/skills/dispatching-parallel-agents/SKILL.md",
+      "local_path": "local/v3-workflow-public-20261115/obra-superpowers-skills-dispatching-parallel-agents-SKILL.md",
+      "sha256": "1968923066f3b707eb01d1992cdf4c42284c3855f70253b9cd5000ff45fca13c",
+      "bytes": 6078,
+      "observed_date": "2026-11-15",
+      "acquisition": "GitHub public raw URL pinned by GitHub API commit query until 2026-11-15T23:59:59Z; Exa/Firecrawl discovery and inspection",
+      "license": "MIT",
+      "limitation": "Workflow source, not evidence of ML effectiveness, scientific correctness or project acceptance"
+    },
+    {
+      "repo": "obra/superpowers",
+      "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/LICENSE",
+      "local_path": "local/v3-workflow-public-20261115/obra-superpowers-LICENSE",
+      "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+      "bytes": 1070,
+      "observed_date": "2026-11-15",
+      "acquisition": "GitHub public raw URL pinned by GitHub API commit query until 2026-11-15T23:59:59Z; Exa/Firecrawl discovery and inspection",
+      "license": "MIT",
+      "limitation": "Workflow source, not evidence of ML effectiveness, scientific correctness or project acceptance"
+    },
+    {
+      "repo": "metrica-sports/more-than-a-hack-2027",
+      "commit": "f8f2629ff1e0985f81d7e59d8413678514ee1530",
+      "commit_date": "2026-10-23T13:42:40Z",
+      "path": "EVALUATION.md",
+      "url": "https://raw.githubusercontent.com/metrica-sports/more-than-a-hack-2027/f8f2629ff1e0985f81d7e59d8413678514ee1530/EVALUATION.md",
+      "local_path": "local/v3-workflow-public-20261115/organizer-EVALUATION.md",
+      "sha256": "25b61f6d8a2bcbe77396bd9a9cae564b27424538e0a958aa1cd365e1e58ae571",
+      "observed_date": "2026-11-15",
+      "supports": "H/A spell F1 over temporal IoU thresholds 0.3-0.7; approximate 0.04 full-match noise scale",
+      "limitation": "Organizer estimate is not a significance guarantee on other providers/corruptions; no records or labels inspected",
+      "reuse": "Reference only; no copied code"
+    },
+    {
+      "repo": "metrica-sports/more-than-a-hack-2027",
+      "path": "FAQ.md",
+      "url": "https://github.com/metrica-sports/more-than-a-hack-2027/blob/main/FAQ.md",
+      "local_path": "local/v3-final-design-science-blind-20261115/public/FAQ.md",
+      "sha256": "c536ec6401ea1b8c8a6dd54ee80e39518d3a521464ed9fe2bc1cf0ee70b7419b",
+      "bytes": 7473,
+      "observed_date": "2026-11-15",
+      "acquisition": "Independent science reviewer public receipt; architect rehashed existing cached bytes only; no new fetch",
+      "license": "repository license applies; no new independent license finding",
+      "limitation": "Mutable main locator, exact content pinned by SHA256; confirms unchanged [110808,113742) forced-D authority. Not empirical acceptance."
+    }
+  ],
+  "prior_version_preserved_in": "local/v3-design-round2-frozen.zip",
+  "local_skill_receipts": [
+    {
+      "local_path": "C:\\Users\\Kian\\.claude\\skills\\advise-project-approach\\SKILL.md",
+      "sha256": "aaaabcc3e665c3d58c81b4ec5eb7bd063fe19c43bd478341741a1bec59d5a1fe",
+      "bytes": 30808,
+      "manual_source_guided_adaptation": true,
+      "invocable_skill_exposed_in_session": false,
+      "provenance_status": "local advising file; upstream revision and license unverified"
+    },
+    {
+      "local_path": "C:\\Users\\Kian\\.claude\\plugins\\cache\\claude-plugins-official\\superpowers\\6.1.1\\.claude-plugin\\plugin.json",
+      "sha256": "475eecc40b42606656129d43d24c3ad9bedf43faeb3a85a8238988d59982f0da",
+      "bytes": 497,
+      "manual_source_guided_adaptation": true,
+      "invocable_skill_exposed_in_session": false,
+      "provenance_status": "locally registered Superpowers6.1.1; inspected local source"
+    },
+    {
+      "local_path": "C:\\Users\\Kian\\.claude\\plugins\\cache\\claude-plugins-official\\superpowers\\6.1.1\\skills\\brainstorming\\SKILL.md",
+      "sha256": "e14914605f640e0841758e45d0ab2a53243b59b921f929e47921c99668f2e61d",
+      "bytes": 10435,
+      "manual_source_guided_adaptation": true,
+      "invocable_skill_exposed_in_session": false,
+      "provenance_status": "locally registered Superpowers6.1.1; inspected local source"
+    },
+    {
+      "local_path": "C:\\Users\\Kian\\.claude\\plugins\\cache\\claude-plugins-official\\superpowers\\6.1.1\\skills\\writing-plans\\SKILL.md",
+      "sha256": "272e1af349f5062c28dc282b3e21b220d58d683a7314a10c455b7432ec91d845",
+      "bytes": 7092,
+      "manual_source_guided_adaptation": true,
+      "invocable_skill_exposed_in_session": false,
+      "provenance_status": "locally registered Superpowers6.1.1; inspected local source"
+    },
+    {
+      "local_path": "C:\\Users\\Kian\\.claude\\plugins\\cache\\claude-plugins-official\\superpowers\\6.1.1\\skills\\dispatching-parallel-agents\\SKILL.md",
+      "sha256": "f0df13f584049059cc5619f90061405b89dcc6e28ab3f2a8517d27d99c7a46a6",
+      "bytes": 6644,
+      "manual_source_guided_adaptation": true,
+      "invocable_skill_exposed_in_session": false,
+      "provenance_status": "locally registered Superpowers6.1.1; inspected local source"
+    },
+    {
+      "local_path": "C:\\Users\\Kian\\.claude\\plugins\\cache\\claude-plugins-official\\superpowers\\6.1.1\\skills\\subagent-driven-development\\SKILL.md",
+      "sha256": "41ab239a6ad1c487cd839fdac972a8c9cf0f5e90efa59a63f963767864f0df4c",
+      "bytes": 21647,
+      "manual_source_guided_adaptation": true,
+      "invocable_skill_exposed_in_session": false,
+      "provenance_status": "locally registered Superpowers6.1.1; inspected local source"
+    }
+  ],
+  "installed_superpowers_registry": {
+    "path": "C:\\Users\\Kian\\.claude\\plugins\\installed_plugins.json",
+    "selected_entry_only": [
+      {
+        "version": "6.1.1",
+        "installPath": "C:\\Users\\Kian\\.claude\\plugins\\cache\\claude-plugins-official\\superpowers\\6.1.1",
+        "gitCommitSha": "363923f74aa9cd7b470c0aaa73dee629a8bfdc90"
+      }
+    ]
+  },
+  "skill_execution": "Manual source-guided use; no runtime skill invocation, installation or upgrade"
+}

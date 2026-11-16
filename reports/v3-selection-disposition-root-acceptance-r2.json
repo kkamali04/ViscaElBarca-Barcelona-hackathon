@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "utc": "2026-11-16T04:46:35.935447+00:00",
+  "scope": "G06 selection-disposition metadata acceptance; no eligible finalist",
+  "accepted": true,
+  "root_verified": true,
+  "disposition": "no_finalist_no_fresh_test",
+  "study_digest": "e2d265c657eabcabf5e5eb8b8d145a54dd8569fe80a8ba0b9aaf288357a51938",
+  "selection_result_identity": {
+    "bytes": 114774,
+    "sha256": "d827b8a575df9ad7843746764a7dc42de74efe491e20539a91af84cda91b40ee"
+  },
+  "independent_report": {
+    "relative_path": "reports/v3-selection-disposition-blind-audit.json",
+    "bytes": 16123,
+    "sha256": "177ff8ad6e6c75c61c50c754db981ba65be02f44a0cb07cdcdde4e3c02bcbd1e"
+  },
+  "root_reproduction": {
+    "relative_path": "reports/v3-selection-disposition-blind-root-02.json",
+    "bytes": 16123,
+    "sha256": "2b3f6859a27d7303123ab3abfa41c495440c7c29914ddd41b0a967fb5a240515"
+  },
+  "oracle": {
+    "bytes": 7366,
+    "sha256": "7d8be757e6c49bb65c7a0b5722649033f8c22eabae281cb2d59011cc9058f1b9"
+  },
+  "audit_harness": {
+    "bytes": 32964,
+    "sha256": "10781f994572cfc28466c5d7d7a90ca0aba0eeeb3ec2613f97a242a73b60b264"
+  },
+  "root_checks": 41347,
+  "source_bindings_verified": 65,
+  "fallback_files_unchanged": 29,
+  "selection_rows": 54,
+  "fresh_test_unopened": true,
+  "scientific_test_or_export_authorized": false,
+  "prior_evidence_correction": {
+    "historical_receipt": "reports/v3-selection-disposition-root-acceptance.json",
+    "independent_report_initial_sha256": "a933d11d2ac7de050b3ddd2696ae2edbfa8a8302eb7885972ea4e2601af7be8e",
+    "initial_report_bytes_missing": true,
+    "reason": "Acceptance author overwrote default report during adapter refinements; initial report cannot be rehashed. Original root source snapshot/replay/receipt preserved. This new receipt binds the current frozen auditor and separately named exact root replay; no earlier report is represented as current evidence."
+  },
+  "limitations": [
+    "Metadata-only audit; aggregate arithmetic and identity consistency do not independently recompute match metrics, raw input identities, feature construction, predictions or parity.",
+    "Three durable fit-start/parity/model artifacts establish recorded three-fit lineage; this cannot prove absence of unrecorded same-user fits.",
+    "Source and prior-ledger identity checks do not independently certify historical prior access or metadata overlap semantics.",
+    "Model feature shape, numeric graph and provenance checked without printing weights; exact feature order semantics remain bound to registered implementation.",
+    "Resource sidecars are recorded evidence, not rerun here; sampled process-tree resident peaks are lower bounds and job ceiling is committed memory.",
+    "Current added-disk growth not independently scanned in this bounded metadata-only task; current free disk and durable fit-time accounting checked.",
+    "No v3 fresh-test scoring, uncached inference benchmark, exported-package/process E2E or official validator execution occurred in this audit; no eligible finalist permits advancing to those release gates.",
+    "One selection match; no confidence interval, significance, hidden-test performance or competition generalization claim."
+  ]
+}

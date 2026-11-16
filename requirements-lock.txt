@@ -1,0 +1,6 @@
+# Verified local runtime: CPython 3.13.12 on Windows.
+numpy==2.4.4
+pandas==2.3.3
+python-dateutil==4.0.0
+pytz==2026.6
+tzdata==2026.6

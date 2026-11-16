@@ -1,0 +1,408 @@
+{
+  "kind": "fresh independent blind source-contract acceptance",
+  "created_utc": "2026-11-15T13:27:23.648311+00:00",
+  "passed": true,
+  "evidence": [
+    {
+      "name": "numpy_only_import",
+      "passed": true,
+      "seconds": 0.20599320001201704,
+      "details": {
+        "command": [
+          "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\.venv\\Scripts\\python.exe",
+          "-I",
+          "-c",
+          "import sys, importlib.abc\nsys.path.insert(0, sys.argv[1])\nclass Block(importlib.abc.MetaPathFinder):\n def find_spec(self, fullname, path=None, target=None):\n  if fullname.split('.')[0] in {'scipy','sklearn','pandas','torch','numba','kloppy'}: raise ImportError('blocked acceptance import '+fullname)\nsys.meta_path.insert(0,Block())\nfrom experiments.noise_v2.features import robustify_ball_motion\nprint('NumPy-only transform import passed')\n",
+          "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon"
+        ],
+        "returncode": 0,
+        "wall_seconds": 0.20597019998240285,
+        "stdout": "NumPy-only transform import passed\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "coordinate_motion_transform",
+      "passed": true,
+      "seconds": 0.0125197000161279,
+      "details": {
+        "known_speed_mps": 5,
+        "gap_unknown_frames": 31,
+        "period_boundary_unknown_frames": 30,
+        "least_squares_checks": 4,
+        "input_arrays_preserved": true
+      }
+    },
+    {
+      "name": "reader_numeric_model_period_contract",
+      "passed": true,
+      "seconds": 0.00895330001367256,
+      "details": {
+        "channel_order_and_metres": true,
+        "malformed_records_rejected": 3,
+        "invalid_models_rejected": 5,
+        "period_decoder_reset": true
+      }
+    },
+    {
+      "name": "period_safe_metrics",
+      "passed": true,
+      "seconds": 0.30289549997542053,
+      "details": {
+        "separate_half_spells": true,
+        "cross_half_transition_matches": 0,
+        "leading_X_half_reset": true
+      }
+    },
+    {
+      "name": "real_cli_input_to_csv_repeated",
+      "passed": true,
+      "seconds": 62.44473600000492,
+      "details": {
+        "commands": [
+          {
+            "command": [
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\.venv\\Scripts\\python.exe",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py",
+              "--config",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\invented-config.json",
+              "--data-dir",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\data",
+              "--out",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\first.csv",
+              "--report",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\first.json",
+              "--no-cache"
+            ],
+            "returncode": 0,
+            "wall_seconds": 30.391369599994505,
+            "stdout": "Official format check passed: 199319 frames\nFeatures: 28.407s; inference: 1.220s; total: 29.810s\nPeak process working set: 117919744 bytes\nCSV SHA256: f02de94ed296d0c87c6e9b766e24afaa07ed178096959b2c9d699287f78c0572\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\.venv\\Scripts\\python.exe",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py",
+              "--config",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\invented-config.json",
+              "--data-dir",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\data",
+              "--out",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\repeat.csv",
+              "--report",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\repeat.json",
+              "--no-cache"
+            ],
+            "returncode": 0,
+            "wall_seconds": 31.100715000007767,
+            "stdout": "Official format check passed: 199319 frames\nFeatures: 29.151s; inference: 1.225s; total: 30.551s\nPeak process working set: 117571584 bytes\nCSV SHA256: f02de94ed296d0c87c6e9b766e24afaa07ed178096959b2c9d699287f78c0572\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\.venv\\Scripts\\python.exe",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\more-than-a-hack-2027-main\\evaluation\\validate_submission.py",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\first.csv"
+            ],
+            "returncode": 0,
+            "wall_seconds": 0.616290800011484,
+            "stdout": "OK    first.csv\n      199319 rows, frame 0..199318\n\n      label counts\n        H   155923   78.2%\n        A        0    0.0%\n        D     2934    1.5%\n        X    40462   20.3%\n\n      reports 2 possessions of mean 3118.5 s\n      (counted with each X as a gap; the scorer bridges abstentions inside a real\n       possession, so its count can be lower than this one)\n\nValid. Note this checks the format only -- it says nothing about whether the labels are right.\nScore it against the public ground truth with run_evaluation.py.\n",
+            "stderr": ""
+          }
+        ],
+        "csv_hashes": [
+          "f02de94ed296d0c87c6e9b766e24afaa07ed178096959b2c9d699287f78c0572",
+          "f02de94ed296d0c87c6e9b766e24afaa07ed178096959b2c9d699287f78c0572"
+        ],
+        "resources": [
+          {
+            "peak_process_working_set_bytes": 117919744,
+            "total_seconds": 29.810282400023425,
+            "feature_seconds": 28.406955100013874,
+            "inference_seconds": 1.219554600014817,
+            "feature_array_bytes": 6776846
+          },
+          {
+            "peak_process_working_set_bytes": 117571584,
+            "total_seconds": 30.55092430001241,
+            "feature_seconds": 29.151166399999056,
+            "inference_seconds": 1.225004900014028,
+            "feature_array_bytes": 6776846
+          }
+        ],
+        "full_real_input_inference": true,
+        "stubs": false,
+        "protected_synthetic_input_hashes_unchanged": true
+      }
+    },
+    {
+      "name": "cli_safe_failures",
+      "passed": true,
+      "seconds": 4.984114100021543,
+      "details": {
+        "bounded_cli_failures": [
+          {
+            "name": "same-output-report",
+            "command": [
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\.venv\\Scripts\\python.exe",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py",
+              "--config",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\invented-config.json",
+              "--data-dir",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\data",
+              "--out",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\preserved.csv",
+              "--report",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\preserved.json",
+              "--no-cache",
+              "--report",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\preserved.csv"
+            ],
+            "returncode": 1,
+            "wall_seconds": 0.501943500014022,
+            "stdout": "",
+            "stderr": "Traceback (most recent call last):\n  File \"C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py\", line 165, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py\", line 90, in main\n    raise ValueError(\"CSV and report destinations must be different files\")\nValueError: CSV and report destinations must be different files\n"
+          },
+          {
+            "name": "output-is-input",
+            "command": [
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\.venv\\Scripts\\python.exe",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py",
+              "--config",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\invented-config.json",
+              "--data-dir",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\data",
+              "--out",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\preserved.csv",
+              "--report",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\preserved.json",
+              "--no-cache",
+              "--out",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\data\\tactical\\BAR-ATH_tactical_atd.txt"
+            ],
+            "returncode": 1,
+            "wall_seconds": 0.49259550002170727,
+            "stdout": "",
+            "stderr": "Traceback (most recent call last):\n  File \"C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py\", line 165, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py\", line 93, in main\n    raise ValueError(\"Output/report destination aliases a protected input or artifact\")\nValueError: Output/report destination aliases a protected input or artifact\n"
+          },
+          {
+            "name": "report-is-model",
+            "command": [
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\.venv\\Scripts\\python.exe",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py",
+              "--config",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\invented-config.json",
+              "--data-dir",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\data",
+              "--out",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\preserved.csv",
+              "--report",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\preserved.json",
+              "--no-cache",
+              "--report",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\invented-model.json"
+            ],
+            "returncode": 1,
+            "wall_seconds": 0.5300378999963868,
+            "stdout": "",
+            "stderr": "Traceback (most recent call last):\n  File \"C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py\", line 165, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py\", line 93, in main\n    raise ValueError(\"Output/report destination aliases a protected input or artifact\")\nValueError: Output/report destination aliases a protected input or artifact\n"
+          },
+          {
+            "name": "report-is-config",
+            "command": [
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\.venv\\Scripts\\python.exe",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py",
+              "--config",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\invented-config.json",
+              "--data-dir",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\data",
+              "--out",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\preserved.csv",
+              "--report",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\preserved.json",
+              "--no-cache",
+              "--report",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\invented-config.json"
+            ],
+            "returncode": 1,
+            "wall_seconds": 0.5408797000127379,
+            "stdout": "",
+            "stderr": "Traceback (most recent call last):\n  File \"C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py\", line 165, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py\", line 93, in main\n    raise ValueError(\"Output/report destination aliases a protected input or artifact\")\nValueError: Output/report destination aliases a protected input or artifact\n"
+          },
+          {
+            "name": "report-under-output",
+            "command": [
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\.venv\\Scripts\\python.exe",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py",
+              "--config",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\invented-config.json",
+              "--data-dir",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\data",
+              "--out",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\preserved.csv",
+              "--report",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\preserved.json",
+              "--no-cache",
+              "--report",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\preserved.csv\\child.json"
+            ],
+            "returncode": 1,
+            "wall_seconds": 0.5396803000185173,
+            "stdout": "",
+            "stderr": "Traceback (most recent call last):\n  File \"C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py\", line 165, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py\", line 67, in main\n    raise ValueError(\"CSV and report destinations cannot contain each other\")\nValueError: CSV and report destinations cannot contain each other\n"
+          },
+          {
+            "name": "nonfinite-tag",
+            "command": [
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\.venv\\Scripts\\python.exe",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py",
+              "--config",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\invented-config.json",
+              "--data-dir",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\data",
+              "--out",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\preserved.csv",
+              "--report",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\preserved.json",
+              "--no-cache",
+              "--experimental-tag-weight",
+              "nan"
+            ],
+            "returncode": 1,
+            "wall_seconds": 0.5175323000003118,
+            "stdout": "",
+            "stderr": "Traceback (most recent call last):\n  File \"C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py\", line 165, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py\", line 72, in main\n    raise ValueError(\"Experimental tag weight must be finite and between 0 and .25\")\nValueError: Experimental tag weight must be finite and between 0 and .25\n"
+          },
+          {
+            "name": "tampered-model",
+            "command": [
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\.venv\\Scripts\\python.exe",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py",
+              "--config",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\bad-tampered-model.json",
+              "--data-dir",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\data",
+              "--out",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\preserved.csv",
+              "--report",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\preserved.json",
+              "--no-cache"
+            ],
+            "returncode": 1,
+            "wall_seconds": 0.5095575000159442,
+            "stdout": "",
+            "stderr": "Traceback (most recent call last):\n  File \"C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py\", line 165, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py\", line 78, in main\n    raise ValueError(\"Trained model differs from frozen configuration\")\nValueError: Trained model differs from frozen configuration\n"
+          },
+          {
+            "name": "tampered-source",
+            "command": [
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\.venv\\Scripts\\python.exe",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py",
+              "--config",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\bad-tampered-source.json",
+              "--data-dir",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\data",
+              "--out",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\preserved.csv",
+              "--report",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\preserved.json",
+              "--no-cache"
+            ],
+            "returncode": 1,
+            "wall_seconds": 0.5053879999904893,
+            "stdout": "",
+            "stderr": "Traceback (most recent call last):\n  File \"C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py\", line 165, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py\", line 75, in main\n    verify_frozen_sources(ROOT, config)\n    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^\n  File \"C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\possession_model\\pipeline.py\", line 34, in verify_frozen_sources\n    raise ValueError(\"Source differs from frozen validation run; audit and validate changes before inference\")\nValueError: Source differs from frozen validation run; audit and validate changes before inference\n"
+          },
+          {
+            "name": "hardlink-input",
+            "command": [
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\.venv\\Scripts\\python.exe",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py",
+              "--config",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\invented-config.json",
+              "--data-dir",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\data",
+              "--out",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\preserved.csv",
+              "--report",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\preserved.json",
+              "--no-cache",
+              "--out",
+              "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\local\\release-blind-acceptance\\hardlink.csv"
+            ],
+            "returncode": 1,
+            "wall_seconds": 0.5555394999973942,
+            "stdout": "",
+            "stderr": "Traceback (most recent call last):\n  File \"C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py\", line 165, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\tools\\run_candidate.py\", line 93, in main\n    raise ValueError(\"Output/report destination aliases a protected input or artifact\")\nValueError: Output/report destination aliases a protected input or artifact\n"
+          }
+        ],
+        "invalid_prediction_preservation_cases": 4,
+        "costly_inference_stubbed": false
+      }
+    },
+    {
+      "name": "runtime_source_freeze",
+      "passed": true,
+      "source_sha256_before": {
+        "possession_model/__init__.py": "449dad4bb18019700401a977f8446b623dcee6a3a7f05d15526fc71c29caa4cb",
+        "possession_model/features.py": "8d2dae5785d1c485e6a1ae20c68e29358906e02a6ff4b053d8da75b1117fb3d8",
+        "possession_model/evidence.py": "f5b2e738022be102db47586271c2bc0669e72744b08c727074bcbae1877c72a9",
+        "possession_model/decoder.py": "410dc8b086a37b3f15a6545760ea114af099929da45d81ce4a6107c72e1af2da",
+        "possession_model/trees.py": "64e5f39b5e5e36a7a58c767e090a8d169b7a953b2dc2e1ed2e84f91fdd672059",
+        "possession_model/pipeline.py": "22b3950cda12c58080b9b21441c8149af93ee464908cf76616d123e7f88a6204",
+        "possession_model/schema.py": "787f738d9a431c961160061a0d509bb93ee850a884e229645de3f0d05e5be470",
+        "validation/sportec.py": "834a997c186661e6564b92f23281463fe62a5d6c7960accef00c5eba7a15651e",
+        "validation/metrics.py": "d94776e7a6c6c69d83485ce35c4ef78f6ae33048fc36c136d5b6f58657056aff",
+        "tools/train_and_validate.py": "f3388329cc02b8e0adfb307662b602a84d0487727534a5ad1253d624f615f99f",
+        "tools/run_candidate.py": "5b9da02c893a0cec34bc8444a4c88a12abe58562bf0f836f9a27955bbed66f34",
+        "experiments/__init__.py": "6410dea73fc5becf931c5b762cb8e1eb6d2b3a669c585e3780d67cc4ab1ce84c",
+        "experiments/noise_v2/__init__.py": "61e39e8b249de5dca7fb3c565d673430be34e04525cb55116e92e8015ba75ced",
+        "experiments/noise_v2/features.py": "830397e5574e2dc7dde590fdb3b7d92bc0ea5f6852ec6c5f95942d54c1739a5c",
+        "more-than-a-hack-2027-main/evaluation/possession_metrics.py": "341bad48904b489d6e875397b27687f5d6a4d22a397f3dc8af3a00d48f16874d",
+        "requirements-lock.txt": "f7db4ee30863d5ee003283f3d9b4eb701be327900756c9113bb40c37a7cb3494"
+      },
+      "source_sha256_after": {
+        "possession_model/__init__.py": "449dad4bb18019700401a977f8446b623dcee6a3a7f05d15526fc71c29caa4cb",
+        "possession_model/features.py": "8d2dae5785d1c485e6a1ae20c68e29358906e02a6ff4b053d8da75b1117fb3d8",
+        "possession_model/evidence.py": "f5b2e738022be102db47586271c2bc0669e72744b08c727074bcbae1877c72a9",
+        "possession_model/decoder.py": "410dc8b086a37b3f15a6545760ea114af099929da45d81ce4a6107c72e1af2da",
+        "possession_model/trees.py": "64e5f39b5e5e36a7a58c767e090a8d169b7a953b2dc2e1ed2e84f91fdd672059",
+        "possession_model/pipeline.py": "22b3950cda12c58080b9b21441c8149af93ee464908cf76616d123e7f88a6204",
+        "possession_model/schema.py": "787f738d9a431c961160061a0d509bb93ee850a884e229645de3f0d05e5be470",
+        "validation/sportec.py": "834a997c186661e6564b92f23281463fe62a5d6c7960accef00c5eba7a15651e",
+        "validation/metrics.py": "d94776e7a6c6c69d83485ce35c4ef78f6ae33048fc36c136d5b6f58657056aff",
+        "tools/train_and_validate.py": "f3388329cc02b8e0adfb307662b602a84d0487727534a5ad1253d624f615f99f",
+        "tools/run_candidate.py": "5b9da02c893a0cec34bc8444a4c88a12abe58562bf0f836f9a27955bbed66f34",
+        "experiments/__init__.py": "6410dea73fc5becf931c5b762cb8e1eb6d2b3a669c585e3780d67cc4ab1ce84c",
+        "experiments/noise_v2/__init__.py": "61e39e8b249de5dca7fb3c565d673430be34e04525cb55116e92e8015ba75ced",
+        "experiments/noise_v2/features.py": "830397e5574e2dc7dde590fdb3b7d92bc0ea5f6852ec6c5f95942d54c1739a5c",
+        "more-than-a-hack-2027-main/evaluation/possession_metrics.py": "341bad48904b489d6e875397b27687f5d6a4d22a397f3dc8af3a00d48f16874d",
+        "requirements-lock.txt": "f7db4ee30863d5ee003283f3d9b4eb701be327900756c9113bb40c37a7cb3494"
+      }
+    }
+  ],
+  "invocation": [
+    "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\.venv\\Scripts\\python.exe",
+    "tests/test_release_blind_acceptance.py"
+  ],
+  "public_oracles": [
+    "CHALLENGE.md",
+    "DATA.md",
+    "SUBMISSION.md",
+    "RULES.md",
+    "FAQ.md"
+  ],
+  "limitations": [
+    "No challenge inputs, ground truth, original candidate model/config or prior reports were opened.",
+    "Invented constant model establishes orchestration and exact contract, not candidate accuracy or calibration.",
+    "Existing .venv used; fresh subprocesses and synthetic inputs, not fresh exported package/environment.",
+    "Finite path failures do not exhaust filesystem permission, disk-full or concurrent-writer conditions.",
+    "Motion fixture checks straight paths, gaps, periods and deterministic measurement error; it does not establish arbitrary-motion denoising quality."
+  ],
+  "acceptance_test_sha256": "5303defbca7427e24f061ed711e9bb46b805cbd58c43ee4bcacf0fc9b3db0a77",
+  "source_freeze_released": {
+    "released": true,
+    "confirmed_to_root": true,
+    "recorded_utc": "2026-11-15T13:27:57.285455+00:00"
+  }
+}

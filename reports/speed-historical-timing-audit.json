@@ -1,0 +1,31 @@
+{
+  "utc": "2026-11-16T18:55:35.446067+00:00",
+  "scope": "previous sealed training aggregate timing metadata only",
+  "rows": [
+    {
+      "model": "C0",
+      "source_and_assembly_seconds": 649.4536424999824,
+      "fit_export_and_parity_seconds": 29.300555100024212,
+      "training_rows": 447608
+    },
+    {
+      "model": "C1",
+      "source_and_assembly_seconds": 230.16222030000063,
+      "fit_export_and_parity_seconds": 27.555463399970904,
+      "training_rows": 447608
+    },
+    {
+      "model": "boundary",
+      "source_and_assembly_seconds": 225.08814190002158,
+      "fit_export_and_parity_seconds": 3.4416059000068344,
+      "training_rows": 56448
+    }
+  ],
+  "total_stage_seconds": 1237.3859909999883,
+  "summed_source_and_assembly_seconds": 1104.7040047000046,
+  "summed_fit_export_and_parity_seconds": 60.29762440000195,
+  "limits": [
+    "Fit timing includes fitting, numeric export and parity; those components were not individually instrumented.",
+    "This read does not parse raw tracking, target arrays, model payloads or predictions, and performs no new fit."
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "scope": "independent invented-only preparation acceptance",
+  "candidate_freeze": {
+    "experiments/speed_v1/__init__.py": "df5e2954aec91940bf2de7240fdffc31d5b8b99528045bd7c12a710169587b81",
+    "experiments/speed_v1/preparation.py": "7400adbd538a44c72f4533887d1279f563d5e4b3d0bb3c2048df1edf7c6fb2f3",
+    "experiments/speed_v1/README.md": "d05c24e146a5c5f75f05c77c9169c6ec319205123d8bb0a408756da42bf9f97c",
+    "specs/004-training-speed/README.md": "5814b925c7c304d77b1ef47464a1500885b1e9d3070686ea633f22fbc7e07c8b"
+  },
+  "oracle_public_sources": {
+    "experiments/v3/training.py": "fd66adbcf48d0567f293f8796ecbdd118d556887175a1175bfbcf9d13baed919",
+    "experiments/v3/corruption.py": "2c5ebbcf18b59dd28dad5c481ea407a30feb0e944764f5ff26e1c9d8c4a870b1",
+    "experiments/v3/boundary.py": "768187cb624c7ff1c7b9b0d560b8640d435720d0a95611dbc48904e62f1f7475",
+    "experiments/v3/contracts.py": "3c82ff9d69526e40085bb36fbd68e75f2e302f8648472628ebee23394356a0ab",
+    "possession_model/features.py": "8d2dae5785d1c485e6a1ae20c68e29358906e02a6ff4b053d8da75b1117fb3d8",
+    "possession_model/evidence.py": "f5b2e738022be102db47586271c2bc0669e72744b08c727074bcbae1877c72a9",
+    "possession_model/schema.py": "787f738d9a431c961160061a0d509bb93ee850a884e229645de3f0d05e5be470",
+    "experiments/noise_v2/features.py": "830397e5574e2dc7dde590fdb3b7d92bc0ea5f6852ec6c5f95942d54c1739a5c"
+  },
+  "interpreter": "C:\\college-github\\college-main\\Hackathon\\Barcelona Hackathon\\.venv\\Scripts\\python.exe",
+  "python": "3.13.12",
+  "numpy": "2.4.4",
+  "fixture_recipe_sha256": "687831ca849213c8f410067d9d2ddce1577eb2ec298b912227c2ae6be10ff78d",
+  "harness_sha256": "793c2d0ecbcf0e4cad6acef44a39c6ed5ab296c728322c21509a5dd52c632152",
+  "checks": [
+    {
+      "name": "exact_curricula_repeats_reordering_ownership_stats",
+      "passed": true,
+      "seconds": 12.214199699985329,
+      "detail": {
+        "baseline_calls": {
+          "condition_observations": 24,
+          "build_features": 24,
+          "condition_receipt": 24,
+          "feature_matrix": 16,
+          "build_boundary_features": 8
+        },
+        "candidate_calls_cold": {
+          "condition_observations": 10,
+          "build_features": 10,
+          "condition_receipt": 10,
+          "feature_matrix": 16,
+          "build_boundary_features": 8
+        },
+        "corpus_digest": "92546d15dcc1dfecee0585141e434c3704e0c6ffbbf70b7a9938921945a07445",
+        "corpus_rows": [
+          6096,
+          6096,
+          8757
+        ],
+        "strata_compared": 24,
+        "cache_bytes": 699151,
+        "numeric_payload_bytes": 675500,
+        "entry_bytes_min": 69748,
+        "entry_bytes_max": 70224
+      }
+    },
+    {
+      "name": "authorization_loader_protocol_capability_close",
+      "passed": true,
+      "seconds": 3.994768499978818,
+      "detail": {
+        "revoked_hit_cases": 4,
+        "loader_calls": 2,
+        "warm_authorization_calls": 4,
+        "protocol_drift_refused": true,
+        "capability_drift_refused": true,
+        "closed_refused": true
+      }
+    },
+    {
+      "name": "target_and_observation_mutations",
+      "passed": true,
+      "seconds": 17.401792599994224,
+      "detail": {
+        "target_only_recomputes": true,
+        "observation_content_schema_metadata_bound": true
+      }
+    },
+    {
+      "name": "lru_zero_oversize_clear_fresh_sessions",
+      "passed": true,
+      "seconds": 20.902992900053505,
+      "detail": {
+        "lru_capacity_bytes": 561792,
+        "capacity_entries": 8,
+        "evictions": 2,
+        "zero_and_oversize_bypass": true,
+        "clear_and_fresh_sessions": true
+      }
+    },
+    {
+      "name": "input_validation",
+      "passed": true,
+      "seconds": 0.07662589999381453,
+      "detail": {
+        "constructor_cases": 9,
+        "invalid_curricula": 6,
+        "invalid_observation_target_cases": 7
+      }
+    },
+    {
+      "name": "bounded_complete_preparation_benchmark",
+      "passed": true,
+      "seconds": 32.31977110001026,
+      "detail": {
+        "workload": {
+          "fixtures": 2,
+          "frames_per_fixture": 1930,
+          "slots_per_fixture": 6,
+          "curricula": [
+            "C0",
+            "C1",
+            "boundary"
+          ],
+          "strata": 24,
+          "includes": "source preparation plus complete corpus assembly; constructor and loader included for cold",
+          "excludes": "fixture generation, output comparison, GC, session close, fitting, model export, inference"
+        },
+        "warmups_per_mode": 1,
+        "paired_repeats": 3,
+        "wall_seconds": {
+          "baseline": [
+            5.513082399964333,
+            5.435738100029994,
+            5.357190300012007
+          ],
+          "candidate_cold": [
+            2.4206976999994367,
+            2.420563099964056,
+            2.4473199999774806
+          ],
+          "candidate_warm": [
+            0.17672360001597553,
+            0.20418830000562593,
+            0.18757050001295283
+          ]
+        },
+        "median_seconds": {
+          "baseline": 5.435738100029994,
+          "candidate_cold": 2.4206976999994367,
+          "candidate_warm": 0.18757050001295283
+        },
+        "baseline_to_cold_median_ratio": 2.245525370652956,
+        "baseline_to_warm_median_ratio": 28.979706828390523,
+        "cache_statistics_per_repeat": [
+          {
+            "source_calls": 3,
+            "fixture_uses": 6,
+            "hits": 14,
+            "misses": 10,
+            "preparations": 10,
+            "evictions": 0,
+            "skipped_retention": 0,
+            "retained_bytes": 699151,
+            "peak_retained_bytes": 699151,
+            "cache_entries": 10,
+            "max_cache_bytes": 134217728,
+            "closed": false
+          },
+          {
+            "source_calls": 3,
+            "fixture_uses": 6,
+            "hits": 14,
+            "misses": 10,
+            "preparations": 10,
+            "evictions": 0,
+            "skipped_retention": 0,
+            "retained_bytes": 699151,
+            "peak_retained_bytes": 699151,
+            "cache_entries": 10,
+            "max_cache_bytes": 134217728,
+            "closed": false
+          },
+          {
+            "source_calls": 3,
+            "fixture_uses": 6,
+            "hits": 14,
+            "misses": 10,
+            "preparations": 10,
+            "evictions": 0,
+            "skipped_retention": 0,
+            "retained_bytes": 699151,
+            "peak_retained_bytes": 699151,
+            "cache_entries": 10,
+            "max_cache_bytes": 134217728,
+            "closed": false
+          }
+        ],
+        "corpus_digest": "92546d15dcc1dfecee0585141e434c3704e0c6ffbbf70b7a9938921945a07445",
+        "measurement_limits": "Same-process exclusive task compute; wall time includes OS noise; cache retention is not peak process memory; no actual-study/fitting-stage extrapolation."
+      }
+    },
+    {
+      "name": "freeze_unchanged_after_acceptance",
+      "passed": true,
+      "seconds": 0.00212459999602288,
+      "detail": {
+        "experiments/speed_v1/__init__.py": "df5e2954aec91940bf2de7240fdffc31d5b8b99528045bd7c12a710169587b81",
+        "experiments/speed_v1/preparation.py": "7400adbd538a44c72f4533887d1279f563d5e4b3d0bb3c2048df1edf7c6fb2f3",
+        "experiments/speed_v1/README.md": "d05c24e146a5c5f75f05c77c9169c6ec319205123d8bb0a408756da42bf9f97c",
+        "specs/004-training-speed/README.md": "5814b925c7c304d77b1ef47464a1500885b1e9d3070686ea633f22fbc7e07c8b"
+      }
+    }
+  ],
+  "failures": [],
+  "limits": [
+    "Only invented observations and labels; synthetic loader and authorization stubs do not prove live study authority.",
+    "No actual study, raw input, model, cache, CSV, fitting, network or Jobs were read or executed.",
+    "Retained cache bytes exclude caller-owned input matches, returned arrays, transients and Python allocator overhead.",
+    "No input-to-CSV, exported-package, official-validator, actual training-stage speedup or hidden-quality claim."
+  ],
+  "passed": true,
+  "check_count": 7
+}

@@ -1,0 +1,396 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-15",
+  "status": "research complete; awaiting independent review",
+  "retrieval_routes": [
+    "Exa MCP search/fetch",
+    "Firecrawl MCP search/developer_search/scrape",
+    "public unauthenticated metadata HTTP"
+  ],
+  "restricted_inputs_accessed": false,
+  "raw_tracking_or_event_files_downloaded": false,
+  "sources": [
+    {
+      "id": "idsse-paper",
+      "url": "https://www.nature.com/articles/s41597-025-04505-y",
+      "accessed": "2026-11-15",
+      "kind": "primary full article",
+      "version": "2025-02-01",
+      "license": "CC-BY-4.0",
+      "claims": "Seven full2022/23 matches;25Hz;BallPossession1home2away control;BallStatus0inactive1active; optical/filter/operator methods.",
+      "limits": null
+    },
+    {
+      "id": "idsse-figshare",
+      "url": "https://api.figshare.com/v2/articles/28196177",
+      "accessed": "2026-11-15",
+      "kind": "primary dataset manifest",
+      "version": "v1 DOI10.6084/m9.figshare.28196177.v1",
+      "license": "CC-BY-4.0",
+      "claims": "Exact21 source files, sizes and MD5;CC-BY4.0; creator authors.",
+      "limits": null
+    },
+    {
+      "id": "idsse-creator",
+      "url": "https://github.com/spoho-datascience/idsse-data",
+      "accessed": "2026-11-15",
+      "kind": "creator repository notice",
+      "version": "5c83f02e3bd07f12184ead0eec88598d03e4b953",
+      "license": "CC-BY-4.0",
+      "claims": "License; must name DFL and cite Bassek et al2025.",
+      "limits": null
+    },
+    {
+      "id": "hf-tree",
+      "url": "https://huggingface.co/api/datasets/pysport/idsse-data/tree/a715a38dfbaf5f58e431727c2b78d174101a703c",
+      "accessed": "2026-11-15",
+      "kind": "mirror manifest",
+      "version": "a715a38dfbaf5f58e431727c2b78d174101a703c",
+      "license": "CC-BY-4.0",
+      "claims": "7actual IDs, file sizes,LFS SHA256;README mismatched WPF/WQF are not in file manifest.",
+      "limits": null
+    },
+    {
+      "id": "hf-info",
+      "url": "https://huggingface.co/api/datasets/pysport/idsse-data",
+      "accessed": "2026-11-15",
+      "kind": "mirror metadata",
+      "version": "a715a38dfbaf5f58e431727c2b78d174101a703c",
+      "license": "CC-BY-4.0",
+      "claims": "Revision and lastModified2026-03-04;card license.",
+      "limits": null
+    },
+    {
+      "id": "skillcorner-repo",
+      "url": "https://github.com/SkillCorner/opendata/tree/4340d274572876239c154c90bc507a9b3250a656",
+      "accessed": "2026-11-15",
+      "kind": "primary repository manifest/readme",
+      "version": "4340d274572876239c154c90bc507a9b3250a656",
+      "license": "MIT repository notice",
+      "claims": "README10stale;tree20tracking LFS pointers;20dynamic_events;no game_events;10Hz coordinate/detection/possession schema.",
+      "limits": "No tracking/event contents downloaded; completeness and labels unaudited."
+    },
+    {
+      "id": "skillcorner-matches",
+      "url": "https://github.com/SkillCorner/opendata/blob/4340d274572876239c154c90bc507a9b3250a656/data/matches.json",
+      "accessed": "2026-11-15",
+      "kind": "primary metadata manifest",
+      "version": "4340d274572876239c154c90bc507a9b3250a656",
+      "license": "MIT repository notice",
+      "claims": "20candidate A-League2024/25 match IDs/dates;19closed,1953632not_started.",
+      "limits": null
+    },
+    {
+      "id": "skillcorner-license",
+      "url": "https://github.com/SkillCorner/opendata/blob/4340d274572876239c154c90bc507a9b3250a656/LICENSE",
+      "accessed": "2026-11-15",
+      "kind": "primary license notice",
+      "version": "4340d274572876239c154c90bc507a9b3250a656",
+      "license": "MIT",
+      "claims": "MIT copyright2020SkillCorner;preserve notice;README requests credit.",
+      "limits": "No separately scoped data-specific license located;independent review required."
+    },
+    {
+      "id": "skillcorner-spec",
+      "url": "https://26560301.fs1.hubspotusercontent-eu1.net/hubfs/26560301/Guides/Dynamic%20Events/20250216%20-%20Dynamic%20Events%20CSV%20Specifications.pdf",
+      "accessed": "2026-11-15",
+      "kind": "primary schema PDF partial",
+      "version": "2025-02-16 pp1-12of89",
+      "license": null,
+      "claims": "Player control/first-lasttouch/one-touch definition;derived fromTrackingV3+Wyscout;modeled possession starts;matched ends;pose-dependent coordinate orientation and empty low-confidence metrics.",
+      "limits": "Only12of89pages read;metadata titleIn Progress;CSV attributes pp27+not audited;no independent is_ball_in_play established."
+    },
+    {
+      "id": "skillcorner-player-possession",
+      "url": "https://skillcorner.com/articles/understanding-player-possession-with-skillcorner-game-intelligence",
+      "accessed": "2026-11-15",
+      "kind": "primary provider article",
+      "version": "2025-07-22",
+      "license": null,
+      "claims": "Firsttouch-to-lasttouch player possession description.",
+      "limits": null
+    },
+    {
+      "id": "skillcorner-tutorial",
+      "url": "https://skillcorner.com/articles/skillcorner-open-data-5-visualising-football-tracking-data",
+      "accessed": "2026-11-15",
+      "kind": "primary provider tutorial",
+      "version": "2026-09-02",
+      "license": null,
+      "claims": "Native tracking+metadata fields and possession-dependent coordinate flip to avoid in features.",
+      "limits": null
+    },
+    {
+      "id": "kloppy-release",
+      "url": "https://github.com/PySport/kloppy/releases/tag/v3.19.1",
+      "accessed": "2026-11-15",
+      "kind": "primary release metadata",
+      "version": "3.19.1",
+      "license": "BSD-3-Clause",
+      "claims": "Published2026-10-03;BSD-3-Clause;PyPI Python>=3.9.",
+      "limits": "No install/import/runtime/3.13dependency verification."
+    },
+    {
+      "id": "kloppy-sportec",
+      "url": "https://github.com/PySport/kloppy/blob/v3.19.1/kloppy/_providers/sportec.py",
+      "accessed": "2026-11-15",
+      "kind": "primary pinned source",
+      "version": "3.19.1",
+      "license": "BSD-3-Clause",
+      "claims": "Actual7IDmapping;loader sample_rate/limit/only_aliveFalse.",
+      "limits": null
+    },
+    {
+      "id": "kloppy-skillcorner",
+      "url": "https://github.com/PySport/kloppy/blob/v3.19.1/kloppy/infra/serializers/tracking/skillcorner.py",
+      "accessed": "2026-11-15",
+      "kind": "primary pinned source",
+      "version": "3.19.1",
+      "license": "BSD-3-Clause",
+      "claims": "Missing home/away owner=>DEAD;V3is_detected not retained;JSONL accumulates list.",
+      "limits": null
+    },
+    {
+      "id": "floodlight-package",
+      "url": "https://pypi.org/pypi/floodlight/json",
+      "accessed": "2026-11-15",
+      "kind": "primary package metadata",
+      "version": "1.2.0",
+      "license": "MIT",
+      "claims": "1.2.0uploaded2026-05-04;Python>=3.10,<3.14;MIT.",
+      "limits": "Not installed/tested."
+    },
+    {
+      "id": "floodlight-dataset",
+      "url": "https://floodlight.readthedocs.io/en/latest/modules/io/datasets.html",
+      "accessed": "2026-11-15",
+      "kind": "primary SDK docs",
+      "version": "latest fetched2026-11-15",
+      "license": "MIT",
+      "claims": "IDSSEDataset7games;may auto-download on construction;~2.4GB corpus;not new games.",
+      "limits": null
+    },
+    {
+      "id": "pff-offer",
+      "url": "https://www.blog.fc.pff.com/blog/enhanced-2022-world-cup-dataset",
+      "accessed": "2026-11-15",
+      "kind": "primary provider article",
+      "version": "2025-02-13",
+      "license": null,
+      "claims": "64WorldCup2022tracking/event games;pergame compressed JSONL;form-mediated access.",
+      "limits": "No form submitted/license/terms/size/semantics obtained;not counted accessible."
+    },
+    {
+      "id": "pff-loader",
+      "url": "https://kloppy.pysport.org/user-guide/loading-data/pff/",
+      "accessed": "2026-11-15",
+      "kind": "primary SDK docs",
+      "version": "fetched2026-11-15",
+      "license": "BSD-3-Clause software only",
+      "claims": "PFFmetadata/roster/tracking loader;owningteam/ballstate;sample_rate/limit/only_alive.",
+      "limits": "SDK fields do not prove data rights or exact annotation semantics."
+    },
+    {
+      "id": "metrica",
+      "url": "https://github.com/metrica-sports/sample-data",
+      "accessed": "2026-11-15",
+      "kind": "primary creator README",
+      "version": "README addedGame3on2021-04-15",
+      "license": null,
+      "claims": "3sample games;anonymized;synchronized tracking/events;normalized105x68coords;acknowledge source.",
+      "limits": "No standardized data license or continuouscontrol/dead GT established."
+    },
+    {
+      "id": "statsbomb",
+      "url": "https://github.com/statsbomb/open-data",
+      "accessed": "2026-11-15",
+      "kind": "primary creator README",
+      "version": "fetched2026-11-15",
+      "license": "custom terms",
+      "claims": "Event,lineup and selected360files;not continuous control-labelled trajectories.",
+      "limits": "No data downloaded;not proposed directGT."
+    },
+    {
+      "id": "soccernet-gsr",
+      "url": "https://openaccess.thecvf.com/content/CVPR2024W/CVsports/html/Somers_SoccerNet_Game_State_Reconstruction_End-to-End_Athlete_Tracking_and_Identification_on_CVPRW_2024_paper.html",
+      "accessed": "2026-11-15",
+      "kind": "primary paper abstract",
+      "version": "CVPRW2024",
+      "license": null,
+      "claims": "200x30sec sequences;athlete position,role,team,jersey—not fullmatch possessionGT.",
+      "limits": "Abstract-only;no empirical model claims used;codeGPL is not dataset license."
+    },
+    {
+      "id": "lastrow",
+      "url": "https://github.com/Friends-of-Tracking-Data-FoTD/Last-Row",
+      "accessed": "2026-11-15",
+      "kind": "primary creator README",
+      "version": "fetched2026-11-15",
+      "license": null,
+      "claims": "19Liverpool goals;incompleteplayers;creator warns lackresearchaccuracy.",
+      "limits": "Not fullmatch or directcontrolGT."
+    },
+    {
+      "id": "tracab-validity",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7064167/",
+      "accessed": "2026-11-15",
+      "kind": "primary paper methods text",
+      "version": "2020-03-10 DOI10.1371/journal.pone.0230179",
+      "license": "CC-BY-4.0",
+      "claims": "Occlusion/IDswap mechanisms and postprocess;controlled playertracking validation not ball/target noise calibration.",
+      "limits": null
+    }
+  ],
+  "public_cache": [
+    {
+      "path": "local/v3-data-research-20261115/figshare.json",
+      "bytes": 13577,
+      "sha256": "a460b521d4ee1905fa27f11315487c8cb9ff0eecf8ef1490009844d0789d8dcf"
+    },
+    {
+      "path": "local/v3-data-research-20261115/floodlight-license.json",
+      "bytes": 2569,
+      "sha256": "d139d963c84acc503a0457c325a07c7f61bafcae07aabf1af5be9288b7f43fb5"
+    },
+    {
+      "path": "local/v3-data-research-20261115/floodlight-pypi.json",
+      "bytes": 36857,
+      "sha256": "4dae2ccb98b347c73c9a00792369f454f3c09be763fafbd1996b5b3f45f0b62b"
+    },
+    {
+      "path": "local/v3-data-research-20261115/hf-info.json",
+      "bytes": 3915,
+      "sha256": "0161b8d5932354bcf250c2405f462ed9161bb795836ec2fb9163bb3dc93b883a"
+    },
+    {
+      "path": "local/v3-data-research-20261115/hf-tree.json",
+      "bytes": 23280,
+      "sha256": "fb411f262544c25d29266189de819f3141a069cab949e62ca0caef918fd2ce79"
+    },
+    {
+      "path": "local/v3-data-research-20261115/idsse-license-readme.txt",
+      "bytes": 2598,
+      "sha256": "4606f7006f74419cb67fd8f8a1977a5e260137a0d2a397deaf8223bf83b67eb7"
+    },
+    {
+      "path": "local/v3-data-research-20261115/idsse-paper-public.md",
+      "bytes": 42458,
+      "sha256": "d988c11bb8013f9cc80d349550229b5d1f1387d2a2d59b9fdda25afd5a040d43"
+    },
+    {
+      "path": "local/v3-data-research-20261115/idsse-repo.json",
+      "bytes": 5245,
+      "sha256": "a092d38174e555bedaacfced2d52c55c379db8b7b822b87ad4a9dfa392dd5bf0"
+    },
+    {
+      "path": "local/v3-data-research-20261115/J03WN1-metadata.xml",
+      "bytes": 11722,
+      "sha256": "5490286436c86e6f80a538d2b1b379d0efd016e0defcaf594bc59d9ef5079f4c"
+    },
+    {
+      "path": "local/v3-data-research-20261115/J03WPY-metadata.xml",
+      "bytes": 11922,
+      "sha256": "566dd5e4c86e124ab90fcdba51100881f0436e22afa71832945a451a2d95a420"
+    },
+    {
+      "path": "local/v3-data-research-20261115/J03WQQ-metadata.xml",
+      "bytes": 11932,
+      "sha256": "e976aa0c5dba862cfa898ea57ec226efce9d1bc04b23b8d775908db86aa6fa41"
+    },
+    {
+      "path": "local/v3-data-research-20261115/kloppy-license.txt",
+      "bytes": 1544,
+      "sha256": "95f62c9eb79000f18a576408b985977e5e5e7098d2ee2614c9e6f77178e04e9e"
+    },
+    {
+      "path": "local/v3-data-research-20261115/kloppy-package.json",
+      "bytes": 104912,
+      "sha256": "93fbdd472a4939b6249f1d4d8de1b8fd8f75a18a079cec9b60fae047ea8abf67"
+    },
+    {
+      "path": "local/v3-data-research-20261115/kloppy-release.json",
+      "bytes": 4130,
+      "sha256": "4d2e8cea15498154cae7c506af3cb982b882b91a553e4a936df2483d20ebd557"
+    },
+    {
+      "path": "local/v3-data-research-20261115/kloppy-skillcorner.py",
+      "bytes": 20998,
+      "sha256": "1df140c274d1eba2501387cdbbfbc49103614b01c64e4f19c6e04107a3bc8ebc"
+    },
+    {
+      "path": "local/v3-data-research-20261115/kloppy-skillcorner.txt",
+      "bytes": 4788,
+      "sha256": "5fc432440791f862e2e6e53a82a61bdeaf9c59fbfdd96f5bd42133d25b4f4948"
+    },
+    {
+      "path": "local/v3-data-research-20261115/kloppy-sportec.txt",
+      "bytes": 8890,
+      "sha256": "e2a6e811efc198da9737d59eee40a5812df78d845611913a365a50dd61ac2a92"
+    },
+    {
+      "path": "local/v3-data-research-20261115/kloppy-tree.json",
+      "bytes": 194673,
+      "sha256": "5d76f8c2ffaad5125353d39e511134638785598d988e7bba23b5c760fae9e693"
+    },
+    {
+      "path": "local/v3-data-research-20261115/skillcorner-commit.json",
+      "bytes": 10671,
+      "sha256": "663f0cbad2a1554a9e2d93a66ed6b6ce8cfaa4467ff40ba3ce94631499033d8e"
+    },
+    {
+      "path": "local/v3-data-research-20261115/skillcorner-lfs-metadata.json",
+      "bytes": 3804,
+      "sha256": "1511cc740e47da17d1e9d7bba6bcf53ce0ee3718970f5d99a60167442e6ced32"
+    },
+    {
+      "path": "local/v3-data-research-20261115/skillcorner-license.txt",
+      "bytes": 1118,
+      "sha256": "a48676d37ebad3ccd6445e12c711618cdeb756581bd8f6e87c5f63faec7a242f"
+    },
+    {
+      "path": "local/v3-data-research-20261115/skillcorner-match-metadata.txt",
+      "bytes": 27541,
+      "sha256": "30c608e78663e9f490b3545479a3ce67b171f418c5133d5609cb249a2466abb2"
+    },
+    {
+      "path": "local/v3-data-research-20261115/skillcorner-matches.json",
+      "bytes": 6969,
+      "sha256": "5b320a28447540c04c2017da589084c68bf284e2945c9683369f73ef7d020523"
+    },
+    {
+      "path": "local/v3-data-research-20261115/skillcorner-readme.txt",
+      "bytes": 12398,
+      "sha256": "cb70d308feedd9849c918942003c585da9f2f2a9580f1b167fb962af09c2073b"
+    },
+    {
+      "path": "local/v3-data-research-20261115/skillcorner-spec-pages1-12.md",
+      "bytes": 23415,
+      "sha256": "769af5f399b987ac43d945c5a49609354d3da572b22bb83b21b0f3c25e62881b"
+    },
+    {
+      "path": "local/v3-data-research-20261115/skillcorner-tree.json",
+      "bytes": 57200,
+      "sha256": "7cba694a52b38984274fdce44ce29ee53a9f6f97adae9e01d23ec237475e0ffc"
+    }
+  ],
+  "source_inspected_local_code": [
+    "validation/sportec.py",
+    "tools/train_and_validate.py",
+    "tools/check_robustness.py",
+    "experiments/noise_v2/run_experiment.py"
+  ],
+  "failed_retrievals": [
+    {
+      "url": "https://floodlight.readthedocs.io/en/latest/modules/io/sportec.html",
+      "reason": "404;used datasets docs instead"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/PySport/kloppy/v3.19.1/kloppy/infra/serializers/tracking/skillcorner/deserializer.py",
+      "reason": "404;resolved actual serializer skillcorner.py via public tree"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/master/docs/README.md",
+      "reason": "404;used repository README"
+    }
+  ]
+}

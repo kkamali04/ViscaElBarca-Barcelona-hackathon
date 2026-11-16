@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "scope": "Public metadata identity only; no tracking/targets parsed",
+  "research_catalog_sha256": "3bcd1ddfcabd0a1f43cb50f57e5288b82696bed31fa606120681d1a2d57df173",
+  "public_source_manifest_sha256": "ab353b23908ddad7cdfb3385a2eed050c69a5f7161d61799d8c67feeb43059f8",
+  "metadata_integrity_receipt_sha256": "9f95c73b8068991de74686edffde1b0c3194a25dc01e5f4bfa7d65d196a543fb",
+  "public_challenge_metadata_sha256": "b70aaa434e96a559f501fe5c3d65dbda6fba25c0fbd80ebe897ef23254de8c24",
+  "identities": [
+    {
+      "fixture_id": "J03WOH",
+      "canonical_fixture_id": "IDSSE:DFL-MAT-J03WOH",
+      "duplicate_group": "2ec0774957a78ae29e5a03a6be1339a101bb13031fe8cc49386fc2f4cbae96c8",
+      "expected_match_id": true,
+      "external_season_2022_23": true
+    },
+    {
+      "fixture_id": "J03WOY",
+      "canonical_fixture_id": "IDSSE:DFL-MAT-J03WOY",
+      "duplicate_group": "43223ba9a6095b90dbe0fd0f5aea7775058c0e5ea43ab654e96014dcc225a7ca",
+      "expected_match_id": true,
+      "external_season_2022_23": true
+    },
+    {
+      "fixture_id": "J03WPY",
+      "canonical_fixture_id": "IDSSE:DFL-MAT-J03WPY",
+      "duplicate_group": "9c31865e18ace44fb02369846a01542b761e7077b03c0d39aaf6c3fc62f1df9e",
+      "expected_match_id": true,
+      "external_season_2022_23": true
+    },
+    {
+      "fixture_id": "J03WN1",
+      "canonical_fixture_id": "IDSSE:DFL-MAT-J03WN1",
+      "duplicate_group": "a82187eff087a5f54b1897ef3cd8369d958110acf83d13c69d3944f8ff5bd4ef",
+      "expected_match_id": true,
+      "external_season_2022_23": true
+    },
+    {
+      "fixture_id": "J03WQQ",
+      "canonical_fixture_id": "IDSSE:DFL-MAT-J03WQQ",
+      "duplicate_group": "721fe14076e9f55af763eb25afc254796ab84167ba084db3607b45f7c28f346b",
+      "expected_match_id": true,
+      "external_season_2022_23": true
+    }
+  ],
+  "unique_duplicate_groups": true,
+  "challenge_overlap_excluded_by_disjoint_public_seasons": true,
+  "tracking_records_parsed": 0,
+  "target_records_parsed": 0,
+  "limitations": "Metadata identity check; no raw-position completeness or scientific acceptance"
+}

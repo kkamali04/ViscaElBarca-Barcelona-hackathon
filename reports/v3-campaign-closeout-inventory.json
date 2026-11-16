@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "utc": "2026-11-16T04:54:11.366837+00:00",
+  "scope": "final campaign read-only integrity/resource/ignore check",
+  "passed": true,
+  "registered_source_files_unchanged": 59,
+  "fallback_files_unchanged": 29,
+  "opaque_originals_sha256_and_md5_verified": 10,
+  "opaque_original_bytes": 1831203572,
+  "duplicate_hashes_in_canonical_v3_originals": 0,
+  "tracking_targets_or_predictions_parsed": false,
+  "test_reserved_or_parsed": false,
+  "registered_stage_children_checked_exited": 2,
+  "actual_export_or_promotion_authorized": false,
+  "added_bytes": 2679906942,
+  "free_bytes": 119217664000,
+  "fit_seconds": 1237.3859909999883,
+  "files_over_50MB_checked": 11,
+  "files_over_50MB_all_ignored": true,
+  "tracked_files_over_50MB": 0,
+  "resource_budget_sha256": "1f2cf83286db627c582e753bbcf891a7bce991f7eca27742a5d1f3247c687651",
+  "ledger_sha256": "ab06f7dfa2562def8f620ff551a6fd93787fadcf42fdd0e632b1978e5402f6a2",
+  "limits": [
+    "Opaque integrity bytes only, not raw-record/model quality validation.",
+    "Ignore check is scoped to this project; no unrelated college files or Downloads were modified."
+  ]
+}

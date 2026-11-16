@@ -1,0 +1,484 @@
+{
+  "schema_version": 1,
+  "study_id": "possession-v3-20261116-a4",
+  "status": "design_repair_pending_fresh_G01_acceptance",
+  "research_cutoff": "2026-11-15",
+  "authority": {
+    "implementation_requires": "G01 design acceptance",
+    "new_label_parse_requires": [
+      "G02 guard acceptance",
+      "G03 adapter/cache/corruption acceptance"
+    ],
+    "submission_authorized": false,
+    "fallback_manifest": "reports/v3-fallback-preservation.json"
+  },
+  "split": {
+    "provider": "IDSSE",
+    "train": [
+      "J03WOH",
+      "J03WOY"
+    ],
+    "selection": [
+      "J03WPY"
+    ],
+    "test": [
+      "J03WN1",
+      "J03WQQ"
+    ],
+    "closed": [
+      "J03WR9",
+      "J03WMX"
+    ],
+    "prior_roles": {
+      "J03WOH": "legacy_training",
+      "J03WOY": "legacy_selection_retired_to_training",
+      "J03WR9": "closed_scored_v1_test",
+      "J03WMX": "closed_scored_v2_test"
+    },
+    "deferred_sources": [
+      "SkillCorner"
+    ],
+    "replacement_policy": "No replacement after role reservation; integrity failure makes evidence incomplete"
+  },
+  "input": {
+    "fps": 25.0,
+    "fps_tolerance": 1e-06,
+    "coordinate_units": "metres",
+    "targets": {
+      "BallStatus=0": 2,
+      "BallStatus=1,BallPossession=1": 0,
+      "BallStatus=1,BallPossession=2": 1,
+      "otherwise": -1
+    },
+    "class_names": [
+      "H",
+      "A",
+      "D"
+    ],
+    "unknown": -1,
+    "unknown_scorer_code": 3,
+    "outside_positive_period": -1,
+    "full_timeline": true,
+    "labels_in_features": false,
+    "native_unknown_frames_retained": true,
+    "slot_identity": "Unique nonempty PersonId strings; canonical slots sorted (team 0 home then 1 away, PersonId encoded UTF-8 lexical bytes). Persist slot_ids and digest; raw roster/XML permutations canonicalize identically before RNG. Noncanonical direct batches reject.",
+    "timestamps": "Retain all observed source timestamps exactly as UTC int64 nanoseconds in sparse source_time_frame_index/source_time_slot/source_time_utc_ns arrays, sorted (frame index, slot). Per-period origin chooses minimum observed source N, ball first then canonical slot. Every observed T within 1000000ns of origin+(N-originN)*40000000ns; missing/invalid timestamps and duplicate object/N fail.",
+    "masks": "Derived player_observed=isfinite(positions).all(axis=2), ball_observed=isfinite(ball_xy).all(axis=1); no persisted masks. Raw incomplete/nonfinite coordinate pair becomes canonical float32 NaN pair (0x7fc00000), counted; typed batches reject partial pairs/inf.",
+    "target_lexical": "Exact XML attribute strings only: status 0 -> D; status 1 with owner 1/2 -> H/A. Missing or any other string -> unknown, count aggregate. No whitespace stripping/coercion. Structural nonstring values, malformed IDs or timing fail. Outside positive periods unknown."
+  },
+  "randomness": {
+    "algorithm": "numpy.random.PCG64",
+    "seed_encoding": "first8 little-endian bytes of SHA256(UTF8(v3|protocol_sha256|role|IDSSE|fixture_id|condition|0|stream))",
+    "streams": [
+      "ball_gap",
+      "player_dropout",
+      "jitter",
+      "teleport",
+      "stale_players",
+      "view_gap",
+      "row_sampling",
+      "boundary_none_sampling"
+    ],
+    "fit_random_state": 20261116,
+    "fit_replicates": 1,
+    "root_binding": "protocol_sha256 is SHA256 of the fixed protocol.json bytes, which contain no raw/catalog/target byte digests. Study manifest separately binds this protocol digest AND catalog/source digests. Authorized synthetic target variants use the same protocol RNG root and fixture/role namespace, distinct source-integrity manifests; target mutation without separate authorization fails integrity. Never reseed from study/source/target/cache digest.",
+    "generator": "Generator(PCG64(seed)); independent generator per listed stream, NumPy2.4.4. Scalar threshold uses < probability. No conditional draws. No chunk reseeding."
+  },
+  "conditions": [
+    {
+      "id": "clean",
+      "kind": "identity"
+    },
+    {
+      "id": "ball4",
+      "kind": "ball_gap",
+      "block_seconds": 4,
+      "block_probability": 0.4
+    },
+    {
+      "id": "ball12",
+      "kind": "ball_gap",
+      "block_seconds": 12,
+      "block_probability": 0.4
+    },
+    {
+      "id": "combined",
+      "kind": "combined",
+      "ball_block_seconds": 4,
+      "ball_block_probability": 0.4,
+      "player_block_seconds": 1,
+      "player_slot_probability": 0.3,
+      "jitter_std_metres": 0.25,
+      "teleport_probability_per_frame": 0.004,
+      "teleport_metres": 20,
+      "order": [
+        "fixed_shape_jitter",
+        "player_dropout",
+        "ball_gap",
+        "observed_ball_teleport"
+      ]
+    },
+    {
+      "id": "stale_players",
+      "kind": "stale_player",
+      "block_seconds": 2,
+      "per_slot_probability": 0.15,
+      "anchor": "original coordinate at block_start-1; missing or first block gives NaN; no searchback or cross-period borrowing",
+      "ball": "unchanged"
+    },
+    {
+      "id": "view_gap",
+      "kind": "joint_missing",
+      "block_seconds": 2,
+      "block_probability": 0.2,
+      "channels": [
+        "ball",
+        "all_players"
+      ]
+    }
+  ],
+  "corruption_semantics": {
+    "blocks": "Each contiguous positive run [a,b) in timeline order; B=ceil((b-a)/block_frames), block starts a+j*block_frames, last truncated. For each run call the same stream generator once: scalar masks random((B,),dtype=float64), player_dropout/stale_players random((B,S),dtype=float64). Traverse C order block then canonical slot; draws independent of observations/targets. Inactive rows have no block and receive no mask.",
+    "coordinates": "Complete finite pairs only; canonical float32 NaN pair for missing. Input remains immutable; outside positive runs unchanged.",
+    "jitter": "Exactly rng.standard_normal((N,S+1,2),dtype=float64), full C order frame then canonical player slots then ball then x/y; all timeline rows/slots drawn even inactive/missing. Multiply by 0.25 in float64. Start float64 copy of input, add only finite pairs in positive runs.",
+    "player_dropout": "combined: threshold random((B,S),dtype=float64)<0.3 at 25-frame blocks; set selected player pairs NaN.",
+    "ball_gap": "ball4/combined:100-frame blocks; ball12:300-frame blocks. threshold random((B,),dtype=float64)<0.4, set selected ball pairs NaN.",
+    "teleport": "Exactly rng.random((N,2),dtype=float64), C order, all rows incl inactive/missing; column0<0.004 decides, angle=column1*(2*pi) float64. After previous corruptions, only retained finite ball in positive run receives float64 20*cos(angle),20*sin(angle).",
+    "stale_players": "50-frame blocks; random((B,S),dtype=float64)<0.15. Anchor ORIGINAL pair at block_start-1; first run block or missing anchor produces NaN whole selected block; never borrow another block/period or search back. Ball unchanged.",
+    "view_gap": "50-frame blocks; random((B,),dtype=float64)<0.2; selected blocks set all players and ball NaN.",
+    "arithmetic": "combined uses one float64 working copy: jitter, player dropout, ball gap, teleport in that order; cast once to float32 after all operations and canonicalize NaNs. Other conditions copy float32 exactly except assigned canonical NaNs/original float32 anchors. Do not clip coordinates.",
+    "chunk_equivalence": "Normative logical Generator calls above define exact arrays. Implementer may materialize them, or prove bitwise equivalent generation independent of chunk boundaries; simply changing standard_normal call partitioning is not presumed equivalent. No conditional draws/reseeding or per-chunk casts.",
+    "symmetry": "Canonical raw identity permutations produce identical conditions. Anonymous clean feature summaries are within-team permutation invariant. Arbitrary already-indexed noncanonical arrays are rejected, not promised pathwise RNG invariance; any internal co-permutation must transport slot_ids and masks together.",
+    "row_sampling": "For L>cap=30000 choose eligible_ids[j*(L-1)//(cap-1)] for j=0..cap-1 using integer arithmetic; L<=cap retains all. No random draw and no floating linspace.",
+    "boundary_none_sampling": "Per match/condition independent boundary_none_sampling stream: rng.choice(N_none,size=min(N_none,20*max(1,N_positive)),replace=False,shuffle=True) over ascending eligible NONE frame IDs; map and sort selected IDs before combining positives.",
+    "targets_and_timeline": "Unchanged, never read by corruption or its RNG."
+  },
+  "fit": {
+    "C0_conditions": [
+      "clean",
+      "ball4",
+      "ball12",
+      "combined"
+    ],
+    "C1_conditions": [
+      "clean",
+      "ball4",
+      "combined",
+      "stale_players"
+    ],
+    "boundary_conditions": [
+      "clean",
+      "ball4",
+      "combined",
+      "stale_players"
+    ],
+    "emitter_fits": 2,
+    "boundary_fits": 1,
+    "emitter": {
+      "max_iter": 64,
+      "max_leaf_nodes": 15,
+      "learning_rate": 0.08,
+      "l2_regularization": 2.0,
+      "min_samples_leaf": 80,
+      "max_bins": 63,
+      "early_stopping": false,
+      "categorical_features": null
+    },
+    "boundary": {
+      "max_iter": 32,
+      "max_leaf_nodes": 7,
+      "learning_rate": 0.08,
+      "l2_regularization": 2.0,
+      "min_samples_leaf": 80,
+      "max_bins": 63,
+      "early_stopping": false,
+      "categorical_features": null
+    },
+    "emitter_rows": "stride5 from each contiguous positive run start; retain known target; concatenate ascending eligible IDs; if L>cap=30000 select eligible_ids[j*(L-1)//(cap-1)] for j=0..cap-1 with integer arithmetic; same IDs every condition",
+    "max_base_rows_per_match": 30000,
+    "max_emitter_augmented_rows_per_fit": 480000,
+    "emitter_weights": "each eligible original class k in match m and condition c has weight1/(2*4*3*n_mck); split weight equally between original and H/A-swapped copy; missing stratum/class fails; finally divide ALL actual fit-row weights by their global mean so sum(weights)=actual augmented fit-row count",
+    "boundary_targets": "edge t-1 to t; NONE unchanged, TEAM_CHANGE H/A, LIVE_DEAD one D; both known same positive run and geometry valid; exact edge no dilation",
+    "boundary_none_sample": "uniform no-replacement min(N_none,20*max(1,N_positive)) per match/condition; all positive edges; empty stratum or globally absent head class fails",
+    "boundary_weights": "inverse inclusion probability times sqrt(N_eligible/(3*N_class)) using full known eligible fit population; normalize final per-match-condition sum to1/8; finally divide ALL actual fit-row weights by their global mean so sum(weights)=actual retained fit-row count",
+    "boundary_side_swap": false,
+    "temperature": 1.0,
+    "head_max_bytes": 524288,
+    "export_max_raw_error": 1e-10,
+    "max_boundary_rows": 750000,
+    "weight_normalization_order": [
+      "eligible population counts",
+      "row selection and inverse inclusion for boundary",
+      "within-match-condition class balance for emitter or global sqrt-inverse-prior for head",
+      "relative match-condition normalization",
+      "emitter side-swap halves weight",
+      "global mean1 using actual rows seen by HGB"
+    ],
+    "runtime_environment_binding": "CPython3.13.12, numpy2.4.4, sklearn1.9.1, scipy1.18.1 as existing locks; inspect installed exact versions and complete lock hashes at registration; mismatch blocks, no automatic upgrade",
+    "source_closure": {
+      "scientific_new_modules": [
+        "__init__.py",
+        "contracts.py",
+        "guard.py",
+        "cache.py",
+        "adapter.py",
+        "corruption.py",
+        "fetch.py",
+        "boundary.py",
+        "decoder.py",
+        "training.py",
+        "evaluate.py",
+        "resources.py",
+        "core.py",
+        "cli.py"
+      ],
+      "scientific_legacy_modules": "Every transitive imported accepted possession_model/noise_v2/validation/public metric source, training locks and actual environment inventory; content hashes captured at registration",
+      "release_only_modules": [
+        "runner.py",
+        "exporting.py",
+        "review.py",
+        "promotion.py"
+      ],
+      "rule": "Register CLI dispatch for all commands before training; release-only modules may be implemented later, but cannot mutate or replace any scientific dependency. Final release manifest adds exact full runtime closure."
+    },
+    "provenance_stages": {
+      "prefit": "Immutable study binds scientific source/protocol/configuration/features/mappings/policy/environment, complete source catalog and accepted comparator model bytes. New C0/C1/head bytes do not exist and have no placeholder hashes at registration.",
+      "postfit": "After exactly three successful fits, seal models/models.json and C0/C1/head bytes immutably, referencing original study digest, source/input identities and numeric parity receipts. Seal all three before selection reservation/access; never amend original study.",
+      "pretest": "Finalist seal binds selected config/model/head, full postfit models seal, comparator and selection result before test reservation; rehash all applicable identities.",
+      "G08": "Rehash prefit study/source/config/policy/comparator, postfit model seal, finalist and exact runtime/release closure; no stage substitutes later bytes into earlier evidence."
+    }
+  },
+  "candidates": [
+    {
+      "id": "A",
+      "emitter": "accepted",
+      "alpha": 0,
+      "support": "none"
+    },
+    {
+      "id": "F080",
+      "emitter": "accepted",
+      "alpha": 0.8,
+      "support": "flattened_valid_run_mean"
+    },
+    {
+      "id": "B080",
+      "emitter": "accepted",
+      "alpha": 0.8,
+      "support": "learned"
+    },
+    {
+      "id": "C0",
+      "emitter": "C0",
+      "alpha": 0,
+      "support": "none"
+    },
+    {
+      "id": "C1",
+      "emitter": "C1",
+      "alpha": 0,
+      "support": "none"
+    },
+    {
+      "id": "D0050",
+      "emitter": "C0",
+      "alpha": 0.5,
+      "support": "learned"
+    },
+    {
+      "id": "D0080",
+      "emitter": "C0",
+      "alpha": 0.8,
+      "support": "learned"
+    },
+    {
+      "id": "D1050",
+      "emitter": "C1",
+      "alpha": 0.5,
+      "support": "learned"
+    },
+    {
+      "id": "D1080",
+      "emitter": "C1",
+      "alpha": 0.8,
+      "support": "learned"
+    }
+  ],
+  "decoder": {
+    "base_cost": "12.5=accepted0.5transition_seconds*25; registration verifies exact scalar and comparator config/model/source hashes",
+    "boundary_head": "one identical C1-curriculum head for every alpha>0 candidate",
+    "edge": "incoming t-1 ->t",
+    "classes": [
+      "NONE",
+      "TEAM_CHANGE",
+      "LIVE_DEAD"
+    ],
+    "modulation": "C_t(i,j)=C_base(i,j)*(1-alpha*q_type); preserve +inf,diag0; invalidq=0",
+    "alpha_zero": "exact accepted output/ties for numerically valid inputs; new decoder rejects both signs of finite-arithmetic overflow even unused alternatives, accepted source unchanged",
+    "symmetry": "objective and optimal-set equivariance always; output equivariance only unique optimum; canonical ties separate",
+    "invalid_support": "observation-invalid windows produce q=0; malformed caller q NaN/inf/range/shape rejects, never coerces",
+    "flattened_control": "F080 uses same accepted emitter/shared head/alpha0.8 as B080. For each contiguous positive run and support type, eligible t>runstart with valid[t,type]. np.mean(q[eligible_ascending,type],dtype=np.float64) with pinned NumPy, cast once np.float32, assign only those edges; invalid/start/outside0; empty0. Validate all q first; no labels; nonmutating. F080 is normally selection eligible.",
+    "head_validation": "Read byte limit524288 before JSON parse; duplicate keys reject; at most96 trees,1..13nodes/tree, acyclic rooted graph, every node reachable, exactly one parent except root, exact class/feature order, finite legal numeric fields. boundary_support calls raw_scores externally in batches<=4096 and writes directly to float32[N,2]. Tree count3..96 divisible3, complete class iteration groups0,1,2; root0; internal children distinct; leaf left/right integer0 sentinels ignored as graph edges."
+  },
+  "evaluation": {
+    "conditions": [
+      "clean",
+      "ball4",
+      "ball12",
+      "combined",
+      "stale_players",
+      "view_gap"
+    ],
+    "condition_weights": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "primary": "Official pooled H/A spell_scores(...,ious=[.3,.4,.5,.6,.7])[mean_f1], exposed as spell_f1_mean; pool H/A spell TP/FP/FN at each IoU then mean thresholds, never macro-average team F1 or run F1. Equal condition then match means.",
+    "secondary": [
+      "macro_f1",
+      "H_f1",
+      "A_f1",
+      "D_f1",
+      "destination_typed_transition_f1_12_frames",
+      "destination_typed_transition_f1_25_frames"
+    ],
+    "unknowns": "official valid_runs separately per contiguous positive period; retain global indices; predictedX forward-fill then leading backfill within each run; allX staysX; no additional censoring or timeline compression",
+    "tolerance_inclusive": true,
+    "selection_order": [
+      "descending round(primary,12)",
+      "descending round(macro_f1,12)",
+      "ascending candidate_id"
+    ],
+    "gate": {
+      "mean_paired_spell_gain_min": 0.04,
+      "each_match_primary_delta_min": 0,
+      "mean_clean_spell_delta_min": -0.005,
+      "each_match_clean_spell_delta_min": -0.01,
+      "mean_each_class_frame_f1_delta_min": -0.01,
+      "each_condition_mean_spell_delta_min": -0.01,
+      "comparison_epsilon": 1e-12
+    },
+    "selection_gate": "same margins on singleWPY; never call significance; select eligible max, no eligible =>no fresh test",
+    "test_candidates": 1,
+    "test_attempts": 1,
+    "uncertainty": "Fixed report: both whole-match paired deltas, their observed minimum/maximum, arithmetic mean, N=2 and provider/shared-club dependence limitations. No confidence interval, p-value, significance, population generalization or hidden-performance claim; no frame bootstrap.",
+    "attribution": "selection only: B080-A; F080-A; B080-F080 temporal-placement control; C0-A; C1-C0 curriculum replacement not stale-only effect; D0-C0,D1-C1. No test ablations.",
+    "transition_aggregation": "Diagnostic external wrapper calls official transitions and match_transitions separately for each positive-period/known-GT run, retaining global offsets, typed=to and inclusive12/25frames. Sum matched/missed/spurious counts as TP/FN/FP before precision/recall/F1; no cross-run matching or average run F1. This intentionally isolates matching unlike calling public evaluate on all runs; official spell metric unchanged.",
+    "frame_aggregation": "Official confusion/scored_confusion3x4/per_class_prf, absent or unpredicted class F1=0; macro_f1 unweighted H/A/D, never drop absent classes. Frame predictionsX are misses on known GT only."
+  },
+  "access": {
+    "prior_snapshot": "immutable historical ledger prefix hash/length and roles; study identity binds snapshot",
+    "live_ledger": "local/v3-control/consumption.jsonl; global cross-study OS-locked atomically checked and fsynced",
+    "selection_reservation": "entire WPY role once before any label-bearing parse; all declared candidates within same live attempt",
+    "test_reservation": "both WN1/WQQ atomically reserved before earliest label-bearing parser/cache access",
+    "retry": "none after reservation for selection/test; interrupted reservation consumes cohort; no stale-lock reset; root may finish recorded result from already sealed complete artifacts only, no reevaluation",
+    "cache_hits": "Study-domain cache hits/misses require live AccessCapability; release-domain observation/feature caches require verified ReleaseAccess with no study/ledger lookup. Both require complete hashes/schema and retained CacheLease handles; release authority never authorizes targets or study caches.",
+    "transport_integrity": "Opaque download and cryptographic hash/size verification may precede reservation; no parser/decompression-to-records/field inspection before capability",
+    "cache_lifetime": "Acquire and retain Windows handles denying WRITE and DELETE for manifest and all members before verification through consumption; map same held identities, never close/reopen by path. Failed locks/identity changes fail closed.",
+    "release_authority": "InferenceContext holds ReleaseAccess bound to verified release/source/runtime/model hashes, observation-only input schema, process identity, cache root and public policy. Exact tactical ATD XML/TXT allowlist (or isolated synthetic fixtures); targets, IDSSE label-bearing XML, study cache domain and original control state prohibited. No study directory/ledger dependency."
+  },
+  "resource": {
+    "heavy_workers": 1,
+    "numeric_threads": 4,
+    "process_tree_peak_bytes": 12884901888,
+    "aggregate_fit_seconds": 28800,
+    "added_disk_target_bytes": 10737418240,
+    "min_free_disk_bytes": 42949672960,
+    "disk_definition": "all new campaign raw originals,caches,models,reports,packages,envs count; preexisting originals do not; preserve all original downloads; forecasts before acquisition, abort growth before cap",
+    "inference_uncached_median_ratio_max": 1.2,
+    "inference_uncached_median_seconds_max": 120,
+    "worker_peak_increment_max_bytes": 33554432,
+    "worker_peak_absolute_max_bytes": 536870912,
+    "repeats": 3,
+    "benchmark_order": [
+      "A",
+      "candidate",
+      "candidate",
+      "A",
+      "A",
+      "candidate"
+    ],
+    "benchmark_cache": "unique empty cache per uncached run; cached separately diagnostic; exact same raw input",
+    "tree_measurement": "OS worker highwater plus concurrent descendant working-set sampler interval<=50ms; memory job/cap monitoring before spawn",
+    "measurement_limits": "Report worker OS highwater separately from sampled concurrent process-tree peak and monitor gaps; sampled tree peak is a lower bound, not proof of instantaneous hard cap. Enforce OS job limits where available; fail admission if supervisor cannot enforce bound. Uncached means fresh process/empty application cache, not cold OS file cache. Synthetic resource preflight before fresh cohort reservation."
+  },
+  "schedule": {
+    "timezone": "America/New_York",
+    "latest_fit_start": "2026-11-16T00:00:00-05:00",
+    "fit_end": "2026-11-16T08:00:00-05:00",
+    "latest_selection_start": "2026-11-16T09:00:00-05:00",
+    "latest_test_start": "2026-11-16T12:00:00-05:00",
+    "test_end": "2026-11-16T14:00:00-05:00",
+    "first_e2e_gate_end": "2026-11-16T17:00:00-05:00",
+    "freeze": "2026-11-16T20:00:00-05:00",
+    "late_policy": "stop new fit/test stage if latest start missed; preserve completed evidence; do not bypass gates; fallback remains selected",
+    "feasibility": "These are stop policies, not measured feasibility or evidence of completion; actual preflight/resources required."
+  },
+  "release": {
+    "namespace": "experiments/v3",
+    "output_root": "local/v3-releases",
+    "accepted_fallback_files_immutable": 29,
+    "challenge_rows": 199319,
+    "challenge_header": [
+      "frame",
+      "label"
+    ],
+    "challenge_frames": [
+      0,
+      199318
+    ],
+    "labels": [
+      "H",
+      "A",
+      "D",
+      "X"
+    ],
+    "positive_period_half_open": [
+      [
+        1,
+        11185,
+        90652
+      ],
+      [
+        2,
+        110808,
+        190198
+      ]
+    ],
+    "published_forced_dead_half_open": [
+      [
+        110808,
+        113742
+      ]
+    ],
+    "minimal_environment": "CPython3.13 with requirements-lock.txt only; no sklearn/scipy at inference",
+    "review": "isolated versioned review state/server using accepted static assets unchanged; synthetic browser acceptance only",
+    "promotion": "exact tested ZIP/manifest/report hashes plus root receipt; explicit v3 launcher; accepted default remains available",
+    "zip_max_bytes": 20971520,
+    "member_max_bytes_exclusive": 50000000,
+    "core_equivalence": "Post-science wrappers may not alter features, decoder, parameters, label/frame mappings, models or scoring. Final E2E rehashes exact scientific core/config/model bytes and verifies runner/CLI/UI output equality with direct frozen infer; no unchecked postprocessing.",
+    "scientific_api": "experiments.v3.core.predict_codes(features,models,config,policy); frozen before fits, used by selection/test and release runner. InferencePolicy external has no forced intervals; public challenge uses protocol public bounds and forced D scores before decode. No labels/tags or wrapper postprocessing.",
+    "technical_docs": [
+      "experiments/v3/TECHNICAL.md",
+      "experiments/v3/REPRODUCE.md"
+    ],
+    "publication": {
+      "paths": "--out and --report must be distinct regular filenames in the SAME absent new generation directory under an existing non-aliased trusted output root; commit.json reserved. Reject different parents, any existing generation parent/destination, aliases/symlinks/reparse paths/collisions before input access.",
+      "commit": "Create unique sibling temporary directory; write and validate CSV, write report binding CSV hash, write commit.json binding both hashes/bytes plus release/source/policy identities. Flush/fsync each file, close writer handles, verify complete pair, atomically rename whole directory to absent final generation. Never replace a previous generation.",
+      "crash": "Before rename final directory absent and scratch may remain; after rename complete committed pair visible. No individual-file publication. Restart ignores/quarantines scratch and incomplete directories; never completes/overwrites previous output. New run uses new generation directory.",
+      "readers": "UI/download/export only expose a generation after strict commit-manifest/member hash/schema verification under held read handles. UI retains old complete generation on failed run; switch in-memory generation under state lock only after validation, derive csv/report from same generation. Restart scans complete generations only; no mutable per-file pointer."
+    },
+    "forced_dead_authority": {
+      "url": "https://github.com/metrica-sports/more-than-a-hack-2027/blob/main/FAQ.md",
+      "sha256": "c536ec6401ea1b8c8a6dd54ee80e39518d3a521464ed9fe2bc1cf0ee70b7419b",
+      "bytes": 7473,
+      "local_path": "local/v3-final-design-science-blind-20261115/public/FAQ.md",
+      "meaning": "Explicit public [110808,113742),2934 dead frames; interval unchanged. URL is a mutable main locator; exact bytes bound by digest."
+    }
+  },
+  "design_revision": 4
+}

@@ -1,0 +1,454 @@
+{
+  "split": "final_holdout",
+  "match": "J03WR9",
+  "selection_sha256": "1d4069949dc30e38b50f194986b41b4ae815befd499eac8c724ee4b8c7c0a4c2",
+  "results": [
+    {
+      "condition": "clean",
+      "candidate": {
+        "macro_f1": 0.9081537557769869,
+        "spell_f1": 0.5335453100158982,
+        "n_truth_spells": 370,
+        "n_predicted_spells": 259,
+        "graded_frames": 146810,
+        "confusion": [
+          [
+            48461,
+            4621,
+            157,
+            0
+          ],
+          [
+            5760,
+            26173,
+            144,
+            0
+          ],
+          [
+            230,
+            179,
+            61085,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.9000092859132696,
+          "A": 0.8302299762093576,
+          "D": 0.9942220052083334
+        },
+        "transitions_1s": {
+          "n_matched": 226,
+          "n_gt": 460,
+          "n_pred": 352,
+          "precision": 0.6420454545454546,
+          "recall": 0.49130434782608695,
+          "f1": 0.5566502463054187
+        }
+      },
+      "smooth50": {
+        "macro_f1": 0.4095178373292973,
+        "spell_f1": 0.3152046783625731,
+        "n_truth_spells": 370,
+        "n_predicted_spells": 314,
+        "graded_frames": 146810,
+        "confusion": [
+          [
+            47671,
+            5568,
+            0,
+            0
+          ],
+          [
+            6721,
+            25356,
+            0,
+            0
+          ],
+          [
+            28218,
+            33276,
+            0,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.7018233479819506,
+          "A": 0.5267301640059413,
+          "D": 0.0
+        },
+        "transitions_1s": {
+          "n_matched": 81,
+          "n_gt": 460,
+          "n_pred": 312,
+          "precision": 0.25961538461538464,
+          "recall": 0.17608695652173914,
+          "f1": 0.20984455958549222
+        }
+      },
+      "candidate_seconds": 6.684069700015243,
+      "source": {
+        "source": "IDSSE Sportec/DFL raw observed tracking",
+        "paper": "https://www.nature.com/articles/s41597-025-04505-y",
+        "license": "CC-BY-4.0",
+        "metadata": {
+          "match_id": "DFL-MAT-J03WR9",
+          "match_title": "Fortuna D\u00fcsseldorf:1. FC Kaiserslautern",
+          "kickoff": "2022-11-11T17:31:11.970+00:00",
+          "pitch": [
+            105.0,
+            68.0
+          ],
+          "slots": [
+            "DFL-OBJ-0025YM",
+            "DFL-OBJ-00003W",
+            "DFL-OBJ-0000F9",
+            "DFL-OBJ-00017G",
+            "DFL-OBJ-0028PO",
+            "DFL-OBJ-0000YE",
+            "DFL-OBJ-00021G",
+            "DFL-OBJ-00265G",
+            "DFL-OBJ-0001ZY",
+            "DFL-OBJ-0002DT",
+            "DFL-OBJ-002G9B",
+            "DFL-OBJ-00265D",
+            "DFL-OBJ-0026MI",
+            "DFL-OBJ-0026WW",
+            "DFL-OBJ-0028GO",
+            "DFL-OBJ-002GEO",
+            "DFL-OBJ-002GPN",
+            "DFL-OBJ-0028G2",
+            "DFL-OBJ-002G0F",
+            "DFL-OBJ-002GPI",
+            "DFL-OBJ-00005H",
+            "DFL-OBJ-00008K",
+            "DFL-OBJ-000170",
+            "DFL-OBJ-0000NZ",
+            "DFL-OBJ-00006V",
+            "DFL-OBJ-0000F8",
+            "DFL-OBJ-J0130T",
+            "DFL-OBJ-00028V",
+            "DFL-OBJ-002FXT",
+            "DFL-OBJ-0026RH",
+            "DFL-OBJ-0028FW",
+            "DFL-OBJ-002G5J",
+            "DFL-OBJ-J01CVM",
+            "DFL-OBJ-002GMO",
+            "DFL-OBJ-002GM1",
+            "DFL-OBJ-002GM9",
+            "DFL-OBJ-J01KJ5",
+            "DFL-OBJ-J01L1F",
+            "DFL-OBJ-J01NQ8",
+            "DFL-OBJ-J01OYT"
+          ],
+          "team_of_slot": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "home_team_id": "DFL-CLU-00000P",
+          "away_team_id": "DFL-CLU-00000I"
+        },
+        "layout": {
+          "n_frames": 146810,
+          "blocks": [
+            {
+              "period": 1,
+              "raw_start": 10000,
+              "raw_end": 78353,
+              "start": 0,
+              "end": 68354
+            },
+            {
+              "period": 2,
+              "raw_start": 100000,
+              "raw_end": 178455,
+              "start": 68354,
+              "end": 146810
+            }
+          ],
+          "fps": 25.0,
+          "xml_frame_records": 3376630,
+          "signature": {
+            "version": 1,
+            "raw_size": 372934140,
+            "raw_mtime_ns": 1794745692996899600,
+            "meta_sha256": "429b584e89df3e3e8b81f4bd0d004b38bd0b4298bb390b8fb43efccb60963e01",
+            "raw_name": "DFL_04_03_positions_raw_observed_DFL-COM-000002_DFL-MAT-J03WR9.xml"
+          },
+          "n_slots": 40,
+          "ball_records": 146810,
+          "coordinate_transform": "centered metres + (pitch_x/2,pitch_y/2), no orientation flip"
+        },
+        "corruption": {
+          "masked_timeline_frames": 0
+        },
+        "target": "BallStatus=0 -> D; status=1 and possession=1 -> H, 2 -> A; otherwise X",
+        "label_limit": "Provider control semantics; not corrected Metrica challenge ground truth",
+        "inference_uses_labels": false
+      }
+    },
+    {
+      "condition": "occluded",
+      "candidate": {
+        "macro_f1": 0.8326044561770023,
+        "spell_f1": 0.37352112676056337,
+        "n_truth_spells": 370,
+        "n_predicted_spells": 340,
+        "graded_frames": 146810,
+        "confusion": [
+          [
+            42064,
+            7568,
+            3607,
+            0
+          ],
+          [
+            5937,
+            24354,
+            1786,
+            0
+          ],
+          [
+            1864,
+            1086,
+            58544,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.8159528243327125,
+          "A": 0.7483752016593685,
+          "D": 0.9334853425389258
+        },
+        "transitions_1s": {
+          "n_matched": 174,
+          "n_gt": 460,
+          "n_pred": 490,
+          "precision": 0.3551020408163265,
+          "recall": 0.3782608695652174,
+          "f1": 0.3663157894736842
+        }
+      },
+      "smooth50": {
+        "macro_f1": 0.46545320084102854,
+        "spell_f1": 0.1986928104575163,
+        "n_truth_spells": 370,
+        "n_predicted_spells": 548,
+        "graded_frames": 146810,
+        "confusion": [
+          [
+            39297,
+            5008,
+            8934,
+            0
+          ],
+          [
+            6608,
+            22276,
+            3193,
+            0
+          ],
+          [
+            23863,
+            27404,
+            10227,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.6389392473599064,
+          "A": 0.5134789373595344,
+          "D": 0.2439414178036447
+        },
+        "transitions_1s": {
+          "n_matched": 88,
+          "n_gt": 460,
+          "n_pred": 686,
+          "precision": 0.1282798833819242,
+          "recall": 0.19130434782608696,
+          "f1": 0.15357766143106458
+        }
+      },
+      "candidate_seconds": 6.230599300004542,
+      "source": {
+        "source": "IDSSE Sportec/DFL raw observed tracking",
+        "paper": "https://www.nature.com/articles/s41597-025-04505-y",
+        "license": "CC-BY-4.0",
+        "metadata": {
+          "match_id": "DFL-MAT-J03WR9",
+          "match_title": "Fortuna D\u00fcsseldorf:1. FC Kaiserslautern",
+          "kickoff": "2022-11-11T17:31:11.970+00:00",
+          "pitch": [
+            105.0,
+            68.0
+          ],
+          "slots": [
+            "DFL-OBJ-0025YM",
+            "DFL-OBJ-00003W",
+            "DFL-OBJ-0000F9",
+            "DFL-OBJ-00017G",
+            "DFL-OBJ-0028PO",
+            "DFL-OBJ-0000YE",
+            "DFL-OBJ-00021G",
+            "DFL-OBJ-00265G",
+            "DFL-OBJ-0001ZY",
+            "DFL-OBJ-0002DT",
+            "DFL-OBJ-002G9B",
+            "DFL-OBJ-00265D",
+            "DFL-OBJ-0026MI",
+            "DFL-OBJ-0026WW",
+            "DFL-OBJ-0028GO",
+            "DFL-OBJ-002GEO",
+            "DFL-OBJ-002GPN",
+            "DFL-OBJ-0028G2",
+            "DFL-OBJ-002G0F",
+            "DFL-OBJ-002GPI",
+            "DFL-OBJ-00005H",
+            "DFL-OBJ-00008K",
+            "DFL-OBJ-000170",
+            "DFL-OBJ-0000NZ",
+            "DFL-OBJ-00006V",
+            "DFL-OBJ-0000F8",
+            "DFL-OBJ-J0130T",
+            "DFL-OBJ-00028V",
+            "DFL-OBJ-002FXT",
+            "DFL-OBJ-0026RH",
+            "DFL-OBJ-0028FW",
+            "DFL-OBJ-002G5J",
+            "DFL-OBJ-J01CVM",
+            "DFL-OBJ-002GMO",
+            "DFL-OBJ-002GM1",
+            "DFL-OBJ-002GM9",
+            "DFL-OBJ-J01KJ5",
+            "DFL-OBJ-J01L1F",
+            "DFL-OBJ-J01NQ8",
+            "DFL-OBJ-J01OYT"
+          ],
+          "team_of_slot": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "home_team_id": "DFL-CLU-00000P",
+          "away_team_id": "DFL-CLU-00000I"
+        },
+        "layout": {
+          "n_frames": 146810,
+          "blocks": [
+            {
+              "period": 1,
+              "raw_start": 10000,
+              "raw_end": 78353,
+              "start": 0,
+              "end": 68354
+            },
+            {
+              "period": 2,
+              "raw_start": 100000,
+              "raw_end": 178455,
+              "start": 68354,
+              "end": 146810
+            }
+          ],
+          "fps": 25.0,
+          "xml_frame_records": 3376630,
+          "signature": {
+            "version": 1,
+            "raw_size": 372934140,
+            "raw_mtime_ns": 1794745692996899600,
+            "meta_sha256": "429b584e89df3e3e8b81f4bd0d004b38bd0b4298bb390b8fb43efccb60963e01",
+            "raw_name": "DFL_04_03_positions_raw_observed_DFL-COM-000002_DFL-MAT-J03WR9.xml"
+          },
+          "n_slots": 40,
+          "ball_records": 146810,
+          "coordinate_transform": "centered metres + (pitch_x/2,pitch_y/2), no orientation flip"
+        },
+        "corruption": {
+          "ball_missing_fraction": 0.4,
+          "block_seconds": 4.0,
+          "seed": 20261115,
+          "masked_timeline_frames": 58724
+        },
+        "target": "BallStatus=0 -> D; status=1 and possession=1 -> H, 2 -> A; otherwise X",
+        "label_limit": "Provider control semantics; not corrected Metrica challenge ground truth",
+        "inference_uses_labels": false
+      }
+    }
+  ],
+  "used_for_tuning": false,
+  "limitation": "External provider labels and simulated missingness; not hidden challenge performance"
+}

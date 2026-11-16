@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "spdx": "CC-BY-4.0",
+  "credit": "Deutsche Fussball Liga (DFL)",
+  "citation": "Bassek, Rein, Weber and Memmert (2025)",
+  "paper": "https://doi.org/10.1038/s41597-025-04505-y",
+  "dataset": "https://doi.org/10.6084/m9.figshare.28196177.v1",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "adaptation": "Local feature extraction and deterministic synthetic corruption"
+}

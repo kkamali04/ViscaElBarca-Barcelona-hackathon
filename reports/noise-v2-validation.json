@@ -1,0 +1,2005 @@
+{
+  "rows": [
+    {
+      "condition": "clean",
+      "transition_seconds": 0.25,
+      "candidate": {
+        "macro_f1": 0.8907007720121157,
+        "spell_f1": 0.5279596977329974,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 338,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            31569,
+            6127,
+            116,
+            0
+          ],
+          [
+            5705,
+            32678,
+            91,
+            0
+          ],
+          [
+            207,
+            490,
+            65553,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.8385640099345225,
+          "A": 0.8403862721650015,
+          "D": 0.993152033936823
+        },
+        "transitions_1s": {
+          "n_matched": 307,
+          "n_gt": 567,
+          "n_pred": 450,
+          "precision": 0.6822222222222222,
+          "recall": 0.5414462081128748,
+          "f1": 0.6037364798426745
+        }
+      },
+      "v1_reference": {
+        "macro_f1": 0.8940179056017046,
+        "spell_f1": 0.5228346456692913,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 306,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            31519,
+            6207,
+            86,
+            0
+          ],
+          [
+            5532,
+            32870,
+            72,
+            0
+          ],
+          [
+            230,
+            118,
+            65902,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.8394657291625052,
+          "A": 0.8464123395434473,
+          "D": 0.996175648099161
+        },
+        "transitions_1s": {
+          "n_matched": 292,
+          "n_gt": 567,
+          "n_pred": 417,
+          "precision": 0.7002398081534772,
+          "recall": 0.5149911816578483,
+          "f1": 0.5934959349593496
+        }
+      },
+      "provenance": {
+        "match": "J03WOY",
+        "raw_sha256": "a228ef0e676d009cefff1580fcb721b53f598454eb120ec347e0a628a3a4646b",
+        "metadata_sha256": "4c497fac683eee8292901c18ca02c0be1d9609d0b9d4bd8aa092c61f9e0b19e9",
+        "condition": {
+          "name": "clean",
+          "seed": 20261128,
+          "ball_missing_fraction": 0.0,
+          "ball_block_seconds": 4.0,
+          "player_slot_dropout_probability": 0.0,
+          "player_block_seconds": 1.0,
+          "coordinate_noise_std_m": 0.0,
+          "teleport_probability_per_timeline_frame": 0.0,
+          "teleport_distance_m": 20.0
+        },
+        "observations": {
+          "n_frames": 142536,
+          "n_roster_slots": 40,
+          "base_ball_observation_rate": 1.0,
+          "stressed_ball_observation_rate": 1.0,
+          "reliable_ball_geometry_rate_after_jump_guard": 0.9927456923163271,
+          "masked_ball_timeline_frames": 0,
+          "masked_ball_timeline_fraction": 0.0,
+          "base_player_observations": 3135792,
+          "retained_player_observations": 3135792,
+          "retained_natural_player_observation_fraction": 1.0,
+          "mean_visible_players_per_side": [
+            11.0,
+            11.0
+          ],
+          "drawn_teleport_frames": 0,
+          "applied_observed_ball_teleports": 0,
+          "feature_array_bytes": 4846224,
+          "player_ring_bytes": 8320,
+          "dropout_mask_bytes": 228080,
+          "feature_seconds": 24.475282800005516
+        },
+        "labels_used_for_features": false
+      }
+    },
+    {
+      "condition": "clean",
+      "transition_seconds": 0.5,
+      "candidate": {
+        "macro_f1": 0.8913465281218267,
+        "spell_f1": 0.5289299867899604,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 301,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            31703,
+            6019,
+            90,
+            0
+          ],
+          [
+            5764,
+            32617,
+            93,
+            0
+          ],
+          [
+            207,
+            485,
+            65558,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.8399703256232943,
+          "A": 0.8406984986146014,
+          "D": 0.9933707601275844
+        },
+        "transitions_1s": {
+          "n_matched": 295,
+          "n_gt": 567,
+          "n_pred": 412,
+          "precision": 0.7160194174757282,
+          "recall": 0.5202821869488536,
+          "f1": 0.6026557711950971
+        }
+      },
+      "v1_reference": {
+        "macro_f1": 0.8940179056017046,
+        "spell_f1": 0.5228346456692913,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 306,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            31519,
+            6207,
+            86,
+            0
+          ],
+          [
+            5532,
+            32870,
+            72,
+            0
+          ],
+          [
+            230,
+            118,
+            65902,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.8394657291625052,
+          "A": 0.8464123395434473,
+          "D": 0.996175648099161
+        },
+        "transitions_1s": {
+          "n_matched": 292,
+          "n_gt": 567,
+          "n_pred": 417,
+          "precision": 0.7002398081534772,
+          "recall": 0.5149911816578483,
+          "f1": 0.5934959349593496
+        }
+      },
+      "provenance": {
+        "match": "J03WOY",
+        "raw_sha256": "a228ef0e676d009cefff1580fcb721b53f598454eb120ec347e0a628a3a4646b",
+        "metadata_sha256": "4c497fac683eee8292901c18ca02c0be1d9609d0b9d4bd8aa092c61f9e0b19e9",
+        "condition": {
+          "name": "clean",
+          "seed": 20261128,
+          "ball_missing_fraction": 0.0,
+          "ball_block_seconds": 4.0,
+          "player_slot_dropout_probability": 0.0,
+          "player_block_seconds": 1.0,
+          "coordinate_noise_std_m": 0.0,
+          "teleport_probability_per_timeline_frame": 0.0,
+          "teleport_distance_m": 20.0
+        },
+        "observations": {
+          "n_frames": 142536,
+          "n_roster_slots": 40,
+          "base_ball_observation_rate": 1.0,
+          "stressed_ball_observation_rate": 1.0,
+          "reliable_ball_geometry_rate_after_jump_guard": 0.9927456923163271,
+          "masked_ball_timeline_frames": 0,
+          "masked_ball_timeline_fraction": 0.0,
+          "base_player_observations": 3135792,
+          "retained_player_observations": 3135792,
+          "retained_natural_player_observation_fraction": 1.0,
+          "mean_visible_players_per_side": [
+            11.0,
+            11.0
+          ],
+          "drawn_teleport_frames": 0,
+          "applied_observed_ball_teleports": 0,
+          "feature_array_bytes": 4846224,
+          "player_ring_bytes": 8320,
+          "dropout_mask_bytes": 228080,
+          "feature_seconds": 24.475282800005516
+        },
+        "labels_used_for_features": false
+      }
+    },
+    {
+      "condition": "clean",
+      "transition_seconds": 1.0,
+      "candidate": {
+        "macro_f1": 0.8846229343042955,
+        "spell_f1": 0.4855944055944056,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 259,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            31064,
+            6656,
+            92,
+            0
+          ],
+          [
+            5898,
+            32485,
+            91,
+            0
+          ],
+          [
+            217,
+            473,
+            65560,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.8284727500633409,
+          "A": 0.8320100399549226,
+          "D": 0.9933860128946231
+        },
+        "transitions_1s": {
+          "n_matched": 267,
+          "n_gt": 567,
+          "n_pred": 370,
+          "precision": 0.7216216216216216,
+          "recall": 0.4708994708994709,
+          "f1": 0.5699039487726787
+        }
+      },
+      "v1_reference": {
+        "macro_f1": 0.8940179056017046,
+        "spell_f1": 0.5228346456692913,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 306,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            31519,
+            6207,
+            86,
+            0
+          ],
+          [
+            5532,
+            32870,
+            72,
+            0
+          ],
+          [
+            230,
+            118,
+            65902,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.8394657291625052,
+          "A": 0.8464123395434473,
+          "D": 0.996175648099161
+        },
+        "transitions_1s": {
+          "n_matched": 292,
+          "n_gt": 567,
+          "n_pred": 417,
+          "precision": 0.7002398081534772,
+          "recall": 0.5149911816578483,
+          "f1": 0.5934959349593496
+        }
+      },
+      "provenance": {
+        "match": "J03WOY",
+        "raw_sha256": "a228ef0e676d009cefff1580fcb721b53f598454eb120ec347e0a628a3a4646b",
+        "metadata_sha256": "4c497fac683eee8292901c18ca02c0be1d9609d0b9d4bd8aa092c61f9e0b19e9",
+        "condition": {
+          "name": "clean",
+          "seed": 20261128,
+          "ball_missing_fraction": 0.0,
+          "ball_block_seconds": 4.0,
+          "player_slot_dropout_probability": 0.0,
+          "player_block_seconds": 1.0,
+          "coordinate_noise_std_m": 0.0,
+          "teleport_probability_per_timeline_frame": 0.0,
+          "teleport_distance_m": 20.0
+        },
+        "observations": {
+          "n_frames": 142536,
+          "n_roster_slots": 40,
+          "base_ball_observation_rate": 1.0,
+          "stressed_ball_observation_rate": 1.0,
+          "reliable_ball_geometry_rate_after_jump_guard": 0.9927456923163271,
+          "masked_ball_timeline_frames": 0,
+          "masked_ball_timeline_fraction": 0.0,
+          "base_player_observations": 3135792,
+          "retained_player_observations": 3135792,
+          "retained_natural_player_observation_fraction": 1.0,
+          "mean_visible_players_per_side": [
+            11.0,
+            11.0
+          ],
+          "drawn_teleport_frames": 0,
+          "applied_observed_ball_teleports": 0,
+          "feature_array_bytes": 4846224,
+          "player_ring_bytes": 8320,
+          "dropout_mask_bytes": 228080,
+          "feature_seconds": 24.475282800005516
+        },
+        "labels_used_for_features": false
+      }
+    },
+    {
+      "condition": "clean",
+      "transition_seconds": 2.0,
+      "candidate": {
+        "macro_f1": 0.8802967195589476,
+        "spell_f1": 0.4417033773861968,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 225,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            30721,
+            6997,
+            94,
+            0
+          ],
+          [
+            5945,
+            32437,
+            92,
+            0
+          ],
+          [
+            242,
+            597,
+            65411,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.822296573875803,
+          "A": 0.8263677472772434,
+          "D": 0.9922258375237966
+        },
+        "transitions_1s": {
+          "n_matched": 245,
+          "n_gt": 567,
+          "n_pred": 334,
+          "precision": 0.7335329341317365,
+          "recall": 0.43209876543209874,
+          "f1": 0.5438401775804662
+        }
+      },
+      "v1_reference": {
+        "macro_f1": 0.8940179056017046,
+        "spell_f1": 0.5228346456692913,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 306,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            31519,
+            6207,
+            86,
+            0
+          ],
+          [
+            5532,
+            32870,
+            72,
+            0
+          ],
+          [
+            230,
+            118,
+            65902,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.8394657291625052,
+          "A": 0.8464123395434473,
+          "D": 0.996175648099161
+        },
+        "transitions_1s": {
+          "n_matched": 292,
+          "n_gt": 567,
+          "n_pred": 417,
+          "precision": 0.7002398081534772,
+          "recall": 0.5149911816578483,
+          "f1": 0.5934959349593496
+        }
+      },
+      "provenance": {
+        "match": "J03WOY",
+        "raw_sha256": "a228ef0e676d009cefff1580fcb721b53f598454eb120ec347e0a628a3a4646b",
+        "metadata_sha256": "4c497fac683eee8292901c18ca02c0be1d9609d0b9d4bd8aa092c61f9e0b19e9",
+        "condition": {
+          "name": "clean",
+          "seed": 20261128,
+          "ball_missing_fraction": 0.0,
+          "ball_block_seconds": 4.0,
+          "player_slot_dropout_probability": 0.0,
+          "player_block_seconds": 1.0,
+          "coordinate_noise_std_m": 0.0,
+          "teleport_probability_per_timeline_frame": 0.0,
+          "teleport_distance_m": 20.0
+        },
+        "observations": {
+          "n_frames": 142536,
+          "n_roster_slots": 40,
+          "base_ball_observation_rate": 1.0,
+          "stressed_ball_observation_rate": 1.0,
+          "reliable_ball_geometry_rate_after_jump_guard": 0.9927456923163271,
+          "masked_ball_timeline_frames": 0,
+          "masked_ball_timeline_fraction": 0.0,
+          "base_player_observations": 3135792,
+          "retained_player_observations": 3135792,
+          "retained_natural_player_observation_fraction": 1.0,
+          "mean_visible_players_per_side": [
+            11.0,
+            11.0
+          ],
+          "drawn_teleport_frames": 0,
+          "applied_observed_ball_teleports": 0,
+          "feature_array_bytes": 4846224,
+          "player_ring_bytes": 8320,
+          "dropout_mask_bytes": 228080,
+          "feature_seconds": 24.475282800005516
+        },
+        "labels_used_for_features": false
+      }
+    },
+    {
+      "condition": "occluded",
+      "transition_seconds": 0.25,
+      "candidate": {
+        "macro_f1": 0.8307903188441726,
+        "spell_f1": 0.4032482598607888,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 406,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            29061,
+            6594,
+            2157,
+            0
+          ],
+          [
+            6617,
+            30251,
+            1606,
+            0
+          ],
+          [
+            2314,
+            1761,
+            62175,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.7667405413962324,
+          "A": 0.7849247535028543,
+          "D": 0.9407056616334311
+        },
+        "transitions_1s": {
+          "n_matched": 230,
+          "n_gt": 567,
+          "n_pred": 551,
+          "precision": 0.41742286751361163,
+          "recall": 0.4056437389770723,
+          "f1": 0.41144901610017887
+        }
+      },
+      "v1_reference": {
+        "macro_f1": 0.833191457158891,
+        "spell_f1": 0.42332506203473946,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 350,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            28897,
+            6902,
+            2013,
+            0
+          ],
+          [
+            6637,
+            30846,
+            991,
+            0
+          ],
+          [
+            2179,
+            1980,
+            62091,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.7652300562727573,
+          "A": 0.7888800797933557,
+          "D": 0.9454642354105599
+        },
+        "transitions_1s": {
+          "n_matched": 229,
+          "n_gt": 567,
+          "n_pred": 482,
+          "precision": 0.475103734439834,
+          "recall": 0.4038800705467372,
+          "f1": 0.436606291706387
+        }
+      },
+      "provenance": {
+        "match": "J03WOY",
+        "raw_sha256": "a228ef0e676d009cefff1580fcb721b53f598454eb120ec347e0a628a3a4646b",
+        "metadata_sha256": "4c497fac683eee8292901c18ca02c0be1d9609d0b9d4bd8aa092c61f9e0b19e9",
+        "condition": {
+          "name": "occluded",
+          "seed": 20261129,
+          "ball_missing_fraction": 0.4,
+          "ball_block_seconds": 4.0,
+          "player_slot_dropout_probability": 0.0,
+          "player_block_seconds": 1.0,
+          "coordinate_noise_std_m": 0.0,
+          "teleport_probability_per_timeline_frame": 0.0,
+          "teleport_distance_m": 20.0
+        },
+        "observations": {
+          "n_frames": 142536,
+          "n_roster_slots": 40,
+          "base_ball_observation_rate": 1.0,
+          "stressed_ball_observation_rate": 0.6000028063085817,
+          "reliable_ball_geometry_rate_after_jump_guard": 0.59560391760678,
+          "masked_ball_timeline_frames": 57014,
+          "masked_ball_timeline_fraction": 0.3999971936914183,
+          "base_player_observations": 3135792,
+          "retained_player_observations": 3135792,
+          "retained_natural_player_observation_fraction": 1.0,
+          "mean_visible_players_per_side": [
+            11.0,
+            11.0
+          ],
+          "drawn_teleport_frames": 0,
+          "applied_observed_ball_teleports": 0,
+          "feature_array_bytes": 4846224,
+          "player_ring_bytes": 8320,
+          "dropout_mask_bytes": 228080,
+          "feature_seconds": 20.189079900010256
+        },
+        "labels_used_for_features": false
+      }
+    },
+    {
+      "condition": "occluded",
+      "transition_seconds": 0.5,
+      "candidate": {
+        "macro_f1": 0.8348866181178335,
+        "spell_f1": 0.42443890274314217,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 346,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            29085,
+            6595,
+            2132,
+            0
+          ],
+          [
+            6331,
+            30593,
+            1550,
+            0
+          ],
+          [
+            2178,
+            1729,
+            62343,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.771424024613426,
+          "A": 0.7906087271129718,
+          "D": 0.9426271026271026
+        },
+        "transitions_1s": {
+          "n_matched": 223,
+          "n_gt": 567,
+          "n_pred": 480,
+          "precision": 0.46458333333333335,
+          "recall": 0.3932980599647266,
+          "f1": 0.4259789875835721
+        }
+      },
+      "v1_reference": {
+        "macro_f1": 0.833191457158891,
+        "spell_f1": 0.42332506203473946,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 350,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            28897,
+            6902,
+            2013,
+            0
+          ],
+          [
+            6637,
+            30846,
+            991,
+            0
+          ],
+          [
+            2179,
+            1980,
+            62091,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.7652300562727573,
+          "A": 0.7888800797933557,
+          "D": 0.9454642354105599
+        },
+        "transitions_1s": {
+          "n_matched": 229,
+          "n_gt": 567,
+          "n_pred": 482,
+          "precision": 0.475103734439834,
+          "recall": 0.4038800705467372,
+          "f1": 0.436606291706387
+        }
+      },
+      "provenance": {
+        "match": "J03WOY",
+        "raw_sha256": "a228ef0e676d009cefff1580fcb721b53f598454eb120ec347e0a628a3a4646b",
+        "metadata_sha256": "4c497fac683eee8292901c18ca02c0be1d9609d0b9d4bd8aa092c61f9e0b19e9",
+        "condition": {
+          "name": "occluded",
+          "seed": 20261129,
+          "ball_missing_fraction": 0.4,
+          "ball_block_seconds": 4.0,
+          "player_slot_dropout_probability": 0.0,
+          "player_block_seconds": 1.0,
+          "coordinate_noise_std_m": 0.0,
+          "teleport_probability_per_timeline_frame": 0.0,
+          "teleport_distance_m": 20.0
+        },
+        "observations": {
+          "n_frames": 142536,
+          "n_roster_slots": 40,
+          "base_ball_observation_rate": 1.0,
+          "stressed_ball_observation_rate": 0.6000028063085817,
+          "reliable_ball_geometry_rate_after_jump_guard": 0.59560391760678,
+          "masked_ball_timeline_frames": 57014,
+          "masked_ball_timeline_fraction": 0.3999971936914183,
+          "base_player_observations": 3135792,
+          "retained_player_observations": 3135792,
+          "retained_natural_player_observation_fraction": 1.0,
+          "mean_visible_players_per_side": [
+            11.0,
+            11.0
+          ],
+          "drawn_teleport_frames": 0,
+          "applied_observed_ball_teleports": 0,
+          "feature_array_bytes": 4846224,
+          "player_ring_bytes": 8320,
+          "dropout_mask_bytes": 228080,
+          "feature_seconds": 20.189079900010256
+        },
+        "labels_used_for_features": false
+      }
+    },
+    {
+      "condition": "occluded",
+      "transition_seconds": 1.0,
+      "candidate": {
+        "macro_f1": 0.8411743004746031,
+        "spell_f1": 0.4336088154269972,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 270,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            28993,
+            6753,
+            2066,
+            0
+          ],
+          [
+            6029,
+            31388,
+            1057,
+            0
+          ],
+          [
+            1812,
+            1956,
+            62482,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.776813225089087,
+          "A": 0.7989716307543496,
+          "D": 0.9477380455803724
+        },
+        "transitions_1s": {
+          "n_matched": 206,
+          "n_gt": 567,
+          "n_pred": 387,
+          "precision": 0.5322997416020672,
+          "recall": 0.36331569664902996,
+          "f1": 0.43186582809224316
+        }
+      },
+      "v1_reference": {
+        "macro_f1": 0.833191457158891,
+        "spell_f1": 0.42332506203473946,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 350,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            28897,
+            6902,
+            2013,
+            0
+          ],
+          [
+            6637,
+            30846,
+            991,
+            0
+          ],
+          [
+            2179,
+            1980,
+            62091,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.7652300562727573,
+          "A": 0.7888800797933557,
+          "D": 0.9454642354105599
+        },
+        "transitions_1s": {
+          "n_matched": 229,
+          "n_gt": 567,
+          "n_pred": 482,
+          "precision": 0.475103734439834,
+          "recall": 0.4038800705467372,
+          "f1": 0.436606291706387
+        }
+      },
+      "provenance": {
+        "match": "J03WOY",
+        "raw_sha256": "a228ef0e676d009cefff1580fcb721b53f598454eb120ec347e0a628a3a4646b",
+        "metadata_sha256": "4c497fac683eee8292901c18ca02c0be1d9609d0b9d4bd8aa092c61f9e0b19e9",
+        "condition": {
+          "name": "occluded",
+          "seed": 20261129,
+          "ball_missing_fraction": 0.4,
+          "ball_block_seconds": 4.0,
+          "player_slot_dropout_probability": 0.0,
+          "player_block_seconds": 1.0,
+          "coordinate_noise_std_m": 0.0,
+          "teleport_probability_per_timeline_frame": 0.0,
+          "teleport_distance_m": 20.0
+        },
+        "observations": {
+          "n_frames": 142536,
+          "n_roster_slots": 40,
+          "base_ball_observation_rate": 1.0,
+          "stressed_ball_observation_rate": 0.6000028063085817,
+          "reliable_ball_geometry_rate_after_jump_guard": 0.59560391760678,
+          "masked_ball_timeline_frames": 57014,
+          "masked_ball_timeline_fraction": 0.3999971936914183,
+          "base_player_observations": 3135792,
+          "retained_player_observations": 3135792,
+          "retained_natural_player_observation_fraction": 1.0,
+          "mean_visible_players_per_side": [
+            11.0,
+            11.0
+          ],
+          "drawn_teleport_frames": 0,
+          "applied_observed_ball_teleports": 0,
+          "feature_array_bytes": 4846224,
+          "player_ring_bytes": 8320,
+          "dropout_mask_bytes": 228080,
+          "feature_seconds": 20.189079900010256
+        },
+        "labels_used_for_features": false
+      }
+    },
+    {
+      "condition": "occluded",
+      "transition_seconds": 2.0,
+      "candidate": {
+        "macro_f1": 0.8418602775874154,
+        "spell_f1": 0.38989598811292714,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 217,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            28959,
+            6869,
+            1984,
+            0
+          ],
+          [
+            6089,
+            31395,
+            990,
+            0
+          ],
+          [
+            1425,
+            2171,
+            62654,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.7796728814700141,
+          "A": 0.7957267231874691,
+          "D": 0.9501812281047635
+        },
+        "transitions_1s": {
+          "n_matched": 182,
+          "n_gt": 567,
+          "n_pred": 330,
+          "precision": 0.5515151515151515,
+          "recall": 0.32098765432098764,
+          "f1": 0.40579710144927533
+        }
+      },
+      "v1_reference": {
+        "macro_f1": 0.833191457158891,
+        "spell_f1": 0.42332506203473946,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 350,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            28897,
+            6902,
+            2013,
+            0
+          ],
+          [
+            6637,
+            30846,
+            991,
+            0
+          ],
+          [
+            2179,
+            1980,
+            62091,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.7652300562727573,
+          "A": 0.7888800797933557,
+          "D": 0.9454642354105599
+        },
+        "transitions_1s": {
+          "n_matched": 229,
+          "n_gt": 567,
+          "n_pred": 482,
+          "precision": 0.475103734439834,
+          "recall": 0.4038800705467372,
+          "f1": 0.436606291706387
+        }
+      },
+      "provenance": {
+        "match": "J03WOY",
+        "raw_sha256": "a228ef0e676d009cefff1580fcb721b53f598454eb120ec347e0a628a3a4646b",
+        "metadata_sha256": "4c497fac683eee8292901c18ca02c0be1d9609d0b9d4bd8aa092c61f9e0b19e9",
+        "condition": {
+          "name": "occluded",
+          "seed": 20261129,
+          "ball_missing_fraction": 0.4,
+          "ball_block_seconds": 4.0,
+          "player_slot_dropout_probability": 0.0,
+          "player_block_seconds": 1.0,
+          "coordinate_noise_std_m": 0.0,
+          "teleport_probability_per_timeline_frame": 0.0,
+          "teleport_distance_m": 20.0
+        },
+        "observations": {
+          "n_frames": 142536,
+          "n_roster_slots": 40,
+          "base_ball_observation_rate": 1.0,
+          "stressed_ball_observation_rate": 0.6000028063085817,
+          "reliable_ball_geometry_rate_after_jump_guard": 0.59560391760678,
+          "masked_ball_timeline_frames": 57014,
+          "masked_ball_timeline_fraction": 0.3999971936914183,
+          "base_player_observations": 3135792,
+          "retained_player_observations": 3135792,
+          "retained_natural_player_observation_fraction": 1.0,
+          "mean_visible_players_per_side": [
+            11.0,
+            11.0
+          ],
+          "drawn_teleport_frames": 0,
+          "applied_observed_ball_teleports": 0,
+          "feature_array_bytes": 4846224,
+          "player_ring_bytes": 8320,
+          "dropout_mask_bytes": 228080,
+          "feature_seconds": 20.189079900010256
+        },
+        "labels_used_for_features": false
+      }
+    },
+    {
+      "condition": "long_gaps",
+      "transition_seconds": 0.25,
+      "candidate": {
+        "macro_f1": 0.8129473784725869,
+        "spell_f1": 0.380952380952381,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 384,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            27828,
+            7635,
+            2349,
+            0
+          ],
+          [
+            6500,
+            29744,
+            2230,
+            0
+          ],
+          [
+            2232,
+            2409,
+            61609,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.7483461517775506,
+          "A": 0.7601134650277274,
+          "D": 0.9303825186124828
+        },
+        "transitions_1s": {
+          "n_matched": 215,
+          "n_gt": 567,
+          "n_pred": 524,
+          "precision": 0.41030534351145037,
+          "recall": 0.37918871252204583,
+          "f1": 0.3941338221814849
+        }
+      },
+      "v1_reference": {
+        "macro_f1": 0.8210846924917306,
+        "spell_f1": 0.4112965340179717,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 323,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            28385,
+            7687,
+            1740,
+            0
+          ],
+          [
+            6341,
+            30563,
+            1570,
+            0
+          ],
+          [
+            2764,
+            2306,
+            61180,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.7538976388409337,
+          "A": 0.7734531190687081,
+          "D": 0.93590331956555
+        },
+        "transitions_1s": {
+          "n_matched": 211,
+          "n_gt": 567,
+          "n_pred": 441,
+          "precision": 0.47845804988662133,
+          "recall": 0.37213403880070545,
+          "f1": 0.4186507936507936
+        }
+      },
+      "provenance": {
+        "match": "J03WOY",
+        "raw_sha256": "a228ef0e676d009cefff1580fcb721b53f598454eb120ec347e0a628a3a4646b",
+        "metadata_sha256": "4c497fac683eee8292901c18ca02c0be1d9609d0b9d4bd8aa092c61f9e0b19e9",
+        "condition": {
+          "name": "long_gaps",
+          "seed": 20261130,
+          "ball_missing_fraction": 0.4,
+          "ball_block_seconds": 12.0,
+          "player_slot_dropout_probability": 0.0,
+          "player_block_seconds": 1.0,
+          "coordinate_noise_std_m": 0.0,
+          "teleport_probability_per_timeline_frame": 0.0,
+          "teleport_distance_m": 20.0
+        },
+        "observations": {
+          "n_frames": 142536,
+          "n_roster_slots": 40,
+          "base_ball_observation_rate": 1.0,
+          "stressed_ball_observation_rate": 0.6000028063085817,
+          "reliable_ball_geometry_rate_after_jump_guard": 0.595849469607678,
+          "masked_ball_timeline_frames": 57014,
+          "masked_ball_timeline_fraction": 0.3999971936914183,
+          "base_player_observations": 3135792,
+          "retained_player_observations": 3135792,
+          "retained_natural_player_observation_fraction": 1.0,
+          "mean_visible_players_per_side": [
+            11.0,
+            11.0
+          ],
+          "drawn_teleport_frames": 0,
+          "applied_observed_ball_teleports": 0,
+          "feature_array_bytes": 4846224,
+          "player_ring_bytes": 8320,
+          "dropout_mask_bytes": 228080,
+          "feature_seconds": 20.166067199985264
+        },
+        "labels_used_for_features": false
+      }
+    },
+    {
+      "condition": "long_gaps",
+      "transition_seconds": 0.5,
+      "candidate": {
+        "macro_f1": 0.8137818328258803,
+        "spell_f1": 0.40464516129032263,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 319,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            27726,
+            7716,
+            2370,
+            0
+          ],
+          [
+            6343,
+            29998,
+            2133,
+            0
+          ],
+          [
+            2140,
+            2566,
+            61544,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.7491387579200497,
+          "A": 0.7618152728750286,
+          "D": 0.9303914676825628
+        },
+        "transitions_1s": {
+          "n_matched": 201,
+          "n_gt": 567,
+          "n_pred": 448,
+          "precision": 0.4486607142857143,
+          "recall": 0.3544973544973545,
+          "f1": 0.3960591133004926
+        }
+      },
+      "v1_reference": {
+        "macro_f1": 0.8210846924917306,
+        "spell_f1": 0.4112965340179717,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 323,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            28385,
+            7687,
+            1740,
+            0
+          ],
+          [
+            6341,
+            30563,
+            1570,
+            0
+          ],
+          [
+            2764,
+            2306,
+            61180,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.7538976388409337,
+          "A": 0.7734531190687081,
+          "D": 0.93590331956555
+        },
+        "transitions_1s": {
+          "n_matched": 211,
+          "n_gt": 567,
+          "n_pred": 441,
+          "precision": 0.47845804988662133,
+          "recall": 0.37213403880070545,
+          "f1": 0.4186507936507936
+        }
+      },
+      "provenance": {
+        "match": "J03WOY",
+        "raw_sha256": "a228ef0e676d009cefff1580fcb721b53f598454eb120ec347e0a628a3a4646b",
+        "metadata_sha256": "4c497fac683eee8292901c18ca02c0be1d9609d0b9d4bd8aa092c61f9e0b19e9",
+        "condition": {
+          "name": "long_gaps",
+          "seed": 20261130,
+          "ball_missing_fraction": 0.4,
+          "ball_block_seconds": 12.0,
+          "player_slot_dropout_probability": 0.0,
+          "player_block_seconds": 1.0,
+          "coordinate_noise_std_m": 0.0,
+          "teleport_probability_per_timeline_frame": 0.0,
+          "teleport_distance_m": 20.0
+        },
+        "observations": {
+          "n_frames": 142536,
+          "n_roster_slots": 40,
+          "base_ball_observation_rate": 1.0,
+          "stressed_ball_observation_rate": 0.6000028063085817,
+          "reliable_ball_geometry_rate_after_jump_guard": 0.595849469607678,
+          "masked_ball_timeline_frames": 57014,
+          "masked_ball_timeline_fraction": 0.3999971936914183,
+          "base_player_observations": 3135792,
+          "retained_player_observations": 3135792,
+          "retained_natural_player_observation_fraction": 1.0,
+          "mean_visible_players_per_side": [
+            11.0,
+            11.0
+          ],
+          "drawn_teleport_frames": 0,
+          "applied_observed_ball_teleports": 0,
+          "feature_array_bytes": 4846224,
+          "player_ring_bytes": 8320,
+          "dropout_mask_bytes": 228080,
+          "feature_seconds": 20.166067199985264
+        },
+        "labels_used_for_features": false
+      }
+    },
+    {
+      "condition": "long_gaps",
+      "transition_seconds": 1.0,
+      "candidate": {
+        "macro_f1": 0.8139576166433296,
+        "spell_f1": 0.394413407821229,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 260,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            27423,
+            8071,
+            2318,
+            0
+          ],
+          [
+            6205,
+            30317,
+            1952,
+            0
+          ],
+          [
+            2376,
+            2264,
+            61610,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.7430096456052888,
+          "A": 0.7662967924575993,
+          "D": 0.9325664118671007
+        },
+        "transitions_1s": {
+          "n_matched": 180,
+          "n_gt": 567,
+          "n_pred": 377,
+          "precision": 0.47745358090185674,
+          "recall": 0.31746031746031744,
+          "f1": 0.3813559322033898
+        }
+      },
+      "v1_reference": {
+        "macro_f1": 0.8210846924917306,
+        "spell_f1": 0.4112965340179717,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 323,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            28385,
+            7687,
+            1740,
+            0
+          ],
+          [
+            6341,
+            30563,
+            1570,
+            0
+          ],
+          [
+            2764,
+            2306,
+            61180,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.7538976388409337,
+          "A": 0.7734531190687081,
+          "D": 0.93590331956555
+        },
+        "transitions_1s": {
+          "n_matched": 211,
+          "n_gt": 567,
+          "n_pred": 441,
+          "precision": 0.47845804988662133,
+          "recall": 0.37213403880070545,
+          "f1": 0.4186507936507936
+        }
+      },
+      "provenance": {
+        "match": "J03WOY",
+        "raw_sha256": "a228ef0e676d009cefff1580fcb721b53f598454eb120ec347e0a628a3a4646b",
+        "metadata_sha256": "4c497fac683eee8292901c18ca02c0be1d9609d0b9d4bd8aa092c61f9e0b19e9",
+        "condition": {
+          "name": "long_gaps",
+          "seed": 20261130,
+          "ball_missing_fraction": 0.4,
+          "ball_block_seconds": 12.0,
+          "player_slot_dropout_probability": 0.0,
+          "player_block_seconds": 1.0,
+          "coordinate_noise_std_m": 0.0,
+          "teleport_probability_per_timeline_frame": 0.0,
+          "teleport_distance_m": 20.0
+        },
+        "observations": {
+          "n_frames": 142536,
+          "n_roster_slots": 40,
+          "base_ball_observation_rate": 1.0,
+          "stressed_ball_observation_rate": 0.6000028063085817,
+          "reliable_ball_geometry_rate_after_jump_guard": 0.595849469607678,
+          "masked_ball_timeline_frames": 57014,
+          "masked_ball_timeline_fraction": 0.3999971936914183,
+          "base_player_observations": 3135792,
+          "retained_player_observations": 3135792,
+          "retained_natural_player_observation_fraction": 1.0,
+          "mean_visible_players_per_side": [
+            11.0,
+            11.0
+          ],
+          "drawn_teleport_frames": 0,
+          "applied_observed_ball_teleports": 0,
+          "feature_array_bytes": 4846224,
+          "player_ring_bytes": 8320,
+          "dropout_mask_bytes": 228080,
+          "feature_seconds": 20.166067199985264
+        },
+        "labels_used_for_features": false
+      }
+    },
+    {
+      "condition": "long_gaps",
+      "transition_seconds": 2.0,
+      "candidate": {
+        "macro_f1": 0.8125555563141917,
+        "spell_f1": 0.34390243902439027,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 200,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            27141,
+            8619,
+            2052,
+            0
+          ],
+          [
+            6232,
+            30545,
+            1697,
+            0
+          ],
+          [
+            2229,
+            2476,
+            61545,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.7393957555779552,
+          "A": 0.7625383828045036,
+          "D": 0.9357325305601167
+        },
+        "transitions_1s": {
+          "n_matched": 156,
+          "n_gt": 567,
+          "n_pred": 307,
+          "precision": 0.50814332247557,
+          "recall": 0.2751322751322751,
+          "f1": 0.35697940503432496
+        }
+      },
+      "v1_reference": {
+        "macro_f1": 0.8210846924917306,
+        "spell_f1": 0.4112965340179717,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 323,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            28385,
+            7687,
+            1740,
+            0
+          ],
+          [
+            6341,
+            30563,
+            1570,
+            0
+          ],
+          [
+            2764,
+            2306,
+            61180,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.7538976388409337,
+          "A": 0.7734531190687081,
+          "D": 0.93590331956555
+        },
+        "transitions_1s": {
+          "n_matched": 211,
+          "n_gt": 567,
+          "n_pred": 441,
+          "precision": 0.47845804988662133,
+          "recall": 0.37213403880070545,
+          "f1": 0.4186507936507936
+        }
+      },
+      "provenance": {
+        "match": "J03WOY",
+        "raw_sha256": "a228ef0e676d009cefff1580fcb721b53f598454eb120ec347e0a628a3a4646b",
+        "metadata_sha256": "4c497fac683eee8292901c18ca02c0be1d9609d0b9d4bd8aa092c61f9e0b19e9",
+        "condition": {
+          "name": "long_gaps",
+          "seed": 20261130,
+          "ball_missing_fraction": 0.4,
+          "ball_block_seconds": 12.0,
+          "player_slot_dropout_probability": 0.0,
+          "player_block_seconds": 1.0,
+          "coordinate_noise_std_m": 0.0,
+          "teleport_probability_per_timeline_frame": 0.0,
+          "teleport_distance_m": 20.0
+        },
+        "observations": {
+          "n_frames": 142536,
+          "n_roster_slots": 40,
+          "base_ball_observation_rate": 1.0,
+          "stressed_ball_observation_rate": 0.6000028063085817,
+          "reliable_ball_geometry_rate_after_jump_guard": 0.595849469607678,
+          "masked_ball_timeline_frames": 57014,
+          "masked_ball_timeline_fraction": 0.3999971936914183,
+          "base_player_observations": 3135792,
+          "retained_player_observations": 3135792,
+          "retained_natural_player_observation_fraction": 1.0,
+          "mean_visible_players_per_side": [
+            11.0,
+            11.0
+          ],
+          "drawn_teleport_frames": 0,
+          "applied_observed_ball_teleports": 0,
+          "feature_array_bytes": 4846224,
+          "player_ring_bytes": 8320,
+          "dropout_mask_bytes": 228080,
+          "feature_seconds": 20.166067199985264
+        },
+        "labels_used_for_features": false
+      }
+    },
+    {
+      "condition": "combined",
+      "transition_seconds": 0.25,
+      "candidate": {
+        "macro_f1": 0.7770706320156795,
+        "spell_f1": 0.29304603330068557,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 565,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            26777,
+            8673,
+            2362,
+            0
+          ],
+          [
+            9618,
+            27069,
+            1787,
+            0
+          ],
+          [
+            2521,
+            2661,
+            61068,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.6979720571368991,
+          "A": 0.7042158252793423,
+          "D": 0.9290240136307971
+        },
+        "transitions_1s": {
+          "n_matched": 234,
+          "n_gt": 567,
+          "n_pred": 769,
+          "precision": 0.30429128738621586,
+          "recall": 0.4126984126984127,
+          "f1": 0.3502994011976047
+        }
+      },
+      "v1_reference": {
+        "macro_f1": 0.3818223963888204,
+        "spell_f1": 0.19793510324483776,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 900,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            27021,
+            10791,
+            0,
+            0
+          ],
+          [
+            10777,
+            27692,
+            5,
+            0
+          ],
+          [
+            30436,
+            31406,
+            4408,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.509609037587462,
+          "A": 0.5110969611398725,
+          "D": 0.12476119043912653
+        },
+        "transitions_1s": {
+          "n_matched": 127,
+          "n_gt": 567,
+          "n_pred": 953,
+          "precision": 0.13326337880377753,
+          "recall": 0.2239858906525573,
+          "f1": 0.1671052631578947
+        }
+      },
+      "provenance": {
+        "match": "J03WOY",
+        "raw_sha256": "a228ef0e676d009cefff1580fcb721b53f598454eb120ec347e0a628a3a4646b",
+        "metadata_sha256": "4c497fac683eee8292901c18ca02c0be1d9609d0b9d4bd8aa092c61f9e0b19e9",
+        "condition": {
+          "name": "combined",
+          "seed": 20261131,
+          "ball_missing_fraction": 0.4,
+          "ball_block_seconds": 4.0,
+          "player_slot_dropout_probability": 0.3,
+          "player_block_seconds": 1.0,
+          "coordinate_noise_std_m": 0.25,
+          "teleport_probability_per_timeline_frame": 0.004,
+          "teleport_distance_m": 20.0
+        },
+        "observations": {
+          "n_frames": 142536,
+          "n_roster_slots": 40,
+          "base_ball_observation_rate": 1.0,
+          "stressed_ball_observation_rate": 0.6000028063085817,
+          "reliable_ball_geometry_rate_after_jump_guard": 0.5673373744176909,
+          "masked_ball_timeline_frames": 57014,
+          "masked_ball_timeline_fraction": 0.3999971936914183,
+          "base_player_observations": 3135792,
+          "retained_player_observations": 2186975,
+          "retained_natural_player_observation_fraction": 0.6974234898233046,
+          "mean_visible_players_per_side": [
+            7.674124431722512,
+            7.669192344390189
+          ],
+          "drawn_teleport_frames": 580,
+          "applied_observed_ball_teleports": 349,
+          "feature_array_bytes": 4846224,
+          "player_ring_bytes": 8320,
+          "dropout_mask_bytes": 228080,
+          "feature_seconds": 22.745518700015964
+        },
+        "labels_used_for_features": false
+      }
+    },
+    {
+      "condition": "combined",
+      "transition_seconds": 0.5,
+      "candidate": {
+        "macro_f1": 0.7907898246499966,
+        "spell_f1": 0.336694021101993,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 397,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            27378,
+            8303,
+            2131,
+            0
+          ],
+          [
+            9038,
+            27729,
+            1707,
+            0
+          ],
+          [
+            2133,
+            2532,
+            61585,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.7170676130485456,
+          "A": 0.719878501518731,
+          "D": 0.9354233593827133
+        },
+        "transitions_1s": {
+          "n_matched": 215,
+          "n_gt": 567,
+          "n_pred": 564,
+          "precision": 0.38120567375886527,
+          "recall": 0.37918871252204583,
+          "f1": 0.3801945181255526
+        }
+      },
+      "v1_reference": {
+        "macro_f1": 0.3818223963888204,
+        "spell_f1": 0.19793510324483776,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 900,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            27021,
+            10791,
+            0,
+            0
+          ],
+          [
+            10777,
+            27692,
+            5,
+            0
+          ],
+          [
+            30436,
+            31406,
+            4408,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.509609037587462,
+          "A": 0.5110969611398725,
+          "D": 0.12476119043912653
+        },
+        "transitions_1s": {
+          "n_matched": 127,
+          "n_gt": 567,
+          "n_pred": 953,
+          "precision": 0.13326337880377753,
+          "recall": 0.2239858906525573,
+          "f1": 0.1671052631578947
+        }
+      },
+      "provenance": {
+        "match": "J03WOY",
+        "raw_sha256": "a228ef0e676d009cefff1580fcb721b53f598454eb120ec347e0a628a3a4646b",
+        "metadata_sha256": "4c497fac683eee8292901c18ca02c0be1d9609d0b9d4bd8aa092c61f9e0b19e9",
+        "condition": {
+          "name": "combined",
+          "seed": 20261131,
+          "ball_missing_fraction": 0.4,
+          "ball_block_seconds": 4.0,
+          "player_slot_dropout_probability": 0.3,
+          "player_block_seconds": 1.0,
+          "coordinate_noise_std_m": 0.25,
+          "teleport_probability_per_timeline_frame": 0.004,
+          "teleport_distance_m": 20.0
+        },
+        "observations": {
+          "n_frames": 142536,
+          "n_roster_slots": 40,
+          "base_ball_observation_rate": 1.0,
+          "stressed_ball_observation_rate": 0.6000028063085817,
+          "reliable_ball_geometry_rate_after_jump_guard": 0.5673373744176909,
+          "masked_ball_timeline_frames": 57014,
+          "masked_ball_timeline_fraction": 0.3999971936914183,
+          "base_player_observations": 3135792,
+          "retained_player_observations": 2186975,
+          "retained_natural_player_observation_fraction": 0.6974234898233046,
+          "mean_visible_players_per_side": [
+            7.674124431722512,
+            7.669192344390189
+          ],
+          "drawn_teleport_frames": 580,
+          "applied_observed_ball_teleports": 349,
+          "feature_array_bytes": 4846224,
+          "player_ring_bytes": 8320,
+          "dropout_mask_bytes": 228080,
+          "feature_seconds": 22.745518700015964
+        },
+        "labels_used_for_features": false
+      }
+    },
+    {
+      "condition": "combined",
+      "transition_seconds": 1.0,
+      "candidate": {
+        "macro_f1": 0.7975416031830981,
+        "spell_f1": 0.3281632653061225,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 279,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            27748,
+            8022,
+            2042,
+            0
+          ],
+          [
+            9194,
+            27811,
+            1469,
+            0
+          ],
+          [
+            1998,
+            2141,
+            62111,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.7230560767146132,
+          "A": 0.7275795311845961,
+          "D": 0.9419892016500849
+        },
+        "transitions_1s": {
+          "n_matched": 192,
+          "n_gt": 567,
+          "n_pred": 415,
+          "precision": 0.46265060240963857,
+          "recall": 0.3386243386243386,
+          "f1": 0.39103869653767814
+        }
+      },
+      "v1_reference": {
+        "macro_f1": 0.3818223963888204,
+        "spell_f1": 0.19793510324483776,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 900,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            27021,
+            10791,
+            0,
+            0
+          ],
+          [
+            10777,
+            27692,
+            5,
+            0
+          ],
+          [
+            30436,
+            31406,
+            4408,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.509609037587462,
+          "A": 0.5110969611398725,
+          "D": 0.12476119043912653
+        },
+        "transitions_1s": {
+          "n_matched": 127,
+          "n_gt": 567,
+          "n_pred": 953,
+          "precision": 0.13326337880377753,
+          "recall": 0.2239858906525573,
+          "f1": 0.1671052631578947
+        }
+      },
+      "provenance": {
+        "match": "J03WOY",
+        "raw_sha256": "a228ef0e676d009cefff1580fcb721b53f598454eb120ec347e0a628a3a4646b",
+        "metadata_sha256": "4c497fac683eee8292901c18ca02c0be1d9609d0b9d4bd8aa092c61f9e0b19e9",
+        "condition": {
+          "name": "combined",
+          "seed": 20261131,
+          "ball_missing_fraction": 0.4,
+          "ball_block_seconds": 4.0,
+          "player_slot_dropout_probability": 0.3,
+          "player_block_seconds": 1.0,
+          "coordinate_noise_std_m": 0.25,
+          "teleport_probability_per_timeline_frame": 0.004,
+          "teleport_distance_m": 20.0
+        },
+        "observations": {
+          "n_frames": 142536,
+          "n_roster_slots": 40,
+          "base_ball_observation_rate": 1.0,
+          "stressed_ball_observation_rate": 0.6000028063085817,
+          "reliable_ball_geometry_rate_after_jump_guard": 0.5673373744176909,
+          "masked_ball_timeline_frames": 57014,
+          "masked_ball_timeline_fraction": 0.3999971936914183,
+          "base_player_observations": 3135792,
+          "retained_player_observations": 2186975,
+          "retained_natural_player_observation_fraction": 0.6974234898233046,
+          "mean_visible_players_per_side": [
+            7.674124431722512,
+            7.669192344390189
+          ],
+          "drawn_teleport_frames": 580,
+          "applied_observed_ball_teleports": 349,
+          "feature_array_bytes": 4846224,
+          "player_ring_bytes": 8320,
+          "dropout_mask_bytes": 228080,
+          "feature_seconds": 22.745518700015964
+        },
+        "labels_used_for_features": false
+      }
+    },
+    {
+      "condition": "combined",
+      "transition_seconds": 2.0,
+      "candidate": {
+        "macro_f1": 0.8004653473631618,
+        "spell_f1": 0.30433482810164425,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 213,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            27833,
+            7967,
+            2012,
+            0
+          ],
+          [
+            9305,
+            27762,
+            1407,
+            0
+          ],
+          [
+            2017,
+            1665,
+            62568,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.723245027089532,
+          "A": 0.7318500553593082,
+          "D": 0.9463009596406452
+        },
+        "transitions_1s": {
+          "n_matched": 173,
+          "n_gt": 567,
+          "n_pred": 339,
+          "precision": 0.5103244837758112,
+          "recall": 0.30511463844797176,
+          "f1": 0.3818984547461369
+        }
+      },
+      "v1_reference": {
+        "macro_f1": 0.3818223963888204,
+        "spell_f1": 0.19793510324483776,
+        "n_truth_spells": 456,
+        "n_predicted_spells": 900,
+        "graded_frames": 142536,
+        "confusion": [
+          [
+            27021,
+            10791,
+            0,
+            0
+          ],
+          [
+            10777,
+            27692,
+            5,
+            0
+          ],
+          [
+            30436,
+            31406,
+            4408,
+            0
+          ]
+        ],
+        "per_class_f1": {
+          "H": 0.509609037587462,
+          "A": 0.5110969611398725,
+          "D": 0.12476119043912653
+        },
+        "transitions_1s": {
+          "n_matched": 127,
+          "n_gt": 567,
+          "n_pred": 953,
+          "precision": 0.13326337880377753,
+          "recall": 0.2239858906525573,
+          "f1": 0.1671052631578947
+        }
+      },
+      "provenance": {
+        "match": "J03WOY",
+        "raw_sha256": "a228ef0e676d009cefff1580fcb721b53f598454eb120ec347e0a628a3a4646b",
+        "metadata_sha256": "4c497fac683eee8292901c18ca02c0be1d9609d0b9d4bd8aa092c61f9e0b19e9",
+        "condition": {
+          "name": "combined",
+          "seed": 20261131,
+          "ball_missing_fraction": 0.4,
+          "ball_block_seconds": 4.0,
+          "player_slot_dropout_probability": 0.3,
+          "player_block_seconds": 1.0,
+          "coordinate_noise_std_m": 0.25,
+          "teleport_probability_per_timeline_frame": 0.004,
+          "teleport_distance_m": 20.0
+        },
+        "observations": {
+          "n_frames": 142536,
+          "n_roster_slots": 40,
+          "base_ball_observation_rate": 1.0,
+          "stressed_ball_observation_rate": 0.6000028063085817,
+          "reliable_ball_geometry_rate_after_jump_guard": 0.5673373744176909,
+          "masked_ball_timeline_frames": 57014,
+          "masked_ball_timeline_fraction": 0.3999971936914183,
+          "base_player_observations": 3135792,
+          "retained_player_observations": 2186975,
+          "retained_natural_player_observation_fraction": 0.6974234898233046,
+          "mean_visible_players_per_side": [
+            7.674124431722512,
+            7.669192344390189
+          ],
+          "drawn_teleport_frames": 580,
+          "applied_observed_ball_teleports": 349,
+          "feature_array_bytes": 4846224,
+          "player_ring_bytes": 8320,
+          "dropout_mask_bytes": 228080,
+          "feature_seconds": 22.745518700015964
+        },
+        "labels_used_for_features": false
+      }
+    }
+  ],
+  "grid": [
+    {
+      "transition_seconds": 0.25,
+      "mean_spell_f1": 0.4013015929617132,
+      "mean_macro_f1": 0.8278772753361386
+    },
+    {
+      "transition_seconds": 0.5,
+      "mean_spell_f1": 0.4236770179813545,
+      "mean_macro_f1": 0.8327012009288842
+    },
+    {
+      "transition_seconds": 1.0,
+      "mean_spell_f1": 0.41044497353718856,
+      "mean_macro_f1": 0.8343241136513315
+    },
+    {
+      "transition_seconds": 2.0,
+      "mean_spell_f1": 0.3699591581562896,
+      "mean_macro_f1": 0.8337944752059291
+    }
+  ],
+  "best": {
+    "transition_seconds": 0.5,
+    "mean_spell_f1": 0.4236770179813545,
+    "mean_macro_f1": 0.8327012009288842
+  },
+  "v1_mean_spell_f1": 0.38884783624171004,
+  "mean_spell_gain": 0.034829181739644444,
+  "promotion_gate_passed": true,
+  "training_export_max_error": 0.0,
+  "seconds": 429.64448460002313,
+  "config_sha256": "72adfa61f9a4475e324317f93f5c5d56d52c8ef352b28f29690b1dc32dff2cd0"
+}

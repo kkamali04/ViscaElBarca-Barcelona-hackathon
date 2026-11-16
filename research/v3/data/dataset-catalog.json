@@ -1,0 +1,802 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-15",
+  "status": "metadata-only proposed catalog; not frozen split",
+  "challenge_match_overlap": "not inspected; manager-local metadata comparison required before freeze",
+  "datasets": [
+    {
+      "id": "idsse",
+      "license": "CC-BY-4.0",
+      "revision": "a715a38dfbaf5f58e431727c2b78d174101a703c",
+      "original_revision": "Figshare28196177.v1",
+      "attribution": [
+        "Deutsche Fußball Liga(DFL)",
+        "Bassek,Rein,Weber,Memmert(2025),doi10.1038/s41597-025-04505-y"
+      ],
+      "fps": 25,
+      "coordinates": "centeredmetres;local shifts bypitch/2;no label-dependentorientation",
+      "targets": {
+        "BallStatus0": "D",
+        "BallStatus1andBallPossession1": "H",
+        "BallStatus1andBallPossession2": "A",
+        "other": "unknown(masked),neverD"
+      },
+      "source_refs": [
+        "idsse-paper",
+        "idsse-figshare",
+        "idsse-creator",
+        "hf-tree",
+        "kloppy-sportec"
+      ],
+      "matches": [
+        {
+          "id": "J03WMX",
+          "status": "closed_scored_holdout",
+          "competition_id": "DFL-COM-000001",
+          "tracking": {
+            "file": "DFL_04_03_positions_raw_observed_DFL-COM-000001_DFL-MAT-J03WMX.xml",
+            "bytes": 418524833,
+            "sha256": "d3dd92e509421a6466acb0a083c009035f1751bc5fd9ef42ffa8f20d01cf7d49",
+            "figshare_md5": "e4273a2adf5dbd9d4ec42def2f01905c"
+          },
+          "metadata": {
+            "file": "DFL_02_01_matchinformation_DFL-COM-000001_DFL-MAT-J03WMX.xml",
+            "bytes": 11930
+          },
+          "actual_tracking_downloaded_this_lane": false
+        },
+        {
+          "id": "J03WN1",
+          "status": "unused_metadata_only",
+          "competition_id": "DFL-COM-000001",
+          "tracking": {
+            "file": "DFL_04_03_positions_raw_observed_DFL-COM-000001_DFL-MAT-J03WN1.xml",
+            "bytes": 391722803,
+            "sha256": "56ef948961a18e150dba0b7b16869d0008ff66f3050a0c355d31fa5b8ec2fcec",
+            "figshare_md5": "bacb2f609c1d1b0bfc906f6b9d4109f2"
+          },
+          "metadata": {
+            "file": "DFL_02_01_matchinformation_DFL-COM-000001_DFL-MAT-J03WN1.xml",
+            "bytes": 11722,
+            "sha256": "5490286436c86e6f80a538d2b1b379d0efd016e0defcaf594bc59d9ef5079f4c",
+            "title": "VfL Bochum 1848:Bayer 04 Leverkusen",
+            "kickoff": "2023-05-27T13:31:08.640+00:00",
+            "home_id": "DFL-CLU-00000S",
+            "away_id": "DFL-CLU-00000B"
+          },
+          "actual_tracking_downloaded_this_lane": false
+        },
+        {
+          "id": "J03WOH",
+          "status": "legacy_training",
+          "competition_id": "DFL-COM-000002",
+          "tracking": {
+            "file": "DFL_04_03_positions_raw_observed_DFL-COM-000002_DFL-MAT-J03WOH.xml",
+            "bytes": 348945715,
+            "sha256": "ec4dcf30200aad694dea263d5289485fcd0ca42badddaeb7c81f5cd5a4229d4f",
+            "figshare_md5": "3efff25a86a61768e7d253b4bba137a3"
+          },
+          "metadata": {
+            "file": "DFL_02_01_matchinformation_DFL-COM-000002_DFL-MAT-J03WOH.xml",
+            "bytes": 11745
+          },
+          "actual_tracking_downloaded_this_lane": false
+        },
+        {
+          "id": "J03WOY",
+          "status": "legacy_selection",
+          "competition_id": "DFL-COM-000002",
+          "tracking": {
+            "file": "DFL_04_03_positions_raw_observed_DFL-COM-000002_DFL-MAT-J03WOY.xml",
+            "bytes": 362567859,
+            "sha256": "a228ef0e676d009cefff1580fcb721b53f598454eb120ec347e0a628a3a4646b",
+            "figshare_md5": "4e1063e0a0ae499920cf68ac1aa3ab4e"
+          },
+          "metadata": {
+            "file": "DFL_02_01_matchinformation_DFL-COM-000002_DFL-MAT-J03WOY.xml",
+            "bytes": 11952
+          },
+          "actual_tracking_downloaded_this_lane": false
+        },
+        {
+          "id": "J03WPY",
+          "status": "unused_metadata_only",
+          "competition_id": "DFL-COM-000002",
+          "tracking": {
+            "file": "DFL_04_03_positions_raw_observed_DFL-COM-000002_DFL-MAT-J03WPY.xml",
+            "bytes": 371688499,
+            "sha256": "845202c29ad93d696653436da426a7cdaefb848298e07b7343de6529581671e1",
+            "figshare_md5": "e56ff1336a334f8da51110fbe7cab764"
+          },
+          "metadata": {
+            "file": "DFL_02_01_matchinformation_DFL-COM-000002_DFL-MAT-J03WPY.xml",
+            "bytes": 11922,
+            "sha256": "566dd5e4c86e124ab90fcdba51100881f0436e22afa71832945a451a2d95a420",
+            "title": "Fortuna Düsseldorf:1. FC Nürnberg",
+            "kickoff": "2022-10-15T11:01:28.300+00:00",
+            "home_id": "DFL-CLU-00000P",
+            "away_id": "DFL-CLU-000005"
+          },
+          "actual_tracking_downloaded_this_lane": false
+        },
+        {
+          "id": "J03WQQ",
+          "status": "unused_metadata_only",
+          "competition_id": "DFL-COM-000002",
+          "tracking": {
+            "file": "DFL_04_03_positions_raw_observed_DFL-COM-000002_DFL-MAT-J03WQQ.xml",
+            "bytes": 356219423,
+            "sha256": "cbefcb0bd7f39f3b94ee69a7bc97aac0f936425062c1cc1b144733df36804d6f",
+            "figshare_md5": "9105bad987191d3c3c362c1fce9a4fcd"
+          },
+          "metadata": {
+            "file": "DFL_02_01_matchinformation_DFL-COM-000002_DFL-MAT-J03WQQ.xml",
+            "bytes": 11932,
+            "sha256": "e976aa0c5dba862cfa898ea57ec226efce9d1bc04b23b8d775908db86aa6fa41",
+            "title": "Fortuna Düsseldorf:FC St. Pauli",
+            "kickoff": "2022-11-05T12:01:27.800+00:00",
+            "home_id": "DFL-CLU-00000P",
+            "away_id": "DFL-CLU-00000H"
+          },
+          "actual_tracking_downloaded_this_lane": false
+        },
+        {
+          "id": "J03WR9",
+          "status": "closed_scored_holdout",
+          "competition_id": "DFL-COM-000002",
+          "tracking": {
+            "file": "DFL_04_03_positions_raw_observed_DFL-COM-000002_DFL-MAT-J03WR9.xml",
+            "bytes": 372934140,
+            "sha256": "70b63069189019066fb7e3d9db891122edfe787f3a43ba522ebe45ed89ea0269",
+            "figshare_md5": "e060bb7d7a5a3bfbd15bbf9bc631024d"
+          },
+          "metadata": {
+            "file": "DFL_02_01_matchinformation_DFL-COM-000002_DFL-MAT-J03WR9.xml",
+            "bytes": 11823
+          },
+          "actual_tracking_downloaded_this_lane": false
+        }
+      ],
+      "unused_ids": [
+        "J03WN1",
+        "J03WPY",
+        "J03WQQ"
+      ],
+      "unused_tracking_bytes": 1119630725,
+      "mirror_readme_error": "READMEIDsJ03WPF/J03WQFnotinactualmanifest;useJ03WQQ/J03WR9"
+    },
+    {
+      "id": "skillcorner",
+      "license": "MIT repository notice;independent scope reviewpending",
+      "revision": "4340d274572876239c154c90bc507a9b3250a656",
+      "fps": 10,
+      "coordinates": "centeredmetres;shiftbymetadatahalf-pitch;no possession-dependentflip",
+      "targets": "known/matched H/Acontrolspan/boundaries only as auxiliaryproviderlabels;unknown notD",
+      "source_refs": [
+        "skillcorner-repo",
+        "skillcorner-matches",
+        "skillcorner-license",
+        "skillcorner-spec",
+        "kloppy-skillcorner"
+      ],
+      "matches": [
+        {
+          "id": 2017461,
+          "date_time": "2025-05-17T09:35:00Z",
+          "home_team": {
+            "id": 868,
+            "short_name": "Melbourne V FC"
+          },
+          "away_team": {
+            "id": 4177,
+            "short_name": "Auckland FC"
+          },
+          "competition_id": 61,
+          "season_id": 95,
+          "manifest_status": "closed",
+          "tracking_pointer": {
+            "path": "data/matches/2017461/2017461_tracking_extrapolated.jsonl",
+            "sha256": "59cfa5588efee041da439f44df5b5b92f2b7305571dc831164e3d05f7415787a",
+            "bytes": 89543442
+          },
+          "eligible_metadata_candidate": true,
+          "actual_tracking_downloaded": false,
+          "full_match_coverage_verified": false,
+          "label_semantics": "provider-derived;no exact independent H/A/D contract established"
+        },
+        {
+          "id": 2016236,
+          "date_time": "2025-05-09T09:35:00Z",
+          "home_team": {
+            "id": 1803,
+            "short_name": "Western United"
+          },
+          "away_team": {
+            "id": 866,
+            "short_name": "Adelaide United"
+          },
+          "competition_id": 61,
+          "season_id": 95,
+          "manifest_status": "closed",
+          "tracking_pointer": {
+            "path": "data/matches/2016236/2016236_tracking_extrapolated.jsonl",
+            "sha256": "d78555f9dfd7d1ce9de38066d3c98e6d54417c6d45d73b1f1ce7e26f07263d8f",
+            "bytes": 94737872
+          },
+          "eligible_metadata_candidate": true,
+          "actual_tracking_downloaded": false,
+          "full_match_coverage_verified": false,
+          "label_semantics": "provider-derived;no exact independent H/A/D contract established"
+        },
+        {
+          "id": 2015213,
+          "date_time": "2025-05-03T08:00:00Z",
+          "home_team": {
+            "id": 1803,
+            "short_name": "Western United"
+          },
+          "away_team": {
+            "id": 4177,
+            "short_name": "Auckland FC"
+          },
+          "competition_id": 61,
+          "season_id": 95,
+          "manifest_status": "closed",
+          "tracking_pointer": {
+            "path": "data/matches/2015213/2015213_tracking_extrapolated.jsonl",
+            "sha256": "413990d0024d84856ce1f2a16866b8887472c0cea22c61caef0d1f46505a609e",
+            "bytes": 102030769
+          },
+          "eligible_metadata_candidate": true,
+          "actual_tracking_downloaded": false,
+          "full_match_coverage_verified": false,
+          "label_semantics": "provider-derived;no exact independent H/A/D contract established"
+        },
+        {
+          "id": 2013725,
+          "date_time": "2025-04-27T07:00:00Z",
+          "home_team": {
+            "id": 1803,
+            "short_name": "Western United"
+          },
+          "away_team": {
+            "id": 869,
+            "short_name": "Sydney FC"
+          },
+          "competition_id": 61,
+          "season_id": 95,
+          "manifest_status": "closed",
+          "tracking_pointer": {
+            "path": "data/matches/2013725/2013725_tracking_extrapolated.jsonl",
+            "sha256": "13eb83329814ed5f5d73da8f8ab5c5979d6c8a7858e89e28a7fa8072f91fb250",
+            "bytes": 96059074
+          },
+          "eligible_metadata_candidate": true,
+          "actual_tracking_downloaded": false,
+          "full_match_coverage_verified": false,
+          "label_semantics": "provider-derived;no exact independent H/A/D contract established"
+        },
+        {
+          "id": 2011166,
+          "date_time": "2025-04-12T05:00:00Z",
+          "home_team": {
+            "id": 867,
+            "short_name": "Wellington P FC"
+          },
+          "away_team": {
+            "id": 868,
+            "short_name": "Melbourne V FC"
+          },
+          "competition_id": 61,
+          "season_id": 95,
+          "manifest_status": "closed",
+          "tracking_pointer": {
+            "path": "data/matches/2011166/2011166_tracking_extrapolated.jsonl",
+            "sha256": "8ec2937050930d87e4f52b2d65515f70ef8edd0ae2814bf40155c4448133390e",
+            "bytes": 87441570
+          },
+          "eligible_metadata_candidate": true,
+          "actual_tracking_downloaded": false,
+          "full_match_coverage_verified": false,
+          "label_semantics": "provider-derived;no exact independent H/A/D contract established"
+        },
+        {
+          "id": 2010085,
+          "date_time": "2025-04-05T06:00:00Z",
+          "home_team": {
+            "id": 2380,
+            "short_name": "Melbourne City"
+          },
+          "away_team": {
+            "id": 870,
+            "short_name": "CC Mariners"
+          },
+          "competition_id": 61,
+          "season_id": 95,
+          "manifest_status": "closed",
+          "tracking_pointer": {
+            "path": "data/matches/2010085/2010085_tracking_extrapolated.jsonl",
+            "sha256": "04562d9754b2977c80430535e9b5733426bc4ce910db56fe7a3760876211ac5a",
+            "bytes": 92516156
+          },
+          "eligible_metadata_candidate": true,
+          "actual_tracking_downloaded": false,
+          "full_match_coverage_verified": false,
+          "label_semantics": "provider-derived;no exact independent H/A/D contract established"
+        },
+        {
+          "id": 2007721,
+          "date_time": "2025-03-16T04:00:00Z",
+          "home_team": {
+            "id": 4177,
+            "short_name": "Auckland FC"
+          },
+          "away_team": {
+            "id": 870,
+            "short_name": "CC Mariners"
+          },
+          "competition_id": 61,
+          "season_id": 95,
+          "manifest_status": "closed",
+          "tracking_pointer": {
+            "path": "data/matches/2007721/2007721_tracking_extrapolated.jsonl",
+            "sha256": "fea913b8d4cbde8d85c6bdf5f1a4b3fd203b78227e976a171c8ab0946705d378",
+            "bytes": 92872706
+          },
+          "eligible_metadata_candidate": true,
+          "actual_tracking_downloaded": false,
+          "full_match_coverage_verified": false,
+          "label_semantics": "provider-derived;no exact independent H/A/D contract established"
+        },
+        {
+          "id": 2007448,
+          "date_time": "2025-03-15T10:45:00Z",
+          "home_team": {
+            "id": 871,
+            "short_name": "Perth Glory"
+          },
+          "away_team": {
+            "id": 1802,
+            "short_name": "Brisbane FC"
+          },
+          "competition_id": 61,
+          "season_id": 95,
+          "manifest_status": "closed",
+          "tracking_pointer": {
+            "path": "data/matches/2007448/2007448_tracking_extrapolated.jsonl",
+            "sha256": "12d00d6e4257218812df6e4c4263c49387ba0313a83ff8d826c4416828f9c798",
+            "bytes": 90025383
+          },
+          "eligible_metadata_candidate": true,
+          "actual_tracking_downloaded": false,
+          "full_match_coverage_verified": false,
+          "label_semantics": "provider-derived;no exact independent H/A/D contract established"
+        },
+        {
+          "id": 2006363,
+          "date_time": "2025-03-08T08:35:00Z",
+          "home_team": {
+            "id": 868,
+            "short_name": "Melbourne V FC"
+          },
+          "away_team": {
+            "id": 870,
+            "short_name": "CC Mariners"
+          },
+          "competition_id": 61,
+          "season_id": 95,
+          "manifest_status": "closed",
+          "tracking_pointer": {
+            "path": "data/matches/2006363/2006363_tracking_extrapolated.jsonl",
+            "sha256": "61dfdbd83f8e654127b249b8503f062338c14ec0c9e65404bcf70fb7c1346bd4",
+            "bytes": 90591887
+          },
+          "eligible_metadata_candidate": true,
+          "actual_tracking_downloaded": false,
+          "full_match_coverage_verified": false,
+          "label_semantics": "provider-derived;no exact independent H/A/D contract established"
+        },
+        {
+          "id": 2006229,
+          "date_time": "2025-03-07T08:35:00Z",
+          "home_team": {
+            "id": 2380,
+            "short_name": "Melbourne City"
+          },
+          "away_team": {
+            "id": 1804,
+            "short_name": "Macarthur FC"
+          },
+          "competition_id": 61,
+          "season_id": 95,
+          "manifest_status": "closed",
+          "tracking_pointer": {
+            "path": "data/matches/2006229/2006229_tracking_extrapolated.jsonl",
+            "sha256": "3ee193ba01f1fe2cbce087eca8a881c21b8b0ea3485ae6c3d7e32e8b2f51e738",
+            "bytes": 90078007
+          },
+          "eligible_metadata_candidate": true,
+          "actual_tracking_downloaded": false,
+          "full_match_coverage_verified": false,
+          "label_semantics": "provider-derived;no exact independent H/A/D contract established"
+        },
+        {
+          "id": 1996435,
+          "date_time": "2025-02-01T06:00:00Z",
+          "home_team": {
+            "id": 869,
+            "short_name": "Sydney FC"
+          },
+          "away_team": {
+            "id": 866,
+            "short_name": "Adelaide United"
+          },
+          "competition_id": 61,
+          "season_id": 95,
+          "manifest_status": "closed",
+          "tracking_pointer": {
+            "path": "data/matches/1996435/1996435_tracking_extrapolated.jsonl",
+            "sha256": "f42764d8bde290e8f738fa21141cadbed75408314b0b337bbf1d5a3444540a02",
+            "bytes": 88634016
+          },
+          "eligible_metadata_candidate": true,
+          "actual_tracking_downloaded": false,
+          "full_match_coverage_verified": false,
+          "label_semantics": "provider-derived;no exact independent H/A/D contract established"
+        },
+        {
+          "id": 1996436,
+          "date_time": "2025-02-01T04:00:00Z",
+          "home_team": {
+            "id": 4177,
+            "short_name": "Auckland FC"
+          },
+          "away_team": {
+            "id": 1804,
+            "short_name": "Macarthur FC"
+          },
+          "competition_id": 61,
+          "season_id": 95,
+          "manifest_status": "closed",
+          "tracking_pointer": {
+            "path": "data/matches/1996436/1996436_tracking_extrapolated.jsonl",
+            "sha256": "fab9d331e06f3042c83ac17798901b49bb259c99a8f3b319cd0146263cde65e7",
+            "bytes": 88945845
+          },
+          "eligible_metadata_candidate": true,
+          "actual_tracking_downloaded": false,
+          "full_match_coverage_verified": false,
+          "label_semantics": "provider-derived;no exact independent H/A/D contract established"
+        },
+        {
+          "id": 1986691,
+          "date_time": "2025-01-26T06:00:00Z",
+          "home_team": {
+            "id": 2902,
+            "short_name": "Western Sydney"
+          },
+          "away_team": {
+            "id": 4177,
+            "short_name": "Auckland FC"
+          },
+          "competition_id": 61,
+          "season_id": 95,
+          "manifest_status": "closed",
+          "tracking_pointer": {
+            "path": "data/matches/1986691/1986691_tracking_extrapolated.jsonl",
+            "sha256": "630e946950fe459f5e48872b01a36e6dfc319cf9027e7b98156150bb6e2c30f6",
+            "bytes": 88531597
+          },
+          "eligible_metadata_candidate": true,
+          "actual_tracking_downloaded": false,
+          "full_match_coverage_verified": false,
+          "label_semantics": "provider-derived;no exact independent H/A/D contract established"
+        },
+        {
+          "id": 1959846,
+          "date_time": "2025-01-10T08:35:00Z",
+          "home_team": {
+            "id": 868,
+            "short_name": "Melbourne V FC"
+          },
+          "away_team": {
+            "id": 1803,
+            "short_name": "Western United"
+          },
+          "competition_id": 61,
+          "season_id": 95,
+          "manifest_status": "closed",
+          "tracking_pointer": {
+            "path": "data/matches/1959846/1959846_tracking_extrapolated.jsonl",
+            "sha256": "5ba2d87f6fd1ba3138301b369bd9266be69416a2d799a3fba5b5ec8a52e1284b",
+            "bytes": 87710167
+          },
+          "eligible_metadata_candidate": true,
+          "actual_tracking_downloaded": false,
+          "full_match_coverage_verified": false,
+          "label_semantics": "provider-derived;no exact independent H/A/D contract established"
+        },
+        {
+          "id": 1953632,
+          "date_time": "2024-12-31T08:00:00Z",
+          "home_team": {
+            "id": 870,
+            "short_name": "CC Mariners"
+          },
+          "away_team": {
+            "id": 2380,
+            "short_name": "Melbourne City"
+          },
+          "competition_id": 61,
+          "season_id": 95,
+          "manifest_status": "not_started",
+          "tracking_pointer": {
+            "path": "data/matches/1953632/1953632_tracking_extrapolated.jsonl",
+            "sha256": "1c2014f97c3eff1ce2475203512c9d126930d7599c036105c9ac442d1de1667e",
+            "bytes": 90027965
+          },
+          "eligible_metadata_candidate": false,
+          "actual_tracking_downloaded": false,
+          "full_match_coverage_verified": false,
+          "label_semantics": "provider-derived;no exact independent H/A/D contract established"
+        },
+        {
+          "id": 1927964,
+          "date_time": "2024-12-22T06:00:00Z",
+          "home_team": {
+            "id": 2902,
+            "short_name": "Western Sydney"
+          },
+          "away_team": {
+            "id": 867,
+            "short_name": "Wellington P FC"
+          },
+          "competition_id": 61,
+          "season_id": 95,
+          "manifest_status": "closed",
+          "tracking_pointer": {
+            "path": "data/matches/1927964/1927964_tracking_extrapolated.jsonl",
+            "sha256": "858c7a756ca3d33017f864775af5999d2c0f364e58ab60ae040c8b9ebab17827",
+            "bytes": 91049828
+          },
+          "eligible_metadata_candidate": true,
+          "actual_tracking_downloaded": false,
+          "full_match_coverage_verified": false,
+          "label_semantics": "provider-derived;no exact independent H/A/D contract established"
+        },
+        {
+          "id": 1925299,
+          "date_time": "2024-12-21T06:00:00Z",
+          "home_team": {
+            "id": 1802,
+            "short_name": "Brisbane FC"
+          },
+          "away_team": {
+            "id": 871,
+            "short_name": "Perth Glory"
+          },
+          "competition_id": 61,
+          "season_id": 95,
+          "manifest_status": "closed",
+          "tracking_pointer": {
+            "path": "data/matches/1925299/1925299_tracking_extrapolated.jsonl",
+            "sha256": "48528be40ad82fa3e2b232e1af8d311705f7d6d119925ef199d2b59ea36fd3c9",
+            "bytes": 97091519
+          },
+          "eligible_metadata_candidate": true,
+          "actual_tracking_downloaded": false,
+          "full_match_coverage_verified": false,
+          "label_semantics": "provider-derived;no exact independent H/A/D contract established"
+        },
+        {
+          "id": 1899585,
+          "date_time": "2024-12-07T04:00:00Z",
+          "home_team": {
+            "id": 4177,
+            "short_name": "Auckland FC"
+          },
+          "away_team": {
+            "id": 867,
+            "short_name": "Wellington P FC"
+          },
+          "competition_id": 61,
+          "season_id": 95,
+          "manifest_status": "closed",
+          "tracking_pointer": {
+            "path": "data/matches/1899585/1899585_tracking_extrapolated.jsonl",
+            "sha256": "90b6289ec2181192d1793ec6240fbbe8225ff0219c7956710c6278c31a661100",
+            "bytes": 85550410
+          },
+          "eligible_metadata_candidate": true,
+          "actual_tracking_downloaded": false,
+          "full_match_coverage_verified": false,
+          "label_semantics": "provider-derived;no exact independent H/A/D contract established"
+        },
+        {
+          "id": 1886347,
+          "date_time": "2024-11-30T04:00:00Z",
+          "home_team": {
+            "id": 4177,
+            "short_name": "Auckland FC"
+          },
+          "away_team": {
+            "id": 1805,
+            "short_name": "Newcastle"
+          },
+          "competition_id": 61,
+          "season_id": 95,
+          "manifest_status": "closed",
+          "tracking_pointer": {
+            "path": "data/matches/1886347/1886347_tracking_extrapolated.jsonl",
+            "sha256": "3577e2803da95390f8b2f85d47829eb55fbbfee6211c94adc65db0dc78e46b41",
+            "bytes": 89280839
+          },
+          "eligible_metadata_candidate": true,
+          "actual_tracking_downloaded": false,
+          "full_match_coverage_verified": false,
+          "label_semantics": "provider-derived;no exact independent H/A/D contract established"
+        },
+        {
+          "id": 1874553,
+          "date_time": "2024-11-23T06:00:00Z",
+          "home_team": {
+            "id": 1802,
+            "short_name": "Brisbane FC"
+          },
+          "away_team": {
+            "id": 866,
+            "short_name": "Adelaide United"
+          },
+          "competition_id": 61,
+          "season_id": 95,
+          "manifest_status": "closed",
+          "tracking_pointer": {
+            "path": "data/matches/1874553/1874553_tracking_extrapolated.jsonl",
+            "sha256": "ea97f58f8eaad925feaeacc6395ec24860dd80027af8a89450276adebd29d265",
+            "bytes": 90729279
+          },
+          "eligible_metadata_candidate": true,
+          "actual_tracking_downloaded": false,
+          "full_match_coverage_verified": false,
+          "label_semantics": "provider-derived;no exact independent H/A/D contract established"
+        }
+      ],
+      "candidate_count": 20,
+      "closed_metadata_candidate_count": 19,
+      "all_tracking_pointer_bytes": 1823448331,
+      "closed_tracking_pointer_bytes": 1733420366,
+      "readme_count_stale": 10,
+      "independent_ball_in_play_source": null
+    }
+  ],
+  "conditional_or_rejected": [
+    {
+      "id": "pff-worldcup2022",
+      "advertised_matches": 64,
+      "direct_GT_status": "conditional:form/license/semantics/size unresolved",
+      "source_refs": [
+        "pff-offer",
+        "pff-loader"
+      ]
+    },
+    {
+      "id": "metrica-sample",
+      "advertised_games": 3,
+      "direct_GT_status": "exclude untillicense+continuouscontrol/deadtargetestablished",
+      "source_refs": [
+        "metrica"
+      ]
+    },
+    {
+      "id": "soccernet-gsr",
+      "direct_GT_status": "exclude:shortathleteidentificationclips",
+      "source_refs": [
+        "soccernet-gsr"
+      ]
+    },
+    {
+      "id": "statsbomb-wyscout-events",
+      "direct_GT_status": "exclude:event/snapshot-onlynotcontinuouscontrolGT",
+      "source_refs": [
+        "statsbomb",
+        "idsse-paper"
+      ]
+    },
+    {
+      "id": "lastrow",
+      "direct_GT_status": "exclude:19goalplays,incompleteplayers",
+      "source_refs": [
+        "lastrow"
+      ]
+    }
+  ],
+  "split_options": {
+    "A": {
+      "train": [
+        "J03WOH",
+        "J03WOY",
+        "J03WPY"
+      ],
+      "selection": [
+        "J03WQQ"
+      ],
+      "test": [
+        "J03WN1"
+      ]
+    },
+    "A2": {
+      "train": [
+        "J03WOH",
+        "J03WPY"
+      ],
+      "selection": [
+        "J03WOY",
+        "J03WQQ"
+      ],
+      "test": [
+        "J03WN1"
+      ]
+    },
+    "A3": {
+      "train": [
+        "J03WOH",
+        "J03WPY"
+      ],
+      "selection": [
+        "J03WOY"
+      ],
+      "test": [
+        "J03WN1",
+        "J03WQQ"
+      ]
+    },
+    "A4_preferred_two_fresh_tests": {
+      "train": [
+        "J03WOH",
+        "J03WOY"
+      ],
+      "selection": [
+        "J03WPY"
+      ],
+      "test": [
+        "J03WN1",
+        "J03WQQ"
+      ]
+    },
+    "B_auxiliary_conditional": {
+      "train": [
+        1874553,
+        1886347,
+        1899585,
+        1925299,
+        1927964,
+        1959846,
+        1986691,
+        1996435,
+        1996436,
+        2006229
+      ],
+      "selection": [
+        2006363,
+        2007448,
+        2007721
+      ],
+      "test": [
+        2010085,
+        2011166,
+        2013725,
+        2015213,
+        2016236,
+        2017461
+      ],
+      "excluded": [
+        1953632
+      ]
+    }
+  },
+  "closed_legacy_test_ids": [
+    "J03WR9",
+    "J03WMX"
+  ],
+  "no_acquisition_before_independent_protocol_review": true
+}

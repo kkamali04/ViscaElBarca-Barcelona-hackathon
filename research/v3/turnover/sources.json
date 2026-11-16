@@ -1,0 +1,297 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-15",
+  "retrieved_at": "2026-11-15",
+  "scope": "Public primary research, repository metadata/source/license only. No private challenge data read, attached or uploaded.",
+  "cache": "local/v3-turnover-research-20261115/",
+  "freshness_policy": "Pinned latest reachable default-branch commit returned by GitHub API with until=2026-11-15T23:59:59Z. Release dates are publication dates; repo updated_at is not treated as code recency.",
+  "sources": [
+    {
+      "id": "pathcrf-paper",
+      "type": "primary_paper",
+      "title": "PathCRF: Ball-Free Soccer Event Detection via Possession Path Inference from Player Trajectories",
+      "url": "https://arxiv.org/html/2602.12080v2",
+      "metadata_url": "https://arxiv.org/abs/2602.12080",
+      "published_date": "2026-02-12",
+      "version": "v2",
+      "version_date": "2026-06-01",
+      "publication_status": "KDD2026 proceedings; journal reference and DOI verified on arXiv",
+      "doi": "10.1145/3770855.3818152",
+      "retrieval": [
+        "Exa fetch full method/results text",
+        "official arXiv metadata via web"
+      ],
+      "read_sections": [
+        "2.1-2.4 formulation/backbone/dynamic transitions/masks",
+        "3.1 data and in-play-only episode protocol",
+        "3.4 static/dynamic ablation",
+        "3.6 GPU timing"
+      ],
+      "claims_supported": [
+        "Dynamic observation-conditioned transitions have direct soccer possession-path precedent.",
+        "Published inference is restricted to in-play episodes and default5FPS; not a complete dead-play decoder.",
+        "GPU latency on RTX4090 cannot establish CPU latency."
+      ],
+      "limitations": [
+        "No local reproduction or independent paper-result verification.",
+        "No demonstrated transfer to anonymous slots or this challenge label semantics.",
+        "Initial Exa abs response mixed full v1 content with v2 metadata; conclusions use explicit html/v2 retrieval."
+      ]
+    },
+    {
+      "id": "pathcrf-code",
+      "type": "official_repo",
+      "url": "https://github.com/hyunsungkim-ds/pathcrf",
+      "pinned_url": "https://github.com/hyunsungkim-ds/pathcrf/tree/1b7c6f85a6b78c92e4543fde72ca2b86a933f997",
+      "commit": "1b7c6f85a6b78c92e4543fde72ca2b86a933f997",
+      "commit_date": "2026-06-08T13:55:04Z",
+      "release": null,
+      "license": "MPL-2.0",
+      "license_url": "https://raw.githubusercontent.com/hyunsungkim-ds/pathcrf/1b7c6f85a6b78c92e4543fde72ca2b86a933f997/LICENSE",
+      "metadata_url": "https://api.github.com/repos/hyunsungkim-ds/pathcrf",
+      "commit_api": "https://api.github.com/repos/hyunsungkim-ds/pathcrf/commits?until=2026-11-15T23%3A59%3A59Z&per_page=1",
+      "read_files": [
+        "README.md",
+        "requirements.txt",
+        "models/dynamic_sparse_crf.py",
+        "LICENSE"
+      ],
+      "method": "torch DynamicSparseCRF with incoming-edge lists and embedding-based transition scoring",
+      "integration": "High: identified-player edge states, new neural backbone, labels and preprocessing; take design precedent only initially.",
+      "cpu_memory": "No measured CPU evidence. Sparse implementation avoids naive dense transition storage, but edge embeddings/temporal attention and hundreds of states materially exceed3states. Paper's24GBGPU is hardware capacity, not measured peak memory.",
+      "claims_supported": [
+        "Repository imports torch in model source but inspected requirements.txt omits torch.",
+        "Pinned license is MPL2.0.",
+        "README supplies code/checkpoints and Sportec preprocessing instructions."
+      ],
+      "limitations": [
+        "No dependency install, weights execution or trained checkpoint reuse.",
+        "No latest release endpoint found; null release is not proof no tag exists."
+      ]
+    },
+    {
+      "id": "asrf-paper",
+      "type": "primary_paper",
+      "title": "Alleviating Over-Segmentation Errors by Detecting Action Boundaries",
+      "url": "https://openaccess.thecvf.com/content/WACV2021/papers/Ishikawa_Alleviating_Over-Segmentation_Errors_by_Detecting_Action_Boundaries_WACV_2021_paper.pdf",
+      "published_date": "2021",
+      "date_precision": "year",
+      "venue": "WACV2021",
+      "version": "CVF proceedings10-page PDF",
+      "retrieval": "Firecrawl scrape PDF10/10pages",
+      "read_sections": [
+        "2 representation and I3D features",
+        "3 separate classification/boundary branches and TCN",
+        "4.4 boundary precision/annotation ambiguity"
+      ],
+      "claims_supported": [
+        "Separate boundary branch can refine frame segmentation in generic action datasets.",
+        "Paper acknowledges low boundary precision and boundary ambiguity.",
+        "Experiments use activity/video feature datasets, not soccer tracking."
+      ],
+      "limitations": [
+        "No soccer transfer evidence, no CPU measurement in this study."
+      ]
+    },
+    {
+      "id": "asrf-code",
+      "type": "official_repo",
+      "url": "https://github.com/yiskw713/asrf",
+      "pinned_url": "https://github.com/yiskw713/asrf/tree/9623f1e8d9a1171333a4eeb65d190997b6c44a95",
+      "commit": "9623f1e8d9a1171333a4eeb65d190997b6c44a95",
+      "commit_date": "2021-02-03T00:41:28Z",
+      "release": null,
+      "license": "MIT",
+      "license_url": "https://raw.githubusercontent.com/yiskw713/asrf/9623f1e8d9a1171333a4eeb65d190997b6c44a95/LICENSE",
+      "metadata_url": "https://api.github.com/repos/yiskw713/asrf",
+      "read_files": [
+        "README.md",
+        "LICENSE"
+      ],
+      "integration": "High for wholesale model; low for boundary/classification separation concept.",
+      "limitations": [
+        "No package/model execution.",
+        "A guessed yonseivnl/asrf URL404ed; corrected official yiskw713/asrf is named in primary paper."
+      ]
+    },
+    {
+      "id": "ruptures-review",
+      "type": "primary_review",
+      "title": "Selective review of offline change point detection methods",
+      "url": "https://arxiv.org/html/1801.00718v3",
+      "published_date": "2018-01-02",
+      "version": "v3",
+      "version_date": "2020-03-26",
+      "journal_date": "2020",
+      "doi": "10.1016/j.sigpro.2019.107299",
+      "retrieval": "Exa fetch",
+      "claims_supported": [
+        "Change-point models combine cost/search/penalty; generic regime changes require an application-specific cost.",
+        "The review is linked to the ruptures implementation."
+      ],
+      "limitations": [
+        "Not soccer-specific; not evidence for team-control boundary classification."
+      ]
+    },
+    {
+      "id": "ruptures-code",
+      "type": "official_repo_and_docs",
+      "url": "https://github.com/deepcharles/ruptures",
+      "pinned_url": "https://github.com/deepcharles/ruptures/tree/ee1c8ff8a548d54c641b2bb471562165931f31c7",
+      "commit": "ee1c8ff8a548d54c641b2bb471562165931f31c7",
+      "commit_date": "2026-05-26T14:40:03Z",
+      "release": "v1.1.10",
+      "release_date": "2025-09-10T09:53:23Z",
+      "release_url": "https://github.com/deepcharles/ruptures/releases/tag/v1.1.10",
+      "license": "BSD-2-Clause",
+      "license_url": "https://raw.githubusercontent.com/deepcharles/ruptures/ee1c8ff8a548d54c641b2bb471562165931f31c7/LICENSE",
+      "metadata_url": "https://api.github.com/repos/deepcharles/ruptures",
+      "docs_url": "https://centre-borelli.github.io/ruptures-docs/user-guide/detection/pelt/",
+      "read_files": [
+        "README.md",
+        "src/ruptures/detection/pelt.py",
+        "LICENSE",
+        "Pelt official documentation"
+      ],
+      "method": "Offline penalized segmentation, pruning optimal search under selected cost; conditional average runtime.",
+      "integration": "Optional development baseline on compact finite channels; extra runtime dependency not recommended.",
+      "claims_supported": [
+        "Pelt defaults min_size2,jump5 restrict allowed boundaries.",
+        "Docs explicitly qualify average-complexity claim.",
+        "Current Python implementation maintains partition dictionaries; do not assume its memory matches existing3N numeric backpointers."
+      ],
+      "limitations": [
+        "No observed runtime/peak-memory benchmark.",
+        "Regime changes are not typed possession changes."
+      ]
+    },
+    {
+      "id": "hsmmlearn-code",
+      "type": "official_repo",
+      "url": "https://github.com/jvkersch/hsmmlearn",
+      "pinned_url": "https://github.com/jvkersch/hsmmlearn/tree/69bc8aafb53033596e6a314d314547c6f2d197f2",
+      "commit": "69bc8aafb53033596e6a314d314547c6f2d197f2",
+      "commit_date": "2021-08-21T12:59:07Z",
+      "release": null,
+      "archived": true,
+      "license": "GPL-3.0",
+      "license_url": "https://raw.githubusercontent.com/jvkersch/hsmmlearn/69bc8aafb53033596e6a314d314547c6f2d197f2/COPYING",
+      "metadata_url": "https://api.github.com/repos/jvkersch/hsmmlearn",
+      "read_files": [
+        "README.md",
+        "COPYING"
+      ],
+      "method": "Unsupervised hidden semi-Markov models with explicit duration distributions; wrapsC++Rhsmm code.",
+      "integration": "Reject production dependency for initial candidate: archived, compiled toolchain and copyleft obligations.",
+      "claims_supported": [
+        "Explicit durations rather than constant Markov transition costs.",
+        "Build requiresC++compiler."
+      ],
+      "limitations": [
+        "O(NK²Dmax) in research is generic bounded-duration DP analysis, not a measured hsmmlearn guarantee.",
+        "No Windows build tested."
+      ]
+    },
+    {
+      "id": "databallpy-code-docs",
+      "type": "official_repo",
+      "url": "https://github.com/Alek050/databallpy",
+      "pinned_url": "https://github.com/Alek050/databallpy/tree/a2ab78c4c7ba3ad964ab26dd65dd848de3939d18",
+      "commit": "a2ab78c4c7ba3ad964ab26dd65dd848de3939d18",
+      "commit_date": "2026-11-03T14:52:48Z",
+      "release": "v0.8.1",
+      "release_date": "2026-08-11T12:24:14Z",
+      "release_url": "https://github.com/Alek050/databallpy/releases/tag/v0.8.1",
+      "license": "MIT",
+      "license_url": "https://raw.githubusercontent.com/Alek050/databallpy/a2ab78c4c7ba3ad964ab26dd65dd848de3939d18/LICENSE",
+      "metadata_url": "https://api.github.com/repos/Alek050/databallpy",
+      "read_files": [
+        "databallpy/features/player_possession.py",
+        "docs/features/team_and_player_possession.ipynb markdown cells only",
+        "LICENSE"
+      ],
+      "method": "Individual possession gains combine proximity duration and speed/direction change; team-possession docs use successful on-ball events.",
+      "integration": "Candidate physics features/comparator only; no inference-event requirement may enter our model.",
+      "limitations": [
+        "Documentation explicitly warns notebook may lag package.",
+        "Observed pinned individual code is stronger evidence for its rules than prose; team-event semantics are documentation evidence, not audited implementation execution."
+      ]
+    },
+    {
+      "id": "vidal-codina-paper",
+      "type": "primary_paper",
+      "title": "Automatic event detection in football using tracking data",
+      "url": "https://arxiv.org/abs/2202.00804",
+      "published_date": "2022-02-01",
+      "version": "v3",
+      "version_date": "2022-08-31",
+      "full_text_url": "https://arxiv.org/html/2202.00804v3",
+      "retrieval": [
+        "Exa primary method text",
+        "official arXiv version history via web"
+      ],
+      "read_sections": [
+        "2.1 data and status conventions",
+        "2.2 possession zones/duels/ball kinematics"
+      ],
+      "claims_supported": [
+        "Rule-based individual ball-control extraction is a relevant soccer precedent.",
+        "Some evaluation datasets supply in-play status or encode dead play in missing ball; challenge missingness cannot inherit that convention."
+      ],
+      "limitations": [
+        "Paper event detection rates are not our H/A/D spellF1; no transfer score claimed.",
+        "Original supplied study datasets not accessed."
+      ]
+    },
+    {
+      "id": "semimarkov-xt-paper",
+      "type": "primary_paper_excluded_target",
+      "title": "A Semi-Markov framework for modeling football possessions and temporal expected threat",
+      "url": "https://www.nature.com/articles/s41598-026-52938-1",
+      "published_date": "2026-05-18",
+      "version": "PublishedScientificReportsarticle",
+      "retrieval": "Exa fetch primary article text",
+      "method": "Event/action/zone-conditioned sojourn durations and temporal expected threat.",
+      "claims_supported": [
+        "Latest2026 duration research is not necessarily a tracking-possession decoder; this predicts scoring value from observed events."
+      ],
+      "code_url_discovered": "https://github.com/Sebastianlecoz/semi-markov",
+      "code_status": "Not evaluated/pinned because excluded target; do not treat as reuse-ready repository.",
+      "limitations": [
+        "Does not support candidateH/A/D improvement."
+      ]
+    }
+  ],
+  "local_code_observations": {
+    "paths": [
+      "possession_model/schema.py",
+      "possession_model/features.py",
+      "possession_model/evidence.py",
+      "possession_model/decoder.py",
+      "possession_model/trees.py",
+      "possession_model/pipeline.py",
+      "experiments/noise_v2/features.py",
+      "tools/run_candidate.py",
+      "validation/README.md",
+      "more-than-a-hack-2027-main/evaluation/possession_metrics.py"
+    ],
+    "claims": [
+      "FeatureSet has anonymous team aggregates, not identified trajectories.",
+      "pipeline builds constant3x3cost; decoder has exact objective and deterministic tie rules.",
+      "Existing features already contain centered proximity/missingness context and teleport guard; noisev2 adds gap-safe1.2s local-linear speed.",
+      "Official source headline uses spellF1mean over0.3..0.7IoUs and typed transition tolerances12/25frames."
+    ],
+    "private_data_accessed": false
+  },
+  "hypotheses_not_results": [
+    "Small typed boundary head improves official external spell and transition metrics.",
+    "Two float32boundary channels can preserve O(9N) decoder asymptotics with bounded overhead.",
+    "Reliability gating avoids tracking-error-induced false switches.",
+    "Proposed20%inference and32MiBmemory budgets are review targets, not measurements."
+  ],
+  "verification_gaps": [
+    "No local package installation, training or performance benchmarking in research phase.",
+    "No private or fresh holdout data accessed.",
+    "Independent blind research critique pending; root owns next gate."
+  ]
+}

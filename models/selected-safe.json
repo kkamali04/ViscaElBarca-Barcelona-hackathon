@@ -1,0 +1,43 @@
+{
+  "emitter": "trees",
+  "transition_seconds": 0.5,
+  "tag_weight": 0.0,
+  "validation_mean_spell_f1": 0.4589603203776432,
+  "validation_mean_macro_f1": 0.8588000628478685,
+  "selection_match": "J03WOY",
+  "training_match": "J03WOH",
+  "holdout_match": "J03WR9",
+  "model": "models/independent_trees.json",
+  "conditions": {
+    "clean": {},
+    "occluded": {
+      "ball_missing_fraction": 0.4,
+      "block_seconds": 4.0,
+      "seed": 20261115
+    }
+  },
+  "model_sha256": "abf4f2973003182ae8b1b40d3a5727624e59e78033571c774e46f0afd5a778f7",
+  "source_sha256": {
+    "possession_model/__init__.py": "449dad4bb18019700401a977f8446b623dcee6a3a7f05d15526fc71c29caa4cb",
+    "possession_model/features.py": "8d2dae5785d1c485e6a1ae20c68e29358906e02a6ff4b053d8da75b1117fb3d8",
+    "possession_model/evidence.py": "f5b2e738022be102db47586271c2bc0669e72744b08c727074bcbae1877c72a9",
+    "possession_model/decoder.py": "410dc8b086a37b3f15a6545760ea114af099929da45d81ce4a6107c72e1af2da",
+    "possession_model/trees.py": "64e5f39b5e5e36a7a58c767e090a8d169b7a953b2dc2e1ed2e84f91fdd672059",
+    "possession_model/pipeline.py": "22b3950cda12c58080b9b21441c8149af93ee464908cf76616d123e7f88a6204",
+    "possession_model/schema.py": "787f738d9a431c961160061a0d509bb93ee850a884e229645de3f0d05e5be470",
+    "validation/sportec.py": "834a997c186661e6564b92f23281463fe62a5d6c7960accef00c5eba7a15651e",
+    "validation/metrics.py": "d94776e7a6c6c69d83485ce35c4ef78f6ae33048fc36c136d5b6f58657056aff",
+    "tools/train_and_validate.py": "f3388329cc02b8e0adfb307662b602a84d0487727534a5ad1253d624f615f99f",
+    "tools/run_candidate.py": "5b9da02c893a0cec34bc8444a4c88a12abe58562bf0f836f9a27955bbed66f34",
+    "experiments/__init__.py": "6410dea73fc5becf931c5b762cb8e1eb6d2b3a669c585e3780d67cc4ab1ce84c",
+    "experiments/noise_v2/__init__.py": "61e39e8b249de5dca7fb3c565d673430be34e04525cb55116e92e8015ba75ced",
+    "experiments/noise_v2/features.py": "830397e5574e2dc7dde590fdb3b7d92bc0ea5f6852ec6c5f95942d54c1739a5c",
+    "more-than-a-hack-2027-main/evaluation/possession_metrics.py": "341bad48904b489d6e875397b27687f5d6a4d22a397f3dc8af3a00d48f16874d",
+    "requirements-lock.txt": "f7db4ee30863d5ee003283f3d9b4eb701be327900756c9113bb40c37a7cb3494"
+  },
+  "selection_rule": "Maximum mean clean/occluded spellF1, macroF1 tie; no challenge GT opened",
+  "release": "v1.1-safety",
+  "feature_transform": "identity",
+  "parent_configuration_sha256": "1d4069949dc30e38b50f194986b41b4ae815befd499eac8c724ee4b8c7c0a4c2",
+  "validation_scope": "V1 numerical model retained; safety/provenance/valid-input parity verified separately, original holdout preserved"
+}

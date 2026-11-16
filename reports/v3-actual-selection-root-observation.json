@@ -1,0 +1,112 @@
+{
+  "utc": "2026-11-16T04:38:30.302206+00:00",
+  "phase": "T07_COMPLETE_NO_ELIGIBLE_FINALIST_INDEPENDENT_DISPOSITION_PENDING",
+  "scope": "root terminal metadata/hash observation; independent disposition audit still pending",
+  "study_digest": "e2d265c657eabcabf5e5eb8b8d145a54dd8569fe80a8ba0b9aaf288357a51938",
+  "selection_result_digest": "d827b8a575df9ad7843746764a7dc42de74efe491e20539a91af84cda91b40ee",
+  "row_count": 54,
+  "candidate_count": 9,
+  "conditions": 6,
+  "selection_matches": 1,
+  "eligible": false,
+  "candidate_summaries": [
+    {
+      "id": "B080",
+      "mean_spell": 0.4480492264540967,
+      "spell_gain": 0.009303705724009459,
+      "mean_macro": 0.858526719232228,
+      "failed_checks": [
+        "mean_paired_spell_gain"
+      ]
+    },
+    {
+      "id": "C0",
+      "mean_spell": 0.4405100172328673,
+      "spell_gain": 0.0017644965027800996,
+      "mean_macro": 0.8602745963829403,
+      "failed_checks": [
+        "each_condition_spell",
+        "mean_paired_spell_gain"
+      ]
+    },
+    {
+      "id": "C1",
+      "mean_spell": 0.4423896464151878,
+      "spell_gain": 0.0036441256851005113,
+      "mean_macro": 0.8614599143242722,
+      "failed_checks": [
+        "mean_paired_spell_gain"
+      ]
+    },
+    {
+      "id": "D0050",
+      "mean_spell": 0.4465396311455119,
+      "spell_gain": 0.007794110415424567,
+      "mean_macro": 0.8616911367979309,
+      "failed_checks": [
+        "mean_paired_spell_gain"
+      ]
+    },
+    {
+      "id": "D0080",
+      "mean_spell": 0.4492704513961761,
+      "spell_gain": 0.010524930666088847,
+      "mean_macro": 0.8616300484979806,
+      "failed_checks": [
+        "mean_paired_spell_gain"
+      ]
+    },
+    {
+      "id": "D1050",
+      "mean_spell": 0.44603096334930253,
+      "spell_gain": 0.007285442619215349,
+      "mean_macro": 0.8620186271756665,
+      "failed_checks": [
+        "mean_paired_spell_gain"
+      ]
+    },
+    {
+      "id": "D1080",
+      "mean_spell": 0.4423447569688164,
+      "spell_gain": 0.0035992362387291623,
+      "mean_macro": 0.8613062591044817,
+      "failed_checks": [
+        "mean_paired_spell_gain"
+      ]
+    },
+    {
+      "id": "F080",
+      "mean_spell": 0.4405073278402712,
+      "spell_gain": 0.001761807110184005,
+      "mean_macro": 0.8574001372620034,
+      "failed_checks": [
+        "mean_paired_spell_gain"
+      ]
+    }
+  ],
+  "selection_resource_measurement": {
+    "exit_code": 0,
+    "gaps_over_50ms": 0,
+    "job_commit_limit_bytes": 12884901888,
+    "max_job_processes": 3,
+    "max_sample_gap_seconds": 0.029733299976214767,
+    "measurement_note": "Sampled concurrent working-set peak is a lower bound; job ceiling limits committed memory, not resident working set.",
+    "sample_count": 86529,
+    "sampled_job_peak_working_set_bytes": 633647104,
+    "sampling_errors": [],
+    "termination_reason": null,
+    "wall_seconds": 899.490818899998,
+    "worker_creation_time": "134392763400647296",
+    "worker_peak_working_set_bytes": 620765184,
+    "worker_pid": 65268
+  },
+  "baseline_mean_spell": 0.43874552073008727,
+  "source_files_unchanged": 59,
+  "fallback_files_unchanged": 29,
+  "fresh_test_unreserved_unopened": true,
+  "export_authorization_exists": false,
+  "shell_wrapper_exit_code": 1,
+  "intended_cli_exit_code": 4,
+  "scientific_worker_exit_code": 0,
+  "next": "independent disposition audit/root replay, bounded synthetic native checker validation, honest rejection/owner review handoff; no test/package/promotion"
+}

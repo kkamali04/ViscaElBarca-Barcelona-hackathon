@@ -1,0 +1,25 @@
+# Restricted competition assets stay local, regardless of size.
+more-than-a-hack-2027-main/data/*
+!more-than-a-hack-2027-main/data/README.md
+local/
+*.zip
+*.crdownload
+*.part
+*.mp4
+submissions/*.csv
+.venv/
+__pycache__/
+*.py[cod]
+# Exact paths for any additional file > 50,000,000 bytes are maintained below
+# by tools/update_large_file_ignores.py (Git has no size-based ignore syntax).
+
+# BEGIN generated files over 50 MB
+/local/external/J03WMX/DFL_04_03_positions_raw_observed_DFL-COM-000001_DFL-MAT-J03WMX.xml
+/local/external/J03WOH/DFL_04_03_positions_raw_observed_DFL-COM-000002_DFL-MAT-J03WOH.xml
+/local/external/J03WOY/DFL_04_03_positions_raw_observed_DFL-COM-000002_DFL-MAT-J03WOY.xml
+/local/external/J03WR9/DFL_04_03_positions_raw_observed_DFL-COM-000002_DFL-MAT-J03WR9.xml
+/more-than-a-hack-2027-main/data/broadcast/BAR-ATH_broadcast.mp4
+/more-than-a-hack-2027-main/data/broadcast/BAR-ATH_broadcast_atd.txt
+/more-than-a-hack-2027-main/data/tactical/BAR-ATH_tactical.mp4
+/more-than-a-hack-2027-main/data/tactical/BAR-ATH_tactical_atd.txt
+# END generated files over 50 MB

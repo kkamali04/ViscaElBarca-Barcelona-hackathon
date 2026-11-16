@@ -1,0 +1,6 @@
+# Frozen source/model fingerprints require identical bytes across Git clones.
+# Disable newline conversion for these files; Python handles either LF/CRLF.
+*.py -text
+*.json -text
+*.ps1 -text
+requirements-*.txt -text
