@@ -1,8 +1,8 @@
 {
   "format": "teammate-code-repository-v2",
-  "created_utc": "2026-11-17T05:14:50.294151+00:00",
-  "base_commit": "83acd3f1b4238c8caaa5136205865d89b1ee6255",
-  "supersedes_manifest_sha256": "094d5829d423369c1dac08564144ee92116f50d5251646ee9af0f935a850d0f1",
+  "created_utc": "2026-11-17T07:18:29.061891+00:00",
+  "base_commit": "0e005b0afd87ff771b100f55420c351ae7360b33",
+  "supersedes_manifest_sha256": "93e99b493852d2daeda51fe72c90e5ed64490962a322e94854b1dc5f822988bf",
   "source_base_zip_sha256": "a06eb6323ebf68658ae626b97e8b98a75acbfbeb109b9e7a7556eadfe03b582c",
   "source_base_members": 106,
   "files": [
@@ -73,18 +73,18 @@
     },
     {
       "path": "PACKAGE_MANIFEST.json",
-      "bytes": 18360,
-      "sha256": "f9c95576d72fb4c7ed5428f2f44b0620473acb41890fb75f48dbb77dcb48e37e"
+      "bytes": 18905,
+      "sha256": "52e413a713f6a85931601c26c053773db7020e15c2d0881313e6db6cbf489343"
     },
     {
       "path": "README.md",
-      "bytes": 4090,
-      "sha256": "3fe97c2e314d1be2c8d58f35009c563dfd74c37dc390b45f7914c809e47cf07c"
+      "bytes": 4159,
+      "sha256": "84105dc4e38f2100ca3fa8026b64ef910f549b3c839285d4abdfc004b923f44c"
     },
     {
       "path": "REPLAY.md",
-      "bytes": 4874,
-      "sha256": "9858c30662b66716c88371723011afc059c6df5be366a16ab1a09d3f1cf4bbb1"
+      "bytes": 5849,
+      "sha256": "8549fc1ded8f35fff5128e403132f75d1a7cd7b55b4550e7d324f159392053b6"
     },
     {
       "path": "SOLUTION.md",
@@ -147,6 +147,11 @@
       "sha256": "687831ca849213c8f410067d9d2ddce1577eb2ec298b912227c2ae6be10ff78d"
     },
     {
+      "path": "docs/MORNING_REVIEW.md",
+      "bytes": 3350,
+      "sha256": "1d97a3e50f4c57fa38af1ae7440d0c3be349e232d67ab96737b1628afbb20c15"
+    },
+    {
       "path": "docs/REPOSITORY_SCOPE.md",
       "bytes": 3164,
       "sha256": "acb4057472a62488b2333b36ffd4a8bfe82d5f8208acc30b46b4888fbb2ef9dc"
@@ -163,8 +168,8 @@
     },
     {
       "path": "docs/VIEWER_GUIDE.md",
-      "bytes": 6076,
-      "sha256": "1c3e5d0358291f1a6d5e5d3c5abbc2437a5282e2be549d6a5742274a06d31f83"
+      "bytes": 6386,
+      "sha256": "9db7bcf3ba6fcb04ec804faea2a87254030179eb81bc6aa6c5c3b6f5157e9171"
     },
     {
       "path": "experiments/__init__.py",
@@ -513,8 +518,8 @@
     },
     {
       "path": "replay_v2/__main__.py",
-      "bytes": 3689,
-      "sha256": "07463e902dad25bfd7e6a1dd6ad6edee4b80199c592d54118a68cda417c36268"
+      "bytes": 4201,
+      "sha256": "4e4f7398e28275c11c7a9b713dcf6c0c271c23ea4c07a361a3832bf6127b73d2"
     },
     {
       "path": "replay_v2/server.py",
@@ -528,8 +533,8 @@
     },
     {
       "path": "replay_v2/static/app.js",
-      "bytes": 22289,
-      "sha256": "0b0b6f0a1a6276a5d0a82301086112158ad9ce734ee13e979e99ddfec9e25a9d"
+      "bytes": 22874,
+      "sha256": "1fd804b280a1eb2925ad09036b794aa19d4f7791547ff7393f9bec0b5e9d609b"
     },
     {
       "path": "replay_v2/static/clock.js",
@@ -543,8 +548,8 @@
     },
     {
       "path": "replay_v2/store.py",
-      "bytes": 20271,
-      "sha256": "2944e3d2147a724c58232e936ab6e58aaecad16e0b51306a65e79adbb91877bb"
+      "bytes": 23449,
+      "sha256": "dd024f7cf01e3e23337c252edc3704df82f38bbd6fbbd25674b092daf550ced9"
     },
     {
       "path": "reports/.gitignore",
@@ -1002,6 +1007,11 @@
       "sha256": "ba528a1d1df8150c3b72fe03aee607862d424244d6405da174570fc24197d582"
     },
     {
+      "path": "specs/008-release-hardening/CONTRACT.md",
+      "bytes": 3511,
+      "sha256": "b818e87ab85de894564a1ddbb1c0e1d8e985b5eeaad297b88864fe287b869244"
+    },
+    {
       "path": "start-match.ps1",
       "bytes": 2631,
       "sha256": "e3d177dd1df99bed0ccb70c7d9a001afc917ffadb44f11fdefdc83d70e404a71"
@@ -1230,6 +1240,7 @@
     "benchmarks/speed_reuse/README.md",
     "benchmarks/speed_reuse/acceptance.py",
     "benchmarks/speed_reuse/oracle.py",
+    "docs/MORNING_REVIEW.md",
     "docs/REPOSITORY_SCOPE.md",
     "docs/REQUIREMENTS_AND_READINESS.md",
     "docs/TECHNICAL_SUBMISSION.md",
@@ -1324,6 +1335,7 @@
     "reports/noise-v2-coverage.json",
     "reports/noise-v2-holdout.json",
     "reports/noise-v2-validation.json",
+    "reports/overnight-acceptance.json",
     "reports/release-blind-acceptance.json",
     "reports/render-repair-acceptance.json",
     "reports/replay-ball-diagnostic.json",
@@ -1407,6 +1419,8 @@
     "specs/006-teammate-release/TASKS.md",
     "specs/007-rendering-repair/CONTRACT.md",
     "specs/007-rendering-repair/TASKS.md",
+    "specs/008-release-hardening/CONTRACT.md",
+    "specs/008-release-hardening/TASKS.md",
     "start-match.ps1",
     "stop-replay.ps1",
     "stop-review.ps1",
@@ -1454,27 +1468,28 @@
     "PROJECT_STATE.md",
     "replay_v2/AGENTIC_GOAL.md",
     "replay_v2/PROJECT_STATE.md",
+    "reports/overnight-acceptance.json",
     "reports/render-repair-acceptance.json",
     "reports/teammate-release-acceptance.json",
     "specs/006-teammate-release/TASKS.md",
-    "specs/007-rendering-repair/TASKS.md"
+    "specs/007-rendering-repair/TASKS.md",
+    "specs/008-release-hardening/TASKS.md"
   ],
   "restricted_assets_included": false,
   "prediction_timelines_included": false,
   "scientific_preservation": {
-    "base_commit": "83acd3f1b4238c8caaa5136205865d89b1ee6255",
-    "unchanged_parent_records": 226,
-    "active_config_and_all16_source_hashes_match": true,
+    "base_commit": "0e005b0afd87ff771b100f55420c351ae7360b33",
+    "unchanged_parent_records": 236,
+    "all_prior_scientific_source_model_config_bytes_unchanged": true,
     "authorized_parent_changes": [
       "PACKAGE_MANIFEST.json",
       "README.md",
       "REPLAY.md",
-      "assets/replay-demo.png",
       "docs/VIEWER_GUIDE.md",
-      "replay_v2/static/app.css",
+      "replay_v2/__main__.py",
       "replay_v2/static/app.js",
-      "replay_v2/static/index.html"
+      "replay_v2/store.py"
     ]
   },
-  "note": "Replay2.2 rendering/workflow repair. Prior reports retain their tested source versions; no estimator/model semantic change. Operational receipt/checkpoint exclusions are explicit."
+  "note": "Replay2.3.2 release hardening; frozen estimator unchanged. Previous reports retain their tested source versions. Operational exclusions explicit."
 }

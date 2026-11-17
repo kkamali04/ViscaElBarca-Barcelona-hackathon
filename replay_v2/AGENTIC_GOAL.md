@@ -1,3 +1,111 @@
+# Morning review source ACCEPTED — 2026-11-17T07:54:56.483226+00:00
+
+Replay2.3.2 / overnight-hardening-3 passed fresh fork-none independent acceptance
+and root reproduction. Tested252-file archive SHA256:
+c14f99a6c14f1927f539461af1ce9fe4ea6ff42306f13dbfd848495c3aaacaa9.
+Frozen noise-v2 model, scientific source/configuration and prior holdouts unchanged.
+
+Evidence: reports/overnight-acceptance.json. Fresh independent A/B environments
+regenerated exact199319-row CSVs, official validation/determinism/source/input
+preservation;22 invented safety and14 Chrome UI groups passed. Root checked
+every199319 replay frame/18935305 components,17 actual local-headless canvas
+samples, crash/index/alias/ownership recovery, source/manifests/legacyZIP and a
+completed24-minute changed-source invented soak with2server restarts/3reloads.
+Timing/measurement and segmented-soak limitations are recorded, not erased.
+
+Private publication and owner8767/8771 process deployment/readbacks are separate
+next operations recorded in the owner-project latest checkpoint and Git history.
+Use docs/MORNING_REVIEW.md and README.md for review/run commands. No public
+visibility change, competition submission, new model training, GT or hidden
+accuracy claim. Teamname pending from friend; deadline Nov17,2026 at17:59NewYork.
+
+---
+Historical checkpoints below apply only to their stated source versions.
+
+# Morning review candidate FROZEN - 2026-11-17T07:18:29.061891+00:00
+
+Revision: replay2.3.2-overnight-hardening-3, pending new independent acceptance.
+Selected noise-v2 estimator/model/scientific source bytes unchanged. This is
+viewer failure/recovery and cache-lifecycle work; old evidence is not acceptance
+of this changed source. New source is isolated until review and publication.
+
+Current work: actionable safe preparation reasons and restart instructions,
+truthful unavailable readout; recover recognized abandoned generated temporary
+files without touching active/unknown owners or inputs; rebuild nonobject cache
+indexes; refuse all selected XML/TXT/CSV runtime/payload/index aliases before any write. Morning guide, release contract/tasks and manifests updated. Original
+failed fixtures and author reproduction are retained privately in owner project
+local/overnight-20261117/. Author checks are not independent acceptance.
+
+Next: fresh fork-none reviewer with predeclared public oracles, fresh Python3.13
+export/environment, two uncached actual ATD runs, exact documented CSV/official
+validator/determinism/worker lifetime resources/safe failure, independent invented
+UI/cache/ownership tests; root reproduces actual evidence and product failures.
+Source stays frozen. No GT/scoring/tuning/retraining, public visibility change
+or competition submission. Only aggregate actual evidence enters model tools.
+
+Team name remains pending for friend. Current private repo condition is not a
+public competition deliverable. Deadline Nov17 at17:59NewYork per supplied email.
+Use docs/MORNING_REVIEW.md and reports/overnight-acceptance.json for handoff/status.
+
+---
+Historical evidence below applies only to its identified source version.
+
+# Morning review candidate FROZEN - 2026-11-17T07:04:27.071267+00:00
+
+Revision: replay2.3.1-overnight-hardening-2, pending new independent acceptance.
+Selected noise-v2 estimator/model/scientific source bytes unchanged. This is
+viewer failure/recovery and cache-lifecycle work; old evidence is not acceptance
+of this changed source. New source is isolated until review and publication.
+
+Current work: actionable safe preparation reasons and restart instructions,
+truthful unavailable readout; recover recognized abandoned generated temporary
+files without touching active/unknown owners or inputs; rebuild nonobject cache
+indexes; refuse selected predictions/runtime-state path collisions before any write. Morning guide, release contract/tasks and manifests updated. Original
+failed fixtures and author reproduction are retained privately in owner project
+local/overnight-20261117/. Author checks are not independent acceptance.
+
+Next: fresh fork-none reviewer with predeclared public oracles, fresh Python3.13
+export/environment, two uncached actual ATD runs, exact documented CSV/official
+validator/determinism/worker lifetime resources/safe failure, independent invented
+UI/cache/ownership tests; root reproduces actual evidence and product failures.
+Source stays frozen. No GT/scoring/tuning/retraining, public visibility change
+or competition submission. Only aggregate actual evidence enters model tools.
+
+Team name remains pending for friend. Current private repo condition is not a
+public competition deliverable. Deadline Nov17 at17:59NewYork per supplied email.
+Use docs/MORNING_REVIEW.md and reports/overnight-acceptance.json for handoff/status.
+
+---
+Historical evidence below applies only to its identified source version.
+
+# Morning review candidate FROZEN - 2026-11-17T06:50:03.145516+00:00
+
+Revision: replay2.3-overnight-hardening-1, pending new independent acceptance.
+Selected noise-v2 estimator/model/scientific source bytes unchanged. This is
+viewer failure/recovery and cache-lifecycle work; old evidence is not acceptance
+of this changed source. New source is isolated until review and publication.
+
+Current work: actionable safe preparation reasons and restart instructions,
+truthful unavailable readout; recover recognized abandoned generated temporary
+files without touching active/unknown owners or inputs; rebuild nonobject cache
+indexes. Morning guide, release contract/tasks and manifests updated. Original
+failed fixtures and author reproduction are retained privately in owner project
+local/overnight-20261117/. Author checks are not independent acceptance.
+
+Next: fresh fork-none reviewer with predeclared public oracles, fresh Python3.13
+export/environment, two uncached actual ATD runs, exact documented CSV/official
+validator/determinism/worker lifetime resources/safe failure, independent invented
+UI/cache/ownership tests; root reproduces actual evidence and product failures.
+Source stays frozen. No GT/scoring/tuning/retraining, public visibility change
+or competition submission. Only aggregate actual evidence enters model tools.
+
+Team name remains pending for friend. Current private repo condition is not a
+public competition deliverable. Deadline Nov17 at17:59NewYork per supplied email.
+Use docs/MORNING_REVIEW.md and reports/overnight-acceptance.json for handoff/status.
+
+---
+Historical evidence below applies only to its identified source version.
+
 # Rendering repair checkpoint - 2026-11-17T05:33:19.705066+00:00
 
 Status: COMPLETE for replay2.2-render-repair-1 implementation and bounded E2E

@@ -1,9 +1,25 @@
 # Tracking replay v2
 
+If a selected input conflicts with a runtime-state or generated-cache path,
+startup refuses it without changing the file. Choose another cache directory
+or port as instructed, then restart the launcher. Input symlink targets receive
+the same protection.
+
 This viewer replays the supplied ATD player and ball coordinates. It replaces the
 old dashboard's illustrative pitch animation. It does not detect objects from
 video, train a model, change possession predictions, or identify individual players.
 The original estimator and review app remain frozen for reproducibility.
+
+If preparation fails, the page explains the input or preparation problem. Correct
+the selected XML/TXT or CSV, or resolve the stated disk/permission issue, then
+restart the PowerShell launcher. **Try again** reconnects to the restarted server;
+it cannot change files selected by an already running process. Transport failures
+also show **Unavailable**, without a current prediction, until recovery.
+
+At startup, the cache removes recognized generated temporary files only when
+their owning process has exited. Live or unknown owners, unrelated files, links
+and legacy anonymous temporary files are preserved. A malformed cache index is
+discarded and rebuilt from the read-only inputs. Original downloads are preserved.
 
 From this repository, after the normal Python environment setup:
 

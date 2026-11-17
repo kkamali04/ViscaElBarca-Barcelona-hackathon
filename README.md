@@ -80,6 +80,7 @@ replay do not establish possession accuracy; hidden-match performance is unknown
 
 ## Further reading
 
+[Morning review and submission checklist](docs/MORNING_REVIEW.md) ·
 [Viewer guide](docs/VIEWER_GUIDE.md) · [Replay commands and storage](REPLAY.md) ·
 [Estimator details](SOLUTION.md) · [Repository scope](docs/REPOSITORY_SCOPE.md) ·
 [Third-party sources](THIRD_PARTY.md)

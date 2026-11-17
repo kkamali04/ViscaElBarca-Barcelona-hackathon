@@ -1,0 +1,160 @@
+{
+  "schema": "overnight-release-hardening-v1",
+  "status": "accepted-for-private-release",
+  "created_utc": "2026-11-17T07:54:56.483226+00:00",
+  "revision": "replay2.3.2-overnight-hardening-3",
+  "tested_source_zip_sha256": "c14f99a6c14f1927f539461af1ce9fe4ea6ff42306f13dbfd848495c3aaacaa9",
+  "source_base_private_commit": "0e005b0afd87ff771b100f55420c351ae7360b33",
+  "publication_files": 252,
+  "scope": "Source/package acceptance. Private publication and owner-process deployment readbacks are recorded separately in the owner project checkpoint, not inferred here.",
+  "changes": [
+    "Actionable safe failure/restart guidance and cleared unavailable observations/overlay.",
+    "Rebuild wrong-type cache indexes; recover only recognized abandoned generated temporaries, preserving live/unknown owners, inputs and unrelated/link/directory/legacy files.",
+    "Refuse selected XML/TXT/CSV aliases to runtime, payload or index destinations before conflicting writes/deletions."
+  ],
+  "scientific_preservation": {
+    "estimator": "frozen noise-v2",
+    "scientific_source_weights_config_unchanged": true,
+    "baseline_files_unchanged_outside_explicit_release_changes": 231,
+    "new_training_tuning_GT_or_hidden_score_claim": false
+  },
+  "independent_acceptance": {
+    "pass": true,
+    "fresh_preaccess_public_plan_sha256": "951371c39678524774fabea3647c6c4d1249cf108b2a024343ae85b2a825cb83",
+    "official_public_commit": "f8f2629ff1e0985f81d7e59d8413678514ee1530",
+    "report_sha256": "4348f6996a0ed755b3b484e6b481cf252aa1ec351a93163f5a8ee4193babc037",
+    "evidence_manifest_sha256": "a54b1786738774cfe9d37bee2594de69862df0b396b4faf56fecd187d71286fd",
+    "physical_evidence_files_root_verified": 311,
+    "fresh_exported_packages": 2,
+    "separate_fresh_Python313_environments": 2,
+    "canonical_rows": 199319,
+    "exact_contract_and_official_validator": true,
+    "deterministic_csv_sha256": "d000a49eb8db71ac94da4877abe5b85506d05be233db1f43644df1e4c9e653fd",
+    "invented_fault_groups": 22,
+    "invented_Chrome157_ui_groups": 14,
+    "native_worker_resources": {
+      "A2": {
+        "wall_seconds": 50.1279921,
+        "peak_bytes": 118992896,
+        "post_exit_memory_query_success": true,
+        "post_exit_times_query_success": true
+      },
+      "B": {
+        "wall_seconds": 50.9696425,
+        "peak_bytes": 119185408,
+        "post_exit_memory_query_success": true,
+        "post_exit_times_query_success": true
+      }
+    },
+    "resource_measurement_limit": "A and B establish separate fresh environments. Original A omitted explicit final memory-query flags; A2 is a corrected uncached process in the reused A environment. B observer and A2 explicitly succeeded after worker exit.",
+    "driver_failures_retained": [
+      "driver-correction-termination.json",
+      "driver-correction-ui-count.json",
+      "driver-correction-ui-heading.json",
+      "driver-correction-ui-frame-format.json",
+      "driver-correction-ui-end-action.json",
+      "driver-correction-ui-ended-label.json"
+    ]
+  },
+  "root_cross_checks": {
+    "actual_uncached_pair": true,
+    "actual_source_rows_and_overlay_frames_verified": 199319,
+    "actual_api_windows_verified": 798,
+    "actual_coordinate_overlay_components_verified": 18935305,
+    "actual_local_headless_canvas_samples": 17,
+    "recovery_alias_and_ownership_reproduced": true,
+    "legacy106_member_code_zip_complete_and_deterministic": true,
+    "all252_source_members_and367_manifest_records_verified": true,
+    "evidence_sha256": {
+      "ROOT_BLIND_ARTIFACT_AUDIT.json": "4a76d598cfd5e474c287d30e6fac856c506524ff6da97850c8b445d48be02fe2",
+      "ROOT_SOURCE_EXPORT_CHECK.json": "7b6fd56cd5ed7d4c796a3e8ecfa9ea1cabc6679b3af823431a991ee0b4cef698",
+      "ROOT_CHANGED_SOURCE_SOAK.json": "7d499c05fd963f84cc1d4c1a525bfbd387be10082fd80cb3ee83a6a7eb37b80b",
+      "root-release-e2e/actual-result.json": "db2c30764e50b9761af16f68c62f02168365e101c897e1b24146acd6a167ffbd",
+      "root-full-fidelity/ROOT_FULL_FIDELITY.json": "d0ca4774d07b537540577d44c8fb3d14d9530691c42a40fde59c683d55cc47c7",
+      "root-release-recovery/ROOT_REPRODUCTION.json": "4a6fc9589f783955dc7cf2600c0ab2c0d8b545d4a02fca9ee816eb4e56d8e12d",
+      "root-release-alias/ROOT_ALIAS_RESULTS.json": "da53347ec3efd53326c5e1a79b510d1a835c4611022e73af7dc9c8296d34345b",
+      "root-runtime-csv-release/ROOT_COLLISION.json": "b79c9ee891743114739bab5717d2ab72b1e0601bb0fb0da4e245d921a137614a",
+      "root-release-ownership/AUTHOR_OWNERSHIP.json": "1182dd3543dd51b970cf782aa1254068c0fa54b47ec9658226bd0bf7470aa06a",
+      "ROOT_VISUAL_REVIEW.json": "7d0b3903b88fdc698f5ab107a1723faa97d3806a1afe2a549d5b2aa6989caf7f"
+    }
+  },
+  "changed_source_soak": {
+    "pass": true,
+    "revision": "replay2.3.2-overnight-hardening-3",
+    "source_zip_sha256": "c14f99a6c14f1927f539461af1ce9fe4ea6ff42306f13dbfd848495c3aaacaa9",
+    "gates": {
+      "completed_full_duration": true,
+      "wrapper_pass": true,
+      "no_page_errors_or_external_page_requests": true,
+      "two_forced_server_restarts": true,
+      "three_page_reloads": true,
+      "two_full_invented_api_traversals": true,
+      "server_drift_within_predeclared_gate": true,
+      "browser_drift_within_predeclared_gate": true,
+      "cache_growth_within_predeclared_gate": true,
+      "browser_sampled_rss_below_safety_cap": true,
+      "frozen_all252_source_files_unchanged": true
+    },
+    "duration_seconds": 1442.9830296,
+    "browser": {
+      "seeks": 790,
+      "canvas_checks": 41,
+      "api_windows": 386,
+      "reloads": 3,
+      "playback_seconds": 1384.782
+    },
+    "server": {
+      "warm_median_bytes": 41373696.0,
+      "final_median_bytes": 41230336,
+      "change_bytes": -143360.0,
+      "change_fraction": -0.003465003465003465,
+      "postwarm_least_squares_bytes_per_minute": -13062.571586877133,
+      "sampled_peak_bytes": 41496576,
+      "gate": true
+    },
+    "browser_tree": {
+      "warm_median_bytes": 704399360.0,
+      "final_median_bytes": 746352640,
+      "change_bytes": 41953280.0,
+      "change_fraction": 0.05955894110977046,
+      "postwarm_least_squares_bytes_per_minute": 2153283.126461492,
+      "sampled_peak_bytes": 848396288,
+      "gate": true
+    },
+    "cache_growth_after_minute6_bytes": 0,
+    "limits": [
+      "Invented-only changed-source root reproduction of independently predeclared baseline harness; not a fresh blind soak.",
+      "Two server restarts segment process lifetimes; three page reloads segment renderer contexts. Not uninterrupted24minute samePID/page proof.",
+      "Browser aggregate RSS is sampled every5seconds and double-counts shared pages; sampled peak is not an exact lifetime peak. Server samples include OS peak observations separately in raw report.",
+      "Bounded resource gates do not prove absence of leaks or overnight/otherOS behavior."
+    ]
+  },
+  "prior_versions": "Baseline0e reviews/soak, a7 safety rejection and9b alias rejection remain version-specific private evidence. They are not relabeled as acceptance of c14.",
+  "privacy": "Restricted XML/TXT and generated CSV were processed only by standalone local code, emitting aggregate pass/fail/resources/hashes. Actual rows/labels/coordinates/media/DOM/screenshots were not model-facing or uploaded. Browser/image inspection used invented data only.",
+  "publication_boundary": {
+    "private_repository_updates_authorized": true,
+    "public_visibility_change_authorized": false,
+    "competition_submission_performed": false,
+    "teammate_device_tested": false
+  },
+  "remaining_owner_actions": [
+    "Confirm registered team identity/eligibility with teammate and final filenames.",
+    "Review final CSV and technical document; decide public code availability separately.",
+    "Use emailed submission form for CSV, public code URL and technical document before November17,2026 23:59CET /17:59NewYork."
+  ],
+  "limits": [
+    "No semantic hidden-match quality, GT scoring/training/tuning/hand corrections, publication or submission.",
+    "Original A monitor retained native-query peaks but omitted explicit final-query-success flags; use A2 and B observer for true final lifetime memory claims.",
+    "A2 reused the independently fresh A environment; original fresh A and B establish separate fresh package/environment inference.",
+    "Chrome157 headless installed channel, real mouse/keyboard/touch controls,1280x720,1440x900,390x844 DPR2; no native window background behavior, browser zoom matrix, other OS or other-browser acceptance.",
+    "Invented fixture112x72 metadata retained; candidate wire contract explicitly uses fixed105.3x68 pitch. Normalized marker geometry checked against documented challenge pitch; arbitrary pitch metadata generalization unsupported, not a claimed capability.",
+    "Actual rendering accepted by independently sampled API binding only here; actual model-facing browser inspection was deliberately excluded.",
+    "No same-frame altered-overlay comparative browser run; all H/A/D/X fixture label blocks were independently checked against fixed coordinate truth.",
+    "Invented-only changed-source root reproduction of independently predeclared baseline harness; not a fresh blind soak.",
+    "Two server restarts segment process lifetimes; three page reloads segment renderer contexts. Not uninterrupted24minute samePID/page proof.",
+    "Browser aggregate RSS is sampled every5seconds and double-counts shared pages; sampled peak is not an exact lifetime peak. Server samples include OS peak observations separately in raw report.",
+    "Bounded resource gates do not prove absence of leaks or overnight/otherOS behavior.",
+    "Format, fidelity and runtime acceptance do not establish hidden possession accuracy.",
+    "Owner local viewer readiness is verified separately after publication."
+  ]
+}

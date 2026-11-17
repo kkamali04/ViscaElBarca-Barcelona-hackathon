@@ -1,5 +1,10 @@
 # Reading the tracking replay
 
+If the page says **Unavailable**, read its preparation message. Correct an invalid
+input or resolve the stated disk/permission problem and restart the launcher.
+**Try again** reconnects afterward; it does not reload changed inputs inside an
+existing server. The unavailable state shows no current prediction.
+
 The coordinate replay displays invented demo positions or positions supplied in
 the ATD files. The optional possession overlay separately reads a CSV produced
 by the estimator. This viewer does not analyze video, assign stable player

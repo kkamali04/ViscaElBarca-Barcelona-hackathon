@@ -12,6 +12,7 @@ import json
 import math
 import os
 from pathlib import Path
+import re
 import tempfile
 import time
 from typing import Callable
@@ -34,6 +35,72 @@ Progress = Callable[[dict], None]
 
 class ReplayError(ValueError):
     """A fixed, safe explanation suitable for local aggregate status."""
+
+
+_OWNED_TEMPORARY = re.compile(r"\.replay-([1-9][0-9]{0,9})-[a-z0-9_]{8}\.(?:f32\.)?tmp\Z")
+
+
+def _process_exited(pid: int) -> bool:
+    """Delete nothing unless the owning process is positively known to be gone."""
+    if pid == os.getpid() or not 0 < pid <= 2 ** 31 - 1:
+        return False
+    if os.name == "nt":
+        # os.kill(pid, 0) is not a liveness probe on Windows: it can terminate.
+        import ctypes
+        from ctypes import wintypes
+        kernel = ctypes.WinDLL("kernel32", use_last_error=True)
+        kernel.OpenProcess.argtypes = [wintypes.DWORD, wintypes.BOOL, wintypes.DWORD]
+        kernel.OpenProcess.restype = wintypes.HANDLE
+        kernel.WaitForSingleObject.argtypes = [wintypes.HANDLE, wintypes.DWORD]
+        kernel.WaitForSingleObject.restype = wintypes.DWORD
+        kernel.CloseHandle.argtypes = [wintypes.HANDLE]
+        kernel.CloseHandle.restype = wintypes.BOOL
+        handle = kernel.OpenProcess(0x00100000, False, pid)  # SYNCHRONIZE only
+        if not handle:
+            # Access denied and other unknown states preserve the file.
+            return ctypes.get_last_error() == 87  # nonexistent process ID
+        try:
+            return kernel.WaitForSingleObject(handle, 0) == 0
+        finally:
+            kernel.CloseHandle(handle)
+    try:
+        os.kill(pid, 0)
+    except ProcessLookupError:
+        return True
+    except (OSError, OverflowError):
+        return False
+    return False
+
+
+def _cleanup_abandoned_temporaries(cache_dir: Path, protected: tuple[Path, ...]) -> None:
+    """Reap only recognized generated files whose process has exited.
+
+    No recursion, symbolic links, input files, live/unknown owners or legacy
+    anonymous files are removed. PID reuse conservatively retains an old file.
+    """
+    protected_paths = {path.resolve() for path in protected}
+    exited = {}
+    with os.scandir(cache_dir) as entries:
+        for entry in entries:
+            match = _OWNED_TEMPORARY.fullmatch(entry.name)
+            if match is None:
+                continue
+            try:
+                if not entry.is_file(follow_symlinks=False):
+                    continue
+                path = Path(entry.path)
+                if path.is_symlink() or path.resolve() in protected_paths:
+                    continue
+                if path.parent.resolve() != cache_dir:
+                    continue
+                pid = int(match[1])
+                if pid not in exited:
+                    exited[pid] = _process_exited(pid)
+                if exited[pid]:
+                    path.unlink(missing_ok=True)
+            except OSError:
+                # A locked/disappeared file must not break another viewer.
+                continue
 
 
 def _digest(path: Path) -> str:
@@ -68,7 +135,7 @@ def atomic_private_json(path: Path, value: dict) -> None:
     """Replace only the caller's named state file, never a followed symlink."""
     if path.is_symlink():
         raise ReplayError("The local state destination is not a regular file.")
-    handle = tempfile.NamedTemporaryFile(prefix=".replay-", suffix=".tmp",
+    handle = tempfile.NamedTemporaryFile(prefix=f".replay-{os.getpid()}-", suffix=".tmp",
                                          dir=path.parent, delete=False)
     temporary = Path(handle.name)
     try:
@@ -286,6 +353,8 @@ def _cached(payload: Path, index: Path, expected: dict) -> dict | None:
         if index.stat().st_size > MAX_METADATA_BYTES:
             return None
         manifest = json.loads(index.read_text(encoding="utf-8"))
+        if not isinstance(manifest, dict):
+            return None
         if any(manifest.get(key) != value for key, value in expected.items()):
             return None
         row_bytes = expected["row_floats"] * 4
@@ -353,6 +422,7 @@ def prepare_store(*, data_dir: Path | None, predictions: Path | None,
             for frame, code in enumerate(_prediction_rows(predictions, description["frames"])):
                 if first_non_x is None and code > 0:
                     first_non_x = frame
+    _cleanup_abandoned_temporaries(cache_dir, tuple(path for _, path in inputs))
     expected = {"format": CACHE_FORMAT, "parser_sha256": parser_hash,
                 "mode": "demo" if demo else "local", "pitch": list(PITCH), "frames": description["frames"],
                 "fps": description["fps"], "row_floats": description["row_floats"],
@@ -361,6 +431,9 @@ def prepare_store(*, data_dir: Path | None, predictions: Path | None,
                 "predictions_ready": predictions is not None, "source_hashes": source_hashes}
     identity = hashlib.sha256(_canonical(expected)).hexdigest()
     payload, index = cache_dir / (identity + ".f32"), cache_dir / (identity + ".json")
+    selected_paths = {path.resolve() for _, path in inputs}
+    if selected_paths.intersection({payload.resolve(), index.resolve()}):
+        raise ReplayError("A cache destination conflicts with a supplied input. Choose a different cache directory; the input was not changed.")
     progress({"phase": "checking_cache", "records": 0, "total": description["frames"]})
     manifest = _cached(payload, index, expected)
     if manifest is not None:
@@ -374,7 +447,7 @@ def prepare_store(*, data_dir: Path | None, predictions: Path | None,
     if payload.is_symlink() or index.is_symlink():
         raise ReplayError("The cache destination must not be a symbolic link.")
     rows = _demo_rows(description, progress) if demo else _local_rows(raw, description, predictions, progress)
-    handle = tempfile.NamedTemporaryFile(prefix=".replay-", suffix=".f32.tmp", dir=cache_dir, delete=False)
+    handle = tempfile.NamedTemporaryFile(prefix=f".replay-{os.getpid()}-", suffix=".f32.tmp", dir=cache_dir, delete=False)
     temporary = Path(handle.name)
     hashes, block, whole = [], bytearray(), hashlib.sha256()
     count, first_observed = 0, None

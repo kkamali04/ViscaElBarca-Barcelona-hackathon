@@ -55,14 +55,19 @@ function disableControls(disabled) {
   for (const id of ['seek', 'play', 'previous', 'next', 'speed']) ui[id].disabled = disabled;
 }
 
-function showFailure(message = 'The local coordinate stream could not be read. Retry when the viewer is ready.') {
+function showFailure(message = 'The local coordinate stream could not be read. Check that the launcher is running, then choose Try again.') {
   failed = true;
   if (clock) clock.pause();
   if (store) store.invalidate();
+  lastPositions = null;
+  drawPitch(null);
+  clearObservationReadout();
   disableControls(true);
   setStatus('Unavailable', 'error');
   stageMessage('Replay unavailable', message, true);
   ui['ball-status'].textContent = 'Unavailable';
+  ui.possession.textContent = 'Unavailable';
+  ui['possession-detail'].textContent = 'No current prediction is shown while the replay is unavailable.';
   updatePlayButton();
 }
 
@@ -433,7 +438,12 @@ async function boot() {
       setTimeout(() => { if (epoch === bootEpoch) boot(); }, 1000);
       return;
     }
-    if (meta.status === 'failed') throw new Error('Local preparation failed.');
+    if (meta.status === 'failed') {
+      const reason = typeof meta.message === 'string' ? meta.message.slice(0, 240) : 'Replay preparation failed.';
+      ui['mode-badge'].textContent = meta.mode === 'demo' ? 'Invented tracking · unavailable' : 'Supplied tracking · unavailable';
+      showFailure(`${reason} Correct the problem and restart the launcher; Try again reconnects afterward.`);
+      return;
+    }
     metadata = validateMetadata(meta);
     store = new FrameStore(metadata);
     clock = createPlaybackClock({ fps: metadata.fps, frames: metadata.frames });

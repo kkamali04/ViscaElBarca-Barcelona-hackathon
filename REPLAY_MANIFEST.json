@@ -1,13 +1,18 @@
 {
   "format": "touchline-tracking-replay-v2-source-2",
-  "runtime_revision": "2.2",
-  "repository_release_revision": "render-repair-1",
-  "created_utc": "2026-11-17T05:14:50.294151+00:00",
+  "runtime_revision": "2.3.2",
+  "repository_release_revision": "overnight-hardening-3",
+  "created_utc": "2026-11-17T07:18:29.061891+00:00",
   "files": [
     {
       "path": "REPLAY.md",
-      "bytes": 4874,
-      "sha256": "9858c30662b66716c88371723011afc059c6df5be366a16ab1a09d3f1cf4bbb1"
+      "bytes": 5849,
+      "sha256": "8549fc1ded8f35fff5128e403132f75d1a7cd7b55b4550e7d324f159392053b6"
+    },
+    {
+      "path": "docs/MORNING_REVIEW.md",
+      "bytes": 3350,
+      "sha256": "1d97a3e50f4c57fa38af1ae7440d0c3be349e232d67ab96737b1628afbb20c15"
     },
     {
       "path": "docs/REQUIREMENTS_AND_READINESS.md",
@@ -21,8 +26,8 @@
     },
     {
       "path": "docs/VIEWER_GUIDE.md",
-      "bytes": 6076,
-      "sha256": "1c3e5d0358291f1a6d5e5d3c5abbc2437a5282e2be549d6a5742274a06d31f83"
+      "bytes": 6386,
+      "sha256": "9db7bcf3ba6fcb04ec804faea2a87254030179eb81bc6aa6c5c3b6f5157e9171"
     },
     {
       "path": "replay.ps1",
@@ -36,8 +41,8 @@
     },
     {
       "path": "replay_v2/__main__.py",
-      "bytes": 3689,
-      "sha256": "07463e902dad25bfd7e6a1dd6ad6edee4b80199c592d54118a68cda417c36268"
+      "bytes": 4201,
+      "sha256": "4e4f7398e28275c11c7a9b713dcf6c0c271c23ea4c07a361a3832bf6127b73d2"
     },
     {
       "path": "replay_v2/server.py",
@@ -51,8 +56,8 @@
     },
     {
       "path": "replay_v2/static/app.js",
-      "bytes": 22289,
-      "sha256": "0b0b6f0a1a6276a5d0a82301086112158ad9ce734ee13e979e99ddfec9e25a9d"
+      "bytes": 22874,
+      "sha256": "1fd804b280a1eb2925ad09036b794aa19d4f7791547ff7393f9bec0b5e9d609b"
     },
     {
       "path": "replay_v2/static/clock.js",
@@ -66,8 +71,8 @@
     },
     {
       "path": "replay_v2/store.py",
-      "bytes": 20271,
-      "sha256": "2944e3d2147a724c58232e936ab6e58aaecad16e0b51306a65e79adbb91877bb"
+      "bytes": 23449,
+      "sha256": "dd024f7cf01e3e23337c252edc3704df82f38bbd6fbbd25674b092daf550ced9"
     },
     {
       "path": "specs/005-tracking-replay/CONTRACT.md",
@@ -95,6 +100,11 @@
       "sha256": "ba528a1d1df8150c3b72fe03aee607862d424244d6405da174570fc24197d582"
     },
     {
+      "path": "specs/008-release-hardening/CONTRACT.md",
+      "bytes": 3511,
+      "sha256": "b818e87ab85de894564a1ddbb1c0e1d8e985b5eeaad297b88864fe287b869244"
+    },
+    {
       "path": "start-match.ps1",
       "bytes": 2631,
       "sha256": "e3d177dd1df99bed0ccb70c7d9a001afc917ffadb44f11fdefdc83d70e404a71"
@@ -106,17 +116,19 @@
     }
   ],
   "repository_manifest": "TEAM_REPO_MANIFEST.json",
-  "repository_manifest_sha256": "70c74a558cd4c2adf65e09de27e7c24aec55f785e8df06befe026dae97c5eb44",
-  "supersedes_manifest_sha256": "2a5bc5b1ab9b3cb107d882f39918d5a331b157cd770899bb4282c1ac17650874",
+  "repository_manifest_sha256": "653c32edbb8a35db8db85589b7e6b1ab3e9bfc78a0a3b5035bb26e695e8c5021",
+  "supersedes_manifest_sha256": "637566f659c08438f9f366c21435b4bb474dd9bc3b2cca9663061778e779108d",
   "operational_docs_excluded": [
     "AGENTIC_GOAL.md",
     "PROJECT_STATE.md",
     "replay_v2/AGENTIC_GOAL.md",
     "replay_v2/PROJECT_STATE.md",
+    "reports/overnight-acceptance.json",
     "reports/render-repair-acceptance.json",
     "reports/teammate-release-acceptance.json",
     "specs/006-teammate-release/TASKS.md",
-    "specs/007-rendering-repair/TASKS.md"
+    "specs/007-rendering-repair/TASKS.md",
+    "specs/008-release-hardening/TASKS.md"
   ],
-  "note": "Versioned viewer/launcher repair; wire API stays v2 and frozen estimator is unchanged. No circular hashes. Separate fresh acceptance required."
+  "note": "Failure and cache recovery changes; wire API remains v2, frozen estimator unchanged. New version requires separate blind acceptance; no circular hashes."
 }

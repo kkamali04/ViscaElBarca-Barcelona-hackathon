@@ -11,7 +11,7 @@ import threading
 import webbrowser
 
 from .server import APP, ReplayHTTPServer, ReplayService
-from .store import ReplayError, _private_directory, atomic_private_json
+from .store import ReplayError, _inputs, _private_directory, atomic_private_json
 
 
 def main(argv=None):
@@ -32,12 +32,19 @@ def main(argv=None):
         parser.error("choose --data-dir or --demo")
     server, state_path, token = None, None, secrets.token_urlsafe(32)
     try:
+        selected_cache = args.cache_dir.resolve()
+        runtime_destination = selected_cache / f"runtime-{args.port}.json"
+        selected_inputs = []
         # Do not create even a runtime token beneath the read-only input root.
         if args.data_dir is not None:
             data_dir = args.data_dir.resolve()
-            selected_cache = args.cache_dir.resolve()
             if selected_cache == data_dir or data_dir in selected_cache.parents:
                 raise ReplayError("Choose a cache directory outside the supplied input directory.")
+            selected_inputs.extend(_inputs(data_dir))
+        if args.predictions is not None:
+            selected_inputs.append(args.predictions)
+        if any(path.resolve() == runtime_destination.resolve() for path in selected_inputs):
+            raise ReplayError("A supplied input conflicts with the viewer runtime state. Choose a different cache directory or port; the input was not changed.")
         cache_dir = _private_directory(args.cache_dir)
         service = ReplayService(demo=args.demo, data_dir=args.data_dir,
                                 predictions=args.predictions, cache_dir=cache_dir)
