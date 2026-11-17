@@ -2,7 +2,7 @@
 
 Estimate team possession from supplied tactical tracking, then replay the
 coordinates with a possession overlay. The active estimator is frozen
-**noise-v2**. It reads ATD XML/TXT and writes a `frame,label` CSV; it does not
+**noise-v2**. It reads ATD XML/TXT and writes a `frame,label` CSV it does not
 understand video, identify players, or classify passes and shots.
 
 ## Windows quickstart — full Git repository
