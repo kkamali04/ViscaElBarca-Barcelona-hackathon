@@ -158,7 +158,7 @@ def cli_end_to_end():
             rows=csv.reader(f);assert next(rows)==['frame','label'];count=0
             for i,row in enumerate(rows):
                 expected='H' if 11185<=i<90652 or 110808<=i<190198 else 'X'
-                if 110808<=i<113742:expected='D'
+                # No match-specific forced labels: synthetic evidence remains H throughout scored periods.
                 assert row==[str(i),expected],(i,row,expected)
                 count+=1
         assert count==N
