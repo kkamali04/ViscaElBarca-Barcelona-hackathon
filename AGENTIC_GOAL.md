@@ -1,3 +1,60 @@
+# COMPLETE — linked video comparison and motion display2.4.0 — 2026-11-17T14:06:50.856341-05:00
+
+The accepted feature is published in commit b4f88d6d0ea65cc82dead57e78fc93ae8171b863.
+Public repository: https://github.com/kkamali04/ViscaElBarca-Barcelona-hackathon
+Remote main matched the accepted local commit; Nsichani Write access confirmed.
+Live owner viewers8767/8771 restarted and ready; all served asset hashes match
+the frozen accepted source. User should hard refresh, choose local tactical MP4,
+check Link controls — same tactical timeline, and leave offset0 for the full file.
+The browser file selection is local; Drive preview is independent/manual.
+Canonical code: C:/college-github/barcelona-possession-hackathon.
+
+Completed: browser-local native video, shared controls/offset/exclusive clip ends,
+sandboxed allowlisted Drive preview/fallback, bounded velocity-aware Natural
+motion/Exact samples, measured-direction cues, distinct stationary player-only
+last-seen markers<=0.24s, persistent source-jump labels, responsive comparison
+layout and readable README/video guide with invented-only visual. Restored-page
+resize and focused native Space defects were independently reproduced and fixed.
+No scientific source/config/weights/CSV changes or competition submission.
+
+Accepted ZIP SHA256: ce4e86ee7661346b9c7106e4d9c9bd7ef48faee1e845a5cc99cbfc1b212464d7.
+Independent UI70 positive checks plus retained scope-excluded stronger Drive
+source-removal assertion; documented invented-fixture/screenshot inspection.
+Two fresh independent actual uncached E2Es52.016s/52.366s; worker OS peaks
+119091200/119070720bytes. Root separate fresh export/env52.854s/119169024bytes.
+Exact199319ordered-row contract, current official validator, deterministic bytes,
+safe failures, package/source/input preservation all passed bounded checks.
+Root actual full local tactical MP4 comparison14/14 on both fresh export and
+owner8767; only aggregate booleans/hashes entered tools, no rows/media/actualDOM.
+
+Original submission remains local and byte-exact, SHA256
+d000a49eb8db71ac94da4877abe5b85506d05be233db1f43644df1e4c9e653fd:
+owner submissions/ViscaElBarca-review-20261117/ViscaElBarca.csv. No resend needed
+because of this display release; partner controls review/submission.
+
+Limits: this is display interpolation, not a physics simulator/tracking repair.
+Supplied gaps and anonymous slot changes remain. Drive external playback/access,
+other browsers/touch hardware and perfect compositor lock unverified. Hidden
+accuracy/scientific compliance not newly established; existing documented model
+limitations and teammate safety branch remain for review. Final package reviewer
+incidentally encountered a documented expected hash after oracle freeze, never
+used it as an oracle; don't describe that package pass as entirely unexposed.
+One private targeted tester JSON was recovered from exact tool stdout after file
+name reuse; primary acceptance/oracles preserved. Invalid Drive submission visibly
+rejects input and retains prior manual source; commit offset before linking.
+
+Private retained evidence at owner local/video-comparison-20261117/: PRD.md,
+FREEZE_3.json, PROMOTION_GATE.json, final-ui-blind/REPORT.md,
+final-package-blind/REPORT.md, ROOT_E2E_3.json, ROOT_ACTUAL_VIDEO_3.json,
+OWNER_READINESS.json, OWNER_ACTUAL_VIDEO.json. Prior candidates/oracles intact.
+Public instructions: docs/VIDEO_COMPARISON.md and README.md.
+Next: human review; no further autonomous implementation or submission required.
+This operational handoff commit may follow the already-verified feature commit
+without changing accepted runtime source.
+
+---
+Historical checkpoints below retain their original tested versions.
+
 # Video comparison2.4.0 — SOURCE ACCEPTED / PROMOTION IN PROGRESS — 2026-11-17T14:05:11.776721-05:00
 
 Owner authorized linked local MP4 comparison, manual Drive preview and improved
