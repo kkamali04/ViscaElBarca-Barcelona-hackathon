@@ -1,3 +1,85 @@
+# Public handoff COMPLETE — 2026-11-17T16:44:23.990655+00:00
+
+Team: **ViscaElBarca**, supplied by the owner. The repository is PUBLIC:
+https://github.com/kkamali04/barcelona-possession-hackathon
+Reviewed documentation/source commit: 030d8eb88aceade9377c077cc9720dbd8a2e6a36.
+An operational checkpoint-only follow-up commit records this completion; bound
+source and model bytes remain those of public-handoff-2. Final remote readback is
+retained privately, rather than trying to embed a commit's own hash in itself.
+Nsichani has Write access. No competition submission has occurred.
+
+Public access was verified with an unauthenticated API and HTML request, raw
+README/image/guide downloads and a fresh anonymous full Git clone. All257 tracked
+paths match the canonical checkout and accepted bound source. The first immediate
+post-visibility Git request returned403/disabled, then a bounded retry succeeded;
+GitHub reports disabled=false. The transient failure is retained, not omitted.
+All12 prepublication reachable commits/302 blobs and the257-file final export
+were independently scanned: no detected restricted payloads, known credentials,
+nonempty notebook outputs or oversized artifacts. Known-signature scans have
+limits; this is bounded evidence, not a claim of absolute secret absence.
+
+Changed: readable README navigation/pipeline Mermaid, generated conceptual banner
+with provenance, human+agent guide, project map, Touchline troubleshooting,
+team/readiness/technical/morning/scope documentation and scoped manifests. No
+scientific/runtime/model changes. Original legacy export scope remains106 members;
+full repository includes replay_v2. The teammate's safety/remove-match-specific-
+dead-label-20261117 branch at373f239 is preserved separately. It changes inference
+and was not promoted; the main CSV still uses the disclosed public FAQ interval.
+Do not silently treat that branch as an accepted or identical submission source.
+
+Acceptance: public-handoff-2 ZIP SHA256
+3e97015dd5a94d87fec2b8212ef29f6dafc5989e2b6f106cf2a348a72d7cc5e5.
+Fresh fork-none preplanned independent package/env: actual inference twice,
+exact199319 ordered frame,label rows, legal labels, independent current official
+validator twice, deterministic bytes, safe missing-input failure,372 manifest
+records,26 frozen reference files,105 local doc links,44 invented-browser checks
+and1500 independently checked invented coordinate/overlay frames. Root physically
+checked14 evidence artifacts, rehashed and strictly checked both independent CSVs,
+then reproduced from another fresh package/env: two start-match runs, exact
+contract/official validation, deterministic bytes, original input/source protection,
+safe absent/malformed/occupied-port paths and17 actual local-headless canvas/API
+samples matching independently parsed source. All four CSVs are byte-identical.
+
+Recent independent wall times86.39/88.54s; true externally observed B worker peak
+119009280bytes. A119074816bytes is self-query only: initial external probes measured
+the Windows venv redirector and are explicitly disqualified/preserved. Root worker
+times80.26/85.84s; externally retained post-exit worker peaks119025664/118767616bytes.
+Root full launcher readiness125.74s cold and89.96s warm. These current measurements
+differ from earlier51-second historical runs; browser/cache memory is additional,
+and no speed guarantee or hidden possession accuracy/rank is claimed. A tester
+end-of-recording harness expectation and a root porcelain-leading-space harness
+error were corrected privately; neither required candidate changes.
+
+Owner viewers remain ready at http://127.0.0.1:8767/ and :8771/. Plain-address
+fresh local-headless checks confirm current assets, observed movement,1x timing,
+pause/hold and accessible laptop controls. User screenshot showed old illustrative
+Touchline: fixed SVG players and sine-ball animation, whose old API returns404
+against replay_v2. Open a NEW http://localhost:8767/ tab or hard reload the old tab
+(Ctrl+Shift+R); the correct title is Touchline · Tracking replay. No claim is made
+that the owner's already-open browser tab was remotely navigated. Actual inputs,
+rows,positions,DOM,media and screenshots never entered model-facing tools; only
+invented images were visually reviewed.
+
+Private human review: submissions/ViscaElBarca-review-20261117/ViscaElBarca.csv,
+ViscaElBarca.md,READ_ME_FIRST.txt. CSV copied from root's latest accepted fresh
+inference and officially validated again at that exact filename. Do not upload
+this private directory to GitHub. Confirm member eligibility, review the technical
+document and use the emailed form yourself. Supplied deadline TODAY November17,
+2026 at23:59CET /17:59NewYork. Public repository change was explicitly authorized;
+competition submission was not. No new training,tuning,GT or paid compute.
+
+Owner-only retained evidence: local/public-release-20261117/PLAN.md,FREEZE-2.json,
+audit/REPORT.json,audit/CANDIDATE2_AUDIT.json,blind/ACCEPTANCE.json,
+ROOT_INDEPENDENT_AUDIT.json,root-e2e/actual-result.json,STAGE_GATE.json,
+PUBLIC_READBACK_SOURCE.json,TEAM_FILES.json and final readback after checkpoint.
+Rollback uses reviewed source baseline c993841 / git revert on a new codex/ branch,
+with manifest reconciliation and acceptance; never erase teammate work or force
+push. No further scheduled overnight monitor is active. Stop useful work here;
+do not manufacture recurring checks after completion.
+
+---
+Historical checkpoints below apply only to their stated versions and dates.
+
 # Public handoff IN PROGRESS — 2026-11-17T16:29:38.844502+00:00
 
 Owner now explicitly authorizes public visibility, cleanup and up-to-date GitHub.
