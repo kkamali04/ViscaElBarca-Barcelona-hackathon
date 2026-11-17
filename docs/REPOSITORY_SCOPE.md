@@ -16,9 +16,20 @@ entry is refreshed for the teammate guide; all other entries and model/runtime
 members remain exact. ESTIMATOR_PACKAGE_MANIFEST.json retains historical estimator
 provenance and references intentionally excluded old GT/baseline members; its
 README corresponds to ESTIMATOR_README.md, not the teammate README.
-TEAM_REPO_MANIFEST.json separately binds the extended repository, excluding itself
-and local generated/ignored files. It does not imply that the original export
-includes newly added experiments/research.
+TEAM_REPO_MANIFEST.json separately binds the extended repository, including the
+coordinate replay, its guide and an invented-only screenshot. It excludes itself,
+REPLAY_MANIFEST.json and explicitly named mutable checkpoints/generated acceptance
+receipts. The replay manifest binds its runtime/spec/guide records and the TEAM
+manifest hash, making the dependency one-way rather than circular. Git commits
+bind the excluded operational documents at publication. This does not extend the
+106-member legacy export to include experiments or replay_v2. Rebuilding that ZIP
+uses MVP_REVIEW.md as its standalone README.
+
+The original teammate handoff is preserved in commit259b1c3. A documentation or
+packaging refresh updates the affected records, with the previous manifest hashes
+recorded as provenance; old reports retain their tested-version scope. Model,
+scientific runtime and ESTIMATOR_PACKAGE_MANIFEST.json remain byte-exact. A later
+publication report must distinguish fresh package checks from historical evidence.
 
 Added evidence is an explicit selected list of aggregate historical reports.
 Some historical links name local controls or reports deliberately excluded here.

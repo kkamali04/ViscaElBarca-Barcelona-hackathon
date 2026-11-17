@@ -1,0 +1,132 @@
+{
+  "schema": "teammate-release-acceptance-v1",
+  "generated_utc": "2026-11-17T02:43:07.457333+00:00",
+  "pass": true,
+  "scope": "Current frozen repository release: noise-v2 estimator and replay runtime2.1. No hidden-match accuracy evaluation.",
+  "tested_source_zip_sha256": "6153665cba7abad5ace9a5796a2dace77971c5b2347851f21d48692eeb007cb7",
+  "source_publication_paths": 242,
+  "team_manifest_sha256": "094d5829d423369c1dac08564144ee92116f50d5251646ee9af0f935a850d0f1",
+  "replay_manifest_sha256": "2a5bc5b1ab9b3cb107d882f39918d5a331b157cd770899bb4282c1ac17650874",
+  "readme_sha256": "bdeb7c3faa1dc1caf29c774ed29452cd64cf04ec75ad7d3c2d002faf3e712bce",
+  "fresh_independent_and_root_environments": true,
+  "independent": {
+    "static_scan": true,
+    "invented_api_checks": 36,
+    "invented_browser_checks": 10,
+    "readme_render_and_commands": true,
+    "legacy_export": true,
+    "isolated_invented_frontend_all_four_labels_and_coordinate_independence": true,
+    "full_match_runs": [
+      {
+        "elapsed_seconds": 56.40432309999596,
+        "max_process_lifetime_peak_working_set_bytes": 119066624
+      },
+      {
+        "elapsed_seconds": 53.689519300009124,
+        "max_process_lifetime_peak_working_set_bytes": 119517184
+      }
+    ],
+    "replay_startup": {
+      "runs": [
+        {
+          "phase": "cold",
+          "mode": "local",
+          "status": "ready",
+          "frames": 199319,
+          "fps": 25.0,
+          "cold_or_warm_cache_reused": false,
+          "independent_ready_seconds": 30.965709700016305,
+          "reported_preparation_seconds": 30.686285,
+          "actual_worker_lifetime_peak_working_set_bytes": 44781568,
+          "frames_endpoint_requested": false,
+          "returncode": 0,
+          "error": null,
+          "pass": true
+        },
+        {
+          "phase": "warm",
+          "mode": "local",
+          "status": "ready",
+          "frames": 199319,
+          "fps": 25.0,
+          "cold_or_warm_cache_reused": true,
+          "independent_ready_seconds": 1.7380476000253111,
+          "reported_preparation_seconds": 1.436068,
+          "actual_worker_lifetime_peak_working_set_bytes": 43880448,
+          "frames_endpoint_requested": false,
+          "returncode": 0,
+          "error": null,
+          "pass": true
+        }
+      ],
+      "pass": true
+    }
+  },
+  "root_reproduction": {
+    "invented_api_checks": 36,
+    "invented_browser_checks": 14,
+    "full_match_runs": [
+      {
+        "elapsed_seconds": 58.233270399970934,
+        "worker_peak_bytes": 119304192,
+        "official_validator_exit": 0
+      },
+      {
+        "elapsed_seconds": 56.83104300004197,
+        "worker_peak_bytes": 119631872,
+        "official_validator_exit": 0
+      }
+    ],
+    "safe_missing_input_failure": true,
+    "legacy_export": {
+      "pass": true,
+      "members": 106,
+      "readme_equals_standalone_review_guide": true,
+      "replay_included": false,
+      "all_manifest_payload_records_valid": true,
+      "zip_sha256": "a06eb6323ebf68658ae626b97e8b98a75acbfbeb109b9e7a7556eadfe03b582c"
+    }
+  },
+  "root_and_independent_label_ui": {
+    "all_four_meanings": true,
+    "unchanged_marker_centres": true,
+    "scope": "Isolated frozen frontend with invented demo HTTP fixture; not combined demo/CSV CLI support."
+  },
+  "all_four_outputs_identical": true,
+  "csv_sha256": "d000a49eb8db71ac94da4877abe5b85506d05be233db1f43644df1e4c9e653fd",
+  "exact_contract": {
+    "rows": 199319,
+    "header": [
+      "frame",
+      "label"
+    ],
+    "first_frame": 0,
+    "last_frame": 199318,
+    "labels": [
+      "H",
+      "A",
+      "D",
+      "X"
+    ],
+    "official_validator_passed_all_four": true
+  },
+  "original_scientific_files_preserved": 212,
+  "independent_receipt_sha256": "a2471bc8faf3cde18c7cc1a7b40a2b0a032ff11ac4ea520878d8bbec40e8fce1",
+  "root_receipt_sha256": "f20b86106509098b3a0c2fed297cdf7a2a8605e0b6c4f47f4291e2da6c14cb42",
+  "privacy": {
+    "restricted_inputs_or_rows_published": false,
+    "ground_truth_used": false,
+    "actual_browser_inspection": false,
+    "invented_screenshot_only": true
+  },
+  "limits": [
+    "Format/reproducibility and bounded UI checks do not establish hidden-match accuracy.",
+    "Supplied automatic coordinates can be noisy, missing or fragmented; slots are anonymous.",
+    "Demo has no CSV overlay; overlay inference and supplied ATD replay are separate steps.",
+    "Private fresh export substitutes for pre-publication remote clone; macOS/Linux not executed.",
+    "Teammate account Write permission is verified separately; their device/authentication error remains unknown.",
+    "Harness/tool setup failures and synchronization corrections are retained privately; candidate runtime unchanged."
+  ],
+  "operational_receipt_excluded_from_manifest": true,
+  "publication": "Owner authorized; Git push and remote readback recorded separately in continuity checkpoint."
+}

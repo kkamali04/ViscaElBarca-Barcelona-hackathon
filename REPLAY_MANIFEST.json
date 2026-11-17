@@ -1,0 +1,100 @@
+{
+  "format": "touchline-tracking-replay-v2-source-2",
+  "runtime_revision": "2.1",
+  "repository_release_revision": "1",
+  "created_utc": "2026-11-17T02:18:59.659437+00:00",
+  "files": [
+    {
+      "path": "REPLAY.md",
+      "bytes": 3772,
+      "sha256": "ccef0c33cf6178e0e41eb15f7704301023050ebfb5a5d1fa1ad3b4b44233c953"
+    },
+    {
+      "path": "docs/VIEWER_GUIDE.md",
+      "bytes": 5423,
+      "sha256": "88d5615bd043203693df62051be8b8ddde94a6ef40c0c67b33b4d3d3e5291d07"
+    },
+    {
+      "path": "replay.ps1",
+      "bytes": 1267,
+      "sha256": "ead8ace579e2783357f05372e4f8debb01f0a3bcf4eaeaf3af0002645a2b14e0"
+    },
+    {
+      "path": "replay_v2/__init__.py",
+      "bytes": 95,
+      "sha256": "5da7e7cd2c02718c1fd6549fd214f696887352249425e20b8741050129c8ff89"
+    },
+    {
+      "path": "replay_v2/__main__.py",
+      "bytes": 3689,
+      "sha256": "07463e902dad25bfd7e6a1dd6ad6edee4b80199c592d54118a68cda417c36268"
+    },
+    {
+      "path": "replay_v2/server.py",
+      "bytes": 10365,
+      "sha256": "dc2a23e4e0d41b0c85b8055da1f02dce96ded0622726cefe5dca40c119fbb5d8"
+    },
+    {
+      "path": "replay_v2/static/app.css",
+      "bytes": 10630,
+      "sha256": "5238e9abb768ae81bbd1f6d3b942527cc2135674c7749e55ae71cb6bbf35af04"
+    },
+    {
+      "path": "replay_v2/static/app.js",
+      "bytes": 22094,
+      "sha256": "248a94988b0afd17e89b86d0a022915185341a01daeae1fcc601eaae3b6aafd6"
+    },
+    {
+      "path": "replay_v2/static/clock.js",
+      "bytes": 2343,
+      "sha256": "6d8205cf1a14f517ae52aaf7208c8108008b7df35866b00b97d30c3afe193602"
+    },
+    {
+      "path": "replay_v2/static/index.html",
+      "bytes": 5594,
+      "sha256": "7e0928e6e9c7a51b6e85c4d76aa4d16a8fc6911d5fb5366956a5cc5041452e28"
+    },
+    {
+      "path": "replay_v2/store.py",
+      "bytes": 20271,
+      "sha256": "2944e3d2147a724c58232e936ab6e58aaecad16e0b51306a65e79adbb91877bb"
+    },
+    {
+      "path": "specs/005-tracking-replay/CONTRACT.md",
+      "bytes": 5759,
+      "sha256": "22f51ca05c5be64c2ec49e73f20675f0834d804be5a6a89270dad96efccfcacf"
+    },
+    {
+      "path": "specs/005-tracking-replay/PRD.md",
+      "bytes": 3029,
+      "sha256": "90266d30a8ac30eed96ff715a112282ad683c877c5b729346d272f627ddcd783"
+    },
+    {
+      "path": "specs/005-tracking-replay/RESEARCH.md",
+      "bytes": 3193,
+      "sha256": "287a69731d39a9bae68cfb19243cd4f69ed031b3d3b2ff0b703b5b062c9623bd"
+    },
+    {
+      "path": "specs/005-tracking-replay/TASKS.md",
+      "bytes": 928,
+      "sha256": "6509b56ac6b6b78bfa918c9bba8bf6ea8f32d533cee7b5e27ca2c4a4f9e70b80"
+    },
+    {
+      "path": "stop-replay.ps1",
+      "bytes": 1024,
+      "sha256": "a15e6a0094a2eb5998020d932366cbea5dc0aac0a1d63962bf25d96e3a50b2c2"
+    }
+  ],
+  "repository_manifest": "TEAM_REPO_MANIFEST.json",
+  "repository_manifest_sha256": "094d5829d423369c1dac08564144ee92116f50d5251646ee9af0f935a850d0f1",
+  "supersedes_manifest_sha256": "bf52dc7b8aa6864c857d5f5b7305eeee30ca046672eef3354dd2e98f2460b6bb",
+  "operational_docs_excluded": [
+    "PROJECT_STATE.md",
+    "AGENTIC_GOAL.md",
+    "replay_v2/PROJECT_STATE.md",
+    "replay_v2/AGENTIC_GOAL.md",
+    "specs/006-teammate-release/TASKS.md",
+    "reports/teammate-release-acceptance.json"
+  ],
+  "note": "Runtime remains v2.1; current documentation/package records refreshed under separate owner-authorized repository release. No circular manifest binding."
+}

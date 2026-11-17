@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b21">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23166d5b'/%3E%3Cpath d='M7 8h18M16 8v18' stroke='%238ee8c7' stroke-width='3'/%3E%3C/svg%3E">
+  <title>Touchline · Tracking replay</title>
+  <link rel="stylesheet" href="/static/app.css">
+  <script type="module" src="/static/app.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="/" aria-label="Touchline tracking replay"><span class="brand-mark" aria-hidden="true"><i></i></span>TOUCHLINE<span class="brand-divider"></span><span class="brand-product">Tracking replay</span></a>
+    <span class="local-tag"><span></span>LOCAL VIEWER</span>
+  </header>
+  <main>
+    <section class="page-heading" aria-labelledby="page-title">
+      <div><p class="eyebrow">COORDINATE REPLAY / V2</p><h1 id="page-title">The game, frame by frame.</h1><p class="intro">Explore observed positions with an independent possession overlay.</p></div>
+      <div class="source-pill" id="mode-badge">Connecting to tracking…</div>
+    </section>
+
+    <div class="workspace">
+      <section class="viewer panel" aria-label="Tracking replay player">
+        <div class="viewer-heading"><div><span class="section-dot"></span><h2>Pitch view</h2><span class="muted" id="pitch-size">105.3 × 68 m</span></div><span id="status" class="state-pill" role="status" aria-live="polite">Connecting</span></div>
+        <div class="pitch-stage" id="pitch-stage">
+          <canvas id="pitch" aria-label="Player and ball coordinates on a football pitch">This replay needs a browser with canvas support.</canvas>
+          <div class="pitch-caption"><span id="source-caption">Coordinate stream</span><span>METRES · TOP VIEW</span></div>
+          <div class="stage-message" id="stage-message" role="status"><span class="loader" aria-hidden="true"></span><strong id="stage-title">Opening the replay</strong><span id="stage-detail">Waiting for metadata from the local viewer.</span><button id="retry" type="button" hidden>Try again</button></div>
+        </div>
+        <div class="viewer-footer"><div class="legend"><span><i class="home-dot"></i>Home slots</span><span><i class="away-dot"></i>Away slots</span><span><i class="ball-dot"></i>Ball</span></div><span class="frame-counter" id="frame-counter">FRAME — / —</span></div>
+        <div class="transport">
+          <div class="seek-labels"><output id="clock" for="seek">00:00.00</output><span id="duration">—</span></div>
+          <label class="sr-only" for="seek">Replay frame</label><input id="seek" type="range" min="0" max="0" step="1" value="0" disabled>
+          <div class="transport-actions"><div class="playback-buttons"><button class="icon-button step-button" id="previous" type="button" title="Previous frame" aria-label="Previous frame" disabled>‹</button><button id="play" class="play-button" type="button" disabled><span aria-hidden="true">▶</span><span>Play</span></button><button class="icon-button step-button" id="next" type="button" title="Next frame" aria-label="Next frame" disabled>›</button><span class="keyboard-hint">Space to play / pause</span></div><label class="speed-label" for="speed">Speed <select id="speed" disabled><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div>
+        </div>
+      </section>
+
+      <aside class="inspector" aria-label="Replay details">
+        <section class="panel possession-panel"><p class="eyebrow">PREDICTION OVERLAY</p><h2>Possession</h2><div id="possession" class="possession-value" aria-live="polite">—</div><p id="possession-detail" class="card-detail">Waiting for replay metadata.</p><div class="overlay-note">Prediction labels do not control marker positions.</div></section>
+        <section class="panel observation-panel"><div class="card-heading"><h2>Observations</h2><span class="small-label" id="fps">— FPS</span></div><dl><div><dt>Visible track slots</dt><dd id="visible-slots">—</dd></div><div><dt>Missing track slots</dt><dd id="missing-slots">—</dd></div><div><dt>Slots outside view</dt><dd id="outside-slots">—</dd></div><div><dt>Ball</dt><dd id="ball-status">Waiting</dd></div><div><dt>Position bounds</dt><dd id="bounds-status">Waiting</dd></div></dl><p class="observation-note" id="motion-note">Positions appear only when observed.</p></section>
+        <section class="notes-card"><span class="note-icon" aria-hidden="true">i</span><div><h2>Read the tracks honestly</h2><p>Markers are anonymous, ordered track slots. They are not stable player identities or shirt numbers.</p><p>Missing observations disappear. Large adjacent jumps snap; no travel is invented across gaps.</p><details><summary>How positions are displayed</summary><p>Only adjacent finite samples interpolate, up to 8 metres per frame. Larger steps hold the earlier sample until the next frame. The view has 8 metres of pitch padding. Observations beyond it are counted as outside view, never clamped. Time starts at record 1 / frame 0; this is a recording clock.</p></details></div></section>
+      </aside>
+    </div>
+    <footer class="page-footer"><span>READ-ONLY TRACKING VIEWER</span><span>CSV generation and export remain in the separate review app.</span></footer>
+  </main>
+</body>
+</html>

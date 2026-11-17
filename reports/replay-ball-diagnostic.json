@@ -1,0 +1,79 @@
+{
+  "scope": "Read-only aggregate tracking-to-cache fidelity diagnostic; not possession accuracy or package acceptance.",
+  "generated_utc": "2026-11-17T02:17:19.933700+00:00",
+  "privacy": {
+    "restricted_rows_or_positions_included": false,
+    "ground_truth_used": false,
+    "predictions_used": false
+  },
+  "source_to_cache": {
+    "frames_compared": 199319,
+    "unequal_frames": 0,
+    "missingness_mismatch_frames": 0,
+    "finite_coordinates_compared": 226976,
+    "max_absolute_error_after_float32_rounding_m": 0.0,
+    "comparison": "Exact little-endian float32 finite coordinates; missing pairs compared semantically.",
+    "pass": true
+  },
+  "source_ball_aggregates": {
+    "observed_frames": 113488,
+    "observed_percent_all_frames": 56.937873,
+    "missing_frames": 85831,
+    "partial_finite_pairs": 0,
+    "adjacent_valid_pairs": 113303,
+    "adjacent_valid_jumps_gt_8m": 0,
+    "jumps_percent_of_adjacent_valid_pairs": 0.0,
+    "finite_off_pitch_frames": 4964,
+    "off_pitch_percent_of_observed": 4.374031,
+    "finite_beyond_viewer_8m_padding_frames": 919,
+    "beyond_viewer_percent_of_observed": 0.809777,
+    "consecutive_valid_step_displacement_m": {
+      "count": 113303,
+      "min_m": 0.0,
+      "median_m": 0.2216188779052874,
+      "p90_m": 0.6891401660591118,
+      "p95_m": 0.9520822163764435,
+      "p99_m": 2.0130503096528436,
+      "max_m": 5.35942047409242,
+      "mean_m": 0.33029090366687125,
+      "over_8m_count": 0
+    },
+    "reacquisition_gap_jump_m": {
+      "count": 184,
+      "min_m": 0.1656936525519317,
+      "median_m": 13.312899909704264,
+      "p90_m": 37.91752451076801,
+      "p95_m": 51.46309051122317,
+      "p99_m": 76.42141117912331,
+      "max_m": 87.17465334092329,
+      "mean_m": 17.444755591885304,
+      "over_8m_count": 119,
+      "scope": "Distance between the last valid observation before a missing run and first valid observation after it. No time normalization; this is never a velocity, nor the path travelled during the gap."
+    },
+    "missing_runs": {
+      "count": 186,
+      "total_frames": 85831,
+      "min_frames": 1,
+      "median_frames": 230.5,
+      "p90_frames": 840.0,
+      "p95_frames": 1312.5,
+      "p99_frames": 5535.3,
+      "max_frames": 8689,
+      "max_seconds": 347.56,
+      "mean_frames": 461.456989,
+      "count_buckets_frames": {
+        "1": 11,
+        "2_to_5": 22,
+        "6_to_25": 10,
+        "26_to_250": 57,
+        "251_or_more": 86
+      }
+    }
+  },
+  "interpretation": [
+    "Every ball frame matches the supplied observation after declared scaling and float32 storage rounding.",
+    "Missing observations are hidden. Distances across missing stretches do not imply velocity or a reconstructed path.",
+    "Agreement establishes input fidelity only; automatic tracking can still be physically wrong.",
+    "The separate possession model does not create, repair or move replay coordinates."
+  ]
+}
