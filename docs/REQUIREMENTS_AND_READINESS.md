@@ -128,7 +128,7 @@ or inherit acceptance automatically.
 | Selected estimator | Frozen `noise-v2`; tracking-to-label source and training provenance are documented in [TECHNICAL_SUBMISSION.md](TECHNICAL_SUBMISSION.md) |
 | Registered team name | **ViscaElBarca** — supplied by the team owner on November 17 |
 | Team registration/eligibility | Must be confirmed; the published rule is 3–5 members, with teams below three ineligible for the later Innovation Challenge/Final Pitch |
-| Repository | [kkamali04/barcelona-possession-hackathon](https://github.com/kkamali04/barcelona-possession-hackathon); owner authorized public visibility on November 17. Confirm that this URL opens while signed out before submitting |
+| Repository | [kkamali04/ViscaElBarca-Barcelona-hackathon](https://github.com/kkamali04/ViscaElBarca-Barcelona-hackathon); owner authorized public visibility on November 17. Confirm that this URL opens while signed out before submitting |
 | Technical document | Prepared draft identifies ViscaElBarca; use `ViscaElBarca.md` or PDF and complete the team's final review |
 | New launcher/viewer package | Version-specific status is in the [repair acceptance receipt](../reports/render-repair-acceptance.json) and latest PROJECT_STATE.md; this document is not a test receipt |
 | Competition submission | **Not submitted** |

@@ -42,8 +42,8 @@ open the served replay address in a new tab or hard refresh. See
 Install **Git** and **Python 3.13**, then clone:
 
 ```powershell
-git clone --config core.autocrlf=false https://github.com/kkamali04/barcelona-possession-hackathon.git
-cd barcelona-possession-hackathon
+git clone --config core.autocrlf=false https://github.com/kkamali04/ViscaElBarca-Barcelona-hackathon.git
+cd ViscaElBarca-Barcelona-hackathon
 .\setup-git.ps1
 py -3.13 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt
@@ -136,7 +136,7 @@ See the [versioned acceptance receipt](reports/overnight-acceptance.json).
 establish format and replay behavior, not ranking. Trained model provenance and
 the disclosed organizer-published dead-play override are in
 [SOLUTION.md](SOLUTION.md). The teammate's
-[`safety/remove-match-specific-dead-label-20261117` branch](https://github.com/kkamali04/barcelona-possession-hackathon/tree/safety/remove-match-specific-dead-label-20261117)
+[`safety/remove-match-specific-dead-label-20261117` branch](https://github.com/kkamali04/ViscaElBarca-Barcelona-hackathon/tree/safety/remove-match-specific-dead-label-20261117)
 changes that inference behavior and requires its own acceptance; it is not silently
 promoted by this documentation release.
 

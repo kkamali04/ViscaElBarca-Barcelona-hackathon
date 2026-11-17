@@ -1,8 +1,8 @@
 {
   "format": "touchline-tracking-replay-v2-source-2",
   "runtime_revision": "2.3.2",
-  "repository_release_revision": "public-handoff-2",
-  "created_utc": "2026-11-17T16:28:51.367389+00:00",
+  "repository_release_revision": "repository-rename-1",
+  "created_utc": "2026-11-17T16:58:04.248295+00:00",
   "files": [
     {
       "path": "REPLAY.md",
@@ -16,13 +16,13 @@
     },
     {
       "path": "docs/REQUIREMENTS_AND_READINESS.md",
-      "bytes": 8882,
-      "sha256": "6c69c2fd0ef0e6feeeec892192fe934d8335d7272b16abbcf0c2ac254245df0b"
+      "bytes": 8886,
+      "sha256": "895523a66d2fbfaa26e9d372a7f2c9ea5cefd2346f18bf8d4a63820b45e72e1d"
     },
     {
       "path": "docs/TECHNICAL_SUBMISSION.md",
-      "bytes": 9196,
-      "sha256": "4956821b74afb8eacb689c1282c72ef366a9c77d221efe5c0cab59f3451db42a"
+      "bytes": 9200,
+      "sha256": "098027cecbac3a46791f11d7ff75f6d4c77af25956acdae511cb2e7fc9f82124"
     },
     {
       "path": "docs/VIEWER_GUIDE.md",
@@ -116,8 +116,8 @@
     }
   ],
   "repository_manifest": "TEAM_REPO_MANIFEST.json",
-  "repository_manifest_sha256": "2f4711ea711991bb1ddd0047c75ff45ce7237d95f3f2c242bb2eacbe7d2e1d8f",
-  "supersedes_manifest_sha256": "1a8559e44726931ff4db9b6621712a8e2f150b949af2ab70fd74c3fa84291447",
+  "repository_manifest_sha256": "bec9343de62965264131a9dcf9f15de90455faea87ff31510229bbe0f6d01dd5",
+  "supersedes_manifest_sha256": "9f47423ec1e26e4788380b9ca995542555c68ebfe787c9820825e26affb79876",
   "operational_docs_excluded": [
     "AGENTIC_GOAL.md",
     "PROJECT_STATE.md",
@@ -130,5 +130,5 @@
     "specs/007-rendering-repair/TASKS.md",
     "specs/008-release-hardening/TASKS.md"
   ],
-  "note": "Public handoff documentation release; runtime remains replay2.3.2 and frozen noise-v2. New package requires its own acceptance."
+  "note": "Repository name/URL documentation refresh; replay runtime remains2.3.2 and frozen noise-v2. Requires version-specific package acceptance."
 }

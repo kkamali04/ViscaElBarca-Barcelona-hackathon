@@ -17,8 +17,8 @@ Use Git and Python 3.13. Run these from the new checkout; the launchers use its
 `.venv` directly, so activating the environment is unnecessary.
 
 ```powershell
-git clone --config core.autocrlf=false https://github.com/kkamali04/barcelona-possession-hackathon.git
-cd barcelona-possession-hackathon
+git clone --config core.autocrlf=false https://github.com/kkamali04/ViscaElBarca-Barcelona-hackathon.git
+cd ViscaElBarca-Barcelona-hackathon
 .\setup-git.ps1
 py -3.13 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt

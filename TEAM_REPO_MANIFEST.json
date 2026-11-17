@@ -1,8 +1,8 @@
 {
   "format": "teammate-code-repository-v2",
-  "created_utc": "2026-11-17T16:28:51.367389+00:00",
-  "base_commit": "c993841226537977d7346efbcac54131cc4a5098",
-  "supersedes_manifest_sha256": "556bd0a3fb74e779c46604a5704be93cca1ba331901bdd7938222b371b8b6ba5",
+  "created_utc": "2026-11-17T16:58:04.248295+00:00",
+  "base_commit": "d2e7022094710f9a2bc0a90bb7bd487e765fc772",
+  "supersedes_manifest_sha256": "2f4711ea711991bb1ddd0047c75ff45ce7237d95f3f2c242bb2eacbe7d2e1d8f",
   "source_base_zip_sha256": "a06eb6323ebf68658ae626b97e8b98a75acbfbeb109b9e7a7556eadfe03b582c",
   "source_base_members": 106,
   "files": [
@@ -74,12 +74,12 @@
     {
       "path": "PACKAGE_MANIFEST.json",
       "bytes": 18360,
-      "sha256": "d2eef408a3dacb8f35e5cef6ced746bd92f6aa68535687432393c0d6157034b8"
+      "sha256": "2ba51099d1e1ee66c7bfd0e88112dd5840474cf2867729c2ba93383d2499f51d"
     },
     {
       "path": "README.md",
-      "bytes": 7465,
-      "sha256": "5feab1218ed011b87eded1c67cc1932edebde171748c5b21cb8f67195d6a0959"
+      "bytes": 7471,
+      "sha256": "68265c910e2b72ec24570c6019436f9aedb2c9d9016800c07e9f14f44d169b5e"
     },
     {
       "path": "REPLAY.md",
@@ -158,8 +158,8 @@
     },
     {
       "path": "docs/AGENT_GUIDE.md",
-      "bytes": 9435,
-      "sha256": "cfd2bfe7bbad7abeead7d2cf5cb3b6f6299228a9bc0ee96265dd3d63944d0c71"
+      "bytes": 9439,
+      "sha256": "6a57e4d3574a6d264be55a79bccb6184e341c543ce000f879e063a7748611099"
     },
     {
       "path": "docs/MORNING_REVIEW.md",
@@ -178,13 +178,13 @@
     },
     {
       "path": "docs/REQUIREMENTS_AND_READINESS.md",
-      "bytes": 8882,
-      "sha256": "6c69c2fd0ef0e6feeeec892192fe934d8335d7272b16abbcf0c2ac254245df0b"
+      "bytes": 8886,
+      "sha256": "895523a66d2fbfaa26e9d372a7f2c9ea5cefd2346f18bf8d4a63820b45e72e1d"
     },
     {
       "path": "docs/TECHNICAL_SUBMISSION.md",
-      "bytes": 9196,
-      "sha256": "4956821b74afb8eacb689c1282c72ef366a9c77d221efe5c0cab59f3451db42a"
+      "bytes": 9200,
+      "sha256": "098027cecbac3a46791f11d7ff75f6d4c77af25956acdae511cb2e7fc9f82124"
     },
     {
       "path": "docs/TOUCHLINE.md",
@@ -1508,17 +1508,16 @@
   "restricted_assets_included": false,
   "prediction_timelines_included": false,
   "scientific_preservation": {
-    "base_commit": "c993841226537977d7346efbcac54131cc4a5098",
+    "base_commit": "d2e7022094710f9a2bc0a90bb7bd487e765fc772",
     "all_prior_scientific_source_model_config_bytes_unchanged": true,
     "authorized_parent_changes": [
       "README.md",
-      "PACKAGE_MANIFEST.json",
-      "docs/MORNING_REVIEW.md",
+      "docs/AGENT_GUIDE.md",
+      "docs/TECHNICAL_SUBMISSION.md",
       "docs/REQUIREMENTS_AND_READINESS.md",
-      "docs/REPOSITORY_SCOPE.md",
-      "docs/TECHNICAL_SUBMISSION.md"
+      "PACKAGE_MANIFEST.json"
     ]
   },
-  "note": "Documentation, source navigation and conceptual/invented visuals only. Scientific source, model and replay runtime unchanged from parent. Historical evidence retains its tested-version scope.",
-  "repository_release_revision": "public-handoff-2"
+  "note": "Repository URL and clone-directory documentation only. Existing runtime/model bytes unchanged; retained historical evidence keeps its prior source/version scope.",
+  "repository_release_revision": "repository-rename-1"
 }

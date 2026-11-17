@@ -2,7 +2,7 @@
 
 **Registered team name: ViscaElBarca.**
 
-**Code repository:** [kkamali04/barcelona-possession-hackathon](https://github.com/kkamali04/barcelona-possession-hackathon).
+**Code repository:** [kkamali04/ViscaElBarca-Barcelona-hackathon](https://github.com/kkamali04/ViscaElBarca-Barcelona-hackathon).
 The owner authorized public code publication on November 17; verify that the URL
 opens while signed out before submitting. This is a prepared, unsubmitted technical draft,
 dated November 17, 2026.

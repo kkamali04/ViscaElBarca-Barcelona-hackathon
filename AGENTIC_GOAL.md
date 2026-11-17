@@ -1,3 +1,27 @@
+# Repository rename IN PROGRESS — 2026-11-17T16:58:04.248295+00:00
+
+Owner authorized exact rename to ViscaElBarca-Barcelona-hackathon. GitHub now:
+https://github.com/kkamali04/ViscaElBarca-Barcelona-hackathon
+Same repository ID1460569563, existing history/branches/public visibility and
+Nsichani Write retained. Canonical local folder remains barcelona-possession-
+hackathon to preserve working viewer process paths; origin now uses the new URL.
+
+Priority: update active README clone/cd instructions, agent guide, technical doc
+and readiness URL; refresh affected legacy/extended/replay manifest records;
+freeze unchanged scientific/runtime package and complete fresh independent blind
+acceptance plus root reproduction before pushing documentation. Historical
+checkpoints retain their original names and tested-source scope.
+
+The owner asked whether their friend can review then submit: prepared files are
+for review, not submitted. Team ViscaElBarca, eligibility/final technical review
+and exact last CSV validation are teammate actions. The main CSV and separate
+safety branch must not be mixed: regenerate from the approved revision if it
+changes inference. No GT, tuning, restricted model-facing content or paid compute.
+Evidence/next action: owner-only local/rename-20261117/PLAN.md and frozen export.
+
+---
+Historical checkpoints below retain their stated dates and names.
+
 # Public handoff COMPLETE — 2026-11-17T16:44:23.990655+00:00
 
 Team: **ViscaElBarca**, supplied by the owner. The repository is PUBLIC:
