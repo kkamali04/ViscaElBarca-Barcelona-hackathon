@@ -128,7 +128,8 @@ def main():
         config = {**config, "tag_weight": args.experimental_tag_weight}
         tags = tag_support(args.data_dir / "tactical/BAR-ATH_tactical_smart_tagging.xml", features.n_frames, features.fps)
     inference_start = time.perf_counter()
-    codes = predict(features, config, model, tags, forced_dead=[(110808, 113742)])
+    # Use model evidence for all graded frames; do not impose known match labels.
+    codes = predict(features, config, model, tags)
     inference_seconds = time.perf_counter()-inference_start
     if np.asarray(codes).shape != (199319,):
         raise ValueError("Prediction must contain exactly one code for every tactical frame")
