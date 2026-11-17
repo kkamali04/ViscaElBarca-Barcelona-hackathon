@@ -88,12 +88,10 @@ control from a touch or explicitly recognize every duel, pass or referee action.
 Missing ball observations alone do not force dead play.
 
 Published inclusive graded ranges become `[11185,90652)` and
-`[110808,190198)`; other frames receive `X`. The sole fixed dead-play interval
-is `[110808,113742)`, explicitly published as dead play in the organizer
-[FAQ](https://github.com/metrica-sports/more-than-a-hack-2027/blob/main/FAQ.md).
-This is a public preparation interval before the second kickoff. Other dead-play
-decisions come from model evidence and temporal decoding. No manual timeline
-edits enter the generated CSV.
+`[110808,190198)`; other frames receive `X`. The published pre-second-kickoff interval `[110808,113742)` is not
+hardcoded as a label. All scored dead-ball decisions come from the frozen model's
+evidence and temporal decoder, avoiding match-specific target overrides.
+No manual timeline edits enter the generated CSV.
 
 ## Reproduction
 
