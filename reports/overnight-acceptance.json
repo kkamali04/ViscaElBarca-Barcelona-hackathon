@@ -1,6 +1,6 @@
 {
   "schema": "overnight-release-hardening-v1",
-  "status": "accepted-for-private-release",
+  "status": "accepted-and-owner-viewers-verified",
   "created_utc": "2026-11-17T07:54:56.483226+00:00",
   "revision": "replay2.3.2-overnight-hardening-3",
   "tested_source_zip_sha256": "c14f99a6c14f1927f539461af1ce9fe4ea6ff42306f13dbfd848495c3aaacaa9",
@@ -156,5 +156,66 @@
     "Bounded resource gates do not prove absence of leaks or overnight/otherOS behavior.",
     "Format, fidelity and runtime acceptance do not establish hidden possession accuracy.",
     "Owner local viewer readiness is verified separately after publication."
-  ]
+  ],
+  "handoff_utc": "2026-11-17T07:59:18.650547+00:00",
+  "private_publication_readback": {
+    "verified_source_commit": "1f99662ed84b3673b4319c593540af5fc6977403",
+    "private": true,
+    "fresh_remote_checkout_all252_files_match": true,
+    "collaborator": {
+      "username": "Nsichani",
+      "permission": "write",
+      "can_pull": true,
+      "can_push": true,
+      "pending_invitation": false
+    },
+    "teammate_device_tested": false,
+    "scope": "Source commit readback. Subsequent excluded operational-only handoff commit is verified in the owner checkpoint."
+  },
+  "owner_viewer_readback": {
+    "pass": true,
+    "revision": "replay2.3.2-overnight-hardening-3",
+    "source_commit": "1f99662ed84b3673b4319c593540af5fc6977403",
+    "ports": [
+      {
+        "port": 8767,
+        "passed": true,
+        "actual_local_headless_only": true,
+        "uniform_fidelity_samples": 17,
+        "playback_checks": {
+          "controls_within_laptop_viewport": true,
+          "near_real_time_1x": true,
+          "observed_marker_motion": true,
+          "pauses_and_holds": true,
+          "no_page_errors": true
+        },
+        "accepted_asset_sha256": {
+          "index.html": "6cbd504b27cba72945228f19ee02033eb17b4cd88c492bd00dd4f2e464764d40",
+          "app.js": "1fd804b280a1eb2925ad09036b794aa19d4f7791547ff7393f9bec0b5e9d609b",
+          "app.css": "3e59b304dec97aca4245cb14681da0d4c5dcf947b9bdb5711a7028aadd257e4e",
+          "clock.js": "6d8205cf1a14f517ae52aaf7208c8108008b7df35866b00b97d30c3afe193602"
+        }
+      },
+      {
+        "port": 8771,
+        "passed": true,
+        "actual_local_headless_only": true,
+        "uniform_fidelity_samples": 17,
+        "playback_checks": {
+          "controls_within_laptop_viewport": true,
+          "near_real_time_1x": true,
+          "observed_marker_motion": true,
+          "pauses_and_holds": true,
+          "no_page_errors": true
+        },
+        "accepted_asset_sha256": {
+          "index.html": "6cbd504b27cba72945228f19ee02033eb17b4cd88c492bd00dd4f2e464764d40",
+          "app.js": "1fd804b280a1eb2925ad09036b794aa19d4f7791547ff7393f9bec0b5e9d609b",
+          "app.css": "3e59b304dec97aca4245cb14681da0d4c5dcf947b9bdb5711a7028aadd257e4e",
+          "clock.js": "6d8205cf1a14f517ae52aaf7208c8108008b7df35866b00b97d30c3afe193602"
+        }
+      }
+    ],
+    "no_model_facing_actual_browser_images_DOM_or_values": true
+  }
 }
