@@ -38,15 +38,15 @@ Try again reconnects after restart. See [replay commands](../REPLAY.md).
 
 ## Before the final form
 
-- Confirm the registered team name and eligible team members. The team name remains pending; the friend knows it and is handling final touches.
-- Name the generated CSV and technical document after that exact team name. Markdown or PDF is accepted for the document.
+- Registered team name: **ViscaElBarca**, supplied by the team owner on November 17. Confirm eligible team members separately.
+- Use **ViscaElBarca.csv** and **ViscaElBarca.md** (or PDF) as the final filenames. Markdown or PDF is accepted for the document.
 - Run the official validator on the exact renamed CSV, using this repository's Python environment:
 
   ```powershell
-  .\.venv\Scripts\python.exe more-than-a-hack-2027-main/evaluation/validate_submission.py 'C:\path\to\TEAM_NAME.csv'
+  .\.venv\Scripts\python.exe more-than-a-hack-2027-main/evaluation/validate_submission.py 'C:\path\to\ViscaElBarca.csv'
   ```
 
-- The form requires a **public** code repository. The current teammate repository is private; visibility and competition submission remain separate owner decisions.
+- The form requires a **public** code repository. The owner authorized publication on November 17; verify that the repository URL opens while signed out. Competition submission remains a separate action.
 - Keep restricted match assets, prediction timelines, private reports and caches outside the public code repository. Bundled weights and source regenerate the output without retraining.
 - Submit the CSV, public repository URL and short technical document through the emailed form. This repository has not submitted them.
 

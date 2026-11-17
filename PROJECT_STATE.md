@@ -1,3 +1,48 @@
+# Public handoff IN PROGRESS — 2026-11-17T16:29:38.844502+00:00
+
+Owner now explicitly authorizes public visibility, cleanup and up-to-date GitHub.
+Registered team name supplied: ViscaElBarca. Goal is a clear human/agent handoff,
+usable observed-coordinate replay and independently accepted public code package.
+This supersedes prior private-only/public-name-pending operational status below.
+Competition submission remains unauthorized and has not occurred.
+
+Baseline: teammate main c993841, README-only descendant of accepted replay2.3.2.
+Pulled fast-forward and preserved teammate safety/remove-match-specific-dead-label-20261117.
+No scientific/runtime/model files changed. That branch changes inference behavior
+and is not silently merged or claimed accepted by this documentation release.
+
+Current phase: final frozen documentation package public-handoff-2 under fresh
+independent preplanned acceptance. Updated README, requirements/technical/morning
+guides and scope; added agent guide, project map, Touchline troubleshooting and
+conceptual generated banner/provenance. All legacy/runtime bytes preserved;
+legacy README record and extended/replay manifests refreshed without scope creep.
+
+Independent history audit: 12 reachable commits,302 blobs; no detected restricted
+payloads, known credentials or oversized blobs. Original audit findings retained
+privately. Main's organizer-published dead interval remains disclosed; different
+inference behavior belongs to the teammate safety branch, with separate review.
+
+Owner8767/8771 aggregate checks confirm correct current app/assets, supplied
+tracking and prediction attachment. Fresh local headless playback checks pass
+movement, near-real-time1x, pause/hold and laptop controls. User screenshot is the
+older illustrative Touchline page: fixed SVG players/sine-ball animation. Its
+legacy API receives404 from replay_v2; hard reload/new localhost tab required.
+No actual data,DOM,images,rows or labels entered model tools. Query-string cache
+busting is not accepted by this server; use a plain local URL/hard reload.
+
+Next: finish independent ZIP2 fresh-env actual inference pair/contract/validator/
+determinism/resources/safe failures plus invented UI/docs/manifests; root reproduce
+fresh package and inspect actual artifacts; finalize private ViscaElBarca review
+files; stage only reviewed allowlist,commit,push and read back; then set PUBLIC
+and verify unauthenticated access and collaborator Write. Do not submit the form.
+
+Owner-only evidence: local/public-release-20261117/PLAN.md,FREEZE-2.json,
+audit/REPORT.json,OWNER_READY.json,OWNER_8767_PLAYBACK.json,OWNER_8771_PLAYBACK.json.
+Existing frozen/holdout reports retain their historical source/version scope.
+
+---
+Historical checkpoints below apply only to their stated dates and sources.
+
 # Morning review COMPLETE — 2026-11-17T07:59:18.650547+00:00
 
 Verified functional source commit: 1f99662ed84b3673b4319c593540af5fc6977403 (private main).

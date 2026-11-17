@@ -41,6 +41,9 @@ do not validate a future change or authorize replay of a closed study.
 Frozen model JSONs were copied opaquely from the vetted base ZIP and verified
 against their manifest digests. No other model payload was copied. Organizer
 starter notebooks retain zero outputs. Third-party notices and source documents
-are retained. This private handoff is not a competition submission or a decision
-to publish code publicly. Private review packs contain actual CSVs and must stay
-local; only a checked code-only export is eligible for a later sharing decision.
+are retained. The owner authorized public code publication on November 17, 2026.
+Publication is not a competition submission. Private review packs contain actual
+CSVs and must stay local; only the audited code/model/document repository is
+eligible for public sharing. The README's generated conceptual illustration and
+invented-only screenshot contain no match data. The generation prompt is recorded
+in [assets/README.md](../assets/README.md).

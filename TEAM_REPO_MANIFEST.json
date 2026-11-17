@@ -1,8 +1,8 @@
 {
   "format": "teammate-code-repository-v2",
-  "created_utc": "2026-11-17T07:18:29.061891+00:00",
-  "base_commit": "0e005b0afd87ff771b100f55420c351ae7360b33",
-  "supersedes_manifest_sha256": "93e99b493852d2daeda51fe72c90e5ed64490962a322e94854b1dc5f822988bf",
+  "created_utc": "2026-11-17T16:28:51.367389+00:00",
+  "base_commit": "c993841226537977d7346efbcac54131cc4a5098",
+  "supersedes_manifest_sha256": "556bd0a3fb74e779c46604a5704be93cca1ba331901bdd7938222b371b8b6ba5",
   "source_base_zip_sha256": "a06eb6323ebf68658ae626b97e8b98a75acbfbeb109b9e7a7556eadfe03b582c",
   "source_base_members": 106,
   "files": [
@@ -73,13 +73,13 @@
     },
     {
       "path": "PACKAGE_MANIFEST.json",
-      "bytes": 18905,
-      "sha256": "52e413a713f6a85931601c26c053773db7020e15c2d0881313e6db6cbf489343"
+      "bytes": 18360,
+      "sha256": "d2eef408a3dacb8f35e5cef6ced746bd92f6aa68535687432393c0d6157034b8"
     },
     {
       "path": "README.md",
-      "bytes": 4159,
-      "sha256": "84105dc4e38f2100ca3fa8026b64ef910f549b3c839285d4abdfc004b923f44c"
+      "bytes": 7465,
+      "sha256": "5feab1218ed011b87eded1c67cc1932edebde171748c5b21cb8f67195d6a0959"
     },
     {
       "path": "REPLAY.md",
@@ -117,6 +117,11 @@
       "sha256": "65a5ffa45b368daf16856ff41d79d2f49d160351923f37492c1dfe619fc14f4a"
     },
     {
+      "path": "assets/README.md",
+      "bytes": 872,
+      "sha256": "90ee1af7780dfb13b0a87dfceab839c08d9bfd4ab728d0e1d0ce18d0ae2c0c23"
+    },
+    {
       "path": "assets/demo.png",
       "bytes": 475104,
       "sha256": "d189879ffd0a140bd201565c0fd949eb2365e0758a72e9b3de144663c89236fd"
@@ -125,6 +130,11 @@
       "path": "assets/replay-demo.png",
       "bytes": 107460,
       "sha256": "f9a844255630776feba15771006ebfe8c160d09b4040e7869e7f21bc00455628"
+    },
+    {
+      "path": "assets/touchline-concept.png",
+      "bytes": 2107122,
+      "sha256": "d3a02dd4957a0647fca10475b2ec1f90bc02aeb609acd1a52855da9246eb9e22"
     },
     {
       "path": "benchmarks/speed_reuse/.gitignore",
@@ -147,24 +157,39 @@
       "sha256": "687831ca849213c8f410067d9d2ddce1577eb2ec298b912227c2ae6be10ff78d"
     },
     {
+      "path": "docs/AGENT_GUIDE.md",
+      "bytes": 9435,
+      "sha256": "cfd2bfe7bbad7abeead7d2cf5cb3b6f6299228a9bc0ee96265dd3d63944d0c71"
+    },
+    {
       "path": "docs/MORNING_REVIEW.md",
-      "bytes": 3350,
-      "sha256": "1d97a3e50f4c57fa38af1ae7440d0c3be349e232d67ab96737b1628afbb20c15"
+      "bytes": 3383,
+      "sha256": "e93317a6bf25263d2023c742b96bed3954ce73ada39d608cae33c83b929c5e2b"
+    },
+    {
+      "path": "docs/PROJECT_MAP.md",
+      "bytes": 7748,
+      "sha256": "d4bf3ed057def25e147540634caa2c94aa67194a03b77b4d8b00de8c5abe9015"
     },
     {
       "path": "docs/REPOSITORY_SCOPE.md",
-      "bytes": 3164,
-      "sha256": "acb4057472a62488b2333b36ffd4a8bfe82d5f8208acc30b46b4888fbb2ef9dc"
+      "bytes": 3366,
+      "sha256": "c0c52998baee4de473136f90808cf9ac86e51cd43391f4aba6899a518a2b778d"
     },
     {
       "path": "docs/REQUIREMENTS_AND_READINESS.md",
-      "bytes": 8809,
-      "sha256": "88fd5d363c918d623e9ea40343bb483724ac67e4798097795693cf24b95b8bc8"
+      "bytes": 8882,
+      "sha256": "6c69c2fd0ef0e6feeeec892192fe934d8335d7272b16abbcf0c2ac254245df0b"
     },
     {
       "path": "docs/TECHNICAL_SUBMISSION.md",
-      "bytes": 9170,
-      "sha256": "59e67a8d2aed6c2b79e32c07f8e8f7c32b38700adeb9cdbcc68569779234060c"
+      "bytes": 9196,
+      "sha256": "4956821b74afb8eacb689c1282c72ef366a9c77d221efe5c0cab59f3451db42a"
+    },
+    {
+      "path": "docs/TOUCHLINE.md",
+      "bytes": 2985,
+      "sha256": "43fc8e9e63a83eb6eb3ab38cbe876ac50f1ddd54224f6dc66876e5d4894c0897"
     },
     {
       "path": "docs/VIEWER_GUIDE.md",
@@ -1234,16 +1259,21 @@
     "TECHNICAL_CANDIDATE_DRAFT.md",
     "THIRD_PARTY.md",
     "V3_REVIEW.md",
+    "assets/README.md",
     "assets/demo.png",
     "assets/replay-demo.png",
+    "assets/touchline-concept.png",
     "benchmarks/speed_reuse/.gitignore",
     "benchmarks/speed_reuse/README.md",
     "benchmarks/speed_reuse/acceptance.py",
     "benchmarks/speed_reuse/oracle.py",
+    "docs/AGENT_GUIDE.md",
     "docs/MORNING_REVIEW.md",
+    "docs/PROJECT_MAP.md",
     "docs/REPOSITORY_SCOPE.md",
     "docs/REQUIREMENTS_AND_READINESS.md",
     "docs/TECHNICAL_SUBMISSION.md",
+    "docs/TOUCHLINE.md",
     "docs/VIEWER_GUIDE.md",
     "experiments/__init__.py",
     "experiments/noise_v2/__init__.py",
@@ -1478,18 +1508,17 @@
   "restricted_assets_included": false,
   "prediction_timelines_included": false,
   "scientific_preservation": {
-    "base_commit": "0e005b0afd87ff771b100f55420c351ae7360b33",
-    "unchanged_parent_records": 236,
+    "base_commit": "c993841226537977d7346efbcac54131cc4a5098",
     "all_prior_scientific_source_model_config_bytes_unchanged": true,
     "authorized_parent_changes": [
-      "PACKAGE_MANIFEST.json",
       "README.md",
-      "REPLAY.md",
-      "docs/VIEWER_GUIDE.md",
-      "replay_v2/__main__.py",
-      "replay_v2/static/app.js",
-      "replay_v2/store.py"
+      "PACKAGE_MANIFEST.json",
+      "docs/MORNING_REVIEW.md",
+      "docs/REQUIREMENTS_AND_READINESS.md",
+      "docs/REPOSITORY_SCOPE.md",
+      "docs/TECHNICAL_SUBMISSION.md"
     ]
   },
-  "note": "Replay2.3.2 release hardening; frozen estimator unchanged. Previous reports retain their tested source versions. Operational exclusions explicit."
+  "note": "Documentation, source navigation and conceptual/invented visuals only. Scientific source, model and replay runtime unchanged from parent. Historical evidence retains its tested-version scope.",
+  "repository_release_revision": "public-handoff-2"
 }

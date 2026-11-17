@@ -1,8 +1,8 @@
 {
   "format": "touchline-tracking-replay-v2-source-2",
   "runtime_revision": "2.3.2",
-  "repository_release_revision": "overnight-hardening-3",
-  "created_utc": "2026-11-17T07:18:29.061891+00:00",
+  "repository_release_revision": "public-handoff-2",
+  "created_utc": "2026-11-17T16:28:51.367389+00:00",
   "files": [
     {
       "path": "REPLAY.md",
@@ -11,18 +11,18 @@
     },
     {
       "path": "docs/MORNING_REVIEW.md",
-      "bytes": 3350,
-      "sha256": "1d97a3e50f4c57fa38af1ae7440d0c3be349e232d67ab96737b1628afbb20c15"
+      "bytes": 3383,
+      "sha256": "e93317a6bf25263d2023c742b96bed3954ce73ada39d608cae33c83b929c5e2b"
     },
     {
       "path": "docs/REQUIREMENTS_AND_READINESS.md",
-      "bytes": 8809,
-      "sha256": "88fd5d363c918d623e9ea40343bb483724ac67e4798097795693cf24b95b8bc8"
+      "bytes": 8882,
+      "sha256": "6c69c2fd0ef0e6feeeec892192fe934d8335d7272b16abbcf0c2ac254245df0b"
     },
     {
       "path": "docs/TECHNICAL_SUBMISSION.md",
-      "bytes": 9170,
-      "sha256": "59e67a8d2aed6c2b79e32c07f8e8f7c32b38700adeb9cdbcc68569779234060c"
+      "bytes": 9196,
+      "sha256": "4956821b74afb8eacb689c1282c72ef366a9c77d221efe5c0cab59f3451db42a"
     },
     {
       "path": "docs/VIEWER_GUIDE.md",
@@ -116,8 +116,8 @@
     }
   ],
   "repository_manifest": "TEAM_REPO_MANIFEST.json",
-  "repository_manifest_sha256": "653c32edbb8a35db8db85589b7e6b1ab3e9bfc78a0a3b5035bb26e695e8c5021",
-  "supersedes_manifest_sha256": "637566f659c08438f9f366c21435b4bb474dd9bc3b2cca9663061778e779108d",
+  "repository_manifest_sha256": "2f4711ea711991bb1ddd0047c75ff45ce7237d95f3f2c242bb2eacbe7d2e1d8f",
+  "supersedes_manifest_sha256": "1a8559e44726931ff4db9b6621712a8e2f150b949af2ab70fd74c3fa84291447",
   "operational_docs_excluded": [
     "AGENTIC_GOAL.md",
     "PROJECT_STATE.md",
@@ -130,5 +130,5 @@
     "specs/007-rendering-repair/TASKS.md",
     "specs/008-release-hardening/TASKS.md"
   ],
-  "note": "Failure and cache recovery changes; wire API remains v2, frozen estimator unchanged. New version requires separate blind acceptance; no circular hashes."
+  "note": "Public handoff documentation release; runtime remains replay2.3.2 and frozen noise-v2. New package requires its own acceptance."
 }

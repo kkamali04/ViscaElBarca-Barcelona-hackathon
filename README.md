@@ -1,13 +1,45 @@
-# Barcelona possession estimator
+# Touchline · football possession from tracking
+
+**ViscaElBarca** · More Than A Hack 2027 initial challenge
+
+![Conceptual illustration of a football pitch flowing into a possession timeline](assets/touchline-concept.png)
+
+*Conceptual illustration; not match data or a screenshot.*
 
 Estimate team possession from supplied tactical tracking, then replay the
 coordinates with a possession overlay. The active estimator is frozen
-**noise-v2**. It reads ATD XML/TXT and writes a `frame,label` CSV it does not
+**noise-v2**. It reads ATD XML/TXT and writes a `frame,label` CSV. It does not
 understand video, identify players, or classify passes and shots.
+
+**Start here:** [run the replay](#windows-quickstart--full-git-repository) ·
+[make the submission CSV](#supplied-atd--csv--replay) ·
+[understand the project](docs/PROJECT_MAP.md) ·
+[work with an AI agent](docs/AGENT_GUIDE.md)
+
+```mermaid
+flowchart LR
+  ATD["Authorized ATD XML + TXT"] --> Features["Geometry and motion features"]
+  Features --> Model["Frozen tree model + temporal decoder"]
+  Model --> CSV["199,319 frame,label rows"]
+  ATD --> Replay["Observed-coordinate replay"]
+  CSV --> Replay
+```
+
+| What you get | What it does |
+|---|---|
+| **CPU inference** | Generates a label for every tactical frame with pinned dependencies and frozen weights |
+| **Coordinate replay** | Draws supplied player/ball observations, with gaps visible and an optional prediction overlay |
+| **Reproducible handoff** | Includes the official validator, provenance, manifests and version-specific acceptance receipts |
+
+The current viewing app is **`replay_v2`**. The older **`review_app` / Touchline
+illustration has fixed player dots and an animated sample ball**; it is retained
+for the original export, and is not a match replay. If an old page reports 404,
+open the served replay address in a new tab or hard refresh. See
+[Touchline troubleshooting](docs/TOUCHLINE.md).
 
 ## Windows quickstart — full Git repository
 
-Install **Git** and **Python 3.13**, then clone with your authorized GitHub account:
+Install **Git** and **Python 3.13**, then clone:
 
 ```powershell
 git clone --config core.autocrlf=false https://github.com/kkamali04/barcelona-possession-hackathon.git
@@ -80,9 +112,38 @@ replay do not establish possession accuracy; hidden-match performance is unknown
 
 ## Further reading
 
-[Morning review and submission checklist](docs/MORNING_REVIEW.md) ·
-[Viewer guide](docs/VIEWER_GUIDE.md) · [Replay commands and storage](REPLAY.md) ·
-[Estimator details](SOLUTION.md) · [Repository scope](docs/REPOSITORY_SCOPE.md) ·
-[Third-party sources](THIRD_PARTY.md)
+- **Run and understand:** [viewer guide](docs/VIEWER_GUIDE.md),
+  [replay commands and storage](REPLAY.md), [project map](docs/PROJECT_MAP.md).
+- **Submit:** [readiness and exact requirements](docs/REQUIREMENTS_AND_READINESS.md),
+  [technical document draft](docs/TECHNICAL_SUBMISSION.md),
+  [morning review checklist](docs/MORNING_REVIEW.md).
+- **Develop:** [agent guide](docs/AGENT_GUIDE.md), [estimator details](SOLUTION.md),
+  [repository scope and manifests](docs/REPOSITORY_SCOPE.md),
+  [third-party sources](THIRD_PARTY.md).
+
+## Evidence and limits
+
+The accepted November 17 replay release includes fresh-package ATD-to-CSV
+checks, repeated deterministic output, the official format validator, independent
+blind tests and local headless replay fidelity checks. In the recorded Windows
+runs, full-match inference took **about 51 seconds** with **about 114 MiB peak
+working set for the inference worker**. Initial replay-cache preparation adds
+about 30 seconds; browser memory is separate. These are measurements of the
+identified release, not a runtime or memory guarantee on another machine.
+See the [versioned acceptance receipt](reports/overnight-acceptance.json).
+
+**Hidden-match possession accuracy is unknown.** A valid CSV and moving dots
+establish format and replay behavior, not ranking. Trained model provenance and
+the disclosed organizer-published dead-play override are in
+[SOLUTION.md](SOLUTION.md). The teammate's
+[`safety/remove-match-specific-dead-label-20261117` branch](https://github.com/kkamali04/barcelona-possession-hackathon/tree/safety/remove-match-specific-dead-label-20261117)
+changes that inference behavior and requires its own acceptance; it is not silently
+promoted by this documentation release.
+
+The repository contains code, frozen model weights, invented screenshots and
+selected aggregate evidence. **Download match data separately; never commit
+match assets, generated prediction timelines, caches or private review packs.**
+Historical experiments and reports remain available for traceability; the project
+map distinguishes them from the selected workflow.
 
 Before editing, run `git pull --ff-only` and follow [AGENTS.md](AGENTS.md).

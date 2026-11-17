@@ -1,10 +1,10 @@
 # Possession estimation from automatic tactical tracking
 
-**Registered team name: PENDING — complete before submission.**
+**Registered team name: ViscaElBarca.**
 
 **Code repository:** [kkamali04/barcelona-possession-hackathon](https://github.com/kkamali04/barcelona-possession-hackathon).
-It is currently private and therefore does **not** yet satisfy the organizer's
-public-repository requirement. This is a prepared, unsubmitted technical draft,
+The owner authorized public code publication on November 17; verify that the URL
+opens while signed out before submitting. This is a prepared, unsubmitted technical draft,
 dated November 17, 2026.
 
 ## Approach and selected assets
@@ -161,5 +161,6 @@ Training peak memory and hidden-match accuracy remain unresolved. Frozen
 estimator evidence does not guarantee the current viewer package or hidden
 performance. Further semantic model changes require a versioned experiment,
 predeclared split, fresh held-out evidence and independent blind acceptance.
-Registered team identity, eligibility, a public repository and the emailed
-submission form remain to be finalized; **no competition submission has occurred**.
+The owner supplied the team name **ViscaElBarca**. Confirm eligibility, public
+repository availability and the emailed submission form before finalizing;
+**no competition submission has occurred**.
