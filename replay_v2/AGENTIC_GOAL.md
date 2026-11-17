@@ -1,3 +1,38 @@
+# Current checkpoint — published release verified 2026-11-17T02:45:36.860568+00:00
+
+Status: COMPLETE. Runtime release commit d322e1990275abe96670e46a9f94529bb52c75d4 is published to the existing
+private kkamali04/barcelona-possession-hackathon repository. Fresh GitHub checkout
+of all242 files matched local bytes, including README, screenshot, replay source
+and manifests. GitHub API confirms Nsichani's accepted Write access, pull/push
+permissions and no pending invitation; main is unprotected. Contributor listing
+is commit attribution, not an access grant. Teammate device/auth remains untested.
+
+This checkpoint-only update records that verified publication; source manifests
+explicitly exclude these operational docs/receipt. Frozen runtime/model/source
+bindings and acceptance evidence remain unchanged. Independent20gate acceptance
+and root fresh environment/export reproduction passed; four deterministic exact
+199319-row outputs passed official format validation. See
+reports/teammate-release-acceptance.json and specs/006-teammate-release/TASKS.md.
+Original owner evidence: local/publish-20261116/manager/REMOTE_VERIFY_FIRST.json;
+blind-release/FINAL_ACCEPTANCE.json; manager/root-e2e/ROOT_ACCEPTANCE.json,
+ROOT_BROWSER.json, ROOT_SYNTHETIC.json and ROOT_FRONTEND_LABELS.json.
+
+Delivered: concise README, authentic invented screenshot, supplied-coordinate
+replay and guide, aggregate ball-fidelity diagnostic, safe manifests and legacy
+ZIP compatibility. No new training, actual match rows/media/GT uploads, public
+visibility change or competition submission. Tracking noise/gaps/anonymous slots
+and unknown hidden accuracy remain. Owner actual replay stays on8767; use only
+invented demo for model-facing browser/screenshots. README explains all labels.
+
+Next for teammates: git pull --ff-only (or clone exactly as README), setup-git.ps1,
+Python3.13 lockfile environment, replay.ps1 -Demo. Obtain authorized inputs
+separately for run-candidate.ps1 and supplied-coordinate replay. If Nsichani still
+has a clone/push/local-run problem, collect the exact error; account Write is live.
+Final competition submission and public publication remain separately authorized.
+
+---
+Historical checkpoints below retain their original version/status scope.
+
 # Current repository release — 2026-11-17T02:43:07.457333+00:00
 
 Local acceptance COMPLETE for frozen noise-v2 + coordinate replay2.1. Publication

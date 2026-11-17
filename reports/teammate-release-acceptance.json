@@ -128,5 +128,19 @@
     "Harness/tool setup failures and synchronization corrections are retained privately; candidate runtime unchanged."
   ],
   "operational_receipt_excluded_from_manifest": true,
-  "publication": "Owner authorized; Git push and remote readback recorded separately in continuity checkpoint."
+  "publication": {
+    "verified_utc": "2026-11-17T02:45:36.860568+00:00",
+    "runtime_release_commit": "d322e1990275abe96670e46a9f94529bb52c75d4",
+    "private": true,
+    "fresh_remote_checkout_all242_files_match": true,
+    "collaborator": {
+      "username": "Nsichani",
+      "permission": "write",
+      "can_pull": true,
+      "can_push": true,
+      "pending_invitation": false
+    },
+    "competition_submitted": false,
+    "note": "This excluded operational receipt records verified runtime publication; a subsequent metadata-only commit binds these updated checkpoints."
+  }
 }
