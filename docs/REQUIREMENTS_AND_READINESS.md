@@ -28,8 +28,9 @@ controlled the ball. A touch, deflection or aerial duel without subsequent
 control is not itself a turnover. Dead play has no requested team owner: its
 answer is `D`. The organizer
 [FAQ](https://github.com/metrica-sports/more-than-a-hack-2027/blob/main/FAQ.md)
-explicitly publishes `[110808,113742)` as 2,934 graded dead-play frames before
-the second kickoff.
+publishes `[110808,113742)` as 2,934 graded dead-play frames before
+the second kickoff. This safety-branch candidate does not force that interval to `D`;
+it uses model evidence for all graded frames.
 
 ## Inputs, predictions and ground truth have different roles
 
