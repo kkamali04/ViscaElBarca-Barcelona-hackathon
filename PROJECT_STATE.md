@@ -1,3 +1,59 @@
+# Repository rename COMPLETE — 2026-11-17T17:11:24.278216+00:00
+
+Team ViscaElBarca. Public repository:
+https://github.com/kkamali04/ViscaElBarca-Barcelona-hackathon
+Same GitHub ID1460569563, ownership/history/branches retained; Nsichani has Write.
+Old web URL redirects to the new URL. Canonical origin is updated; its local
+folder remains barcelona-possession-hackathon so running viewer paths remain
+valid. Localhost viewer remains ready. No competition submission has occurred.
+
+Reviewed source/documentation commit: de262bd926319ae7073574027fd3e2fb4b733481.
+Fresh anonymous clone matched all257 tracked paths; new README clone/cd commands,
+agent guide, technical document/readiness URLs and scoped manifests are pushed.
+The final operational checkpoint-only commit records this completed readback;
+its exact head is retained privately after publication to avoid a self-hash loop.
+Historical checkpoints keep their original repository names and source scopes.
+
+Frozen package repository-rename-1 SHA256:
+ba9c852dfa02a28a4280da8ceb510460dce2f288f5e60fbe589495199512aea5.
+No scientific/runtime/model changes. Fresh pre-access fork-none independent
+acceptance: fresh Python3.13.11 package/env, two uncached actual XML/TXT-to-CSV
+processes, exact199319 ordered frame,label rows, independent current official
+validator, deterministic bytes,6 invented validator cases, missing-input and
+sentinel preservation,245TEAM/22REPLAY/105PACKAGE records,47 local doc links,
+fresh new-URL clone and bounded six-frame invented browser/API replay oracles.
+Root rehashed10 evidence artifacts, checked the independent physical outputs,
+and reproduced with a separate fresh export/env on Python3.13.12: exact contract,
+official validator, safe missing-input failure and source preservation. All three
+actual CSVs are byte-identical. Workers measured74.494s/78.407s independent and
+83.055s root; retained post-exit OS peaks117530624/117686272/118960128bytes.
+Working-set figures exclude browser/cache and do not establish hidden accuracy.
+
+Tester directory-name heuristic falsely flagged unchanged public research/data
+catalog/provenance documents. Content/provenance and baseline-byte checks resolved
+that false positive; source was never changed. Tester overwrote the initial scan
+report before preserving its bytes/hash. Final report explicitly records this
+limitation; the initial root transcript retains its text and the saved artifact
+is labeled reconstruction, not original. Actual/source evidence remains intact.
+
+Private review files: submissions/ViscaElBarca-review-20261117/ViscaElBarca.csv and
+ViscaElBarca.md. Technical copy now uses the new repository URL and the exact CSV
+filename passed the official validator again. No teammate edits were overwritten.
+Friend should review eligibility, technical document and the exact approved
+revision. Main's frozen CSV and the separate preserved safety branch are distinct;
+if inference changes, regenerate/revalidate the CSV from that revision. Submit
+CSV,new public URL and technical document through the emailed form yourselves.
+Supplied deadline TODAY Nov17,2026 at23:59CET /17:59NewYork. Hidden score unknown.
+
+Owner-only evidence: local/rename-20261117/PLAN.md,FREEZE.json,ROOT_E2E.json,
+ROOT_BLIND_REVIEW.json,STAGE_GATE.json,blind/FINAL_BLIND_ACCEPTANCE.md,
+IDENTITY_AND_TEAM_FILES.json and FINAL_PUBLIC_READBACK.json. No GT,tuning,
+restricted model-facing content,new paid compute or form submission. Stop here
+after final checkpoint readback; no new recurring monitoring.
+
+---
+Historical checkpoints below retain their dates, names and tested versions.
+
 # Repository rename IN PROGRESS — 2026-11-17T16:58:04.248295+00:00
 
 Owner authorized exact rename to ViscaElBarca-Barcelona-hackathon. GitHub now:
