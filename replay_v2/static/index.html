@@ -10,30 +10,40 @@
   <script type="module" src="/static/app.js"></script>
 </head>
 <body>
+  <section id="launch-help" aria-labelledby="launch-title">
+    <h1 id="launch-title">Start the tracking viewer</h1>
+    <p>This HTML file needs the local application. Open the repository in PowerShell and run:</p>
+    <pre><code>.\replay.ps1 -Demo</code></pre>
+    <p>For the match, generate predictions from the supplied tracking and then open the replay:</p>
+    <pre><code>.\start-match.ps1 -DataDir 'C:\path\to\challenge\data'</code></pre>
+    <p><a href="http://127.0.0.1:8771/">Open the running viewer on port 8771</a> · <a href="http://127.0.0.1:8767/">Open the owner's current viewer on port 8767</a></p>
+    <p>If you already opened a local address, make sure the launcher is still running and JavaScript is enabled. See README.md for Python setup.</p>
+  </section>
+  <div id="app-shell" hidden>
   <header class="masthead">
     <a class="brand" href="/" aria-label="Touchline tracking replay"><span class="brand-mark" aria-hidden="true"><i></i></span>TOUCHLINE<span class="brand-divider"></span><span class="brand-product">Tracking replay</span></a>
     <span class="local-tag"><span></span>LOCAL VIEWER</span>
   </header>
   <main>
     <section class="page-heading" aria-labelledby="page-title">
-      <div><p class="eyebrow">COORDINATE REPLAY / V2</p><h1 id="page-title">The game, frame by frame.</h1><p class="intro">Explore observed positions with an independent possession overlay.</p></div>
+      <div><p class="eyebrow">COORDINATE REPLAY / V2</p><h1 id="page-title">Team possession, frame by frame.</h1><p class="intro">Supplied tracking → possession algorithm → prediction CSV. This page replays the observations and optional predictions.</p></div>
       <div class="source-pill" id="mode-badge">Connecting to tracking…</div>
     </section>
 
     <div class="workspace">
       <section class="viewer panel" aria-label="Tracking replay player">
         <div class="viewer-heading"><div><span class="section-dot"></span><h2>Pitch view</h2><span class="muted" id="pitch-size">105.3 × 68 m</span></div><span id="status" class="state-pill" role="status" aria-live="polite">Connecting</span></div>
+        <div class="transport">
+          <div class="seek-labels"><output id="clock" for="seek">00:00.00</output><span id="duration">—</span></div>
+          <label class="sr-only" for="seek">Replay frame</label><input id="seek" type="range" min="0" max="0" step="1" value="0" disabled>
+          <div class="transport-actions"><div class="playback-buttons"><button class="icon-button step-button" id="previous" type="button" title="Previous frame" aria-label="Previous frame" disabled>‹</button><button id="play" class="play-button" type="button" disabled><span aria-hidden="true">▶</span><span>Play</span></button><button class="icon-button step-button" id="next" type="button" title="Next frame" aria-label="Next frame" disabled>›</button><span class="keyboard-hint">Space to play / pause</span></div><label class="speed-label" for="speed">Speed <select id="speed" disabled><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div>
+        </div>
         <div class="pitch-stage" id="pitch-stage">
           <canvas id="pitch" aria-label="Player and ball coordinates on a football pitch">This replay needs a browser with canvas support.</canvas>
           <div class="pitch-caption"><span id="source-caption">Coordinate stream</span><span>METRES · TOP VIEW</span></div>
           <div class="stage-message" id="stage-message" role="status"><span class="loader" aria-hidden="true"></span><strong id="stage-title">Opening the replay</strong><span id="stage-detail">Waiting for metadata from the local viewer.</span><button id="retry" type="button" hidden>Try again</button></div>
         </div>
         <div class="viewer-footer"><div class="legend"><span><i class="home-dot"></i>Home slots</span><span><i class="away-dot"></i>Away slots</span><span><i class="ball-dot"></i>Ball</span></div><span class="frame-counter" id="frame-counter">FRAME — / —</span></div>
-        <div class="transport">
-          <div class="seek-labels"><output id="clock" for="seek">00:00.00</output><span id="duration">—</span></div>
-          <label class="sr-only" for="seek">Replay frame</label><input id="seek" type="range" min="0" max="0" step="1" value="0" disabled>
-          <div class="transport-actions"><div class="playback-buttons"><button class="icon-button step-button" id="previous" type="button" title="Previous frame" aria-label="Previous frame" disabled>‹</button><button id="play" class="play-button" type="button" disabled><span aria-hidden="true">▶</span><span>Play</span></button><button class="icon-button step-button" id="next" type="button" title="Next frame" aria-label="Next frame" disabled>›</button><span class="keyboard-hint">Space to play / pause</span></div><label class="speed-label" for="speed">Speed <select id="speed" disabled><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div>
-        </div>
       </section>
 
       <aside class="inspector" aria-label="Replay details">
@@ -44,5 +54,6 @@
     </div>
     <footer class="page-footer"><span>READ-ONLY TRACKING VIEWER</span><span>CSV generation and export remain in the separate review app.</span></footer>
   </main>
+  </div>
 </body>
 </html>

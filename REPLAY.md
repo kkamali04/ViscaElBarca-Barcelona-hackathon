@@ -15,6 +15,20 @@ That opens **invented tracking**, useful for testing and sharing screenshots.
 For your locally downloaded challenge data, choose the directory containing
 `tactical/` and optionally an existing possession CSV:
 
+For a complete fresh inference-to-viewer run:
+
+```powershell
+.\start-match.ps1 -DataDir 'C:\path\to\challenge\data'
+```
+
+This runs uncached ATD-to-label inference, writes a unique local/match-runs/
+CSV/report, validates the output format and launches the coordinate replay with
+that generated CSV. It does not read GT or an existing prediction CSV to generate
+the answer. Use `-Port` for another free port or `-NoBrowser` for terminal-only
+startup. Keep the launcher running; original inputs and prior outputs stay intact.
+
+To replay a separately generated CSV without rerunning inference:
+
 ```powershell
 .\replay.ps1 -DataDir 'C:\path\to\challenge\data' -Predictions 'C:\path\to\candidate.csv'
 ```
@@ -73,3 +87,12 @@ check, not evidence of improved possession accuracy or hidden-test performance.
 
 Restricted match inputs may be processed locally by code. Model-facing browser
 tests and screenshots must use invented tracking only.
+
+## Opening the viewer correctly
+
+Open the localhost address printed by a launcher. Double-clicking the static
+HTML file displays launch instructions because modules need the local server.
+If no application is running, start it before opening the link. The demo displays
+invented coordinates and **No CSV overlay**; use start-match.ps1 with authorized
+ATD inputs to generate real predictions. The replay controls sit above the pitch
+on desktop and mobile so Play is reachable without scrolling past the canvas.

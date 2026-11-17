@@ -11,6 +11,9 @@ const ui = Object.fromEntries(['pitch', 'pitch-stage', 'seek', 'play', 'previous
   'ball-status', 'bounds-status', 'visible-slots', 'missing-slots', 'outside-slots', 'fps',
   'frame-counter', 'mode-badge', 'source-caption', 'pitch-size', 'motion-note',
   'stage-message', 'stage-title', 'stage-detail', 'retry'].map(id => [id, $(id)]));
+// Keep raw file:// opening and failed module loading readable instead of a broken app.
+document.getElementById('app-shell').hidden = false;
+document.getElementById('launch-help').hidden = true;
 const context = ui.pitch.getContext('2d');
 let metadata = null;
 let clock = null;

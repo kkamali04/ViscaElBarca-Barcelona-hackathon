@@ -30,6 +30,8 @@ coordinates. Its possession panel shows **No CSV overlay**; no match download
 is needed. Keep PowerShell running; stop with **Ctrl+C** or
 `.\stop-replay.ps1` from another shell.
 
+Use the launcher and local address; opening a static HTML file shows launch help.
+
 ![Coordinate replay with invented demo data](assets/replay-demo.png)
 
 *Screenshot: invented demo tracking, with no CSV overlay.*
@@ -47,15 +49,21 @@ Replace the placeholder below with a data root containing
 
 ```powershell
 $DataRoot = 'C:\path\to\challenge\data'
-.\run-candidate.ps1 --data-dir $DataRoot --no-cache
-.\replay.ps1 -DataDir $DataRoot -Predictions '.\submissions\candidate.csv'
+.\start-match.ps1 -DataDir $DataRoot
 ```
 
-Inference writes `submissions/candidate.csv` and `reports/candidate-run.json`,
-including the official format check. Replay opens with **Supplied tracking**;
-opening it does not rerun inference. Omit `-Predictions` to view coordinates alone.
+This recomputes predictions from ATD with the frozen model, checks the format,
+writes a fresh CSV/report under ignored `local/match-runs/`, then opens
+**Supplied tracking** with that output attached. It does not use a precomputed
+possession CSV as inference input. Choose another port with `-Port 8772` if needed.
+Separate inference/replay commands remain in [REPLAY.md](REPLAY.md).
 Inputs, CSVs, caches and environments stay local and outside Git. Model-facing
 screenshots and browser tests must use invented data.
+
+The organizer permits tracking-only algorithms. **A label for every frame is
+required; decoding every video frame is optional.** Ground truth and hand-edited
+match labels are forbidden training/tuning inputs. See the
+[requirements and submission-readiness review](docs/REQUIREMENTS_AND_READINESS.md).
 
 ## Read the pitch and labels
 

@@ -1,0 +1,213 @@
+{
+  "schema": "render-repair-acceptance-v1",
+  "generated_utc": "2026-11-17T05:33:19.705066+00:00",
+  "pass": true,
+  "revision": "replay2.2-render-repair-1",
+  "selected_model": "noise-v2 unchanged",
+  "source_zip_sha256": "649438e9242dba9f86bb816e7c6ccb6315bce436b6d3daa792d04b1949c95460",
+  "source_publication_paths": 248,
+  "source_bound_payload_records": 238,
+  "unchanged_parent_payload_records": 226,
+  "team_manifest_sha256": "70c74a558cd4c2adf65e09de27e7c24aec55f785e8df06befe026dae97c5eb44",
+  "replay_manifest_sha256": "c2476d90239982cd209545eb892edb6d5d4bfd285bd61bbb7efd2249466792f4",
+  "readme_sha256": "3fe97c2e314d1be2c8d58f35009c563dfd74c37dc390b45f7914c809e47cf07c",
+  "requirements_audit_sha256": "1330dd81a799fecc73f94ac900ffbb6ed9ef3c04a6d47b3d705082e8fd402c9d",
+  "independent_report_sha256": "a470b946c6bd07d1640fcc3640a3d7a6a4c7f99bab816e5a54bc7d2225ec65c1",
+  "root_report_sha256": "797ae5c44f50127f3987a6e88d492498667ce7794d8bc899d0838d19eda543e5",
+  "root_extras_sha256": "95879d20e32d98d788f383d984c00f5be5feaa69a2112187c4b758d950e1dc85",
+  "fresh_exports_and_python313_environments": 2,
+  "completed_uncached_inference_runs": 4,
+  "identical_output_sha256": "d000a49eb8db71ac94da4877abe5b85506d05be233db1f43644df1e4c9e653fd",
+  "all_four_exact_ordered_199319_and_official_validator_pass": true,
+  "independent_gates": {
+    "nonexistent": true,
+    "missing_input": true,
+    "occupied_port": true,
+    "deterministic_bytes": true,
+    "inference_failure_no_viewer": true,
+    "immutable_source_model_inputs": true,
+    "two_fresh_launcher_runs": true,
+    "exact_contract": true,
+    "official_validator": true,
+    "served_source_csv_binding": true,
+    "independent_endpoint_coordinates": true,
+    "local_headless_actual_fidelity": true,
+    "fresh_python313_environment": true
+  },
+  "root_gates": {
+    "nonexistent": true,
+    "missing_input": true,
+    "occupied_port": true,
+    "deterministic_bytes": true,
+    "inference_failure_no_viewer": true,
+    "immutable_source_model_inputs": true,
+    "two_fresh_launcher_runs": true,
+    "exact_contract": true,
+    "official_validator": true,
+    "served_source_csv_binding": true,
+    "independent_endpoint_coordinates": true,
+    "local_headless_actual_fidelity": true,
+    "fresh_python313_environment": true
+  },
+  "independent_invented_ui": {
+    "passed": true,
+    "gates": {
+      "raw_file_launch_guidance": true,
+      "external_assets_existing_csp": true,
+      "layout_1280_720_dpr1": true,
+      "layout_1280_720_dpr2": true,
+      "layout_1440_900_dpr1": true,
+      "layout_1440_900_dpr2": true,
+      "layout_390_844_dpr1": true,
+      "layout_390_844_dpr2": true,
+      "invented_frame_alignment_missingness_sides": true,
+      "label_independent_coordinates": true,
+      "wall_clock_1x": true,
+      "real_pause_holds_frame": true,
+      "wall_clock_2x": true,
+      "missing_gap_hidden_during_play": true,
+      "browser_store_three_windows": true,
+      "stale_seek_cannot_replace_latest": true,
+      "safe_backend_error": true,
+      "backend_recovery": true,
+      "invented_terminal_frame_oracle": true,
+      "terminal_replay_restarts": true,
+      "invented_demo_no_overlay": true
+    },
+    "clock": [
+      {
+        "speed": 1,
+        "elapsed_seconds": 1.238,
+        "frame_delta": 30
+      },
+      {
+        "speed": 2,
+        "elapsed_seconds": 1.2377999999523164,
+        "frame_delta": 61
+      }
+    ],
+    "failures": [],
+    "layout_cases": 6
+  },
+  "root_invented_ui": {
+    "passed": true,
+    "gates": {
+      "raw_file_launch_guidance": true,
+      "external_assets_existing_csp": true,
+      "layout_1280_720_dpr1": true,
+      "layout_1280_720_dpr2": true,
+      "layout_1440_900_dpr1": true,
+      "layout_1440_900_dpr2": true,
+      "layout_390_844_dpr1": true,
+      "layout_390_844_dpr2": true,
+      "invented_frame_alignment_missingness_sides": true,
+      "label_independent_coordinates": true,
+      "wall_clock_1x": true,
+      "real_pause_holds_frame": true,
+      "wall_clock_2x": true,
+      "missing_gap_hidden_during_play": true,
+      "browser_store_three_windows": true,
+      "stale_seek_cannot_replace_latest": true,
+      "safe_backend_error": true,
+      "backend_recovery": true,
+      "invented_terminal_frame_oracle": true,
+      "terminal_replay_restarts": true,
+      "invented_demo_no_overlay": true
+    },
+    "clock": [
+      {
+        "speed": 1,
+        "elapsed_seconds": 1.236600000023842,
+        "frame_delta": 30
+      },
+      {
+        "speed": 2,
+        "elapsed_seconds": 1.2365,
+        "frame_delta": 61
+      }
+    ],
+    "failures": [],
+    "layout_cases": 6
+  },
+  "actual_local_headless_fidelity": {
+    "independent_samples": 17,
+    "root_samples": 17,
+    "active_owner_samples": 17,
+    "each_sample_has_independent_local_atd_and_prediction_oracle": true,
+    "no_actual_screenshots_or_dom_or_rows_exposed": true
+  },
+  "root_manifest_and_legacy_checks": {
+    "manifest_records_valid": true,
+    "legacy_export_members": 106,
+    "legacy_generation_and_export_passed": true,
+    "legacy_zip_sha256": "a06eb6323ebf68658ae626b97e8b98a75acbfbeb109b9e7a7556eadfe03b582c"
+  },
+  "runtime_measurements": [
+    {
+      "tester": "independent",
+      "inference_seconds": 57.09626339998795,
+      "workflow_ready_seconds": 59.84450960002141,
+      "python_worker_lifetime_peak_bytes": 119062528,
+      "sampled_process_tree_peak_bytes": 214966272
+    },
+    {
+      "tester": "independent",
+      "inference_seconds": 53.116332500008866,
+      "workflow_ready_seconds": 55.83045130001847,
+      "python_worker_lifetime_peak_bytes": 118988800,
+      "sampled_process_tree_peak_bytes": 214695936
+    },
+    {
+      "tester": "root",
+      "inference_seconds": 55.176001899992116,
+      "workflow_ready_seconds": 89.61520109995035,
+      "python_worker_lifetime_peak_bytes": 119373824,
+      "sampled_process_tree_peak_bytes": 219987968
+    },
+    {
+      "tester": "root",
+      "inference_seconds": 57.30868499999633,
+      "workflow_ready_seconds": 60.42161690001376,
+      "python_worker_lifetime_peak_bytes": 119160832,
+      "sampled_process_tree_peak_bytes": 214425600
+    }
+  ],
+  "resource_scope": "Python worker OS lifetime PeakWorkingSetSize; process-tree peak sampled separately. Browser memory is not benchmarked. Root first workflow includes cold replay preparation; subsequent workflows reuse replay storage but recompute inference with --no-cache.",
+  "owner_viewer": {
+    "url": "http://127.0.0.1:8771/",
+    "ready": true,
+    "mode": "local",
+    "generated_prediction_binding": true,
+    "actual_aggregate_browser_pass": true
+  },
+  "preserved_harness_corrections": [
+    {
+      "tester": "independent",
+      "issue": "Terminal frame is End of recording, not necessarily Paused.",
+      "candidate_changed": false,
+      "original_evidence_preserved": true
+    },
+    {
+      "tester": "independent",
+      "issue": "Pause comparison must wait for queued animation-frame painting to settle.",
+      "candidate_changed": false,
+      "original_evidence_preserved": true
+    },
+    {
+      "tester": "root",
+      "issue": "Export intentionally rejects destination outside project; root reproduction destination corrected to source/local.",
+      "candidate_changed": false,
+      "original_harness_and_failure_record_preserved": true
+    }
+  ],
+  "limits": [
+    "Format/runtime/rendering acceptance does not establish hidden possession accuracy or rank.",
+    "Actual browser coordinate fidelity sampled at17 predeclared uniform positions per tester, not all199319 rendered frames.",
+    "Headless Chrome layouts checked at1280x720,1440x900,390x844 with DPR1/2.",
+    "Supplied tracking gaps and jumps are retained; viewer is not video detection or corrected tracking.",
+    "Public repository, registered team identity/eligibility and final competition submission remain pending."
+  ],
+  "submission_performed": false,
+  "public_visibility_changed": false,
+  "private_evidence_root": "Original owner project local/repair-20261117; logs, fixtures, hashes, failed attempts and reproducible harnesses are retained locally."
+}

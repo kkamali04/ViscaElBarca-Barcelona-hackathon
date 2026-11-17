@@ -1,18 +1,28 @@
 {
   "format": "touchline-tracking-replay-v2-source-2",
-  "runtime_revision": "2.1",
-  "repository_release_revision": "1",
-  "created_utc": "2026-11-17T02:18:59.659437+00:00",
+  "runtime_revision": "2.2",
+  "repository_release_revision": "render-repair-1",
+  "created_utc": "2026-11-17T05:14:50.294151+00:00",
   "files": [
     {
       "path": "REPLAY.md",
-      "bytes": 3772,
-      "sha256": "ccef0c33cf6178e0e41eb15f7704301023050ebfb5a5d1fa1ad3b4b44233c953"
+      "bytes": 4874,
+      "sha256": "9858c30662b66716c88371723011afc059c6df5be366a16ab1a09d3f1cf4bbb1"
+    },
+    {
+      "path": "docs/REQUIREMENTS_AND_READINESS.md",
+      "bytes": 8809,
+      "sha256": "88fd5d363c918d623e9ea40343bb483724ac67e4798097795693cf24b95b8bc8"
+    },
+    {
+      "path": "docs/TECHNICAL_SUBMISSION.md",
+      "bytes": 9170,
+      "sha256": "59e67a8d2aed6c2b79e32c07f8e8f7c32b38700adeb9cdbcc68569779234060c"
     },
     {
       "path": "docs/VIEWER_GUIDE.md",
-      "bytes": 5423,
-      "sha256": "88d5615bd043203693df62051be8b8ddde94a6ef40c0c67b33b4d3d3e5291d07"
+      "bytes": 6076,
+      "sha256": "1c3e5d0358291f1a6d5e5d3c5abbc2437a5282e2be549d6a5742274a06d31f83"
     },
     {
       "path": "replay.ps1",
@@ -36,13 +46,13 @@
     },
     {
       "path": "replay_v2/static/app.css",
-      "bytes": 10630,
-      "sha256": "5238e9abb768ae81bbd1f6d3b942527cc2135674c7749e55ae71cb6bbf35af04"
+      "bytes": 11644,
+      "sha256": "3e59b304dec97aca4245cb14681da0d4c5dcf947b9bdb5711a7028aadd257e4e"
     },
     {
       "path": "replay_v2/static/app.js",
-      "bytes": 22094,
-      "sha256": "248a94988b0afd17e89b86d0a022915185341a01daeae1fcc601eaae3b6aafd6"
+      "bytes": 22289,
+      "sha256": "0b0b6f0a1a6276a5d0a82301086112158ad9ce734ee13e979e99ddfec9e25a9d"
     },
     {
       "path": "replay_v2/static/clock.js",
@@ -51,8 +61,8 @@
     },
     {
       "path": "replay_v2/static/index.html",
-      "bytes": 5594,
-      "sha256": "7e0928e6e9c7a51b6e85c4d76aa4d16a8fc6911d5fb5366956a5cc5041452e28"
+      "bytes": 6474,
+      "sha256": "6cbd504b27cba72945228f19ee02033eb17b4cd88c492bd00dd4f2e464764d40"
     },
     {
       "path": "replay_v2/store.py",
@@ -80,21 +90,33 @@
       "sha256": "6509b56ac6b6b78bfa918c9bba8bf6ea8f32d533cee7b5e27ca2c4a4f9e70b80"
     },
     {
+      "path": "specs/007-rendering-repair/CONTRACT.md",
+      "bytes": 3656,
+      "sha256": "ba528a1d1df8150c3b72fe03aee607862d424244d6405da174570fc24197d582"
+    },
+    {
+      "path": "start-match.ps1",
+      "bytes": 2631,
+      "sha256": "e3d177dd1df99bed0ccb70c7d9a001afc917ffadb44f11fdefdc83d70e404a71"
+    },
+    {
       "path": "stop-replay.ps1",
       "bytes": 1024,
       "sha256": "a15e6a0094a2eb5998020d932366cbea5dc0aac0a1d63962bf25d96e3a50b2c2"
     }
   ],
   "repository_manifest": "TEAM_REPO_MANIFEST.json",
-  "repository_manifest_sha256": "094d5829d423369c1dac08564144ee92116f50d5251646ee9af0f935a850d0f1",
-  "supersedes_manifest_sha256": "bf52dc7b8aa6864c857d5f5b7305eeee30ca046672eef3354dd2e98f2460b6bb",
+  "repository_manifest_sha256": "70c74a558cd4c2adf65e09de27e7c24aec55f785e8df06befe026dae97c5eb44",
+  "supersedes_manifest_sha256": "2a5bc5b1ab9b3cb107d882f39918d5a331b157cd770899bb4282c1ac17650874",
   "operational_docs_excluded": [
-    "PROJECT_STATE.md",
     "AGENTIC_GOAL.md",
-    "replay_v2/PROJECT_STATE.md",
+    "PROJECT_STATE.md",
     "replay_v2/AGENTIC_GOAL.md",
+    "replay_v2/PROJECT_STATE.md",
+    "reports/render-repair-acceptance.json",
+    "reports/teammate-release-acceptance.json",
     "specs/006-teammate-release/TASKS.md",
-    "reports/teammate-release-acceptance.json"
+    "specs/007-rendering-repair/TASKS.md"
   ],
-  "note": "Runtime remains v2.1; current documentation/package records refreshed under separate owner-authorized repository release. No circular manifest binding."
+  "note": "Versioned viewer/launcher repair; wire API stays v2 and frozen estimator is unchanged. No circular hashes. Separate fresh acceptance required."
 }

@@ -1,3 +1,123 @@
+# Rendering repair checkpoint - 2026-11-17T05:33:19.705066+00:00
+
+Status: COMPLETE for replay2.2-render-repair-1 implementation and bounded E2E
+acceptance. Selected noise-v2 scientific model/runtime unchanged. Source archive
+SHA256 649438e9242dba9f86bb816e7c6ccb6315bce436b6d3daa792d04b1949c95460; 248 publication paths,238 payload records,
+226 unchanged parent records. Parent83acd3f and historical evidence preserved.
+
+Fixed raw-file broken assets/Connecting via readable launch help, put transport
+before pitch and within laptop viewports, corrected viewport sizing, documented
+ATD input vs prediction CSV, and added start-match.ps1 fresh uncached inference
+then replay. README now has exact quickstart and an invented-only screenshot.
+
+Independent fork-none reviewer and root each used a fresh export/Python3.13
+environment. Four completed uncached actual inference runs yielded identical
+199319-row ordered CSVs and all passed official validation. Missing root/pair,
+occupied port and malformed inference fail safely. Own models/source/inputs stayed
+unchanged. Actual local headless endpoint/render comparison passed17 predeclared
+uniform recording positions per tester; active owner instance also passed17.
+No actual data/GT/DOM/screenshots were exposed to model tools or uploaded.
+
+Independent + root invented browser acceptance passed six desktop/mobile/DPR
+layouts, raw-file guidance/CSP, wall-clock1x/2x/pause, exact supplied slots and
+gaps, labels independent of coordinates, bounded store, stale seek rejection,
+backend failure/recovery, final frame and restart. Manifest and legacy invented
+generation/106-member export checks passed. Original failed tester predicates
+and root export-destination mistake are preserved, corrected and reproduced;
+none required a candidate change. See reports/render-repair-acceptance.json.
+
+Root inference55.176s/57.309s; workflow ready89.615s cold and60.422s warm.
+Python worker lifetime peak119373824/119160832 bytes (not browser memory).
+Owner viewer is ready at http://127.0.0.1:8771/ with verified generated CSV;
+existing8767 was preserved. Use served URLs; raw HTML gives launch instructions.
+
+Requirements audit checked11 official upstream files against organizer commit
+f8f2629ff1e0985f81d7e59d8413678514ee1530. Tracking-only algorithms are allowed;
+per-frame label output is mandatory, video decoding optional. No selected-path
+GT/prior prediction copying found. Historical unrecorded tuning cannot be
+proven absent by source metadata. Public restart interval is official FAQ data.
+
+Current limitations: hidden accuracy unknown; actual rendering sampled, not
+exhaustively viewed; automatic gaps/jumps remain. Registered team name/eligibility
+pending, repository private, no competition submission/public visibility change.
+Technical submission draft and readiness matrix are in docs/. Nsichani Write
+permission was reverified live. No further training or model promotion performed.
+
+Exact owner commands from C:\college-github\barcelona-possession-hackathon:
+.\start-match.ps1 -DataDir 'C:\college-github\college-main\Hackathon\Barcelona Hackathon\more-than-a-hack-2027-main\data' -Port 8772
+(8771 is currently running; -Port8772 starts a separate fresh inference/viewer.)
+Stop the owner viewer with .\stop-replay.ps1 -Port 8771 -CacheDir '.\local\replay-v2-owner'.
+
+Private complete evidence and reproduction scripts: original owner project
+local/repair-20261117/manager/ and blind-acceptance/. Final private Git publication
+is verified separately there; no restricted files belong in Git. Next owner steps:
+review viewer, confirm registered team name and eligibility, review technical
+draft, then separately authorize public visibility and competition submission.
+
+---
+Historical checkpoints below do not override this tested version.
+
+# Rendering repair checkpoint — 2026-11-17T05:14:50.294151+00:00
+
+Phase: source FROZEN for new independent acceptance; not yet verified. Reopened
+user report of broken HTML is addressed by readable raw-file launch help, hidden
+uninitialized shell, controls before pitch, laptop-height layout, explicit data
+flow and start-match.ps1 fresh uncached ATD inference→generatedCSV→replay.
+Frozen noise-v2 model and all16 configured scientific source fingerprints match.
+Original83acd3f and old reports retained; current UI revision2.2 has separate evidence.
+
+Independent requirements audit verified current public organizer source, tracking-
+only permission, input vs predicted CSV separation and public FAQ restart interval.
+No selected-path GT/corrected ownership/prior prediction copying found. Historical
+no-tuning claims remain bounded by recorded evidence, not independently provable
+through source metadata alone. Requirements/readiness and technical draft added;
+registered teamname unknown, repo private, competition not submitted.
+
+Author invented browser checks cover raw fallback, UTF-8 controls,1280x720,
+1440x900,390x844 layouts and playback. These are author checks, not acceptance.
+Root initial actual headless diagnostic emitted aggregates only; final actual
+rendering acceptance still required. No actual screenshot/DOM/positions/labels
+enter model tools; code-only aggregate tests are allowed under the privacy policy.
+
+Next: fresh blind export/env, actual start-match input-to-CSV twice with exact
+contract/official validator/determinism/true-worker resources/safe failure and
+actual aggregate-only browser checks. Root fresh reproduction, honest checkpoint,
+leave fixed owner viewer usable. No new training, public release or submission.
+Evidence: original owner local/repair-20261117/; current receipt pending at
+reports/render-repair-acceptance.json. Source archive/hash ledger retained there.
+
+---
+Historical checkpoints below; prior completion does not validate this repair.
+
+# Latest checkpoint — rendering repair ACTIVE 2026-11-17T05:07:06.119187+00:00
+
+User reports broken HTML and asks for complete E2E and a requirements audit.
+Current objective: reproduce/fix rendering and make ATD→algorithm→CSV→replay a
+clear usable workflow. Organizer permits supplied tracking; per-frame output is
+mandatory, per-video-frame decoding is optional. No GT/prediction copying/tuning.
+Both repositories pulled --ff-only before changes. Scientific model/runtime stay
+frozen; new UI/launcher repair is versioned separately, original83acd3f preserved.
+
+Independent diagnosis reproduced raw file:// failure: missing CSS/module CORS,
+Connecting/disabled Play. Normal laptop layouts also put Play below the fold.
+Root local-code-only actual browser diagnostic saw served tracking, advancing
+clock/markers and seven seeking checks; no actual screenshots/DOM/coordinates/
+labels entered model tools. Initial backing-scale/pause predicates need rounding/
+render-settlement correction before interpreting those two aggregate checks.
+
+Changes in progress: static HTML launch help when served module is absent,
+controls before pitch, viewport-aware layout, honest data-flow copy, and a single
+start-match.ps1 command for fresh ATD inference then replay. New spec007 and
+updated manifests pending. Backup: local/repair-20261117/manager/before-render-repair.zip.
+Independent requirements/source audit and demo stress diagnosis in parallel.
+Next: implement wrapper/docs, freeze, fresh blind acceptance with independently
+derived fixtures; actual two-run inference/validator/determinism/worker resources,
+and local headless actual browser aggregate-only rendering. Root reproduces and
+leaves owner viewer usable. No competition submission or public visibility change.
+
+---
+Historical checkpoints below are superseded for this reopened task.
+
 # Current checkpoint — published release verified 2026-11-17T02:45:36.860568+00:00
 
 Status: COMPLETE. Runtime release commit d322e1990275abe96670e46a9f94529bb52c75d4 is published to the existing

@@ -22,6 +22,17 @@ Keep the launcher running while viewing. Stop with Ctrl+C, or
 `-CacheDir`, give the stop script the same directory. See [REPLAY.md](../REPLAY.md)
 for supplied-data commands and cache details.
 
+For the complete match workflow, run
+`.\start-match.ps1 -DataDir 'C:\path\to\challenge\data'`. It reads the tactical
+ATD files, generates and checks a fresh possession CSV, then opens this viewer
+with that output. The CSV is an algorithmic result, not an answer key supplied
+to inference. The organizer permits tracking-only algorithms; video decoding is
+optional, while one output label per video frame is required.
+
+Open the printed localhost address. Raw static HTML now shows launch help instead
+of a broken Connecting screen. Play/seek/speed sit above the pitch. The original
+review application's illustrative pitch is not this coordinate replay.
+
 ## What the dots mean
 
 | Marker | Meaning |

@@ -1,8 +1,8 @@
 {
   "format": "teammate-code-repository-v2",
-  "created_utc": "2026-11-17T02:18:59.659437+00:00",
-  "base_commit": "259b1c3a0b71cae13b680d67097b40cffff4a009",
-  "supersedes_manifest_sha256": "c458e30d6373d55e58d5ecd198f399c2860e9ec49d4e962db5a09b8cbdeba4a7",
+  "created_utc": "2026-11-17T05:14:50.294151+00:00",
+  "base_commit": "83acd3f1b4238c8caaa5136205865d89b1ee6255",
+  "supersedes_manifest_sha256": "094d5829d423369c1dac08564144ee92116f50d5251646ee9af0f935a850d0f1",
   "source_base_zip_sha256": "a06eb6323ebf68658ae626b97e8b98a75acbfbeb109b9e7a7556eadfe03b582c",
   "source_base_members": 106,
   "files": [
@@ -73,18 +73,18 @@
     },
     {
       "path": "PACKAGE_MANIFEST.json",
-      "bytes": 18905,
-      "sha256": "ceb43755ce98981625fff096aeeaf00972316831af8be3b756f6b79e5f6107d3"
+      "bytes": 18360,
+      "sha256": "f9c95576d72fb4c7ed5428f2f44b0620473acb41890fb75f48dbb77dcb48e37e"
     },
     {
       "path": "README.md",
-      "bytes": 3653,
-      "sha256": "bdeb7c3faa1dc1caf29c774ed29452cd64cf04ec75ad7d3c2d002faf3e712bce"
+      "bytes": 4090,
+      "sha256": "3fe97c2e314d1be2c8d58f35009c563dfd74c37dc390b45f7914c809e47cf07c"
     },
     {
       "path": "REPLAY.md",
-      "bytes": 3772,
-      "sha256": "ccef0c33cf6178e0e41eb15f7704301023050ebfb5a5d1fa1ad3b4b44233c953"
+      "bytes": 4874,
+      "sha256": "9858c30662b66716c88371723011afc059c6df5be366a16ab1a09d3f1cf4bbb1"
     },
     {
       "path": "SOLUTION.md",
@@ -123,8 +123,8 @@
     },
     {
       "path": "assets/replay-demo.png",
-      "bytes": 112723,
-      "sha256": "5708d736b4d1346e9b0c5dbef772e510440971bd1432364ef393cafab6403d3a"
+      "bytes": 107460,
+      "sha256": "f9a844255630776feba15771006ebfe8c160d09b4040e7869e7f21bc00455628"
     },
     {
       "path": "benchmarks/speed_reuse/.gitignore",
@@ -152,9 +152,19 @@
       "sha256": "acb4057472a62488b2333b36ffd4a8bfe82d5f8208acc30b46b4888fbb2ef9dc"
     },
     {
+      "path": "docs/REQUIREMENTS_AND_READINESS.md",
+      "bytes": 8809,
+      "sha256": "88fd5d363c918d623e9ea40343bb483724ac67e4798097795693cf24b95b8bc8"
+    },
+    {
+      "path": "docs/TECHNICAL_SUBMISSION.md",
+      "bytes": 9170,
+      "sha256": "59e67a8d2aed6c2b79e32c07f8e8f7c32b38700adeb9cdbcc68569779234060c"
+    },
+    {
       "path": "docs/VIEWER_GUIDE.md",
-      "bytes": 5423,
-      "sha256": "88d5615bd043203693df62051be8b8ddde94a6ef40c0c67b33b4d3d3e5291d07"
+      "bytes": 6076,
+      "sha256": "1c3e5d0358291f1a6d5e5d3c5abbc2437a5282e2be549d6a5742274a06d31f83"
     },
     {
       "path": "experiments/__init__.py",
@@ -513,13 +523,13 @@
     },
     {
       "path": "replay_v2/static/app.css",
-      "bytes": 10630,
-      "sha256": "5238e9abb768ae81bbd1f6d3b942527cc2135674c7749e55ae71cb6bbf35af04"
+      "bytes": 11644,
+      "sha256": "3e59b304dec97aca4245cb14681da0d4c5dcf947b9bdb5711a7028aadd257e4e"
     },
     {
       "path": "replay_v2/static/app.js",
-      "bytes": 22094,
-      "sha256": "248a94988b0afd17e89b86d0a022915185341a01daeae1fcc601eaae3b6aafd6"
+      "bytes": 22289,
+      "sha256": "0b0b6f0a1a6276a5d0a82301086112158ad9ce734ee13e979e99ddfec9e25a9d"
     },
     {
       "path": "replay_v2/static/clock.js",
@@ -528,8 +538,8 @@
     },
     {
       "path": "replay_v2/static/index.html",
-      "bytes": 5594,
-      "sha256": "7e0928e6e9c7a51b6e85c4d76aa4d16a8fc6911d5fb5366956a5cc5041452e28"
+      "bytes": 6474,
+      "sha256": "6cbd504b27cba72945228f19ee02033eb17b4cd88c492bd00dd4f2e464764d40"
     },
     {
       "path": "replay_v2/store.py",
@@ -987,6 +997,16 @@
       "sha256": "578a6e274f6b0c47cb509fa2e23510f02bff2f640ee4632520d60956cf9bdfe4"
     },
     {
+      "path": "specs/007-rendering-repair/CONTRACT.md",
+      "bytes": 3656,
+      "sha256": "ba528a1d1df8150c3b72fe03aee607862d424244d6405da174570fc24197d582"
+    },
+    {
+      "path": "start-match.ps1",
+      "bytes": 2631,
+      "sha256": "e3d177dd1df99bed0ccb70c7d9a001afc917ffadb44f11fdefdc83d70e404a71"
+    },
+    {
       "path": "stop-replay.ps1",
       "bytes": 1024,
       "sha256": "a15e6a0094a2eb5998020d932366cbea5dc0aac0a1d63962bf25d96e3a50b2c2"
@@ -1211,6 +1231,8 @@
     "benchmarks/speed_reuse/acceptance.py",
     "benchmarks/speed_reuse/oracle.py",
     "docs/REPOSITORY_SCOPE.md",
+    "docs/REQUIREMENTS_AND_READINESS.md",
+    "docs/TECHNICAL_SUBMISSION.md",
     "docs/VIEWER_GUIDE.md",
     "experiments/__init__.py",
     "experiments/noise_v2/__init__.py",
@@ -1303,6 +1325,7 @@
     "reports/noise-v2-holdout.json",
     "reports/noise-v2-validation.json",
     "reports/release-blind-acceptance.json",
+    "reports/render-repair-acceptance.json",
     "reports/replay-ball-diagnostic.json",
     "reports/speed-bottleneck-source-audit.json",
     "reports/speed-historical-timing-audit.json",
@@ -1382,6 +1405,9 @@
     "specs/005-tracking-replay/TASKS.md",
     "specs/006-teammate-release/CONTRACT.md",
     "specs/006-teammate-release/TASKS.md",
+    "specs/007-rendering-repair/CONTRACT.md",
+    "specs/007-rendering-repair/TASKS.md",
+    "start-match.ps1",
     "stop-replay.ps1",
     "stop-review.ps1",
     "tests/test_blind_adversarial.py",
@@ -1424,25 +1450,31 @@
   "self_excluded": true,
   "other_manifest_excluded": "REPLAY_MANIFEST.json",
   "mutable_operational_documents_excluded": [
-    "PROJECT_STATE.md",
     "AGENTIC_GOAL.md",
-    "replay_v2/PROJECT_STATE.md",
+    "PROJECT_STATE.md",
     "replay_v2/AGENTIC_GOAL.md",
+    "replay_v2/PROJECT_STATE.md",
+    "reports/render-repair-acceptance.json",
+    "reports/teammate-release-acceptance.json",
     "specs/006-teammate-release/TASKS.md",
-    "reports/teammate-release-acceptance.json"
+    "specs/007-rendering-repair/TASKS.md"
   ],
   "restricted_assets_included": false,
   "prediction_timelines_included": false,
   "scientific_preservation": {
-    "base_commit": "259b1c3a0b71cae13b680d67097b40cffff4a009",
-    "unchanged_base_records": 212,
-    "authorized_base_changes": [
-      "AGENTIC_GOAL.md",
+    "base_commit": "83acd3f1b4238c8caaa5136205865d89b1ee6255",
+    "unchanged_parent_records": 226,
+    "active_config_and_all16_source_hashes_match": true,
+    "authorized_parent_changes": [
       "PACKAGE_MANIFEST.json",
-      "PROJECT_STATE.md",
       "README.md",
-      "docs/REPOSITORY_SCOPE.md"
+      "REPLAY.md",
+      "assets/replay-demo.png",
+      "docs/VIEWER_GUIDE.md",
+      "replay_v2/static/app.css",
+      "replay_v2/static/app.js",
+      "replay_v2/static/index.html"
     ]
   },
-  "note": "REPLAY_MANIFEST binds this manifest one-way. Git commits bind excluded operational receipts/checkpoints. Historical reports retain their original tested scopes."
+  "note": "Replay2.2 rendering/workflow repair. Prior reports retain their tested source versions; no estimator/model semantic change. Operational receipt/checkpoint exclusions are explicit."
 }
