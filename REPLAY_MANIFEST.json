@@ -1,13 +1,13 @@
 {
   "format": "touchline-tracking-replay-v2-source-2",
-  "runtime_revision": "2.3.2",
-  "repository_release_revision": "repository-rename-1",
-  "created_utc": "2026-11-17T16:58:04.248295+00:00",
+  "runtime_revision": "2.4.0",
+  "repository_release_revision": "video-comparison-3",
+  "created_utc": "2026-11-17T18:52:11.680423+00:00",
   "files": [
     {
       "path": "REPLAY.md",
-      "bytes": 5849,
-      "sha256": "8549fc1ded8f35fff5128e403132f75d1a7cd7b55b4550e7d324f159392053b6"
+      "bytes": 6987,
+      "sha256": "5753ed67b274d0cf6b4c79c247f3eefa37adb4e73ad7c8eab147e317edf64da9"
     },
     {
       "path": "docs/MORNING_REVIEW.md",
@@ -25,9 +25,14 @@
       "sha256": "098027cecbac3a46791f11d7ff75f6d4c77af25956acdae511cb2e7fc9f82124"
     },
     {
+      "path": "docs/VIDEO_COMPARISON.md",
+      "bytes": 5198,
+      "sha256": "7cbd591361765d0520e37ba797a88056f9a846f1a9e49deff488448d356f701c"
+    },
+    {
       "path": "docs/VIEWER_GUIDE.md",
-      "bytes": 6386,
-      "sha256": "9db7bcf3ba6fcb04ec804faea2a87254030179eb81bc6aa6c5c3b6f5157e9171"
+      "bytes": 7043,
+      "sha256": "2691b752d852336f57edf0c45ba921943de66d81fe3e714d8e3c43ef3f9b4d7f"
     },
     {
       "path": "replay.ps1",
@@ -46,18 +51,18 @@
     },
     {
       "path": "replay_v2/server.py",
-      "bytes": 10365,
-      "sha256": "dc2a23e4e0d41b0c85b8055da1f02dce96ded0622726cefe5dca40c119fbb5d8"
+      "bytes": 10611,
+      "sha256": "fe969f53dba7c738a0d4bfea8ac96906e2fc3077b827d5a6d9472200d923687b"
     },
     {
       "path": "replay_v2/static/app.css",
-      "bytes": 11644,
-      "sha256": "3e59b304dec97aca4245cb14681da0d4c5dcf947b9bdb5711a7028aadd257e4e"
+      "bytes": 16639,
+      "sha256": "f61e79203397d86776b20d474b5ba671a6e06f65a0109ba5907ee48c98ad4caf"
     },
     {
       "path": "replay_v2/static/app.js",
-      "bytes": 22874,
-      "sha256": "1fd804b280a1eb2925ad09036b794aa19d4f7791547ff7393f9bec0b5e9d609b"
+      "bytes": 26784,
+      "sha256": "e04a1a91eef6464f6752df12ceb0be63a2262890307cde4a8e0641c7d95faf75"
     },
     {
       "path": "replay_v2/static/clock.js",
@@ -66,8 +71,18 @@
     },
     {
       "path": "replay_v2/static/index.html",
-      "bytes": 6474,
-      "sha256": "6cbd504b27cba72945228f19ee02033eb17b4cd88c492bd00dd4f2e464764d40"
+      "bytes": 7601,
+      "sha256": "f3119f0d91dcf31878bb508186cacab7df368fff4d662c98e2173859d6dd6bfb"
+    },
+    {
+      "path": "replay_v2/static/motion.js",
+      "bytes": 8387,
+      "sha256": "93302dc1e016cda566bd97c074bd2007c0bb8235ec09c9ae766b03b1fb53c933"
+    },
+    {
+      "path": "replay_v2/static/video.js",
+      "bytes": 20167,
+      "sha256": "f217971b38347f990ee25f897f7c4dbea7bce1f1ac19e17dde739e862f64e12a"
     },
     {
       "path": "replay_v2/store.py",
@@ -116,8 +131,8 @@
     }
   ],
   "repository_manifest": "TEAM_REPO_MANIFEST.json",
-  "repository_manifest_sha256": "bec9343de62965264131a9dcf9f15de90455faea87ff31510229bbe0f6d01dd5",
-  "supersedes_manifest_sha256": "9f47423ec1e26e4788380b9ca995542555c68ebfe787c9820825e26affb79876",
+  "repository_manifest_sha256": "ce01537dfbbfea38dc09ffafb3d498fb17ea16eb14f52dcf950cc5ae7ff6a374",
+  "supersedes_manifest_sha256": "8affef19dcf66af41183ffac97250cd09e20f801b42d92bd8e48f73213826639",
   "operational_docs_excluded": [
     "AGENTIC_GOAL.md",
     "PROJECT_STATE.md",
@@ -130,5 +145,5 @@
     "specs/007-rendering-repair/TASKS.md",
     "specs/008-release-hardening/TASKS.md"
   ],
-  "note": "Repository name/URL documentation refresh; replay runtime remains2.3.2 and frozen noise-v2. Requires version-specific package acceptance."
+  "note": "Display2.4.0 optional local native-video timeline/manual Drive preview and honest natural/exact/last-seen rendering. Frozen noise-v2 and source coordinates unchanged; requires independent version-specific acceptance."
 }

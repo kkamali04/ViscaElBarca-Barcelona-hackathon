@@ -16,6 +16,8 @@ APP = "touchline-tracking-replay"
 ASSETS = {"/": ("index.html", "text/html; charset=utf-8"),
           "/static/app.css": ("app.css", "text/css; charset=utf-8"),
           "/static/app.js": ("app.js", "text/javascript; charset=utf-8"),
+          "/static/motion.js": ("motion.js", "text/javascript; charset=utf-8"),
+          "/static/video.js": ("video.js", "text/javascript; charset=utf-8"),
           "/static/clock.js": ("clock.js", "text/javascript; charset=utf-8")}
 INTEGER = re.compile(r"(?:0|[1-9][0-9]{0,9})\Z", flags=re.ASCII)
 MAX_RESPONSE_BYTES = 1024 * 1024
@@ -62,7 +64,7 @@ class ReplayService:
 
     def health(self):
         with self._lock:
-            return {"app": APP, "version": 2, "mode": self.mode, "status": self._status}
+            return {"app": APP, "version": 2, "display_version": "2.4.0", "mode": self.mode, "status": self._status}
 
     def metadata(self):
         with self._lock:
@@ -114,7 +116,7 @@ class ReplayHandler(BaseHTTPRequestHandler):
         self.send_header("Cache-Control", "no-store")
         self.send_header("X-Content-Type-Options", "nosniff")
         self.send_header("Referrer-Policy", "no-referrer")
-        self.send_header("Content-Security-Policy", "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'")
+        self.send_header("Content-Security-Policy", "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data:; media-src 'self' blob:; frame-src https://drive.google.com; object-src 'none'; base-uri 'none'; frame-ancestors 'none'")
         self.send_header("Connection", "close")
         for key, value in (extra or {}).items():
             self.send_header(key, str(value))

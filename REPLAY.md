@@ -65,14 +65,17 @@ directory. Opening this viewer does not run possession inference.
 ## Reading the pitch
 
 - Play, pause, seek, single-frame steps and speed controls use ATD frame time.
-  Frame zero corresponds to ATD record one. The clock follows elapsed wall time.
+  Frame zero corresponds to ATD record one. Standalone playback follows elapsed
+  wall time; a deliberately linked local MP4 supplies the shared media clock.
 - Player dots are anonymous track slots, colored by the metadata's home/away
   side. Fragmented slots do not establish a persistent player identity.
-- A ball or player disappears when its coordinate pair is missing. The viewer
-  does not invent a position between missing observations.
-- Adjacent finite observations interpolate for display only when separated by
-  at most eight metres. Larger jumps snap. The viewport has eight metres of
-  padding; finite positions beyond it are counted separately from missing data.
+- Missing observations stay unobserved. Optional stationary dashed player
+  last-seen markers fade within 0.24 seconds; they are not current observations.
+- Natural display uses bounded adjacent curves with presentation guards of
+  15 m/s for player slots and 75 m/s for the ball. Larger changes hold then snap;
+  source endpoints stay exact. Exact samples disables interpolation. No gap is
+  bridged and no ball position is invented. Eight metres of pitch padding remain;
+  finite positions beyond it are counted separately from missing data.
 - The optional CSV supplies the current H/A/D/X possession state. Without a CSV,
   coordinates still replay, and possession is explicitly unavailable. A valid
   CSV initially opens at its first non-X frame; all frames remain seekable.
@@ -87,8 +90,23 @@ Preparation streams observations into a private disk cache under
 `local/replay-v2/`. It reads original files without moving or altering them.
 Content hashes bind the metadata, tracking, optional CSV and parser version;
 cache bytes are checked before reuse and while serving windows. The browser
-retains at most three 250-frame coordinate windows. No video decoder or GPU is
-needed. Changing the CSV currently rebuilds the combined coordinate/label cache.
+retains at most three 250-frame coordinate windows. Tracking alone needs no video
+decoder or GPU. Optional local comparison uses one native browser video decoder
+and a file object URL, with no whole-file JavaScript buffer or upload. Changing
+the CSV currently rebuilds the combined coordinate/label cache.
+
+## Compare the actual footage
+
+Choose the local tactical MP4 and intentionally enable **Link controls — same
+tactical timeline**. Full tactical offset is 0. Native playback, timeline seeks,
+steps and speed share the video clock. Clips need the documented viewing offset;
+broadcast cuts/replays cannot be aligned throughout with one offset.
+
+An optional Google Drive file link opens a sandboxed **independent/manual**
+preview. It cannot share our controls; permission/cookie/processing failures use
+the local-file fallback. No Drive request occurs until the user clicks its button.
+See [the video and motion guide](docs/VIDEO_COMPARISON.md) for all controls,
+coverage boundaries, source states and limitations. No CSV or model is modified.
 
 Data, caches, CSV outputs and virtual environments are ignored locally. Never
 add challenge inputs, tokens or large originals to Git. The tracked size hook

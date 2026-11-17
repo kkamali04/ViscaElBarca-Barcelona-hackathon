@@ -1,7 +1,7 @@
 import { createPlaybackClock } from './clock.js';
+import { getDisplayMotion, getGhosts } from './motion.js';
+import { createVideoComparison } from './video.js';
 
-// A display rule only. Source samples are never changed or extrapolated.
-const MAX_INTERPOLATED_STEP_METRES = 8;
 const VIEW_PADDING_METRES = 8;
 const MAX_WINDOWS = 3;
 const REQUEST_TIMEOUT_MS = 15000;
@@ -10,7 +10,8 @@ const ui = Object.fromEntries(['pitch', 'pitch-stage', 'seek', 'play', 'previous
   'speed', 'clock', 'duration', 'status', 'possession', 'possession-detail',
   'ball-status', 'bounds-status', 'visible-slots', 'missing-slots', 'outside-slots', 'fps',
   'frame-counter', 'mode-badge', 'source-caption', 'pitch-size', 'motion-note',
-  'stage-message', 'stage-title', 'stage-detail', 'retry'].map(id => [id, $(id)]));
+  'stage-message', 'stage-title', 'stage-detail', 'retry', 'motion-mode',
+  'show-ghosts', 'ghost-slots', 'catalog-size', 'live-possession'].map(id => [id, $(id)]));
 // Keep raw file:// opening and failed module loading readable instead of a broken app.
 document.getElementById('app-shell').hidden = false;
 document.getElementById('launch-help').hidden = true;
@@ -24,6 +25,17 @@ let failed = false;
 let stateName = '';
 let messageKey = '';
 let lastPositions = null;
+let lastGhosts = [];
+let comparison = null;
+
+function timelineState(timestamp) {
+  return comparison?.snapshot() || clock?.snapshot(timestamp);
+}
+
+function pausePlayback() {
+  comparison?.pause();
+  clock?.pause();
+}
 
 function formatTime(frames, fps) {
   const centiseconds = Math.floor(Math.max(0, frames) / fps * 100 + 1e-7);
@@ -52,14 +64,16 @@ function stageMessage(title = '', detail = '', retry = false) {
 }
 
 function disableControls(disabled) {
-  for (const id of ['seek', 'play', 'previous', 'next', 'speed']) ui[id].disabled = disabled;
+  for (const id of ['seek', 'play', 'previous', 'next', 'speed', 'motion-mode', 'show-ghosts']) ui[id].disabled = disabled;
 }
 
 function showFailure(message = 'The local coordinate stream could not be read. Check that the launcher is running, then choose Try again.') {
   failed = true;
-  if (clock) clock.pause();
+  pausePlayback();
+  comparison?.suspend();
   if (store) store.invalidate();
   lastPositions = null;
+  lastGhosts = [];
   drawPitch(null);
   clearObservationReadout();
   disableControls(true);
@@ -67,6 +81,7 @@ function showFailure(message = 'The local coordinate stream could not be read. C
   stageMessage('Replay unavailable', message, true);
   ui['ball-status'].textContent = 'Unavailable';
   ui.possession.textContent = 'Unavailable';
+  ui['live-possession'].textContent = 'Unavailable';
   ui['possession-detail'].textContent = 'No current prediction is shown while the replay is unavailable.';
   updatePlayButton();
 }
@@ -218,27 +233,21 @@ function validateMetadata(meta) {
 }
 
 function updatePlayButton() {
-  const playing = clock?.snapshot().playing || false;
-  const ended = clock?.snapshot().ended || false;
+  const state = timelineState();
+  const playing = state?.playing || false;
+  const ended = state?.ended || false;
   ui.play.children[0].textContent = playing ? 'Ⅱ' : ended ? '↻' : '▶';
   ui.play.children[1].textContent = playing ? 'Pause' : ended ? 'Replay' : 'Play';
   ui.play.setAttribute('aria-label', playing ? 'Pause replay' : ended ? 'Replay from beginning' : 'Play replay');
   ui.play.setAttribute('aria-pressed', String(playing));
-}
-
-function interpolatePair(current, next, index, fraction) {
-  const x = current[index];
-  const y = current[index + 1];
-  if (!Number.isFinite(x) || !Number.isFinite(y)) return null;
-  if (!next || fraction === 0 || !Number.isFinite(next[index]) || !Number.isFinite(next[index + 1])) return { x, y, jump: false };
-  const dx = next[index] - x;
-  const dy = next[index + 1] - y;
-  if (Math.hypot(dx, dy) > MAX_INTERPOLATED_STEP_METRES) return { x, y, jump: true };
-  return { x: x + dx * fraction, y: y + dy * fraction, jump: false };
-}
-
-function observedPositions(row, next, fraction) {
-  return Array.from({ length: metadata.slots.length + 1 }, (_, index) => interpolatePair(row, next, index * 2, fraction));
+  if (state?.speed) {
+    if (!Array.from(ui.speed.options).some(option => Number(option.value) === state.speed)) {
+      for (const option of Array.from(ui.speed.querySelectorAll('[data-native-rate]'))) option.remove();
+      const option = new Option(`${state.speed}×`, String(state.speed));
+      option.dataset.nativeRate = 'true'; ui.speed.add(option);
+    }
+    ui.speed.value = String(state.speed);
+  }
 }
 
 function fitCanvas() {
@@ -254,11 +263,13 @@ function fitCanvas() {
   return { width: width / ratio, height: height / ratio };
 }
 
-function drawPitch(positions) {
+function drawPitch(positions, ghosts = []) {
   const { width, height } = fitCanvas();
   context.clearRect(0, 0, width, height);
   context.fillStyle = '#183c34';
   context.fillRect(0, 0, width, height);
+  // Layout can briefly report a zero-sized canvas during viewport transitions.
+  if (width < 32 || height < 48) return;
   const [length, breadth] = metadata?.pitch || [105.3, 68];
   const bounds = { left: -VIEW_PADDING_METRES, right: length + VIEW_PADDING_METRES,
     top: -VIEW_PADDING_METRES, bottom: breadth + VIEW_PADDING_METRES };
@@ -295,6 +306,18 @@ function drawPitch(positions) {
   }
   context.fillStyle = '#b9d4bc85';
   context.beginPath(); context.arc(px(length / 2), py(breadth / 2), 1.5, 0, Math.PI * 2); context.fill();
+  // A reconnected page can resize before its new metadata arrives.
+  if (!metadata) return;
+  for (const ghost of ghosts) {
+    if (outsideViewport(ghost)) continue;
+    context.save();
+    context.globalAlpha = Math.max(0, Math.min(1, ghost.alpha)) * .65;
+    context.setLineDash([2.5, 3]);
+    context.strokeStyle = metadata.slots[ghost.slot].side === 'H' ? '#5ee1be' : '#f6ae7f';
+    context.lineWidth = 1.5;
+    context.beginPath(); context.arc(px(ghost.x), py(ghost.y), 7.2, 0, Math.PI * 2); context.stroke();
+    context.restore();
+  }
   for (let index = 0; index < (positions?.length || 0); index += 1) {
     const point = positions[index];
     if (!point || outsideViewport(point)) continue;
@@ -306,9 +329,17 @@ function drawPitch(positions) {
     context.beginPath(); context.arc(px(point.x), py(point.y), radius, 0, Math.PI * 2);
     context.fillStyle = color; context.fill();
     context.shadowBlur = 0; context.shadowOffsetY = 0;
-    context.lineWidth = isBall ? 1.1 : 1.5; context.strokeStyle = isBall ? '#29483d' : '#143c33'; context.stroke();
+    context.lineWidth = isBall ? 1.1 : 1.5; context.strokeStyle = point.jump ? '#f9d26c' : isBall ? '#29483d' : '#143c33';
+    if (point.display === 'held') context.setLineDash([2, 2]);
+    context.stroke(); context.setLineDash([]);
     if (isBall) {
       context.beginPath(); context.arc(px(point.x), py(point.y), 1.2, 0, Math.PI * 2); context.fillStyle = '#65766c'; context.fill();
+    }
+    if (!isBall && Number.isFinite(point.heading)) {
+      context.strokeStyle = '#0d3a31'; context.lineWidth = 1.6;
+      context.beginPath(); context.moveTo(px(point.x), py(point.y));
+      context.lineTo(px(point.x) + Math.cos(point.heading) * 8, py(point.y) + Math.sin(point.heading) * 8);
+      context.stroke();
     }
     context.restore();
   }
@@ -320,7 +351,7 @@ function outsideViewport(point) {
     point.y < -VIEW_PADDING_METRES || point.y > breadth + VIEW_PADDING_METRES;
 }
 
-function updateObservations(positions, row) {
+function updateObservations(positions, row, ghosts) {
   const players = positions.slice(0, metadata.slots.length);
   const observed = players.filter(Boolean).length;
   const visible = players.filter(point => point && !outsideViewport(point)).length;
@@ -329,29 +360,40 @@ function updateObservations(positions, row) {
   const [length, breadth] = metadata.pitch;
   const outside = positions.filter(point => point && (point.x < 0 || point.x > length || point.y < 0 || point.y > breadth)).length;
   const jumps = positions.filter(point => point?.jump).length;
-  ui['visible-slots'].textContent = `${visible} / ${metadata.slots.length}`;
+  ui['visible-slots'].textContent = String(visible);
+  ui['catalog-size'].textContent = `${metadata.slots.length} anonymous slots · not a player count`;
+  ui['ghost-slots'].textContent = String(ghosts.length);
   ui['missing-slots'].textContent = String(metadata.slots.length - observed);
-  ui['missing-slots'].dataset.warning = String(observed < metadata.slots.length);
+  ui['missing-slots'].dataset.warning = 'false';
   ui['outside-slots'].textContent = String(players.filter(point => point && outsideViewport(point)).length);
   ui['outside-slots'].dataset.warning = String(outsideView > 0);
-  ui['ball-status'].textContent = ball ? outsideViewport(ball) ? 'Observed · outside view' : 'Observed' : 'Unobserved';
+  ui['ball-status'].textContent = ball ? outsideViewport(ball) ? 'Outside view' :
+    ball.display === 'interpolated' ? 'Interpolated display' : ball.display === 'held' ? 'Held sample' : 'Observed sample' : 'Unobserved';
   ui['ball-status'].dataset.warning = String(!ball || outsideViewport(ball));
   ui['bounds-status'].textContent = outside ? `${outside} off-pitch` : 'Within pitch';
   ui['bounds-status'].dataset.warning = String(outside > 0);
-  ui['motion-note'].textContent = jumps ? `${jumps} large adjacent ${jumps === 1 ? 'jump' : 'jumps'} · snapping at the next sample.` : 'Missing observations stay hidden; adjacent gaps never interpolate.';
+  const interpolated = positions.filter(point => point?.display === 'interpolated').length;
+  const held = positions.filter(point => point?.display === 'held').length;
+  ui['motion-note'].textContent = `${ui['motion-mode'].value === 'exact' ? 'Exact source samples.' : 'Bounded natural display.'} ` +
+    `${interpolated} interpolated · ${held} held · ${jumps} adjacent discontinuities. ` +
+    (ghosts.length ? `${ghosts.length} dashed last-seen markers are unobserved.` : 'No travel is invented across missing samples.');
   const codeNumber = row[metadata.row_floats - 1];
   const code = Number.isInteger(codeNumber) && codeNumber >= 0 && codeNumber <= 3 ? metadata.label_codes[codeNumber] : null;
   const values = { H: ['Home', 'Home possession · existing CSV label'], A: ['Away', 'Away possession · existing CSV label'],
     D: ['Dead ball', 'Dead-ball state · existing CSV label'], X: ['No answer', 'CSV label X · play state unspecified'] };
   ui.possession.textContent = code ? values[code][0] : 'No CSV overlay';
+  ui['live-possession'].textContent = ui.possession.textContent;
+  ui['live-possession'].dataset.code = code || '';
   ui.possession.dataset.code = code || '';
   ui['possession-detail'].textContent = code ? values[code][1] : 'No prediction label is available at this frame.';
 }
 
 function clearObservationReadout() {
-  for (const id of ['visible-slots', 'missing-slots', 'outside-slots', 'bounds-status']) ui[id].textContent = '—';
+  for (const id of ['visible-slots', 'missing-slots', 'outside-slots', 'bounds-status', 'ghost-slots']) ui[id].textContent = '—';
   ui['ball-status'].textContent = 'Buffering';
   ui.possession.textContent = '—';
+  ui['live-possession'].textContent = '—';
+  ui['live-possession'].dataset.code = '';
   ui.possession.dataset.code = '';
   ui['possession-detail'].textContent = 'Waiting for this frame’s coordinate window.';
 }
@@ -359,31 +401,41 @@ function clearObservationReadout() {
 function render(timestamp) {
   animationPending = false;
   if (!clock || failed) return;
-  const state = clock.snapshot(timestamp);
+  const state = timelineState(timestamp);
   const frame = state.frame;
   const fraction = state.position - frame;
   const nextFrame = Math.min(frame + 1, metadata.frames - 1);
   const row = store.row(frame);
-  const next = fraction > 0 ? store.row(nextFrame) : null;
+  const needsNext = fraction > 0 && ui['motion-mode'].value === 'natural';
+  const next = needsNext ? store.row(nextFrame) : null;
   ui.seek.value = String(frame);
   ui.clock.textContent = formatTime(state.position, metadata.fps);
   ui['frame-counter'].textContent = `FRAME ${frame.toLocaleString('en-US')} / ${(metadata.frames - 1).toLocaleString('en-US')}`;
   ui.pitch.dataset.frame = String(frame);
   updatePlayButton();
-  if (!row || (fraction > 0 && !next)) {
+  if (!row || (needsNext && !next)) {
     lastPositions = null;
+    lastGhosts = [];
     drawPitch(null);
     clearObservationReadout();
     setStatus('Buffering', 'buffering');
     stageMessage('Buffering coordinates', 'Playback time is preserved while this frame window loads.');
     if (!row) store.request(frame, true);
-    if (fraction > 0 && !next) store.request(nextFrame, true);
+    if (needsNext && !next) store.request(nextFrame, true);
   } else {
     stageMessage();
     setStatus(state.ended ? 'End of recording' : state.playing ? 'Playing' : 'Paused');
-    lastPositions = observedPositions(row, next, fraction);
-    drawPitch(lastPositions);
-    updateObservations(lastPositions, row);
+    const previous = frame > 0 ? store.row(frame - 1) : null;
+    const following = frame + 2 < metadata.frames ? store.row(frame + 2) : null;
+    const motion = getDisplayMotion({ row, next: next || store.row(nextFrame), previous, following,
+      fraction, slots: metadata.slots, fps: metadata.fps, mode: ui['motion-mode'].value });
+    lastPositions = motion.positions;
+    lastGhosts = ui['show-ghosts'].checked ? getGhosts({ frame: state.position, slots: metadata.slots,
+      fps: metadata.fps, lookup: index => store.row(index), maxAgeSeconds: .24 }) : [];
+    drawPitch(lastPositions, lastGhosts);
+    updateObservations(lastPositions, row, lastGhosts);
+    if (frame > 0) store.request(frame - 1);
+    if (frame + 2 < metadata.frames) store.request(frame + 2);
     store.prefetch(frame);
   }
   if (state.playing) scheduleRender();
@@ -398,12 +450,16 @@ function scheduleRender() {
 function seekTo(frame) {
   if (!clock || failed) return;
   store.invalidate();
-  clock.seek(frame);
+  lastGhosts = [];
+  if (!comparison?.seek(frame)) clock.seek(frame);
   scheduleRender();
 }
 
-function togglePlayback() {
+async function togglePlayback() {
   if (!clock || failed) return;
+  if (await comparison?.toggle()) {
+    updatePlayButton(); scheduleRender(); return;
+  }
   const state = clock.snapshot();
   if (state.playing) clock.pause();
   else {
@@ -419,7 +475,10 @@ async function boot() {
   failed = false;
   disableControls(true);
   if (store) store.invalidate();
-  if (clock) clock.pause();
+  pausePlayback();
+  comparison?.suspend();
+  lastPositions = null;
+  lastGhosts = [];
   metadata = null;
   clock = null;
   store = null;
@@ -459,6 +518,7 @@ async function boot() {
     ui['mode-badge'].classList.toggle('invented', metadata.mode === 'demo');
     ui['source-caption'].textContent = mode;
     ui['possession-detail'].textContent = metadata.predictions_ready ? 'Existing CSV overlay · read-only' : 'No predictions CSV is attached.';
+    comparison?.refresh?.();
     disableControls(false);
     scheduleRender();
   } catch (_) {
@@ -470,23 +530,40 @@ ui.play.addEventListener('click', togglePlayback);
 ui.seek.addEventListener('input', () => seekTo(Number(ui.seek.value)));
 ui.previous.addEventListener('click', () => {
   if (!clock) return;
-  clock.pause(); seekTo(clock.snapshot().frame - 1);
+  pausePlayback(); seekTo(timelineState().frame - 1);
 });
 ui.next.addEventListener('click', () => {
   if (!clock) return;
-  clock.pause(); seekTo(clock.snapshot().frame + 1);
+  pausePlayback(); seekTo(timelineState().frame + 1);
 });
 ui.speed.addEventListener('change', () => {
   if (!clock || failed) return;
-  clock.setSpeed(Number(ui.speed.value));
+  if (!comparison?.setSpeed(Number(ui.speed.value))) clock.setSpeed(Number(ui.speed.value));
   scheduleRender();
 });
 ui.retry.addEventListener('click', boot);
+ui['motion-mode'].addEventListener('change', scheduleRender);
+ui['show-ghosts'].addEventListener('change', scheduleRender);
 document.addEventListener('keydown', event => {
+  // The native video handles Space itself; routing it twice cancels playback.
   if (event.code !== 'Space' || event.altKey || event.ctrlKey || event.metaKey || event.repeat ||
-      ['INPUT', 'SELECT', 'TEXTAREA', 'BUTTON', 'SUMMARY', 'A'].includes(event.target.tagName)) return;
+      ['INPUT', 'SELECT', 'TEXTAREA', 'BUTTON', 'SUMMARY', 'A', 'VIDEO'].includes(event.target.tagName)) return;
   event.preventDefault(); togglePlayback();
 });
-window.addEventListener('resize', () => { if (!clock || failed) drawPitch(lastPositions); else scheduleRender(); });
-window.addEventListener('pagehide', () => { bootEpoch += 1; store?.invalidate(); clock?.pause(); });
+window.addEventListener('resize', () => { if (!clock || failed) drawPitch(lastPositions, lastGhosts); else scheduleRender(); });
+function initializeComparison() {
+  comparison?.destroy();
+  $('video-panel').replaceChildren();
+  comparison = createVideoComparison({ container: $('video-panel'),
+    getReplay: () => clock && metadata && !failed ? { ...clock.snapshot(), fps: metadata.fps, frames: metadata.frames } : null,
+    onChange: () => { updatePlayButton(); scheduleRender(); },
+    onRelease: state => {
+      if (!clock || !state) return;
+      clock.pause(); clock.seek(state.position); clock.setSpeed(state.speed);
+      scheduleRender();
+    } });
+}
+window.addEventListener('pagehide', () => { bootEpoch += 1; store?.invalidate(); pausePlayback(); comparison?.destroy(); });
+window.addEventListener('pageshow', event => { if (event.persisted) { initializeComparison(); boot(); } });
+initializeComparison();
 boot();

@@ -5,6 +5,9 @@ input or resolve the stated disk/permission problem and restart the launcher.
 **Try again** reconnects afterward; it does not reload changed inputs inside an
 existing server. The unavailable state shows no current prediction.
 
+The [video and motion guide](VIDEO_COMPARISON.md) explains optional side-by-side
+MP4 playback, deliberate linked controls, independent Drive preview and display modes.
+
 The coordinate replay displays invented demo positions or positions supplied in
 the ATD files. The optional possession overlay separately reads a CSV produced
 by the estimator. This viewer does not analyze video, assign stable player
@@ -42,9 +45,11 @@ review application's illustrative pitch is not this coordinate replay.
 
 | Marker | Meaning |
 | --- | --- |
-| **Mint / green player dot** | An observed home-side track slot. |
-| **Peach / orange player dot** | An observed away-side track slot. |
-| **Small white ball dot** | An observed ball position. |
+| **Mint / green player dot** | Home-side source slot; natural mode may interpolate between samples. |
+| **Peach / orange player dot** | Away-side source slot; natural mode may interpolate between samples. |
+| **Small white ball dot** | Source ball track; its readout distinguishes observed/interpolated/held display. |
+| **Dashed ring** | Brief stationary last-seen slot location, currently unobserved. |
+| **Yellow outline** | Adjacent source discontinuity flagged by the display guard. |
 
 Team membership comes from ATD metadata. A slot is an anonymous tracker channel,
 not a shirt number or a person. The organizer describes **46 tactical track
@@ -58,9 +63,11 @@ missing on **43% of all frames** and **41% of graded frames**. This is a propert
 of the supplied tracking, not a viewer accuracy measurement. See
 [organizer DATA.md](https://github.com/metrica-sports/more-than-a-hack-2027/blob/main/DATA.md).
 
-Missing coordinate pairs disappear. Adjacent finite observations interpolate
-only for display, up to eight metres per frame. Larger jumps snap; missing gaps
-are not bridged. The pitch includes eight metres of padding. Finite positions
+Missing coordinate pairs remain unobserved; optional stationary dashed last-seen
+player markers fade within 0.24 seconds and never count as current observations. Natural
+display uses bounded adjacent curves with guards of 15 m/s for players and 75 m/s
+for the ball. Larger changes hold then snap. Exact samples disables interpolation;
+missing gaps are never bridged. The pitch includes eight metres of padding. Finite positions
 beyond that area are counted as **outside view**, separately from missing slots.
 The Observations card explains what is currently available.
 

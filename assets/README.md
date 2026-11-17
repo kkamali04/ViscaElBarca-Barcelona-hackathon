@@ -1,7 +1,8 @@
 # Visual assets
 
-- `replay-demo.png`: screenshot of the coordinate viewer with invented tracking
-  and no prediction CSV. It demonstrates the interface, not actual match quality.
+- `replay-demo.png`: screenshot of the comparison viewer with invented tracking,
+  an FFmpeg-generated synthetic test-pattern MP4 and no prediction CSV. It
+  demonstrates controls and layout, not actual match quality or video correspondence.
 - `demo.png`: historical synthetic illustration from the legacy review app.
 - `touchline-concept.png`: conceptual README banner generated with the built-in
   imagegen tool on November 17, 2026. No input match data, screenshots, team marks

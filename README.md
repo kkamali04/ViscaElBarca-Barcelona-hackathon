@@ -23,12 +23,14 @@ flowchart LR
   Model --> CSV["199,319 frame,label rows"]
   ATD --> Replay["Observed-coordinate replay"]
   CSV --> Replay
+  Video["Optional local tactical MP4"] -. "linked playback" .-> Replay
 ```
 
 | What you get | What it does |
 |---|---|
 | **CPU inference** | Generates a label for every tactical frame with pinned dependencies and frozen weights |
-| **Coordinate replay** | Draws supplied player/ball observations, with gaps visible and an optional prediction overlay |
+| **Coordinate replay** | Natural or exact-sample motion, explicit missingness and an optional possession overlay |
+| **Video comparison** | Link a local tactical MP4 to the replay clock, or open an independent Google Drive preview |
 | **Reproducible handoff** | Includes the official validator, provenance, manifests and version-specific acceptance receipts |
 
 The current viewing app is **`replay_v2`**. The older **`review_app` / Touchline
@@ -66,7 +68,13 @@ Use the launcher and local address; opening a static HTML file shows launch help
 
 ![Coordinate replay with invented demo data](assets/replay-demo.png)
 
-*Screenshot: invented demo tracking, with no CSV overlay.*
+*Screenshot: invented tracking and synthetic test-pattern video, with no CSV overlay.*
+
+To compare the actual game, choose your local tactical MP4 in the viewer, then
+check **Link controls — same tactical timeline** and leave offset **0** for the
+full supplied recording. Files stay on your computer. A Drive share link can
+open an **independent preview**; its controls are not synchronized.
+See the [video and motion guide](docs/VIDEO_COMPARISON.md).
 
 This quickstart requires the full repository. The legacy **106-member code-only
 ZIP excludes `replay_v2`**; ZIP users should follow [MVP_REVIEW.md](MVP_REVIEW.md)

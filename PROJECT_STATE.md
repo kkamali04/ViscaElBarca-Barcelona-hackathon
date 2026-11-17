@@ -1,3 +1,163 @@
+# Video comparison2.4.0 — SOURCE ACCEPTED / PROMOTION IN PROGRESS — 2026-11-17T14:05:11.776721-05:00
+
+Owner authorized linked local MP4 comparison, manual Drive preview and improved
+display motion. Frozen source ZIP SHA256 ce4e86ee7661346b9c7106e4d9c9bd7ef48faee1e845a5cc99cbfc1b212464d7.
+Independent invented UI70 positive checks; original stricter Drive-removal
+preference retained and excluded from clarified contract. Natural/exact motion,
+missing-player ghosts, clocks, native keyboard controls, races, lifecycle and
+desktop/mobile passed bounded checks. Two fresh independent actual uncached
+CSV E2Es:52.016s/52.366s, worker peaks119091200/119070720bytes.
+Root fresh export/env reproduction52.854s/119169024bytes, strict199319-row
+contract/current official validator/original CSV identity/source preservation.
+Root full local tactical MP4 checks14/14: shared control/time/CSV overlay at
+start/middle/end, no uploads/external requests/page errors. Actual data remained
+inside local code; only aggregates/hashes entered tools.
+
+Files: replay_v2/static/app.js,app.css,index.html,motion.js,video.js; fixed-asset
+server/CSP; README/REPLAY/viewer/video guides; invented screenshot; current exact
+manifests. Frozen scientific source/model/config/old evidence and submission
+CSV unchanged. No training/tuning/GT/media upload or competition submission.
+
+Limits: Drive external playback/access not verified; Drive controls independent.
+Source gaps/anonymous slot changes remain. Interpolation is presentation, not a
+physics simulator or tracking repair. Hidden-match accuracy unknown. Final
+package reviewer incidentally saw a documented expected hash after oracle freeze,
+never used as oracle. One private targeted tester JSON recovered from exact tool
+stdout after filename reuse; primary acceptance/oracles preserved. Invalid Drive
+input visibly rejects and keeps prior manual source. Commit offset before linking.
+
+Private evidence in owner local/video-comparison-20261117/: FREEZE_3.json,
+PROMOTION_GATE.json, final-ui-blind/REPORT.md, final-package-blind/REPORT.md,
+ROOT_E2E_3.json, ROOT_ACTUAL_VIDEO_3.json. Public baseline remains25e6d3e until
+accepted branch fast-forwards; next: restart/readback8767/8771 and push/verify.
+
+---
+Historical checkpoints retain their original tested versions.
+
+# Video comparison and motion display — FINAL REVISION 3 FREEZE / FRESH BLIND ACCEPTANCE PENDING — 2026-11-17T13:52:11.445305-05:00
+
+Owner authorized local video/Google Drive comparison and improved animation.
+Candidate isolated in local/video-comparison-20261117/candidate on branch
+codex/video-comparison-20261117; canonical main/live viewer retain prior accepted
+25e6d3e7f1c6232b30b2054811c6bc9908fc0536 until fresh independent acceptance.
+
+Scope: browser-local MP4 file selection, deliberate linked tactical-timeline
+playback and offset, independent/manual Drive iframe preview with fallback,
+bounded natural motion/exact samples and short distinct missing-player ghosts.
+No estimator/config/weights/CSV changes, tracking repair, GT/tuning or uploads.
+Actual media/rows/coordinates/DOM/screenshots never model-facing. Invented media
+and fixtures only for model-visible browser tests. No paid cloud compute.
+
+Research: official MDN video/currentTime/frame callbacks/object URLs/same-origin
+and Google Drive help, via Exa/Firecrawl/official web. Important limits: Drive
+iframe cannot use our synchronized controls; broadcast cuts need more than a
+single offset. User must affirm same tactical timeline before native clock link.
+
+Files, phase tasks and API/acceptance contract: local/video-comparison-20261117/
+PRD.md. Root owns integration/docs/manifests; disjoint implementers own video.js
+and motion.js. Blind acceptance must use a frozen fresh package and independent
+invented video/motion oracles plus serialized actual CSV E2E; root reproduces
+changed-source evidence before promotion. No competition submission authorized.
+
+Current phase: FINAL REVISION 3 FREEZE / FRESH BLIND ACCEPTANCE PENDING. Do not equate author checks with independent acceptance.
+Next action: follow the current PRD manager checklist and retained phase artifacts.
+
+---
+Historical checkpoints below retain their tested versions and scopes.
+
+# Video comparison and motion display — REVISION 2 FREEZE / FRESH BLIND ACCEPTANCE PENDING — 2026-11-17T13:42:38.978347-05:00
+
+Owner authorized local video/Google Drive comparison and improved animation.
+Candidate isolated in local/video-comparison-20261117/candidate on branch
+codex/video-comparison-20261117; canonical main/live viewer retain prior accepted
+25e6d3e7f1c6232b30b2054811c6bc9908fc0536 until fresh independent acceptance.
+
+Scope: browser-local MP4 file selection, deliberate linked tactical-timeline
+playback and offset, independent/manual Drive iframe preview with fallback,
+bounded natural motion/exact samples and short distinct missing-player ghosts.
+No estimator/config/weights/CSV changes, tracking repair, GT/tuning or uploads.
+Actual media/rows/coordinates/DOM/screenshots never model-facing. Invented media
+and fixtures only for model-visible browser tests. No paid cloud compute.
+
+Research: official MDN video/currentTime/frame callbacks/object URLs/same-origin
+and Google Drive help, via Exa/Firecrawl/official web. Important limits: Drive
+iframe cannot use our synchronized controls; broadcast cuts need more than a
+single offset. User must affirm same tactical timeline before native clock link.
+
+Files, phase tasks and API/acceptance contract: local/video-comparison-20261117/
+PRD.md. Root owns integration/docs/manifests; disjoint implementers own video.js
+and motion.js. Blind acceptance must use a frozen fresh package and independent
+invented video/motion oracles plus serialized actual CSV E2E; root reproduces
+changed-source evidence before promotion. No competition submission authorized.
+
+Current phase: REVISION 2 FREEZE / FRESH BLIND ACCEPTANCE PENDING. Do not equate author checks with independent acceptance.
+Next action: follow the current PRD manager checklist and retained phase artifacts.
+
+---
+Historical checkpoints below retain their tested versions and scopes.
+
+# Video comparison and motion display — CANDIDATE FREEZE / INDEPENDENT ACCEPTANCE PENDING — 2026-11-17T13:24:55.470596-05:00
+
+Owner authorized local video/Google Drive comparison and improved animation.
+Candidate isolated in local/video-comparison-20261117/candidate on branch
+codex/video-comparison-20261117; canonical main/live viewer retain prior accepted
+25e6d3e7f1c6232b30b2054811c6bc9908fc0536 until fresh independent acceptance.
+
+Scope: browser-local MP4 file selection, deliberate linked tactical-timeline
+playback and offset, independent/manual Drive iframe preview with fallback,
+bounded natural motion/exact samples and short distinct missing-player ghosts.
+No estimator/config/weights/CSV changes, tracking repair, GT/tuning or uploads.
+Actual media/rows/coordinates/DOM/screenshots never model-facing. Invented media
+and fixtures only for model-visible browser tests. No paid cloud compute.
+
+Research: official MDN video/currentTime/frame callbacks/object URLs/same-origin
+and Google Drive help, via Exa/Firecrawl/official web. Important limits: Drive
+iframe cannot use our synchronized controls; broadcast cuts need more than a
+single offset. User must affirm same tactical timeline before native clock link.
+
+Files, phase tasks and API/acceptance contract: local/video-comparison-20261117/
+PRD.md. Root owns integration/docs/manifests; disjoint implementers own video.js
+and motion.js. Blind acceptance must use a frozen fresh package and independent
+invented video/motion oracles plus serialized actual CSV E2E; root reproduces
+changed-source evidence before promotion. No competition submission authorized.
+
+Current phase: CANDIDATE FREEZE / INDEPENDENT ACCEPTANCE PENDING. Do not equate author checks with independent acceptance.
+Next action: follow the current PRD manager checklist and retained phase artifacts.
+
+---
+Historical checkpoints below retain their tested versions and scopes.
+
+# Video comparison and motion display — IMPLEMENTATION IN PROGRESS — 2026-11-17T13:08:44.921146-05:00
+
+Owner authorized local video/Google Drive comparison and improved animation.
+Candidate isolated in local/video-comparison-20261117/candidate on branch
+codex/video-comparison-20261117; canonical main/live viewer retain prior accepted
+25e6d3e7f1c6232b30b2054811c6bc9908fc0536 until fresh independent acceptance.
+
+Scope: browser-local MP4 file selection, deliberate linked tactical-timeline
+playback and offset, independent/manual Drive iframe preview with fallback,
+bounded natural motion/exact samples and short distinct missing-player ghosts.
+No estimator/config/weights/CSV changes, tracking repair, GT/tuning or uploads.
+Actual media/rows/coordinates/DOM/screenshots never model-facing. Invented media
+and fixtures only for model-visible browser tests. No paid cloud compute.
+
+Research: official MDN video/currentTime/frame callbacks/object URLs/same-origin
+and Google Drive help, via Exa/Firecrawl/official web. Important limits: Drive
+iframe cannot use our synchronized controls; broadcast cuts need more than a
+single offset. User must affirm same tactical timeline before native clock link.
+
+Files, phase tasks and API/acceptance contract: local/video-comparison-20261117/
+PRD.md. Root owns integration/docs/manifests; disjoint implementers own video.js
+and motion.js. Blind acceptance must use a frozen fresh package and independent
+invented video/motion oracles plus serialized actual CSV E2E; root reproduces
+changed-source evidence before promotion. No competition submission authorized.
+
+Current phase: IMPLEMENTATION IN PROGRESS. Do not equate author checks with independent acceptance.
+Next action: follow the current PRD manager checklist and retained phase artifacts.
+
+---
+Historical checkpoints below retain their tested versions and scopes.
+
 # Repository rename COMPLETE — 2026-11-17T17:11:24.278216+00:00
 
 Team ViscaElBarca. Public repository:

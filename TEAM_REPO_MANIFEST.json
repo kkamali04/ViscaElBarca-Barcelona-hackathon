@@ -1,8 +1,8 @@
 {
   "format": "teammate-code-repository-v2",
-  "created_utc": "2026-11-17T16:58:04.248295+00:00",
-  "base_commit": "d2e7022094710f9a2bc0a90bb7bd487e765fc772",
-  "supersedes_manifest_sha256": "2f4711ea711991bb1ddd0047c75ff45ce7237d95f3f2c242bb2eacbe7d2e1d8f",
+  "created_utc": "2026-11-17T18:52:11.680423+00:00",
+  "base_commit": "25e6d3e7f1c6232b30b2054811c6bc9908fc0536",
+  "supersedes_manifest_sha256": "615ccbd87b1f8a95aadb1fa7fc42057f2cc93e73d9ce547d440b35eaa50aee61",
   "source_base_zip_sha256": "a06eb6323ebf68658ae626b97e8b98a75acbfbeb109b9e7a7556eadfe03b582c",
   "source_base_members": 106,
   "files": [
@@ -74,17 +74,17 @@
     {
       "path": "PACKAGE_MANIFEST.json",
       "bytes": 18360,
-      "sha256": "2ba51099d1e1ee66c7bfd0e88112dd5840474cf2867729c2ba93383d2499f51d"
+      "sha256": "4271835aa8ef0aea06f270ec3061126a9ae0174d4240b5ab44f1652134d3007e"
     },
     {
       "path": "README.md",
-      "bytes": 7471,
-      "sha256": "68265c910e2b72ec24570c6019436f9aedb2c9d9016800c07e9f14f44d169b5e"
+      "bytes": 8049,
+      "sha256": "bb25285f940b506265c3ec4fcc4b7943d31a79fbaf09750d925c352a626c4bb5"
     },
     {
       "path": "REPLAY.md",
-      "bytes": 5849,
-      "sha256": "8549fc1ded8f35fff5128e403132f75d1a7cd7b55b4550e7d324f159392053b6"
+      "bytes": 6987,
+      "sha256": "5753ed67b274d0cf6b4c79c247f3eefa37adb4e73ad7c8eab147e317edf64da9"
     },
     {
       "path": "SOLUTION.md",
@@ -118,8 +118,8 @@
     },
     {
       "path": "assets/README.md",
-      "bytes": 872,
-      "sha256": "90ee1af7780dfb13b0a87dfceab839c08d9bfd4ab728d0e1d0ce18d0ae2c0c23"
+      "bytes": 952,
+      "sha256": "913f2cab250d89c5b94e7dadc6994e33d829a44af7e20819e1404a8d04410dee"
     },
     {
       "path": "assets/demo.png",
@@ -128,8 +128,8 @@
     },
     {
       "path": "assets/replay-demo.png",
-      "bytes": 107460,
-      "sha256": "f9a844255630776feba15771006ebfe8c160d09b4040e7869e7f21bc00455628"
+      "bytes": 180566,
+      "sha256": "3a96dbb384e45348427cb7ba38ce92b02b9c8a03d5b0b7a97f1357d8696104c0"
     },
     {
       "path": "assets/touchline-concept.png",
@@ -192,9 +192,14 @@
       "sha256": "43fc8e9e63a83eb6eb3ab38cbe876ac50f1ddd54224f6dc66876e5d4894c0897"
     },
     {
+      "path": "docs/VIDEO_COMPARISON.md",
+      "bytes": 5198,
+      "sha256": "7cbd591361765d0520e37ba797a88056f9a846f1a9e49deff488448d356f701c"
+    },
+    {
       "path": "docs/VIEWER_GUIDE.md",
-      "bytes": 6386,
-      "sha256": "9db7bcf3ba6fcb04ec804faea2a87254030179eb81bc6aa6c5c3b6f5157e9171"
+      "bytes": 7043,
+      "sha256": "2691b752d852336f57edf0c45ba921943de66d81fe3e714d8e3c43ef3f9b4d7f"
     },
     {
       "path": "experiments/__init__.py",
@@ -548,18 +553,18 @@
     },
     {
       "path": "replay_v2/server.py",
-      "bytes": 10365,
-      "sha256": "dc2a23e4e0d41b0c85b8055da1f02dce96ded0622726cefe5dca40c119fbb5d8"
+      "bytes": 10611,
+      "sha256": "fe969f53dba7c738a0d4bfea8ac96906e2fc3077b827d5a6d9472200d923687b"
     },
     {
       "path": "replay_v2/static/app.css",
-      "bytes": 11644,
-      "sha256": "3e59b304dec97aca4245cb14681da0d4c5dcf947b9bdb5711a7028aadd257e4e"
+      "bytes": 16639,
+      "sha256": "f61e79203397d86776b20d474b5ba671a6e06f65a0109ba5907ee48c98ad4caf"
     },
     {
       "path": "replay_v2/static/app.js",
-      "bytes": 22874,
-      "sha256": "1fd804b280a1eb2925ad09036b794aa19d4f7791547ff7393f9bec0b5e9d609b"
+      "bytes": 26784,
+      "sha256": "e04a1a91eef6464f6752df12ceb0be63a2262890307cde4a8e0641c7d95faf75"
     },
     {
       "path": "replay_v2/static/clock.js",
@@ -568,8 +573,18 @@
     },
     {
       "path": "replay_v2/static/index.html",
-      "bytes": 6474,
-      "sha256": "6cbd504b27cba72945228f19ee02033eb17b4cd88c492bd00dd4f2e464764d40"
+      "bytes": 7601,
+      "sha256": "f3119f0d91dcf31878bb508186cacab7df368fff4d662c98e2173859d6dd6bfb"
+    },
+    {
+      "path": "replay_v2/static/motion.js",
+      "bytes": 8387,
+      "sha256": "93302dc1e016cda566bd97c074bd2007c0bb8235ec09c9ae766b03b1fb53c933"
+    },
+    {
+      "path": "replay_v2/static/video.js",
+      "bytes": 20167,
+      "sha256": "f217971b38347f990ee25f897f7c4dbea7bce1f1ac19e17dde739e862f64e12a"
     },
     {
       "path": "replay_v2/store.py",
@@ -1274,6 +1289,7 @@
     "docs/REQUIREMENTS_AND_READINESS.md",
     "docs/TECHNICAL_SUBMISSION.md",
     "docs/TOUCHLINE.md",
+    "docs/VIDEO_COMPARISON.md",
     "docs/VIEWER_GUIDE.md",
     "experiments/__init__.py",
     "experiments/noise_v2/__init__.py",
@@ -1352,6 +1368,8 @@
     "replay_v2/static/app.js",
     "replay_v2/static/clock.js",
     "replay_v2/static/index.html",
+    "replay_v2/static/motion.js",
+    "replay_v2/static/video.js",
     "replay_v2/store.py",
     "reports/.gitignore",
     "reports/BLIND_FAILURE_LEDGER.md",
@@ -1508,16 +1526,25 @@
   "restricted_assets_included": false,
   "prediction_timelines_included": false,
   "scientific_preservation": {
-    "base_commit": "d2e7022094710f9a2bc0a90bb7bd487e765fc772",
+    "base_commit": "25e6d3e7f1c6232b30b2054811c6bc9908fc0536",
     "all_prior_scientific_source_model_config_bytes_unchanged": true,
     "authorized_parent_changes": [
+      "AGENTIC_GOAL.md",
+      "PACKAGE_MANIFEST.json",
+      "PROJECT_STATE.md",
       "README.md",
-      "docs/AGENT_GUIDE.md",
-      "docs/TECHNICAL_SUBMISSION.md",
-      "docs/REQUIREMENTS_AND_READINESS.md",
-      "PACKAGE_MANIFEST.json"
+      "REPLAY.md",
+      "REPLAY_MANIFEST.json",
+      "TEAM_REPO_MANIFEST.json",
+      "assets/README.md",
+      "assets/replay-demo.png",
+      "docs/VIEWER_GUIDE.md",
+      "replay_v2/server.py",
+      "replay_v2/static/app.css",
+      "replay_v2/static/app.js",
+      "replay_v2/static/index.html"
     ]
   },
-  "note": "Repository URL and clone-directory documentation only. Existing runtime/model bytes unchanged; retained historical evidence keeps its prior source/version scope.",
-  "repository_release_revision": "repository-rename-1"
+  "note": "Optional browser-local video comparison and bounded display motion; frozen estimator, legacy review runtime, weights/config and source inputs unchanged. No predictions/media included. Prior acceptance evidence remains version-specific.",
+  "repository_release_revision": "video-comparison-3"
 }
